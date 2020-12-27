@@ -1,0 +1,49 @@
+syntax = "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "CarnivalProtocol";
+
+// 推送新服狂欢活动
+message OpenCarnival_Resp_147001 {
+	optional int32 flag 			= 1;	//0 关闭 1 开启
+	optional int32 remaining_time	= 2;	// 活动剩余时间
+}
+
+// 新服狂欢任务
+message CarnivalTask {
+    optional int32 task_id				= 1;    // 任务id
+    optional int64 progress             = 2;    // 进度
+    optional int32 state 				= 3;    // 0 未完成 1可领取 2已领取
+}
+
+// 获取活动任务列表
+message GetCarnival_Req_147002 {
+	optional int32 label = 1;	// 标签
+}
+message GetCarnival_Resp_147002 {
+	repeated CarnivalTask tasks 			= 1;	// 任务列表
+	optional int32 gift_bag_state			= 2;	// 0 未完成 1可领取 2已领取
+}
+
+// 领取活动任务奖励
+message RewardCarnivalTask_Req_147003 {
+	optional int32 task_id = 1;    // 任务id
+}
+message RewardCarnivalTask_Resp_147003 {
+	optional int32 task_id = 1;    // 任务id
+}
+
+// 领取活动礼包奖励
+message RewardCarnivalGiftBag_Req_147004 {
+	optional int32 label = 1;    // 标签
+}
+message RewardCarnivalGiftBag_Resp_147004 {
+	optional int32 label = 1;    // 标签
+}
+
+// 推送任务完成
+message PushCarnivalTaskFinish_Resp_147005 {
+	optional int32 task_id = 1;    // 任务id
+}
+
+
+

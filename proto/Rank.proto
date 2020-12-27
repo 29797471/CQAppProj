@@ -1,0 +1,145 @@
+syntax = "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "RankProtocol";
+import "Role.proto";
+
+// 排行榜查看请求
+message RankView_Req_133001 {
+    optional int32 rank_id = 1;   // 排行榜id
+    optional int32 page    = 2;   // 页数
+}
+
+// 日利润榜查看返回
+message DailyProfitRankView_Resp_133002 {
+    optional int32 my_rank                        = 1;   // 我的排名
+    optional int32 page                           = 2;   // 页数
+    repeated DailyProfitRankMessage rank_messages = 3;   // 排名数据
+}
+
+message DailyProfitRankMessage {
+    optional RoleHeadMessage head 	= 1;    // 头像信息
+    optional int64 daily_profit     = 2;    // 日利润
+    optional int32 old_rank         = 3;    // 旧排名 
+}
+
+// 商会等级榜查看返回
+message ClanLevelRankView_Resp_133004 {
+    optional int32 my_rank                      = 1;   // 我的排名
+    optional int32 page                         = 2;   // 页数
+    repeated ClanLevelRankMessage rank_messages = 3;   // 排名数据    
+    repeated int64 applied_clanIds              = 4;   // 玩家已申请的商会id
+}
+
+message ClanLevelRankMessage {
+    optional int64 clan_id         = 1;    // 商会id
+    optional string name           = 2;    // 商会名称
+    optional int32 head            = 3;    // 商会图标
+    optional int32 level           = 4;    // 商会等级
+    optional int32 population      = 5;    // 商会人数
+    optional int64 rid             = 6;    // 商会会长玩家id
+    optional string nick           = 7;    // 商会会长玩家名字
+    optional int32 old_rank        = 8;    // 旧排名 
+	optional int32 contribution    = 9;    // 贡献
+}
+
+// 最强店铺榜查看返回
+message BestShopRankView_Resp_133005 {
+    optional int32 my_rank                     = 1;   // 我的排名
+    repeated BestShopRankMessage rank_messages = 2;   // 排名数据
+}
+
+message BestShopRankMessage {
+    optional RoleHeadMessage head  	= 1;    // 头像信息
+    optional int64 bid               = 2;    // 建筑id
+    optional int32 building_type     = 3;    // 建筑配置id
+    optional int64 shop_daily_profit = 4;    // 店铺日利润
+    optional int32 traffic           = 5;    // 客流量
+    optional int32 addition          = 6;    // 加成
+    optional int32 building_subtype  = 7;    // 店铺类型
+}
+
+// 热门景点榜查看返回
+message HotTourismRankView_Resp_133006 {
+    optional int32 my_rank                        = 1;   // 我的排名
+    optional int32 page                           = 2;   // 页数
+    repeated HotTourismsRankMessage rank_messages = 3;   // 排名数据
+ }
+
+message HotTourismsRankMessage {
+    optional RoleHeadMessage head  	= 1;    // 头像信息
+    optional int32 add_traffic_sum   = 2;    // 加成人口总和
+    optional int32 building_count    = 3;    // 建筑数量
+    optional int32 old_rank          = 4;    // 旧排名
+}
+
+// 战斗力榜查看返回
+message FightingPowerRankView_Resp_133015 {
+    optional int32 my_rank                          = 1;    // 我的排名
+    optional int32 page                             = 2;    // 页数
+    repeated FightingPowerRankMessage rank_messages = 3;    // 排名数据
+}
+
+message FightingPowerRankMessage {
+    optional RoleHeadMessage head 	= 1;    // 头像信息
+    optional int32 fighting_power   = 2;    // 战斗力
+    optional int64 daily_profit     = 3;    // 日利润
+    optional int32 old_rank         = 4;    // 旧排名
+}
+
+// 头衔排行信息
+message HeadTitleRankMessage {
+    optional RoleHeadMessage head     = 1;    // 头像信息
+    optional int32 head_title_level     = 2;    // 头衔等级
+}
+
+// 头衔排行榜
+message HeadTitleRankView_Resp_133019 {
+    optional int32 my_rank                       = 1;    // 我的排名
+    optional int32 page                          = 2;    // 页数
+    repeated HeadTitleRankMessage rank_messages  = 3;    // 排名数据
+}
+
+// 观摩
+message ClickRank_Req_133020 {
+    optional int32 type  = 1;    // 排行类型
+}
+
+message ClickRank_Resp_133020 {
+    optional int32 type  		= 1;    // 排行类型
+    optional int32 end_time  	= 2;    // 上次点赞时间
+}
+
+// 观摩列表
+message ClickRankList_Req_133021 {
+}
+
+message ClickRankList_Resp_133021 {
+    repeated RoleClickRank click_rank  = 1; // 点击信息
+}
+
+// 点击信息
+message RoleClickRank {
+    optional int32 type  		= 1;    // 排行类型
+    optional int32 end_time  	= 2;    // 上次点赞时间
+}
+
+// 称号排行榜
+message TitleRankView_Resp_133022 {
+    optional int32 my_rank                   = 1;    // 我的排名
+    optional int32 page                      = 2;    // 页数
+    repeated TitleRankMessage rank_messages  = 3;    // 排名数据
+}
+
+// 称号排行信息
+message TitleRankMessage {
+    optional RoleHeadMessage head     	= 1;    // 头像信息
+    optional int32 title_num     		= 2;    // 称号总数
+	repeated TitleNumBriefMsg msg		= 3;  	// 称号的信息
+}
+
+// 称号数量简略信息
+message TitleNumBriefMsg {
+	optional int32 config_id 	= 1; // 称号配置id
+	optional int32 num 			= 2; // 数量
+	optional bool is_active 	= 3; // 是否激活
+}

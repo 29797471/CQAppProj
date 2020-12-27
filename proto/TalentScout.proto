@@ -1,0 +1,31 @@
+syntax = "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "TalentScoutProtocol";
+
+// 获取奖励
+message GetReward_Req_155001 {
+	optional int32 cfg_id 	= 1; //奖励配置id
+}
+
+message GetReward_Resp_155001 {
+    optional int32 result 		= 1; //0:成功1:失败3.已领取
+    optional int32 cfg_id 		= 2; // 奖励配置id
+}
+
+// 删除人才
+message DeleteTalent_Req_155002 {
+	optional int64 rid 	= 1; //人才rid 
+}
+
+message DeleteTalent_Resp_155002 {
+    optional int32 result = 1; //0:成功1:失败
+    optional int64 rid 	  = 2; // 人才rid 
+}
+
+// 获取奖励信息
+message GetRewardMsg_Req_155003 {
+}
+
+message GetRewardMsg_Resp_155003 {
+    repeated int32 ids = 1;  // 已经领取奖励集合
+}

@@ -1,0 +1,120 @@
+syntax = "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "BusinessInvestigationProtocol";
+import "Values.proto";
+import "Common.proto";
+import "Car.proto";
+
+// 单位信息
+message UnitMessage {
+    optional int64 rid                = 1;    // 玩家id
+    optional string nick              = 2;    // 玩家名
+    optional int32 actor              = 3;    // 主角
+    optional int32 level              = 4;    // 等级
+    optional int32 vip_level          = 5;    // vip等级
+    repeated ShowTitle titles         = 7;    // 佩戴的称号
+    optional MovingMessage moving_msg = 8;    // 移动信息
+    optional CarInfo car_info         = 9;    // 车信息
+}
+
+// 移动信息
+message MovingMessage {
+    optional float x = 1;    // x
+    optional float y = 2;    // y
+    optional float z = 3;    // z
+    optional float r = 4;    // 旋转
+    optional int32 s = 5;    // 状态 0 静止 1 移动
+}
+
+// 选项奖励
+message OptionRewardMessage {
+    optional int32 option         = 1;    // 选项
+    repeated ValuesMessage reward = 2;    // 奖励
+}
+
+// 开始商务考察请求
+message StartBusinessInvestigation_Req_126001 {
+    optional MovingMessage moving_msg = 1;    // 移动信息
+    optional int32 car_id             = 2;    // 车配置表id
+}
+
+// 开始商务考察返回
+message StartBusinessInvestigation_Resp_126001 {
+    
+}
+
+// 结束商务考察请求
+message StopBusinessInvestigation_Req_126002 {
+    
+}
+
+// 结束商务考察返回
+message StopBusinessInvestigation_Resp_126002 {
+    
+}
+
+// 考察事件触发请求
+message InvestigateEventTrigger_Req_126003 {
+    optional int64 target_building_id = 1;    // 目标建筑id
+}
+
+// 考察事件触发返回
+message InvestigateEventTrigger_Resp_126003 {
+    optional int32 question_id                  = 4;    // 题目id
+    repeated OptionRewardMessage option_rewards = 5;    // 选项奖励
+}
+
+// 选择选项请求
+message SelectOption_Req_126004 {
+    optional int32 option = 1;    // 选项
+}
+
+// 答题选择选项返回
+message AnswerSelectOption_Resp_126004 {
+    optional int32 option = 1;    // 选项
+}
+
+// 获取地图所有单位请求
+message ListAllUnits_Req_126005 {
+    optional int64 mapId = 1;   // 地图id
+}
+
+// 获取地图所有单位
+message ListAllUnits_Resp_126005 {
+    optional int64      mapId  = 1;   // 地图id
+    repeated UnitMessage units = 2;   // 单位信息列表     
+}
+
+// 推送单位进入
+message PushUnitEnter_Resp_126006 {
+    optional int64      mapId = 1;   // 地图id
+    optional UnitMessage unit = 2;   // 单位信息
+}
+
+// 推送单位离开
+message PushUnitLeave_Resp_126007 {
+    optional int64 mapId = 1;   // 地图id
+    optional int64 rid   = 2;   // 玩家id
+}
+
+// 同步单位移动信息请求
+message SyncMoving_Req_126008 {
+    optional int64 rid                = 1;    // 玩家id
+    optional MovingMessage moving_msg = 2;    // 移动信息
+}
+
+// 同步单位移动信息返回
+message SyncMoving_Resp_126008 {
+    
+}
+
+// 推送单位移动信息
+message PushMoving_Resp_126009 {
+    optional int64 rid                = 1;    // 玩家id
+    optional MovingMessage moving_msg = 2;    // 移动信息
+}
+
+// 玩家考察信息
+message GetInvestigationInfo_Resp_126011 {
+    optional int32 trigger_count = 3;  // 触发次数
+}

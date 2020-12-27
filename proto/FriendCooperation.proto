@@ -1,0 +1,134 @@
+syntax = "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "FriendCooperationProtocol";
+import "Role.proto";
+
+message FriendRoleMessage{
+    optional RoleHeadMessage role_head    = 1;    // 角色头像
+    optional int32 favorable_level        = 6;    // 好感度级别
+    optional bool invite                  = 7;    // 我的邀请 是否邀请
+    optional bool friend_invite           = 9;    // 好友的邀请 是否邀请
+}
+message ApplyRoleMessage{
+    optional RoleHeadMessage role_head    = 1;  // 角色头像
+    optional CooperationMode type         = 2;  // 合作类型
+    optional int32 building_config_id     = 3;  // 店铺类型
+    optional int32 effective_time         = 4;  // 申请消息失效时间
+    optional bool is_friend               = 5;  // 是否好友
+    optional int32 favorable_level        = 6; // 好感度级别
+	optional int64 building_id			  = 8;	// 建筑唯一id state=0的时候为对方的建筑ID，state=1的时候为我的建筑ID，state=2的时候为0
+    optional int32 state				  = 9; // 0 别人申请我 1我申请别人 2 我可以申请的推荐 
+}
+enum CooperationMode{
+    FRIEND      = 1;//好友合作
+    TEMPORARY   = 2;//临时合作
+}
+message ApplyBuilding{
+    optional int64 building_config_id    = 1;
+    optional int32 effective_time        = 2;   // 失效时间
+    optional CooperationMode type        = 3;   // 合作类型
+}
+
+message CooperationSucceed {
+    optional int64 building_id                           = 1;
+    optional int32 apply_temporary_cooling_time          = 2;   // 临时合作申请冷却时间
+    optional int32 cooperation_num                       = 3;   // 好友合作数次
+    optional int32 temporary_effective_time              = 4;   // 临时合作失效时间
+    optional CooperationMode type                        = 5;   // 合作类型
+    optional FriendRoleMessage temporary_role            = 6;   // 临时合作玩家信息
+}
+
+//获取店铺合作的好友列表
+message GetShopCooperationFriend_Req_158001{
+    optional int64 building_id  = 1;
+}
+message GetShopCooperationFriend_Resp_158001{
+    optional int64 building_id              = 1;
+    repeated FriendRoleMessage invite_list  = 2;    // 可以申请的列表
+    repeated FriendRoleMessage list         = 3;    // 成功合作的列表
+}
+
+//发起合作申请
+message ApplyCooperation_Req_158002{
+    optional int64 rid                      = 1;
+    optional int64 building_id              = 2;
+    optional CooperationMode type           = 3;    // 合作类型
+}
+message ApplyCooperation_Resp_158002{
+    optional int64 rid                                  = 1;
+    optional int64 building_id                          = 2;
+    optional CooperationMode type                       = 3;    // 合作类型
+    optional int32 apply_temporary_cooling_time         = 4;    // 临时合作申请冷却时间
+}
+
+//好友确认合作
+message BuildingCooperation_Req_158005{
+    optional int64 building_id           = 1;// 建筑唯一id
+    optional int64 rid                   = 2;// 确认合作的好友rid
+}
+
+message BuildingCooperation_Resp_158005{
+    optional int64 building_id = 1;//建筑唯一id
+}
+//取消合作
+message CancelCooperation_Req_158006{
+    optional int64 rid                      = 1;
+    optional CooperationMode type           = 2;    // 合作类型
+    optional int64 building_id              = 3;
+}
+message CancelCooperation_Resp_158006{
+    optional int64 rid                      = 1;
+    optional CooperationMode type           = 2;    // 合作类型
+}
+
+//登陆推送
+message PushShopFriendCooperation_Resp_158007{
+    repeated CooperationSucceed succeed_list    = 1;
+    repeated ApplyBuilding apply_list           = 2;
+}
+
+//合作状态变化推送
+message PushCooperationState_Resp_158008{
+    optional CooperationSucceed  cooperation         = 1;
+}
+
+
+//合作申请推送
+message PushApplyCooperation_Resp_158010{
+    optional ApplyBuilding apply = 1;
+}
+
+
+//获取申请列表
+message GetCooperationApplyList_Req_158011{
+     optional int32 identify                    = 1; // 标识
+    optional CooperationMode type               = 2;    // 合作类型
+}
+message GetCooperationApplyList_Resp_158011{
+    repeated ApplyRoleMessage list              = 1;
+    optional int32 identify                     = 2; // 标识
+    optional CooperationMode type               = 3;    // 合作类型
+	optional bool over                          = 4; // 结束
+}
+
+//拒绝合作
+message RefuseCooperation_Req_158012{
+    optional int64 building_id              = 1;	// 建筑唯一id
+    optional CooperationMode type           = 3;    // 合作类型
+}
+message RefuseCooperation_Resp_158012{
+}
+
+//商业合作
+message BusinessCooperation_Req_158013{
+    optional int64 building_id           		= 1;// 建筑唯一id
+    optional int64 cooperation_building_id      = 2;// 确认合作店铺id
+}
+
+message BusinessCooperation_Resp_158013{
+    optional int64 building_id = 1;//建筑唯一id
+}
+
+
+
+

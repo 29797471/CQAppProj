@@ -1,0 +1,92 @@
+syntax = "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "DailyPlanningActivityProtocol";
+import "Role.proto";
+
+// 进入每日规划地图
+message EnterDailyPlanningMap_Req_144023 {
+    optional int64 planning_id   = 1; // 规划id
+}
+
+message EnterDailyPlanningMap_Resp_144023 {
+    optional int64 planning_id                = 1; // 规划id
+    optional RoleHeadMessage role_head        = 2; // 玩家信息
+    optional int64 current_daily_profit       = 3; // 当前日利润
+    optional int64 historic_high_daily_profit = 4; // 历史最高日利润
+}
+
+// 推送每日规划地图日利润
+message PushDailyPlanningDailyProfit_Resp_144024 {
+    optional int64 map_id                     = 1;  // 地图id
+    optional int64 current_daily_profit       = 2;  // 当前日利润
+    optional int64 historic_high_daily_profit = 3;  // 历史最高日利润
+}
+
+// 查看每日规划建筑简要信息
+message GetDailyPlanningBuildingBriefInfo_Req_144025 {
+    optional int64 planning_id = 1;    // 规划id
+    optional int64 map_id      = 2;    // 地图id
+    optional int64 building_id = 3;    // 建筑id
+}
+
+// 举办规划活动
+message OrganizeDailyPlanning_Req_144026 {
+    optional int32 type = 1; // 类型
+}
+
+message OrganizeDailyPlanning_Resp_144026 {
+    optional int32 type = 1; // 类型
+}
+
+// 获取规划活动列表
+message ListDailyPlanning_Req_144027 {
+    
+}
+
+message ListDailyPlanning_Resp_144027 {
+    repeated DailyPlanningMessage daily_planning = 1;
+}
+
+message DailyPlanningMessage {
+    optional int64 planning_id         = 1; // 规划id
+    optional int32 type                = 2; // 类型
+    optional RoleHeadMessage organizer = 3; // 举办者
+    optional int32 start_time          = 4; // 举办时间
+    optional int32 end_time            = 5; // 结束时间 
+    optional int32 join_num            = 6; // 参与人数
+    optional int32 last_enter_time     = 7; // 上次进入时间
+    optional int32 my_rank             = 8; // 我的排名
+}
+
+// 查看排名
+message ViewDailyPlanningRank_Req_144028 {
+    optional int64 planning_id = 1; // 规划id
+}
+
+message ViewDailyPlanningRank_Resp_144028 {
+    repeated DailyPlanningRankMessage rank_messages = 1;
+    optional int32 my_rank                          = 2;
+    optional int64 planning_id                      = 3; // 规划id
+    optional int32 type                             = 4; // 类型
+}
+
+// 规划排名数据
+message DailyPlanningRankMessage {
+    optional RoleHeadMessage role_head = 1;    // 玩家信息
+    optional int32 rank                = 2;    // 排名
+    optional int64 daily_profit        = 3;    // 日利润
+}
+
+// 获取规划活动举办信息
+message GetDailyPlanningOrganizeInfo_Req_144029 {
+    
+}
+
+message GetDailyPlanningOrganizeInfo_Resp_144029 {
+    repeated DailyPlanningMessage daily_planning = 1;
+}
+
+// 推送规划活动结束
+message PushDailyPlanningEnd_Resp_144030 {
+    optional int64 planning_id   = 1; // 规划id
+}

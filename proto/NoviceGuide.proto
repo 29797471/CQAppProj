@@ -1,0 +1,47 @@
+syntax = "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "NoviceGuideProtocol";
+
+message Step{
+	optional int32 id = 1;
+	optional int32 executeTimes = 2;//执行次数
+	optional int32 finishTimes = 3;//完成次数
+}
+
+//获取所有
+message GetAllGuide_Req_140001{
+}
+message GetAllGuide_Resp_140001{
+	repeated Step list = 1;
+	optional bool close = 2;
+}
+
+// 更新
+message UpdateGuide_Req_140002{
+	optional int32 id = 1;
+	optional int32 executeTimes = 2;//执行次数
+	optional int32 finishTimes = 3;//完成次数
+}
+message UpdateGuide_Resp_140002{
+}
+//测试使用 清除所有指引
+message TestClearGuide_Req_140003{
+}
+message TestClearGuide_Resp_140003{
+}
+
+//指引节点操作统计-执行
+message NodeOperation_Req_140004{
+	optional int32 id = 1;//指引链id
+	optional int32 nodeIndex = 2;//执行索引
+}
+
+message NodeOperation_Resp_140004{
+}
+//指引节点操作统计-完成
+message NodeOperation_Req_140005{
+	optional int32 id = 1;//指引链id
+	optional int32 nodeIndex = 2;//完成索引
+}
+message NodeOperation_Resp_140005{
+}

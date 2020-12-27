@@ -1,0 +1,90 @@
+syntax = "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "SignActivitiesProtocol";
+
+// 获取七日签到信息
+message GetSevenDaysInMessage_Req_132001{
+}
+
+message GetSevenDaysInMessage_Resp_132001{
+	optional int32 times 			= 1; //签到次数
+	optional int32 last_sign_time  	= 2; //上次签到时间
+}
+
+// 七日签到信息签到
+message SevenDaysInSign_Req_132002{
+}
+
+message SevenDaysInSign_Resp_132002{
+	optional int32 times = 1; //签到次数
+	optional int32 time  = 2; //签到时间
+}
+
+// 获取30天签到信息
+message GetThirtyDaysInMessage_Req_132003{
+}
+
+message GetThirtyDaysInMessage_Resp_132003{
+	repeated int32 times 				= 1; // 签到所有次数
+	optional int32 last_sign_time  		= 2; // 上次签到时间
+	optional int32 round				= 3; // 第几轮
+	optional int32 open_server_time		= 4; // 开服时间
+	optional int32 get_reward_status	= 5; // 是否获取连续签到的奖励 0:未1:已经获取
+	optional bool can_sign 				= 6; // 能够签到 true:能够 false:不能	
+	optional int32 total_num 			= 7; // 累计签到次数
+}
+
+// 30天签到信息签到
+message ThirtyDaysInSign_Req_132004{
+}
+
+message ThirtyDaysInSign_Resp_132004{
+	repeated int32 times 				= 1; // 签到所有次数
+	optional int32 last_sign_time  		= 2; // 上次签到时间
+	optional int32 round				= 3; // 第几轮
+	optional int32 time  				= 4; // 签到时间
+	optional bool can_sign 				= 5; // 能够签到 true:能够 false:不能	
+}
+
+// 30天签到宝箱奖励
+message ThirtyDaysInGetReward_Req_132005 {
+}
+
+message ThirtyDaysInGetReward_Resp_132005 {
+}
+
+// 在线礼包信息
+message OnlineGiftMsg_Req_132007 {
+}
+
+message OnlineGiftMsg_Resp_132007 {
+	optional int32 index 			= 1; // 配置位置（已经完成的位置 0:还未开始）
+	optional int32 cumulative_time 	= 2; // 累计的时间 
+}
+
+// 获取在线礼包奖励
+message GetOnlineGiftReward_Req_132008 {
+	optional int32 index = 1; // 配置id
+}
+
+message GetOnlineGiftReward_Resp_132008 {
+}
+
+// 每日签到
+message DailySign_Req_132010 {
+	optional int32 config_id = 1; // 配置id
+}
+
+message DailySign_Resp_132010 {
+	repeated int32 config_ids = 1; // 配置id List (数组从 0 到 5)
+}
+
+// 每日签到信息
+message DailySignMsg_Req_132011 {
+}
+
+message DailySignMsg_Resp_132011 {
+	optional int32 round      = 1; // 轮次
+	repeated int32 config_ids = 2; // 配置id List(数组从 0 到 5)
+}
+

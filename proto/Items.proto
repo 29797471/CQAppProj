@@ -1,0 +1,121 @@
+syntax =  "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "ItemsProtocol";
+
+message Items {
+	optional int32 item_id 	= 1; 	//物品id 
+	optional int32 number 	= 2;  	//数量
+	optional int32 time 	= 3;    //过期时间 0:永久有效 其他:时间戳单位(秒)
+	optional float quality 	= 4; 	//品质
+	optional int32 cost 	= 5; 	//成本
+	optional int32 status	= 6;	//状态:1-供货中 0-未供货中
+	optional int64 bid		= 7;	// 被供应的建筑id
+}
+
+ //105001 物品列表
+message ItemsList_Req_105001 {
+      
+}
+
+//105001
+message ItemsList_Resp_105001 {
+	repeated Items list = 1;
+}
+
+
+//105002 物品使用或合成
+message UseItems_Req_105002 {
+	optional int32 item_id = 1; //物品id
+	optional int32 use_num = 2; //使用数量,合成时:合成的物品数量
+}
+
+//105002
+message UseItems_Resp_105002 {	
+	optional Items use_items 		= 1; // 使用道具
+	repeated Items produce_items 	= 2; // 产生的道具
+	optional int32 event_id			= 3; // 事件id
+}
+
+ //105003 添加物品
+message AddItems_Req_105003 {
+      
+}
+
+//105003 添加物品
+message AddItems_Resp_105003 {
+	repeated Items list = 1;		 // 物品列表
+}
+
+ //105004 扣除物品
+message SubItems_Req_105004 {
+      
+}
+
+//105004 扣除物品
+message SubItems_Resp_105004 {
+	repeated Items list = 1;
+}
+
+//105005 丢弃物品
+message DiscardItem_Req_105005 {
+	optional int32 item_id = 1; 	//物品id 
+	optional int32 number = 2; 		//选择丢弃的数量
+}
+
+//105005 丢弃物品
+message DiscardItem_Resp_105005 {
+	
+}
+
+//105006 卖出原料或产品
+message SellProductOrMaterial_Req_105006 {
+	optional int32 id = 1; 		//原料或产品id 
+	optional int32 number = 2; 	//选择丢弃的数量
+}
+
+//105006 卖出原料或产品
+message SellProductOrMaterial_Resp_105006 {
+	optional int32 id = 1; 		//原料或产品id 
+	optional int32 number = 2; 	//选择丢弃的数量
+}
+
+ //105007 产品或原料列表
+message ProductOrMaterialList_Req_105007 {
+      
+}
+
+//105007 产品或原料列表
+message ProductOrMaterialList_Resp_105007 {
+	repeated Items list = 1;
+}
+
+//105008 物品合成
+message ItemsComposition_Req_105008 {
+	optional int32 item_id = 1; //物品id
+	optional int32 use_num = 2; //使用数量
+	optional int32 compostion_item_id = 3; //合成的物品id
+}
+
+//105008
+message ItemsComposition_Resp_105008 {	
+}
+
+//道具不足-通过配置兑换
+message ItemsNotEnoughExchange_Req_105009{
+	optional int32 item_id = 1; //配置表道具id
+	optional int32 num = 2; //数量
+}
+message ItemsNotEnoughExchange_Resp_105009{
+	optional int32 item_id = 1; //配置表道具id
+	optional int32 num = 2; //数量
+}
+
+// 图纸购买
+message ItemDrawingBuy_Req_105010 {
+	optional int32 id 		= 1; // 图纸ID
+	optional int32 type 	= 2; // 购买方式
+	optional int32 count 	= 3; // 购买数量
+}
+message ItemDrawingBuy_Resp_105010 {
+
+}

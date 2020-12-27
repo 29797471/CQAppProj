@@ -1,0 +1,126 @@
+syntax = "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "FriendsProtocol";
+import "Role.proto";
+
+message FriendInfo{
+	required RoleHeadMessage role 			= 1;
+	optional bool isShield 					= 2;
+	optional int32 visit_time 				= 3;//下次能拜访时间
+	optional int32 gift_time 				= 4;//下次能赠送时间
+	optional int32 friendshipValue 			= 5;//友情值
+	optional int32 favorableValue 			= 6;//好感度
+	optional int32 favorableLevel 			= 7;//好感度级别
+	optional int32 favorableExp				= 8;//好感度经验
+}
+//获取推荐列表/申请列表/黑名单列表
+message GetFriendsList_Req_109301{
+	required int32 type = 1; //1 推荐列表  2 申请列表 3 好友列表 4黑名单列表 
+}
+message GetFriendsList_Resp_109301{
+	repeated FriendInfo list 	= 1;
+	required int32 type 		= 2;
+}
+//发送好友申请
+message SendApply_Req_109302{
+	required int64 rid = 1;//申请好友rid
+}
+message SendApply_Resp_109302{
+	required int64 rid = 1;//申请好友rid
+}
+
+//同意/拒绝添加好友
+message DealApply_Req_109303{
+	required int32 type 	= 1;//0 拒绝 1 同意
+	required int64 rid 		= 2;//申请者rid
+}
+message DealApply_Resp_109303{
+	required int32 type 	= 1;//0 拒绝 1 同意
+	required int64 rid 		= 2;
+}
+//删除好友
+message DeleteFriends_Req_109304{
+	required int64 rid = 1;
+}
+message DeleteFriends_Resp_109304{
+	required int64 rid 		= 1;
+	optional bool active 	= 2;//是否是主动删除
+}
+
+//清空申请列表
+message ClearApplyList_Req_109305{
+}
+message ClearApplyList_Resp_109305{
+}
+
+
+//昵称模糊搜索
+message VagueSearchNick_Req_109306{
+	required string nick = 1;
+}
+message VagueSearchNick_Resp_109306{
+	repeated FriendInfo list = 1;
+}
+
+//移除屏蔽人
+message RemoveShield_Req_109307{
+	required int64 rid = 1;
+}
+message RemoveShield_Resp_109307{
+	required int64 rid = 1;
+}
+
+//好友赠送礼物
+
+message GiftToFriend_Req_109308{
+	required int64 rid = 1;//好友rid
+	optional int32 configId = 2;
+}
+message GiftToFriend_Resp_109308{
+	required FriendInfo info = 1;
+}
+
+//商务学习
+message BusinessLearn_Req_109309{
+	required int64 friendRid = 1;
+}
+message BusinessLearn_Resp_109309{
+	required FriendInfo info = 1;
+}
+//通过好友申请推送
+message PassApplyFriend_Resp_109310{
+	required FriendInfo friendInfo = 1;
+}
+
+//购买赠送礼物
+message BuyGiftItem_Req_109311{
+	required int32 config_id		= 1;//配置表id
+}
+message BuyGiftItem_Resp_109311{
+	required int32 config_id		= 1;//配置表id
+}
+
+//换一批申请列表
+message AnotherBatchApplyList_Req_109312{
+}
+
+message VisitRecord{
+	required RoleHeadMessage role 		  = 1;
+	optional int32 add_flow				  = 2;	  // 增加客流
+	optional int32 visit_time			  = 3;	  // 好友拜访时间
+	optional bool isFriend				  = 4;	  // 是否是好友
+	optional int32 next_visit_time		  = 5;	  // 下次我能拜访的时间
+}
+
+//获取拜访记录
+message VisitRecordList_Req_109313{
+}
+message VisitRecordList_Resp_109313{
+	repeated VisitRecord list = 1;
+}
+//获取今日拜访次数
+message GetVisitNum_Req_109314{
+}
+message GetVisitNum_Resp_109314{
+	optional int32 num = 1;
+}

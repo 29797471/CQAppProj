@@ -1,0 +1,73 @@
+syntax = "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "CarProtocol";
+
+
+// 车信息
+message CarInfo {
+    optional int32 car_id                = 1; // 车配置表id
+    optional int32 expiry_time           = 2; // 到期时间
+    optional string painting             = 3; // 喷漆
+    optional int32 painting_expired_time = 4; // 喷漆过期时间
+}
+
+//  玩家打开车库界面
+message ListingInfo_Req_125001{
+}
+
+// 玩家打开车库界面
+message ListingInfo_Resp_125001 {
+    repeated CarInfo car_list = 3;    // 车列表
+}
+
+// 奖励或者使用道具得到的车辆列表
+message ReceiveCarList_Resp_125003 {
+    repeated CarInfo car_list = 1;  // 车列表
+}
+
+// 过期车辆
+message ExpiredCar_Resp_125004 {
+    optional int32 car_id = 1;// 车配置表id
+}
+
+//  玩家车库信息
+message CarListInfo_Req_125005 {
+    optional int64 rid = 1; // 玩家
+}
+// 玩家车库信息
+message CarListInfo_Resp_125005 {
+    repeated CarInfo car_list = 1;// 车列表
+	optional int64 rid = 2; // 玩家
+}
+//购买座驾
+message BuyCar_Req_125006 {
+    optional int32 car_id = 1;// 车配置表id
+}
+message BuyCar_Resp_125006 {
+}
+
+// 喷漆
+message PaintCar_Req_125007 {
+    optional int32 car_id    = 1; // 车配置表id
+    optional string painting = 2; // 喷漆
+}
+
+message PaintCar_Resp_125007 {
+    optional CarInfo car_info = 1;
+    optional bool success     = 2;
+}
+
+// 座驾累充信息
+message CarTotalRechargeInfo {
+    optional int32 car_id               = 1; // 车配置表id
+    optional int32 money				= 2; // 充值金额(分)
+}
+
+// 获取座驾累充信息列表
+message ListCarTotalRecharge_Req_125008{
+}
+message ListCarTotalRecharge_Resp_125008 {
+    repeated CarTotalRechargeInfo list 	= 1; // 座驾累充信息列表
+}
+
+

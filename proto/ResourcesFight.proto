@@ -1,0 +1,59 @@
+syntax = "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "ResourcesFightProtocol";
+import "Role.proto";
+import "Battle.proto";
+import "Values.proto";
+
+// 银币争夺获取匹配对手
+message SilverFightListMatchEnemies_Req_137001 {
+    
+}
+
+message SilverFightListMatchEnemies_Resp_137001 {
+    repeated SilverFightEnemyMessage enemies = 1; // 对手信息
+    optional int32 remain_fight_count        = 2; // 剩余挑战次数
+}
+
+
+message SilverFightEnemyMessage {
+    optional RoleHeadMessage head_info = 1; // 玩家信息
+    optional int64 can_rob_silver      = 2; // 可抢银币
+    optional int64 robbed_silver       = 3; // 已抢银币
+    optional int32 buff_end_time       = 4; // 持续时间         
+}
+
+// 银币争夺获取复仇对手
+message SilverFightListRevengeEnemies_Req_137002 {
+    
+}
+
+message SilverFightListRevengeEnemies_Resp_137002 {
+    repeated SilverFightEnemyMessage enemies = 1; // 对手信息
+}
+
+// 银币争夺发起战斗
+message SilverFight_Req_137003 {
+    optional int64 enemy_rid = 1; // 对手rid
+}
+
+message SilverFight_Resp_137003 {
+    optional BattleDetailsMessage battle  = 1; // 战斗
+    repeated ValuesMessage reward         = 2; // 奖励
+    optional RewardsMessage real_reward   = 3; // 实际获得 
+    optional int64 rob_silver             = 4; // 抢得银币
+    optional int32 remain_fight_count     = 5; // 剩余挑战次数
+    optional int32 attacker_morale_reduce = 6; // 攻方士气下降
+}
+
+// 银币争夺发起复仇
+message SilverRevenge_Req_137004 {
+    optional int64 enemy_rid = 1; // 对手rid
+}
+
+message SilverRevenge_Resp_137004 {
+    optional BattleDetailsMessage battle = 1; // 战斗
+    optional int64 rob_silver            = 2; // 抢得银币
+    repeated ValuesMessage reward        = 3; // 奖励
+    optional RewardsMessage real_reward  = 4; // 实际获得 
+}

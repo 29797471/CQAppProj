@@ -1,0 +1,43 @@
+syntax = "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "ClanFightProtocol";
+import "Role.proto";
+import "Battle.proto";
+import "Clan.proto";
+
+// 层
+message ClanFightFloor {
+	optional int32 floor					= 1; // 层数
+	optional int32 type                     = 2; // 类型 1.玩家 2.机器人
+    optional RoleHeadMessage head_info      = 3; // 玩家信息
+    repeated ManagerBattleMessage defenders = 4; // 阵容
+	optional int32 state					= 5; // 状态 0.可挑战 1.保护期 2.挑战冷却
+	optional int32 time						= 6; // 保护期、挑战冷却解除的时间戳
+}
+
+// 获取详情
+message GetClanFight_Req_174001 {
+}
+message GetClanFight_Resp_174001 {
+	optional ClanHeadMessage rival_clan		= 1; // 竞争商会
+	repeated ClanFightFloor floors			= 2; // 层列表
+	optional int32 power          			= 3; // 我的战力
+	optional int32 next_refresh_time		= 4; // 下一次刷新的时间戳
+}
+
+// 挑战
+message BattleClanFight_Req_174002 {
+	optional int32 floor 					= 1; // 层数
+}
+message BattleClanFight_Resp_174002 {
+	optional int32 floor 					= 1; // 层数
+	optional BattleDetailsMessage battle    = 2; // 战斗详情
+}
+
+// 放弃
+message GiveUpClanFight_Req_174003 {
+	optional int32 floor 					= 1; // 层数
+}
+message GiveUpClanFight_Resp_174003 {
+	optional int32 floor 					= 1; // 层数
+}

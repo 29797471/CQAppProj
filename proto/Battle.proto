@@ -1,0 +1,172 @@
+syntax = "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "BattleProtocol";
+import "Values.proto";
+
+// 战场
+message BattleMessage {
+    optional int64 battle_type       = 1;    // 战场类型
+    repeated BattleUnitMessage units = 2;    // 战场单位
+    optional int32 max_round         = 3;    // 最大回合数
+}
+
+// 战场单位
+message BattleUnitMessage {
+    optional int32 position              = 1;    // 单位位置 攻方(101~199) 守方(201~299)
+    optional int32 id                    = 2;    // 单位id
+    optional int32 type                  = 3;    // 单位类型 1, 经理 2, 怪物
+    repeated BattleUnitAttrMessage attrs = 4;    // 单位属性
+    optional int64 hp                    = 5;    // 当前血量
+    optional int32 quality               = 6;    // 单位品质
+}
+
+// 战场单位属性
+message BattleUnitAttrMessage {
+    optional int32 attr  = 1;    // 属性 1, 攻击 2, 防御, 3, 最大血量, 4, 命中, 5, 闪避 6, 暴击, 7, 韧性
+    optional int64 value = 2;    // 值
+}
+
+// 战斗结果
+message BattleResultMessage {
+    repeated BattleRoundMessage rounds = 1;    // 所有回合
+}
+
+// 战斗回合
+message BattleRoundMessage {
+    optional int32 round                                     = 1;    // 回合
+    repeated SkillTargetEffectMessage buff_ticks             = 2;    // 回合开始前buff心跳
+    repeated BattleUnitActionMessage round_beginning_actions = 3;    // 回合开始时的动作
+    repeated BattleUnitVsResultMessage vs_reults             = 4;    // vs结果
+}
+
+// vs结果
+message BattleUnitVsResultMessage {
+    optional int32 unit_position                 = 1;    // 单位位置
+    optional int32 unit_vs_position              = 2;    // vs.单位位置
+    optional BattleUnitActionMessage unit_action = 3;    // 单位动作
+}
+
+// 战场单位动作
+message BattleUnitActionMessage {
+    optional int32 unit_position              = 1;    // 单位位置
+    optional int32 skill_id                   = 2;    // 技能id
+    optional int32 skill_effect_id            = 3;    // 效果id
+    optional int32 union_position             = 4;    // 技能联合单位位置
+    repeated SkillResultMessage skill_results = 5;    // 技能结果
+}
+
+// 技能结果
+message SkillResultMessage {
+    repeated SkillTargetResultMessage target_results = 2;    // 技能目标结果
+}
+
+// 技能目标结果
+message SkillTargetResultMessage {
+    optional SkillTargetEffectMessage target_effect                              = 1;    // 技能目标效果
+    optional int32 attacked_unit_position                                        = 2;    // 被击单位位置
+    optional int32 attacked_unit_skill_id                                        = 3;    // 被击单位使用技能id
+    optional int32 attacked_unit_skill_effect_id                                 = 4;    // 被击单位使用技能效果id
+    repeated AttackedSkillTargetResultMessage attacked_unit_skill_target_results = 5;    // 被击单位使用技能目标结果
+}
+
+// 被击使用技能目标结果
+message AttackedSkillTargetResultMessage {
+    optional SkillTargetEffectMessage target_effect = 1;    // 技能目标效果
+}
+
+// 技能目标效果
+message SkillTargetEffectMessage {
+    optional int32 target_position              = 1;    // 技能目标战场单位位置
+    optional bool kill                          = 2;    // 是否击杀
+    optional bool miss                          = 3;    // 是否miss
+    repeated DamageMessage damages              = 4;    // 伤害
+    repeated int64 heals                        = 5;    // 治疗
+    repeated BuffUpdateMessage buff_updates     = 6;    // buff更新
+    optional int64 hp                           = 7;    // 当前血量变化量 正数增加 负数扣减
+    repeated BattleUnitAttrMessage attr_changes = 8;    // 属性变化量 正数为加 负数为减
+}
+
+// 伤害
+message DamageMessage {
+    optional int32 type        = 1;    // 伤害类型 1, 普通伤害 2,dot 3,附加伤害
+    optional int64 damage      = 2;    // 伤害值
+    optional bool critical     = 3;    // 是否暴击
+    optional int64 real_damage = 4;    // 实际伤害
+}
+
+// buff更新
+message BuffUpdateMessage {
+    optional int32 buff_type   = 1;    // buff类型
+    optional int32 rounds      = 2;    // 持续回合
+    optional int32 update_type = 3;    // 更新类型 1, 移除 2, 新增 3, 覆盖
+}
+
+// 战斗
+message BattleDetailsMessage {
+    optional BattleMessage battle_message               = 1;    // 战场信息
+    optional BattleResultMessage battle_result          = 2;    // 战斗结果
+    optional bool win                                   = 3;    // 是否挑战胜利
+    optional DamageTakenMeterMessage damage_taken_meter = 4;    // 受到伤害统计
+}
+
+// 受到伤害统计
+message DamageTakenMeterMessage {
+    repeated DamageTakenMessage damage_taken  = 1;    // 受到伤害
+}
+
+// 受到伤害
+message DamageTakenMessage {
+    optional int32 unit_position = 1;    // 单位位置
+    optional int64 damage_taken  = 2;    // 受到伤害
+}
+
+// 战场技能 
+message BattleSkillMessage {
+    optional int32 skill_id    = 1;    // 技能id
+    optional int32 skill_level = 2;    // 技能等级
+}
+
+// 经理战场信息
+message ManagerBattleMessage {
+    optional int32 index               = 1;    // 位置
+    optional int32 config_id           = 2;    // 配置id
+    optional int32 level               = 3;    // 等级
+    optional int32 talent_level        = 4;    // 天赋等级
+    optional int32 star                = 5;    // 星级
+    optional int32 battle_power        = 7;    // 战力
+    repeated BattleSkillMessage skills = 8;    // 战场技能
+    optional int32 quality             = 9;    // 品质
+}
+
+
+// 关卡信息请求
+message BarrierMessage_Req_135010 {
+}
+
+// 关卡信息返回
+message BarrierMessage_Resp_135010 {
+    optional int32 chapter_progress = 1;    // 章节进度 (关卡id)
+    optional bool receive_reward    = 3;    // 当前章节是否已领取奖励
+}
+
+// 挑战关卡请求
+message BarrierBattle_Req_135011 {
+}
+
+// 挑战关卡返回
+message BarrierBattle_Resp_135011 {
+    optional BattleDetailsMessage battle = 1;    // 战斗
+    optional int32 barrier_id            = 2;    // 关卡id
+    repeated ValuesMessage reward        = 3;    // 奖励
+    optional RewardsMessage rewards      = 4;    // 实际获得
+}
+
+// 领取关卡章节奖励请求
+message ReceiveBarrierChapterReward_Req_135013 {
+    optional int32 chapter_id = 1;    // 章节id
+}
+
+// 领取关卡章节奖励返回
+message ReceiveBarrierChapterReward_Resp_135013 {
+    optional int32 chapter_id = 1;    // 章节id
+}

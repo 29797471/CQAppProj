@@ -1,0 +1,133 @@
+syntax = "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "TradeProtocol";
+
+//现价时间线结构
+message MaterialPriceLine
+{
+	optional int32 time = 1;
+	optional int32 price = 2; //价格 放大 1000 倍
+}
+
+//原料个人信息
+message MaterialInfo
+{
+	required int32 materialId = 1;
+    required int64 costPrice=2;	//成本价格
+    required int64 haveCount=3;	//持有量
+}
+
+//原料现价信息
+message MaterialPrice
+{
+	optional int32 materialId = 1;
+	optional int32 price = 2;
+}
+
+//获取港口信息
+message Port_Req_116001
+{
+	required int32 portId = 1;//港口id(配置表对应的)
+}
+
+//返回港口信息
+message Port_Resp_116001
+{
+	required int32 portId = 1;
+	repeated MaterialPriceLine dataList = 2;
+    required int32 price=3;		//市场现价
+    required int32 percentK=4;	//看涨率(放大1000倍)
+	required int32 arrayCount = 5;//每次买入量
+	optional int32 correctRise = 6;//修正值(放大1000倍)
+}
+
+//原料运输结构
+message MaterialTransport
+{
+	required int32 portId = 1;//港口id
+	required int32 count = 2;//数量
+	required int32 arriveTime = 3;//到达时间戳
+}
+
+//获取正在运输的原料和价格刷新时间
+message MaterialTransportList_Req_116002
+{
+}
+
+//返回正在运输的原料和价格刷新时间
+message MaterialTransportList_Resp_116002
+{
+	repeated MaterialTransport list = 1;
+	optional int32 passRefreshTime 	= 2;//过去的刷新时间
+}
+
+//购买原料
+message BuyMaterial_Req_116003
+{
+	required int32 portId 			= 1;//港口id
+	optional bool  isGuideState 	= 2;// true 指引状态
+	optional int32 unit	  			= 3; // 几个基础单位
+}
+
+//返回原料购买成功
+message BuyMaterial_Resp_116003
+{
+	required int32 portId = 1;//港口id
+}
+
+//请求个人相关所有原料信息
+message GetMaterialInfo_Req_116004
+{
+}
+
+//返回请求个人相关所有原料信息
+message GetMaterialInfo_Resp_116004
+{
+	repeated MaterialInfo info = 1;
+	required int32 tradeTimes = 2;//已贸易次数
+}
+
+//获取当前市场原料的现价
+message GetNowMaterialPrice_Req_116007
+{
+	required int32 materialId = 1;
+}
+
+//返回当前市场原料的现价
+message GetNowMaterialPrice_Resp_116007
+{
+	required MaterialPrice info = 1;
+}
+
+
+//获取所有港口原料价格列表
+message PortPriceList_Req_116008
+{
+}
+
+//返回所有港口原料价格列表
+message PortPriceList_Resp_116008
+{
+	repeated MaterialPrice list = 1;
+}
+
+//卖原料
+message SellMaterial_Req_116009
+{
+	optional int32 materialId 		= 1;
+	optional int32 count 			= 2;
+	optional bool  isGuideState 	= 3;
+}
+
+//单个原料信息刷新
+message UpdateMaterial_Resp_116009
+{
+	optional MaterialInfo info = 1;
+}
+
+//获取贸易奖励银币
+message GetRewardSilver_Req_116010{
+}
+message GetRewardSilver_Resp_116010{
+	optional int32 silver	= 1;//获取银币数量
+}

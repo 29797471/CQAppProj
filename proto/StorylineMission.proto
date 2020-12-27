@@ -1,0 +1,54 @@
+syntax = "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "StorylineMissionProtocol";
+
+// 主线任务请求
+message StorylineMission_Req_134001 {
+    
+}
+
+// 主线任务返回
+message StorylineMission_Resp_134001 {
+    repeated SectionMissionMessage sections = 2;    // 节
+}
+
+
+// 节
+message SectionMissionMessage {
+    optional int32 section_id            = 1;    // 节id
+    optional int64 progress              = 2;    // 进度
+    optional int32 state 				 = 3;    // 0 未完成 1可领取 
+	optional int64 value 				 = 4;// 目标值
+}
+
+
+
+// 领取节任务奖励请求
+message ReceiveSectionMissionReward_Req_134003 {
+    optional int32 section_id = 1;    // 节id  
+}
+
+// 领取节奖励返回
+message ReceiveSectionMissionReward_Resp_134003 {
+    optional int32 section_id = 1;    // 节id
+}
+
+// 推送节任务(任务发生变化)
+message PushSectionMission_Resp_134004 {
+    repeated SectionMissionMessage sections = 1;    // 节
+}
+
+
+
+
+
+//查看任务的增加进度
+message UpdateProgress_Req_134005 {
+	required string key = 1;//任务类型
+	optional int32 condition = 2;
+	optional int32 subCondition = 3;
+}
+
+message UpdateProgress_Resp_134005 {
+	
+}

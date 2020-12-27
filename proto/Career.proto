@@ -1,0 +1,21 @@
+syntax = "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "CareerProtocol";
+
+message CareerProgress {
+    optional int32       id = 1;  // id
+    optional int64 progress = 2;  // 进度
+}
+
+// 生涯
+message GetCareer_Req_129001 {
+    
+}
+
+message GetCareer_Resp_129001 {
+    repeated CareerProgress progress = 1;
+}
+
+message PushCareer_Resp_129002 {
+    repeated CareerProgress progress = 1;
+}

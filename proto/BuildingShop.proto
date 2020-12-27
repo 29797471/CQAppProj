@@ -1,0 +1,446 @@
+syntax = "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "BuildingShopProtocol";
+import "Role.proto";
+import "Common.proto";
+import "Values.proto";
+import "Battle.proto";
+import "Manager.proto";
+
+// 店铺信息
+message ShopListElem {
+    optional int64 building_id                      = 1;    // 建筑id
+    optional int32 building_type                    = 2;    // 建筑类型
+    optional int64 map_id                           = 3;    // 地图id 
+    optional float local_x                          = 5;    // X坐标
+    optional float local_y                          = 6;    // Y坐标
+    optional int32 direction                        = 7;    // 方向
+    optional int32 level                            = 8;    // 等级
+    optional int32 star                             = 9;    // 星级
+    optional int32 daily_profit                     = 10;   // 日利润
+    optional int32 traffic                          = 11;   // 客流量
+    optional int32 shop_addition                    = 12;   // 店铺加成(千分比)
+    optional int32 competitive_power                = 13;   // 竞争力(千分比)
+    repeated ManagerSlot manager_slots              = 14;   // 经理
+    optional int32 manager_manage_addition          = 15;   // 经理经营加成(千分比)
+    optional int32 shop_level_addition              = 16;   // 店铺等级加成(千分比)
+    optional int32 environment_addition             = 17;   // 环境加成(千分比)
+    optional bool exist_competition                 = 18;   // 是否存在竞争
+    optional bool is_activated                      = 19;   // 是否激活
+    optional int32 total_traffic                    = 20;   // 总客流量（各项人口之和）                     
+    optional bool is_undeployed                     = 21;   // 是否收起
+    optional int32 traffic_max                      = 22;   // 客流上限
+    optional int32 price_marketing_grade            = 23;   // 价格营销档次
+    optional int32 adjust_price_marketing_cd        = 24;   // 调整价格营销cd
+    optional int32 undeploy_time                    = 32;   // 收起时间
+    optional int32 map_type                         = 36;   // 地图配置id
+    optional int32 map_index                        = 37;   // 同类型地图索引
+    optional int32 daily_profit_influence           = 39;   // 利润影响(千分比) 
+    optional int32 supply_factory_competitive_power = 40;   // 供货工厂竞争力(千分比)
+    optional int32 manager_competitive_power        = 41;   // 经理竞争能力(千分比)
+    optional int32 industry_brand_competitive_power = 42;   // 行业品牌竞争力(千分比)
+    optional int32 clan_addition                    = 43;   // 商会加成(千分比)
+    optional int32 city_title_addition              = 44;   // 城市冠名加成(千分比)
+    optional int32 guild_appoint_addition           = 45;   // 行会任命加成(千分比)
+    optional int32 industry_representative_addition = 46;   // 行业代表加成(千分比)
+    optional int32 industry_awards                  = 47;   // 行业嘉奖(千分比)
+    optional int32 industry_sanction                = 48;   // 行业制裁(千分比)
+    optional int32 guild_chairman_addition          = 49;   // 行会主席加成(千分比)
+    optional int32 guild_chairman_awards            = 50;   // 行会主席嘉奖(千分比)
+    optional int32 guild_chairman_sanction          = 51;   // 行会主席制裁(千分比)
+    repeated GuildBuff industry_buffs               = 52;   // 行业嘉奖制裁buff
+    repeated GuildBuff guild_chairman_buffs         = 53;   // 行会主席嘉奖制裁buff
+    optional int32 vip_addition                     = 54;   // vip加成(千分比)
+    optional int32 chains_addition                  = 55;   // 连锁加成(千分比)
+    optional int32 consortium_addition              = 56;   // 联营加成(千分比)
+    optional int32 role_skill_goods_price_addition  = 57;   // 主角技能货物售价加成(千分比) 
+    optional int32 shop_cooperation_addition        = 58;   // 店铺合作加成(千分比) 
+    optional int32 factory_product_addition         = 59;   // 新品加成(千分比) 
+    optional int32 head_title_addition              = 60;   // 头衔加成(千分比) 
+    optional int32 title_addition                   = 62;   // 称号加成(千分比)
+    optional int32 id_card_addition                 = 64;   // 身份卡加成(千分比)
+    optional int32 temporary_cooperation_addition   = 65;   // 临时合作加成(千分比)
+    optional int32 star_addition                    = 66;   // 星级加成(千分比)
+    optional int32 avg_competitive_power            = 69;   // 平均竞争力(千分比)
+    optional int32 clan_fight_addition              = 70;   // 商会竞技加成(千分比)
+    optional int32 cut_supply_end_time              = 71;   // 断供结束时间
+    optional int32 sales_promotion_type             = 72;   // 促销类型
+    optional int32 sales_promotion_end_time         = 73;   // 促销结束时间
+    optional bool sales_promotion_harvest_limit     = 74;   // 促销收钱是否上限
+    optional int32 build_state                      = 75;   // 建造状态 0,建造完成 1,建造中 2,升级中
+    optional int32 build_finish_time                = 76;   // 建造完成时间   
+    optional int32 inventory                        = 77;   // 库存
+    optional int32 inventory_upper_limit            = 78;   // 库存上限
+    optional int32 purchase_cd                      = 79;   // 采购cd
+    optional bool bonded                            = 80;   // 是否抵押
+}
+
+// 店铺列表
+message ShopList_Resp_107001 {
+    repeated ShopListElem buildings  = 1;
+}
+
+// 店铺升级请求
+message ShopUpgrade_Req_107002 {
+    optional int64 building_id  = 1; // 建筑id
+    optional int32 cost_type    = 2; // 消耗类型
+}
+
+// 店铺升级返回
+message ShopUpgrade_Resp_107002 {
+    optional int64 building_id      = 1;    // 建筑id
+    optional int32 level            = 2;    // 等级
+}
+
+// 获取店铺收益
+message FetchShopProfit_Req_107003 {
+    optional int64 building_id = 1;    // 建筑id 
+}
+
+message FetchShopProfit_Resp_107003 {
+    optional int64 building_id = 1; // 建筑id 
+    optional int64 profit      = 2; // 收益
+    optional int32 buff        = 3; // buff
+}
+
+// 查看建筑详情信息返回
+message GetShopDetailInfo_Resp_107004 {
+    optional int64 building_id                      = 1;    // 建筑id
+    optional int32 building_type                    = 2;    // 建筑类型
+    optional int64 map_id                           = 3;    // 地图id
+    optional int32 map_type                         = 4;    // 地图配置id
+    optional int32 map_index                        = 5;    // 同类型地图索引
+    optional float local_x                          = 7;    // X坐标
+    optional float local_y                          = 8;    // Y坐标
+    optional int32 level                            = 9;    // 等级
+    optional int32 star                             = 10;   // 星级
+    optional int32 daily_profit                     = 11;   // 日利润
+    optional int32 traffic                          = 12;   // 客流量
+    optional int32 shop_addition                    = 13;   // 店铺加成(千分比)
+    optional int32 competitive_power                = 14;   // 竞争力(千分比)
+    optional RoleHeadMessage owner                  = 15;   // 拥有者
+    optional int32 radius                           = 16;   // 影响半径
+    repeated ShopManagerInfo manager                = 20;   // 店铺经理
+    optional string brand_name                      = 21;   // 品牌名字
+    optional int32 manager_manage_addition          = 22;   // 经理经营加成(千分比)
+    optional int32 shop_level_addition              = 23;   // 店铺等级加成(千分比)
+    optional int32 environment_addition             = 24;   // 环境加成(千分比)
+    optional bool is_activated                      = 25;   // 是否激活
+    optional int32 traffic_max                      = 28;   // 客流上限
+    optional bool is_undeployed                     = 39;   // 是否收起
+    optional bool success                           = 41;   // 是否成功
+    optional int32 daily_profit_influence           = 42;   // 利润影响(千分比) 
+    optional int32 clan_addition                    = 43;   // 商会加成(千分比)
+    optional int32 city_title_addition              = 44;   // 城市冠名加成(千分比)
+    optional int32 guild_appoint_addition           = 45;   // 行会任命加成(千分比)
+    optional int32 industry_representative_addition = 46;   // 行业代表加成(千分比)
+    optional int32 industry_awards                  = 47;   // 行业嘉奖(千分比)
+    optional int32 industry_sanction                = 48;   // 行业制裁(千分比)
+    optional int32 guild_chairman_addition          = 49;   // 行会主席加成(千分比)
+    optional int32 guild_chairman_awards            = 50;   // 行会主席嘉奖(千分比)
+    optional int32 guild_chairman_sanction          = 51;   // 行会主席制裁(千分比)
+    repeated GuildBuff industry_buffs               = 52;   // 行业嘉奖制裁buff
+    repeated GuildBuff guild_chairman_buffs         = 53;   // 行会主席嘉奖制裁buff
+    optional int32 vip_addition                     = 54;   // vip加成(千分比)
+    optional int32 chains_addition                  = 55;   // 连锁加成(千分比)
+    optional int32 consortium_addition              = 56;   // 联营加成(千分比)
+    optional int32 role_skill_goods_price_addition  = 57;   // 主角技能货物售价加成(千分比) 
+    optional int32 shop_cooperation_addition        = 58;   // 店铺合作加成(千分比) 
+    optional int32 factory_product_addition         = 59;   // 工厂产品加成(千分比) 
+    optional int32 head_title_addition              = 60;   // 头衔加成(千分比) 
+    optional int32 title_addition                   = 61;   // 称号加成(千分比)
+    optional int32 id_card_addition                 = 63;   // 身份卡加成(千分比)
+    optional int32 temporary_cooperation_addition   = 64;   // 临时合作加成(千分比)
+    optional int32 star_addition                    = 65;   // 星级加成(千分比)
+    optional int32 satisfaction                     = 66;   // 满意度
+    optional int64 salary                           = 67;   // 店铺薪酬   
+    optional int32 clan_fight_addition              = 68;   // 商会竞技加成(千分比)
+    repeated int32 joint_consortium                 = 69;   // 已联营店铺类型
+    optional int32 cut_supply_end_time              = 70;   // 断供结束时间
+    optional string cut_supply_executor_nick        = 71;   // 断供者角色名
+    optional int32 inventory                        = 72;   // 库存
+    optional int32 inventory_upper_limit            = 73;   // 库存上限
+}
+
+// 店铺经理信息
+message ShopManagerInfo {
+    optional int64 id                 = 1;    // 唯一id
+    optional int32 config_id          = 2;    // 配置id
+    optional int32 level              = 3;    // 等级
+    optional int32 star               = 4;    // 星级
+    optional int32 talent             = 5;    // 天赋
+    optional int32 talent_level       = 6;    // 天赋等级
+    optional int32 color              = 7;    // 品质
+    optional int32 competitive_power  = 8;    // 竞争能力(千分比)
+    optional int32 index              = 9;    // 槽位
+    repeated SkillMsg skills          = 10;   // 技能信息
+    optional int32 loyalty            = 11;   // 忠诚度 
+    optional int64 salary             = 12;   // 日薪
+}
+
+// 店铺竞争信息请求
+message GetShopCompetitionInfo_Req_107006 {
+    optional int64 building_id = 1;    // 建筑id
+}
+
+// 店铺竞争信息返回
+message GetShopCompetitionInfo_Resp_107006 {
+    optional int32 competitive_power                    = 1;    // 竞争力(千分比)
+    optional int32 supply_factory_competitive_power     = 2;    // 供货工厂竞争力(千分比)
+    optional int32 manager_competitive_power            = 3;    // 经理竞争能力(千分比)
+    optional int32 industry_brand_competitive_power     = 4;    // 行业品牌竞争力(千分比)
+    optional int32 traffic_max                          = 6;    // 客流上限
+    optional int32 excepted_total_traffic               = 7;    // 预计总客流
+    optional int32 radiation_traffic                    = 8;    // 辐射街区人口
+    optional int32 tourism_add_traffic                  = 9;    // 旅游建筑增加人口
+    optional int32 competition_reduce_traffic           = 10;   // 竞争关系减少客流
+    optional int32 factory_reduce_traffic               = 11;   // 工厂减少客流
+    repeated ShopInfoCompetitive shop_competitive       = 12;   // 竞争店铺
+    optional int64 supply_factory_building_id           = 13;   // 供货工厂建筑id
+    optional int32 landmark_traffic                     = 14;   // 地标建筑人口
+    optional int32 port_add_traffic                     = 15;   // 港口增加人口
+    optional int32 airline_add_traffic                  = 16;   // 航线增加人口
+    optional int32 company_building_traffic             = 20;   // 公司大楼人口
+    optional int32 visited_add_traffic                  = 21;   // 被拜访增加人口
+    optional int32 tourism_industry_traffic             = 22;   // 旅游建筑行业人口
+}
+
+// 竞争店铺
+message ShopInfoCompetitive {
+    optional int64 building_id        = 1;    // 建筑id
+    optional int32 building_type      = 2;    // 建筑类型
+    optional int64 map_id             = 3;    // 地图id 
+    optional float local_x            = 5;    // X坐标
+    optional float local_y            = 6;    // Y坐标
+    optional int32 competitive_power  = 7;    // 竞争力(千分比)
+    optional int32 competitive_traffic= 8;    // 竞争客流
+    optional string owner_nick        = 9;    // 归属玩家名
+    optional int32 level              = 10;   // 等级
+}
+
+// 推送店铺更新(包括建造)
+message PushShopUpdates_Resp_107014 {
+    repeated ShopListElem buildings = 1;    // 店铺
+}
+
+// 查看建筑简要信息返回
+message GetShopBriefInfo_Resp_107015 {
+    optional int64 building_id               = 1;    // 建筑id
+    optional int32 building_type             = 2;    // 建筑类型
+    optional RoleHeadMessage owner           = 3;    // 拥有者
+    optional float key_info                  = 6;    // 关键信息
+    optional int32 building_level            = 7;    // 建筑等级
+    optional int32 traffic_max               = 8;    // 客流上限
+    optional int32 traffic                   = 9;    // 客流
+    optional int32 competitive_power         = 19;   // 竞争力(千分比)
+    optional int32 environment_addition      = 20;   // 环境加成(千分比)
+    repeated ManagerSlot manager_slots       = 21;   // 经理
+    optional int32 chains_addition           = 22;   // 连锁加成(千分比)
+    optional int32 consortium_addition       = 23;   // 联营加成(千分比)
+}
+
+// 快速恢复满意度
+message ShopFastRecoverSatisfaction_Req_107016 {
+    optional int64 bid = 1; // 建筑id
+}
+
+message ShopFastRecoverSatisfaction_Resp_107016 {
+    optional int64 bid          = 1; // 建筑id
+    optional int32 satisfaction = 2; // 满意度
+}
+
+// 调整价格营销
+message ShopAdjustPriceMarketing_Req_107017 {
+    optional int64 bid          = 1; // 建筑id
+    optional int32 grade        = 2; // 档次
+}
+
+message ShopAdjustPriceMarketing_Resp_107017 {
+    optional int64 bid          = 1; // 建筑id
+    optional int32 grade        = 2; // 档次
+}
+
+// 尝试调整价格营销
+message ShopTryAdjustPriceMarketing_Req_107018 {
+    optional int64 bid          = 1; // 建筑id
+    optional int32 grade        = 2; // 档次
+}
+
+message ShopTryAdjustPriceMarketing_Resp_107018 {
+    optional int64 bid               = 1; // 建筑id
+    optional int32 grade             = 2; // 档次
+    optional int32 daily_profit      = 3; // 日利润
+    optional int32 competitive_power = 4; // 竞争力(千分比)
+}
+
+// 店铺尝试升级
+message ShopTryUpgrade_Req_107028 {
+    optional int64 building_id = 1;    // 建筑id
+    optional int32 level       = 2;    // 等级
+}
+
+message ShopTryUpgrade_Resp_107028 {
+    optional int64 building_id           = 1;    // 建筑id
+    optional int32 level                 = 2;    // 等级
+    optional int32 daily_profit          = 3;    // 日利润
+    optional int32 traffic_max           = 4;    // 客流上限
+    optional int32 shop_level_addition   = 5;    // 店铺等级加成(千分比)
+    optional int32 inventory_upper_limit = 6;    // 库存上限
+}
+
+// 尝试任命经理
+message ShopTryAppointManager_Req_107029 {
+    optional int64 building_id = 1;    // 建筑id
+    optional int64 manager_id  = 2;    // 经理id
+    optional int32 index       = 3;    // 位置
+}
+
+message ShopTryAppointManager_Resp_107029 {
+    optional int64 building_id               = 1;    // 建筑id
+    optional int32 manager_manage_addition   = 2;    // 经理经营加成(千分比)
+    optional int32 shop_addition             = 3;    // 店铺加成(千分比)
+    optional int32 competitive_power         = 4;    // 竞争力(千分比)
+    optional int32 competition_reduce_traffic= 5;    // 竞争关系减少客流
+    optional int32 role_daily_profit_update  = 6;    // 玩家日利润变化值
+}
+
+// 快速升级
+message ShopRapidUpgrade_Req_107033 {
+    optional int64 bid          = 1; // 建筑id
+    optional int32 cost_type    = 2; // 消耗类型
+}
+
+message ShopRapidUpgrade_Resp_107033 {
+    optional int64 bid          = 1; // 建筑id
+}
+
+// 店铺升星
+message ShopUpStar_Req_107035 {
+    optional int64 building_id = 1; // 建筑id
+    optional int32 cost_type   = 2; // 消耗类型
+}
+
+message ShopUpStar_Resp_107035 {
+    optional int64 building_id = 1; // 建筑id
+    optional int32 star        = 2; // 星级
+}
+
+// 店铺尝试升星
+message ShopTryUpStar_Req_107036 {
+    optional int64 building_id = 1; // 建筑id
+    optional int32 star        = 2; // 星级
+}
+
+message ShopTryUpStar_Resp_107036 {
+    optional int64 building_id   = 1;    // 建筑id
+    optional int32 star          = 2;    // 星级
+    optional int32 daily_profit  = 3;    // 日利润
+    optional int32 star_addition = 4;    // 店铺星级加成(千分比)
+}
+
+// 获取打击店铺信息
+message GetPreStrikeShopInfo_Req_107040 {
+    optional int64 bid = 1;  // 建筑id
+}
+
+message GetPreStrikeShopInfo_Resp_107040 {
+    optional int64 bid                     = 1; // 建筑id
+    optional int32 building_type           = 2; // 建筑类型
+    optional int32 satisfaction            = 3; // 满意度
+    optional RoleHeadMessage defender_head = 4; // 守方头像
+}
+
+// 打击店铺
+message StrikeShop_Req_107041 {
+    optional int64 bid = 1; // 建筑id 
+}
+
+message StrikeShop_Resp_107041 {
+    optional int64 bid                          = 1; // 建筑id 
+    optional BattleDetailsMessage battle        = 2; // 战斗
+    optional int32 defender_satisfaction_reduce = 4; // 守方满意度下降
+    optional int32 attacker_morale_reduce       = 5; // 攻方士气下降
+    optional bool remove                        = 6; // 是否拆除成功
+}
+
+// 获取店铺商业对手
+message ListShopCompetitors_Req_107042 {
+    optional int32 building_type = 1;    // 建筑类型
+}
+
+message ListShopCompetitors_Resp_107042 {
+    optional int32 building_type               = 1; // 建筑类型
+    repeated ShopCompetitorMessage competitors = 2; // 对手
+}
+
+message ShopCompetitorMessage {
+    optional RoleHeadMessage role_head = 1; // 对手信息
+    optional int32 competitive_power   = 2; // 竞争力(千分比)
+}
+
+// 店铺收钱
+message ShopHarvest_Resp_107038 {
+    optional int64 bid                                 = 1; // 建筑id
+    repeated ValuesMessage harvest                     = 2; // 获得
+    optional int32 buff                                = 3; // buff
+}
+
+// 店铺促销
+message ShopSalesPromote_Req_107043 {
+    optional int64 bid        = 1; // 建筑id
+    optional int32 product_id = 2; // 产品id
+}
+
+message ShopSalesPromote_Resp_107043 {
+    optional ShopSalesPromotionMessage sales_promotion = 1;
+}
+
+// 店铺促销信息
+message ShopSalesPromotionMessage {
+    optional int64 bid        = 1; // 建筑id
+    optional int32 product_id = 2; // 产品id
+    optional int32 count      = 3; // 促销次数
+    optional int32 cd         = 4; // 促销冷却时间
+}
+
+// 店铺促销信息列表
+message ListShopSalesPromotionMessage_Resp_107044 {
+    repeated ShopSalesPromotionMessage sales_promotion = 1;
+}
+
+// 推送玩家店铺促销信息
+message PushRoleShopSalesPromotionInfo_Resp_107045 {
+    optional int32 remain_count = 1; // 剩余次数
+}
+
+// 店铺采购
+message ShopPurchase_Req_107046 {
+    optional int32 purchase_type = 1; // 采购方式
+    repeated int64 building_id   = 2; // 建筑id
+}
+
+message ShopPurchase_Resp_107046 {
+    
+}
+
+// 店铺采购秒cd
+message ShopPurchaseClearCd_Req_107047 {
+    repeated int64 building_id   = 1; // 建筑id
+}
+
+message ShopPurchaseClearCd_Resp_107047 {
+    
+}
+
+// 推送店铺库存更新
+message PushShopInventoryUpdate_Resp_107048 {
+    repeated ShopInventoryMessage shop_inventory = 1; // 店铺库存
+}
+
+// 店铺库存
+message ShopInventoryMessage {
+    optional int64 building_id           = 1; // 建筑id
+    optional int32 inventory             = 2; // 库存
+    optional int32 inventory_upper_limit = 3; // 库存上限
+    optional int32 purchase_cd           = 4; // 采购cd
+}

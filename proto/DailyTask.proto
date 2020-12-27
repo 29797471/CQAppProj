@@ -1,0 +1,40 @@
+syntax = "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "DailyTaskProtocol";
+
+//
+
+message DailyTask {
+    optional int32 task_id            = 1;    // 任务id
+    optional int32 progress              = 2;    // 进度
+    optional int32 state = 3;    // 0 未完成 1可领取 2已领取
+}
+//任务列表
+message DailyTaskList_Req_142001{
+}
+
+message DailyTaskList_Resp_142001{
+	repeated DailyTask list = 1;
+	repeated int32 received_ids = 2;//领取宝箱id 
+}
+
+//任务领取
+message ReceiveTask_Req_142002{
+	optional int32 task_id            = 1;    // 任务id
+}
+message ReceiveTask_Resp_142002{
+	optional int32 task_id            = 1;    // 任务id
+}
+
+//完成推送
+message PushFinishTask_Resp_142003{
+	optional int32 task_id            = 1;    // 任务id
+}
+//宝箱领取
+message ReceiveBox_Req_142004{
+	optional int32 box_id = 1;
+}
+
+message ReceiveBox_Resp_142004{
+	optional int32 box_id = 1;
+}

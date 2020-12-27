@@ -1,0 +1,52 @@
+syntax = "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "DiaryProtocol";
+
+// 日记信息
+message Diary {
+    optional int64 id		= 1; // 序号
+	optional int32 type		= 2; // 类型
+    optional int32 time	    = 3; // 时间
+    repeated string params	= 4; // 参数列表
+}
+
+// 获取日记列表
+message ListDiary_Req_164001 {
+
+}
+message ListDiary_Resp_164001 {
+	repeated Diary list		= 1; // 日记信息列表
+}
+
+// 登录时推送(分批)
+message PushDiaryList_Resp_164002 {
+	repeated Diary list		= 1; // 日记信息列表
+}
+
+// 新增记录时推送
+message PushDiary_Resp_164003 {
+	optional Diary diary	= 1; // 日记信息
+}
+
+// 1.公司升级           公司等级
+// 2.创建品牌           品牌类型、品牌名称
+// 3.品牌升级           品牌类型、品牌名称、品牌等级
+// 4.修建店铺           建筑类型、店铺数量
+// 5.修建公益建造        建筑类型
+// 6.修建旅游建筑        建筑类型
+// 7.聘用秘书           秘书类型
+// 8.主角头衔升级        头衔等级
+// 9.主角技能            主角技能类型
+// 10.技能升级          主角技能类型、主角技能等级
+// 11.加入商会          商会名称
+// 12.商会升级          商会名称、商会等级
+// 13.修建商会建筑        商会名称、建筑类型
+// 14.解锁飞机场         无
+// 15.解锁港口          港口类型、解锁方式(1时间解锁, 2金币解锁)
+// 16.股权融资          放出的股本、当前利润、预计获得G币
+// 17.股权回购          回购的股本、当前利润、消耗的G币
+// 18.公司上市          上市时的利润、融资G币、放出股本
+// 19.获取员工数         员工总数
+// 20.任命经理数         任命经理总数
+	 
+	 

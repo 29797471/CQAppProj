@@ -1,0 +1,88 @@
+syntax = "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "StockProtocol";
+import "Role.proto";
+
+message HoldingStockRole{
+	optional RoleHeadMessage info 	    = 1;    // 玩家信息
+	optional int32 hold_shares          = 2;    // 持仓
+	optional StockUserType type			= 3;
+	optional int64 back_price 			= 4; //回购价格
+	optional StockSource source			= 5;
+}
+
+//股东类型
+enum StockUserType{
+	ROLE  		= 1;//玩家
+    MVP   		= 2;//系统回收
+    ANGEL 		= 3;//天使投资人
+}
+enum StockSource{
+	ANGEL_STOCK	= 1;
+	LIST		= 2;
+	FINANCE		= 3;
+	MARKET		= 4;
+}
+
+//我的股票占股信息
+message MyStockDistribution_Req_171001 {
+}
+
+message MyStockDistribution_Resp_171001 {
+	optional int64 stock_id 				= 1;	// 股票id
+	optional string stock_code 				= 2;	// 股票代码
+	optional int32 config_id 				= 3;	// 上市配置表id(增发阶段)
+	optional int64 price 					= 4;	//现价（1股价格）
+	repeated HoldingStockRole roleHoldings 	= 5; 	//玩家持股信息
+	optional int32 issue_stock_num 			= 6;	//发行股数
+}
+
+//回购
+message BuyBackStock_Req_171002 {
+	optional int32 num 				= 1; //股数
+	optional int64 rid 				= 2;//被回购的玩家id
+	optional StockSource type		= 3;
+}
+message BuyBackStock_Resp_171002 {
+	optional int32 num 				= 1; //股数
+	optional int64 rid 				= 2;//被回购的玩家id
+	optional StockSource type		= 3;
+}
+
+
+//增资
+message AdditionalShare_Req_171003 {
+	optional int64 cash 		= 1;
+}
+message AdditionalShare_Resp_171003 {
+	optional int64 cash 		= 1;
+}
+
+//分红
+message SendBonus_Req_171004 {
+	optional int64 cash				= 1;
+}
+message SendBonus_Resp_171004 {
+	optional int64 cash				= 1;
+}
+
+//获取公司市值
+message GetSaleValue_Req_171005{
+}
+message GetSaleValue_Resp_171005{
+	optional int64 sale_value	= 1;
+}
+
+//是否可以分红
+message CanBonus_Req_171006{
+}
+message CanBonus_Resp_171006{
+	optional bool result	= 1;
+}
+
+//股权签署
+message StockSign_Req_171007{
+}
+message StockSign_Resp_171007{
+	optional int32 sign_state	= 1;//当前签署
+}

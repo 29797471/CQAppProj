@@ -1,0 +1,19 @@
+syntax = "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "BuildingLandmarkProtocol";
+
+
+message MapBuildingLandmark {
+    optional int64 building_id              = 1;    // 建筑id
+    optional float local_x                  = 2;    // x坐标
+    optional float local_y                  = 3;    // y坐标
+    optional int32 building_type            = 4;    // 建筑类型
+    optional int32 direction                = 5;    // 方向
+    optional bool is_activated              = 6;    // 是否激活
+    optional int64 rid                      = 7;    // 玩家id
+    optional int32 building_progress        = 8;    // 建造进度
+}
+
+message PushMapBuildingLandmarks_Resp_111001 {
+    repeated MapBuildingLandmark landmarks = 1;
+}

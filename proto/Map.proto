@@ -1,0 +1,182 @@
+syntax = "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "MapProtocol";
+import "Road.proto";
+import "Role.proto";
+
+// 地图信息
+message MapTable {
+    optional int32 map_type                 = 1;    // 地图配置id
+    optional int64 map_id                   = 2;    // 地图id
+    optional int32 index                    = 4;    // 同类型地图索引
+    optional int64 rid                      = 5;    // 玩家id
+    repeated int32 opened_fog_ids           = 6;    // 已开迷雾区域id
+}
+
+// 地图建筑信息
+message MapBuildingMessage {
+    optional int64 building_id              = 1;    // 建筑id
+    optional float local_x                  = 2;    // x坐标
+    optional float local_y                  = 3;    // y坐标
+    optional int32 building_type            = 4;    // 建筑类型
+    optional int32 direction                = 5;    // 方向
+    optional bool is_activated              = 6;    // 是否激活
+    optional int64 rid                      = 7;    // 玩家id
+    optional int32 radius                   = 8;    // 影响半径
+    optional int32 traffic                  = 9;    // 影响人口
+    optional int32 build_state              = 10;   // 建造状态 0,建造完成 1,建造中 2,升级中
+    optional int32 build_finish_time        = 11;   // 建造完成时间
+    optional int32 layer                    = 12;   // 层
+    optional int32 level                    = 13;   // 等级
+    optional bool is_undeployed             = 14;   // 是否收起
+    optional int32 undeploy_time            = 15;   // 收起时间
+}
+
+// 地图建筑列表返回
+message MapBuildingList_Resp_103002 {
+    optional int64 map_id                   = 1;    // 地图id
+    optional int32 flag                     = 2;    // 0未完成，1已发完
+    repeated MapBuildingMessage buildings   = 3;    // 建筑列表
+}
+
+// 地图列表信息
+message MapTableList_Resp_103003 {
+    repeated MapTable map_tables            = 1;    // 地图数据
+    optional int64 current_into_map_id      = 2;    // 当前玩家处于的地图
+}
+
+// 返回玩家上次处于的地图
+message GoBackLastIntoMap_Req_103004 {
+    
+}
+
+// 进入地图
+message EnterMap_Req_103007 {
+    optional int64 map_id                   = 1;    // 地图id
+}
+
+message EnterMap_Resp_103007 {
+    optional MapTable map = 1;   // 地图信息
+    optional bool success = 2;   // 是否成功
+}
+
+// 缩略图单个店铺或者建筑状态
+message MiniMapXYInfo {
+    optional float x                    = 1;    // x坐标
+    optional float y                    = 2;    // y坐标
+    optional int32 building_type        = 3;    // 建筑类型
+    optional int32 status               = 4;    // 状态值，1:我的店铺，2:我的建筑，3:竞争店铺，4：其他店铺，5：其他建筑
+    optional int32 direction            = 5;    // 方向
+}
+
+// 缩略图
+message MiniMap_Req_103010 {
+    optional int64 map_id               = 1;    // 地图id
+}
+
+message MiniMap_Resp_103010 {
+    optional int64 map_id               = 1;    // 地图id
+    repeated MiniMapXYInfo buildings    = 2;    // 地图建筑信息
+    repeated Road roads                 = 3;    // 路
+    optional bool isEnd                 = 4;    // 是否结束
+}
+
+// 推送地图建筑更新
+message PushMapBuildingUpdate_Resp_103013 {
+    optional int64 map_id                 = 1;    // 地图id
+    repeated MapBuildingMessage buildings = 2;    // 地块建筑信息
+}
+
+// 拜访玩家请求
+message Visit_Req_103014 {
+    optional int64 rid = 1;    // 玩家id
+}
+
+// 拜访玩家返回
+message Visit_Resp_103014 {
+    optional RoleHeadMessage head_info = 1;   // 玩家信息
+    optional bool is_friend            = 2;   // 是否是好友
+    optional bool can_business_learn   = 3;   // 是否可以商务学习
+}
+
+// 推送被拜访者头像信息
+message PushVisitedRoleHead_Resp_103015 {
+    optional RoleHeadMessage head_info = 1;   // 玩家信息
+}
+
+message MapTableInfo {
+    optional int32 map_type                 = 1;    // 地图配置id
+    optional int64 map_id                   = 2;    // 地图id
+    optional int32 time                     = 4;    // 时间
+}
+
+// 开放与不开放列表
+message AllMapList_Req_103017 {
+
+} 
+
+message AllMapList_Resp_103017 {
+    repeated MapTableInfo map_table_infos = 1;
+}
+
+// 推送地图建筑添加
+message PushMapBuildingAdd_Resp_103018 {
+    optional int64 map_id                 = 1;    // 地图id
+    repeated MapBuildingMessage buildings = 2;    // 地块建筑信息
+}
+
+// 推送地图建筑移除
+message PushMapBuildingRemove_Resp_103019 {
+    optional int64 map_id                 = 1;    // 地图id
+    repeated int64 bids                   = 2;    // 建筑id
+}
+
+// 新增地图推送
+message PushOpenMap_Resp_103020 {
+    optional MapTable map = 1;
+}
+
+// 关闭地图推送
+message PushCloseMap_Resp_103021 {
+    optional int64 map_id = 1;    // 地图id
+}
+
+// 地图设施
+message MapFacilityMessage {
+    optional int32 facility_id    = 1;   // 设施id
+    optional bool is_activated    = 2;   // 是否激活
+    optional int32 build_state    = 4;   // 建造状态 -1，未建造 0,建造完成 1,建造中 
+}
+
+// 地图设施列表返回
+message MapFacilityList_Resp_103025 {
+    optional int64 map_id                  = 1;   // 地图id
+    repeated MapFacilityMessage facilities = 2;   // 设施
+}
+
+// 推送地图设施更新
+message PushMapFacilitiesUpdate_Resp_103026 {
+    optional int64 map_id                  = 1;   // 地图id
+    repeated MapFacilityMessage facilities = 2;   // 设施
+}
+
+// 驱散地图迷雾
+message DispelMapFog_Req_103027 {
+    optional int64 map_id = 1; // 地图id
+    optional int32 fog_id = 2; // 迷雾区域id 
+}
+
+message DispelMapFog_Resp_103027 {
+    optional MapTable map_table = 1;
+}
+
+// 推送地图迷雾开放记录
+message PushMapFogOpenRecord_Resp_103028 {
+    optional int64 map_id           = 1; // 地图id
+    repeated int32 recorded_fog_ids = 2; // 已记录开放的迷雾区域id
+}
+
+// 地图更新推送
+message PushMapUpdate_Resp_103029 {
+    optional MapTable map = 1;
+}

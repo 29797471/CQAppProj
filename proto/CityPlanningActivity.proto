@@ -1,0 +1,67 @@
+syntax = "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "CityPlanningActivityProtocol";
+import "Role.proto";
+
+// 获取城市规划数据
+message GetCityPlanningMessage_Req_144001 {
+    
+}
+
+message GetCityPlanningMessage_Resp_144001 {
+    optional bool completed      = 1;    // 是否已达标
+    optional bool receive_reward = 2;    // 是否已领取奖励
+}
+
+// 查看城市规划排行数据
+message ViewCityPlanningRank_Req_144002 {
+    optional int32 from = 1;
+    optional int32 to   = 2;
+}
+
+message ViewCityPlanningRank_Resp_144002 {
+    repeated CityPlanningRankMessage rank_messages = 1;
+    optional int32 my_rank                         = 2;
+}
+
+// 城市规划排名数据
+message CityPlanningRankMessage {
+    optional RoleHeadMessage role_head = 1;    // 玩家信息
+    optional int32 rank                = 2;    // 排名
+    optional int64 daily_profit        = 3;    // 日利润
+}
+
+// 领取城市规划奖励
+message ReceiveCityPlanningReward_Req_144003 {
+    
+}
+
+message ReceiveCityPlanningReward_Resp_144003 {
+    optional bool receive_reward = 1;    // 是否领取奖励
+}
+
+// 进入城市规划地图
+message EnterCityPlanningMap_Req_144004 {
+    optional int64 rid = 1;
+}
+
+message EnterCityPlanningMap_Resp_144004 {
+    optional RoleHeadMessage role_head  = 1;    // 玩家信息
+    optional int64 target_daily_profit  = 2;    // 达标日利润 
+    optional int64 current_daily_profit = 3;    // 当前日利润
+    optional int32 rank                 = 4;    // 排名
+}
+
+// 推送城市规划地图日利润
+message PushCityPlanningDailyProfit_Resp_144005 {
+    optional int64 map_id               = 1;    // 地图id
+    optional int64 current_daily_profit = 2;    // 当前日利润
+    optional int32 rank                 = 3;    // 排名
+    optional bool completed             = 4;    // 是否已达标
+}
+
+// 查看城市规划建筑简要信息
+message GetCityPlanningBuildingBriefInfo_Req_144006 {
+    optional int64 rid         = 1;    // 玩家id
+    optional int64 building_id = 2;    // 建筑id
+}

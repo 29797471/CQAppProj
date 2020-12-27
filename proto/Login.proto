@@ -1,0 +1,106 @@
+syntax = "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "LoginProtocol";
+
+// 登录请求
+message Login_Req_101001 {
+    optional string openid             = 1; // openid
+    optional int32 time                = 2; // 时间戳秒
+    optional string sign               = 3; // sign
+    optional int32 server_id           = 4; // 服务器id
+    optional int32 device_type         = 5; // 设备类型
+    optional string upush_device_token = 6; // 友盟推送设备token
+    optional int32 share_id            = 7; // 分享id
+    optional string invite_code        = 8; // 推广码
+    optional int64 rid                 = 9; // 角色id
+    optional string extra_data         = 10;// 其他数据(json格式)
+}
+
+// 登录返回
+message Login_Resp_101001 {
+    optional int32 error_code     = 1; // 错误码
+    repeated string error_args    = 2; // 错误码参数
+    optional int64 server_time    = 3; // 服务器时间(时间戳毫秒)
+    optional int32 offset_utc     = 4; // 服务器时间和格林标准时间差(时区差正或者负 单位秒)
+    optional int64 rid            = 5; // 角色id
+    optional string nick          = 6; // 角色名字
+}
+
+// 心跳请求
+message Heartbeat_Req_101002 {
+    
+}
+
+// 心跳返回
+message Heartbeat_Resp_101002 {
+    optional int64 server_time = 1;// 服务器时间(时间戳毫秒)
+}
+
+// 设备类型
+enum DeviceType {
+    OTHER = 0;
+    IOS = 1;
+    ANDROID = 2;
+}
+
+// 创建角色请求
+message Create_Req_101003 {
+    optional string openid          = 1;  // openid
+    optional string name            = 2;  // 名字
+    optional int32 actor            = 3;  // 角色
+    optional string device          = 4;  // 设备唯一码
+    required DeviceType device_type = 5;  // 设备类型
+    optional string platform        = 6;  // 平台 
+    optional string channel         = 7;  // 广告渠道
+    optional int32 server_id        = 8;  // 服务器id
+    optional string server_name     = 9;  // 服务器名
+    optional string head            = 10; // 头像
+    optional int32 share_id         = 11; // 分享id
+    optional string extra_data      = 12; // 其他数据(json格式)
+}
+
+// 创建角色返回
+message Create_Resp_101003 {
+    optional int32 error_code     = 1;// 错误码
+    optional int64 rid            = 2;// 角色rid
+    optional string nick          = 3;// 角色名字
+}
+
+// 获取随机昵称
+message GetRandomName_Req_101004 {
+    optional int32 sex = 1;// 1 男 2女
+}
+message GetRandomName_Resp_101004 {
+    optional string nickName = 1;
+}
+
+// 登陆推送数据结束
+message LoginEnd_Resp_101005 {
+}
+
+// 下线通知
+message NotifyOffline_Resp_101006 {
+    optional int32 error_code  = 1; // 错误码
+    repeated string error_args = 2; // 错误码参数
+}
+
+// 获取玩家角色
+message GetRoleMessages_Req_101007 {
+    optional string openid   = 1; // openid
+    optional int32 server_id = 2; // 服务器id
+    optional int32 time      = 3; // 时间戳秒
+    optional string sign     = 4; // sign
+}
+
+message GetRoleMessages_Resp_101007 {
+    optional int32 error_code  = 1; // 错误码
+    repeated RoleMessage roles = 2; // 角色信息
+}
+
+// 角色信息
+message RoleMessage {
+    optional int64 rid    = 1; // rid
+    optional string nick  = 2; // 名字
+    optional int32 actor  = 3; // 主角
+    optional int32 level  = 4; // 等级
+}

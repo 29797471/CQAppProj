@@ -1,0 +1,61 @@
+syntax = "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "AirportProtocol";
+
+// 航线图
+message GetAirlineMap_Req_117001 {
+    
+}
+
+message GetAirlineMap_Resp_117001 {
+    repeated AirlineDestinationMessage destinations = 1;   // 目的地
+    repeated AirlineMessage airlines                = 2;   // 航线
+}
+
+message AirlineMessage {
+    optional int32 airline_id  = 1; // 航线id
+    optional int64 manager_id  = 2; // 经理
+}
+
+message AirlineDestinationMessage {
+    optional int32 map_type             = 1;    // 地图配置id
+    optional int64 map_id               = 2;    // 地图id
+    optional int32 shop_count           = 3;    // 店铺数量
+}
+
+// 经理任命航线
+message ManagerAppointAirline_Req_117002 {
+    optional int32 airline_id = 1; // 航线id  
+    optional int64 manager_id = 2; // 经理
+}
+
+message ManagerAppointAirline_Resp_117002 {
+    optional AirlineMessage airline = 1;
+}
+
+// 航线猎聘
+message AirlineHunting_Req_117003 {
+	optional int32 cost_type  = 1; // 消耗类型 配置
+	optional int32 airline_id = 2; // 航线id  
+}
+
+message AirlineHunting_Resp_117003 {
+	required bool is_success 	= 1; // 是否成功
+	optional int64 manager_id 	= 2;  //经理id
+	optional int32 airline_id  	= 3;  //航线id  
+	optional int32 num   		= 4;  //失败次数
+}
+
+// 航线猎聘次数
+message AirlineHuntingNum_Req_117004 {
+}
+
+message AirlineHuntingNum_Resp_117004 {
+	repeated AirlineHuntingNum hunting_num = 1; // 猎聘次数信息
+}
+
+// 航线猎聘信息
+message AirlineHuntingNum{
+	optional int32 air_line 	= 1; // 航线
+	optional int32 num 			= 2; // 猎聘次数信息
+}

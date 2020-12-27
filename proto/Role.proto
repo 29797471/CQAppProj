@@ -1,0 +1,284 @@
+syntax = "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "RoleProtocol";
+import "Common.proto";
+import "Values.proto";
+import "MapStructs.proto";
+
+message RoleHeadMessage {
+    optional int64 rid                    = 1;    // 玩家id
+    optional string nick                  = 2;    // 角色名
+    optional int32 actor                  = 3;    // 主角
+    optional int32 level                  = 4;    // 等级
+    optional int32 vip_level              = 5;    // vip等级
+    optional int64 clan_id                = 6;    // 商会id
+    optional string clan_name             = 7;    // 商会名称
+    optional int32 clan_position          = 8;    // 商会职务
+    optional int64 daily_profit           = 9;    // 日利润
+    optional int32 power                  = 10;   // 谈判战力
+    optional bool is_online               = 11;   // 是否在线
+    optional int32 last_offline_time      = 12;   // 最后离线时间
+    optional int32 head_title_level       = 13;   // 头衔等级
+    optional int32 id_card_id             = 14;   // 身份卡
+    optional int32 id_card_end_time       = 15;   // 身份卡过期时间
+    optional int64 family_id              = 16;   // 家族id
+    optional string family_name           = 17;   // 家族名称
+    optional string head                  = 18;   // 头像
+	repeated int32 titles				  = 19;   // 称号列表
+	optional string server_name 		  = 20;   // 服务器名称
+}
+
+// 角色信息
+message RoleInfo_Req_102001 {
+}
+
+// 角色信息
+message RoleInfo_Resp_102001 {
+    optional int64 rid                     = 1;    // 玩家id
+    optional int32 register_time           = 2;    // 注册时间
+    optional string nick                   = 3;    // 角色名
+    optional int32 actor                   = 4;    // 主角
+    optional int64 clan_id                 = 6;    // 商会id
+    optional string clan_name              = 7;    // 商会名称
+    optional int32 listing_config_id       = 8;    // 上市配置id
+    optional int32 buy_vip_gift_mark       = 10;   // 购买vip礼包标识(2进制位)
+    optional int64 cash_reserve            = 11;   // G币储备
+    repeated RoleAttributeValue attributes = 13;   // 属性值
+    repeated GuildBuff buff                = 14;   // buff数据
+    optional int32 head_title_level        = 15;   // 头衔等级
+    optional float silver_speed            = 16;   // 银币速率(个/秒)
+    optional int64 family_id               = 17;   // 家族id
+    optional string family_name            = 18;   // 家族名称
+    optional string head                   = 19;   // 头像
+	optional int32 sign_state		   	   = 20;   // 当前签署id
+}
+
+// 更换头像
+message ChangeHead_Req_102002 {
+    optional string head = 1;
+}
+
+message ChangeHead_Resp_102002 {
+    optional string head = 1;
+}
+
+// 公司升级
+message CompanyUpgrade_Req_102003{  
+    
+}
+message CompanyUpgrade_Resp_102003{  
+    required int32 level                = 1;
+    optional int32 up_rank              = 2;//上升排名
+    repeated RoleHeadMessage ranks      = 3;//附近排名玩家
+    optional int32 first_rank           = 4;//列表第一个排名名次 
+}
+
+// 修改玩家昵称
+message ModifyNickName_Req_102004{
+    required string nickName = 1;
+}
+
+message ModifyNickName_Resp_102004{
+    required string nickName = 1;
+}
+
+// 通用通知消息
+message CommonMessage_Req_102005{
+}
+
+message CommonMessage_Resp_102005{
+    optional MessageData message_data = 1;// 通用消息
+}
+
+// 添加币或道具
+message AddResource_Req_102007 {
+    optional string cmd = 1;   // 指令
+}
+
+message AddResource_Resp_102007 {
+}
+
+// 推送角色信息
+message PushRoleInfo_Resp_102009 {
+    repeated RoleAttributeValue attributes = 1;
+}
+
+message RoleAttributeValue {
+    optional int32 attribute = 1;    // 属性
+    optional int64 value     = 2;    // 值
+}
+
+// 获取玩家名片信息
+message GetBusinessCard_Req_102011 {
+    optional int64 rid = 1;
+}
+
+message GetBusinessCard_Resp_102011 {
+	optional RoleHeadMessage role               = 1;
+    optional int32 daily_profit_rank            = 2;   // 日利润排名
+    optional bool is_shield                     = 3;   // 是否屏蔽 true 屏蔽 false 没有屏蔽
+    optional bool is_friend                     = 4;   // 是否是朋友 true 是朋友 false 不是朋友
+    optional MapDetailsMessage novice_map       = 5;   // 新手图信息
+    optional int32 shop_survey_expire_time      = 6;   // 店铺调查过期时间
+    optional int32 manager_survey_expire_time   = 7;   // 经理调查过期时间
+	
+}
+
+// 推送日利润变化, 只做提示用
+message PushDailyProfitChange_Resp_102012 {
+    optional int64 daily_profit_change = 1;    // 日利润变化量 (正负分别对应增减)
+    optional int64 daily_profit        = 2;    // 日利润
+}
+
+// 奖励推送
+message PushRewards_Resp_102014 {
+    optional RewardsMessage rewards = 1;
+}
+
+// 玩家G币储备推送
+message PushCashReserve_Resp_102015 {
+    optional int64 cash_reserve = 1;    // G币储备
+}
+
+// 获取公司简报
+message GetCompanyBriefReport_Req_102016 {
+    
+}
+
+message GetCompanyBriefReport_Resp_102016 {
+    optional int64 rid                          = 1;  // 玩家id
+    optional int64 income                       = 2;  // 收入
+    optional int64 expenditure                  = 3;  // 支出
+    optional int32 total_staff                  = 4;  // 员工总数
+    optional int32 used_staff                   = 5;  // 已使用员工
+    optional int32 shop_count                   = 6;  // 店铺总数
+    optional int32 shop_addition_avg            = 7;  // 店铺平均加成(千分比)
+    optional int32 shop_traffic_avg             = 8;  // 店铺平均客流
+    optional int32 shop_competitive_power_avg   = 9;  // 店铺平均竞争力(千分比)
+    optional int32 profit_margin_score          = 10; // 利率率评分(千分比)
+    optional int32 manpower_score               = 11; // 人力效率评分(千分比)
+    optional int32 shop_addition_score          = 12; // 平均加成评分(千分比)
+    optional int32 shop_traffic_score           = 13; // 平均客流评分(千分比)
+    optional int32 shop_competitive_power_score = 14; // 平均竞争力评分(千分比)
+	optional int64 assets						= 15; // 公司资产
+	optional int64 liabilities					= 16; // 负债
+	optional int64 net_income					= 17; // 净收入
+    optional int64 goods_cost                   = 18; // 售货成本
+    optional int64 loan_interest                = 19; // 贷款利息
+}
+
+// 设置信息
+message SettingMessage {
+    optional int32 setting_id    = 1;   // 设置id
+    optional int32 setting_value = 2;   // 设置值
+}
+
+// 获取玩家设置
+message GetSettings_Resp_102020 {
+    repeated SettingMessage settings = 1;
+}
+
+// 保存设置请求
+message SaveSettings_Req_102021 {
+    repeated SettingMessage settings = 1;
+}
+
+// 保存设置返回
+message SaveSettings_Resp_102021 {
+    
+}
+
+// 获取利润走势图
+message GetProfitChart_Req_102022 {
+    
+}
+
+message GetProfitChart_Resp_102022 {
+    optional ProfitChartMessage server_avg_profit_chart            = 1;    // 服务器平均利润走势图
+    optional ProfitChartMessage role_profit_chart                  = 2;    // 个人利润当前走势图
+    optional int64 server_avg_profit                               = 3;    // 服务器平均利润
+    optional int64 role_profit                                     = 4;    // 我的当前利润
+}
+
+// 利润走势图
+message ProfitChartMessage {
+    repeated LineChartData data = 1;   
+}
+
+// 模糊查询玩家
+message FuzzySearchRole_Req_102027 {
+    optional string nick = 1;
+}
+
+message FuzzySearchRole_Resp_102027 {
+    repeated RoleHeadMessage roles = 1;
+}
+
+// 推送玩家触发防沉迷游戏时长限制
+message PushAddictionPlayTime_Resp_102028 {
+    optional string platform    = 1;  // 渠道
+    optional int32 playtime     = 2;  // 游戏时长，单位分钟
+    optional int32 is_certified = 3;  // 1已实名 2未实名
+    optional int32 login_type   = 4;  // 1游客模式 2其他账号登录模式
+    optional int32 is_holiday   = 5;  // 1法定假日 2非法定假日
+    optional int32 timestamp    = 6;  // 时间戳
+    optional int32 is_pop       = 7;  // 1弹实名界面 2文字飘窗 3弹防沉迷解除倒计时
+    optional string msg         = 8;  // 文字飘窗内容
+}
+
+// 头衔升级
+message HeadTitleUpgrade_Req_102029 {
+}
+
+message HeadTitleUpgrade_Resp_102029 {
+    optional int32 level = 1;//头衔最新级别
+}
+
+// 推送银币速率
+message PushSilverSpeed_Resp_102030 {
+    optional float silver_speed = 1;   // 银币速率(个/秒)
+}
+
+// 升级拜访留言
+message LeaveMessageAfterUpgradeVisit_Req_102031 {
+    optional int64 rid = 1;
+    optional int32 level = 2;
+    optional int32 message_id = 3;
+}
+
+message LeaveMessageAfterUpgradeVisit_Resp_102031 {
+    
+}
+
+// 获取升级拜访信息
+message GetUpgradeVisitInfo_Req_102032 {
+    optional int64 rid = 1;
+    optional int32 level = 2;
+}
+
+message GetUpgradeVisitInfo_Resp_102032 {
+    optional int64 rid = 1;
+    optional int32 level = 2;
+    optional int32 end_time = 3; // 留言结束时间
+    optional bool left_message = 4; // 是否已留言
+}
+
+//升级条件
+message LevelUpCondition{
+	optional int32 config_id	= 1;
+	optional int64 progress 	= 2;
+	optional int32 state 		= 3;
+}
+//推送升级条件
+message PushLevelUpCondition_Resp_102033 {
+	optional int32 level 			= 1;
+	repeated LevelUpCondition list  = 2;
+}
+
+//开服时间
+message OpenServerTime_Resp_102034 {
+	optional int32 time 			= 1; // 0表示未设置开服时间
+}
+
+
+

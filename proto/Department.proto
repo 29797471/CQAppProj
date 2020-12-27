@@ -1,0 +1,254 @@
+syntax =  "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "DepartmentProtocol";
+import "Common.proto";
+import "Role.proto";
+import "Manager.proto";
+import "Values.proto";
+import "Battle.proto";
+
+message DepartmentInfo{
+    required int32 type =1;//部门类型
+    required int32 level =2;//部门级别
+}
+
+//部门升级
+message DepartmentUpgrade_Req_106001{
+    required int32 type = 1;//部门类型
+}
+message DepartmentUpgrade_Resp_106001{
+    optional int32 level = 1;//部门最终升级
+    required int32 type = 2;//部门类型
+}
+//获取部门列表
+message DepartmentList_Req_106002{
+}
+message DepartmentList_Resp_106002{
+    repeated DepartmentInfo depInfoList = 1;
+}
+
+
+
+//获取币的收入或支出数据
+message CurrencyData_Req_106003{
+    required int32 currency = 1;//1 G币 2 银币
+    required int32 direction = 2;//方向 ，1 收入 2 支出
+}
+message CurrencyData_Resp_106003{
+    repeated LineChartData dataList = 1 ;   
+    required int32 currency = 2;//1 G币 2 银币
+    required int32 direction = 3;//方向 ，1 收入 2 支出
+}
+
+message TypeLineChartData{
+    required int32 type = 1;//EventGroup 或 店铺类型
+    repeated LineChartData dataList = 3 ;
+}
+//获取币支出具体分类的数据/G币收入表
+message ExpenditureTypeData_Req_106004{
+    required int32 currency = 1;//1 G币 2 银币
+    required int32 type = 2;//1 收入 2 支出
+}
+message ExpenditureTypeData_Resp_106004{
+    required int32 type = 1;//0货币  1 G币收入表
+    required int32 currency = 2;//1 G币 2 银币
+    repeated TypeLineChartData dataList = 3 ;
+}
+
+//财务部明细（预计本日支出收入）
+message FinanceDetails_Req_106005 {
+}
+
+message FinanceDetails_Resp_106005 {
+    optional int64 today_expenditure = 1; // 今日预计支出
+    optional int64 manager_salary    = 2; // 经理薪酬
+    optional int64 shop_tax          = 3; // 店铺税收
+    optional int64 staff_salary      = 4; // 员工薪酬
+    optional int64 building_upkeep   = 5; // 建筑维护费
+    optional int64 port_upkeep       = 9; // 港口维护费
+	optional int64 loan_interest 	 = 10;// 贷款利息
+    
+    optional int64 today_income      = 6; // 今日预计收入
+    optional int64 shop_profit       = 7; // 店铺利润
+    optional int64 investment_income = 8; // 投资收入
+}
+
+
+
+
+// 情报部
+
+// 玩家情报信息
+message RoleIntelligence {
+    optional RoleHeadMessage role               = 1;
+    optional int32 shop_survey_expire_time      = 2; // 店铺调查过期时间
+    optional int32 manager_survey_expire_time   = 3; // 经理调查过期时间
+}
+
+// 获取玩家情报信息 (多段返回)
+message ListIntelligence_Req_106006 {
+    optional int32 identify                     = 1; // 标识
+}
+message ListIntelligence_Resp_106006 {
+    optional int32 identify                     = 1; // 标识
+    repeated RoleIntelligence list              = 2; // 玩家情报列表
+    optional bool over                          = 3; // 结束
+}
+
+// 店铺调查
+message SurveyShop_Req_106007 {
+    optional int64 rid                          = 1; // 玩家ID
+}
+message SurveyShop_Resp_106007 {
+    optional int64 rid                          = 1; // 玩家ID
+    optional int32 survey_expire_time           = 2; // 调查过期时间
+}
+
+// 经理调查
+message SurveyManager_Req_106008 {
+    optional int64 rid                          = 1; // 玩家ID
+}
+message SurveyManager_Resp_106008 {
+    optional int64 rid                          = 1; // 玩家ID
+    optional int32 survey_expire_time           = 2; // 调查过期时间
+}
+
+// 店铺信息
+message SurveyShopInfo {
+    optional int64 building_id                  = 1;    // 建筑id
+    optional int32 building_type                = 2;    // 建筑类型
+    optional int64 map_id                       = 3;    // 地图id 
+    optional int32 map_type                     = 4;    // 地图配置id
+    optional float local_x                      = 5;    // X坐标
+    optional float local_y                      = 6;    // Y坐标
+    optional int32 level                        = 7;    // 等级
+    optional int32 star                         = 8;    // 星级
+    optional int32 daily_profit                 = 9;    // 日利润
+    optional int32 traffic                      = 10;   // 客流量
+    optional int32 traffic_max                  = 11;   // 客流量上限
+    optional int32 total_addition               = 12;   // 总加成(千分比)
+    optional int32 satisfaction                 = 13;   // 满意度
+}
+
+// 获取店铺信息
+message ListSurveyShop_Req_106009 {
+    optional int64 rid                          = 1; // 玩家ID
+}
+message ListSurveyShop_Resp_106009 {
+    optional int64 rid                          = 1; // 玩家ID
+    repeated SurveyShopInfo list                = 2; // 店铺信息列表
+}
+
+// 经理信息
+message SurveyManagerInfo {
+    optional int64 id                           = 1; // 唯一id
+    optional int32 config_id                    = 2; // 配置id
+    repeated SkillMsg skills                    = 3; // 技能信息
+    optional int32 level                        = 4; // 等级
+    optional int32 talent                       = 5; // 天赋
+    optional int32 talent_level                 = 6; // 天赋等级
+    optional int32 color                        = 7; // 品质
+    optional int32 star                         = 8; // 星级
+    optional int64 map_id                       = 9; // 地图id 
+    optional int32 map_type                     = 10; // 地图配置id
+    optional float x                            = 11; // x坐标
+    optional float y                            = 12; // y坐标
+    optional int64 building_id                  = 13; // 建筑id
+    optional int32 building_type                = 14; // 建筑类型
+    optional int32 status                       = 15; // 经理状态 0:空闲, 1:在职 
+    optional int32 loyalty 				        = 16; // 忠诚度
+    optional int64 salary                       = 17; // 日薪
+    optional bool is_undeployed                 = 18; // 是否收起
+}
+
+// 获取经理信息 (多段返回)
+message ListSurveyManager_Req_106010 {
+    optional int64 rid                          = 1; // 玩家ID
+    optional int32 identify                     = 2; // 标识
+}
+message ListSurveyManager_Resp_106010 {
+    optional int64 rid                          = 1; // 玩家ID
+    optional int32 identify                     = 2; // 标识
+    repeated SurveyManagerInfo list             = 3; // 经理信息列表
+    optional bool over                          = 4; // 结束
+}
+
+// 准备挖经理
+message PrePoachingManager_Req_106011 {
+    optional int64 manager_id = 1; // 经理id
+}
+
+message PrePoachingManager_Resp_106011 {
+    optional bool success                  = 1; // 是否成功
+    optional int64 manager_id              = 2; // 经理id
+    optional RoleHeadMessage defender_head = 3; // 守方头像
+}
+
+// 挖经理
+message PoachingManager_Req_106012 {
+    optional int64 manager_id = 1; // 经理id
+}
+
+message PoachingManager_Resp_106012 {
+    optional int64 manager_id                       = 1; // 经理id
+    optional bool success                           = 2; // 是否成功
+    optional BattleDetailsMessage battle            = 3; // 战斗
+    optional int32 defender_manager_loyalty_reduce  = 4; // 守方经理忠诚度下降
+    optional int32 attacker_morale_reduce           = 5; // 攻方士气下降
+    optional ManagerValuesMessage manager           = 6; // 挖到的经理
+    optional SurveyManagerInfo pre_poaching_manager = 7; // 准备挖的经理
+}
+
+
+
+
+// 市场部
+
+// 市场部信息
+message MarketInfo {
+    optional int32 type         = 1; // 行业类型
+    optional int32 index        = 2; // 位置
+    optional int64 manager_id   = 3; // 经理ID
+}
+
+// 获取市场部信息列表 (登录时推送)
+message ListMarketInfo_Resp_106013 {
+    repeated MarketInfo list    = 1; // 市场部信息列表
+}
+
+// 任命经理
+message MarketAppointManager_Req_106014 {
+    optional int32 type         = 1; // 行业类型
+    optional int32 index        = 2; // 位置
+    optional int64 manager_id   = 3; // 经理ID
+}
+message MarketAppointManager_Resp_106014 {
+    optional int32 type         = 1; // 行业类型
+    optional int32 index        = 2; // 位置
+    optional int64 manager_id   = 3; // 经理ID
+}
+
+// 猎聘经理
+message MarketHuntingManager_Req_106015 {
+	required int32 type 		= 1; // 类型
+	optional int32 index 		= 2; // 位置
+	optional int32 cost_type 	= 3; // 花费类型
+}
+message MarketHuntingManager_Resp_106015 {
+	required bool is_success 	= 1; // 是否成功
+	optional int64 manager_id 	= 2;  //经理id
+	optional int32 type  	    = 3;  //市场类型
+	optional int32 index		= 4;  //任命的位置
+	optional int32 num   		= 5;  //失败次数
+}
+
+// 猎聘经理次数
+message MarketHuntingManagerNum_Req_106016 {
+    optional int32 type  	    = 1;  //市场类型
+	optional int32 index		= 2;  //任命的位置
+}
+message MarketHuntingManagerNum_Resp_106016 {
+	optional int32 type  	    = 1;  //市场类型
+	optional int32 index		= 2;  //任命的位置
+	optional int32 num   		= 3;  //失败次数
+}

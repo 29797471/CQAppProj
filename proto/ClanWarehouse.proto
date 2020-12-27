@@ -1,0 +1,38 @@
+syntax = "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "ClanWarehouseProtocol";
+
+//物品列表
+message GoodsList_Req_110901{
+}
+
+message GoodsList_Resp_110901{
+	repeated Goods goods_list = 1;
+}
+
+// 物品列表
+message Goods {
+	optional int32 item_id 	= 1; // 物品id
+	optional int32 num 		= 2; // 数量
+}
+
+// 捐献物品
+message DonateGoods_Req_110902 {
+	optional int32 item_id 	= 1; // 物品id
+	optional int32 num 		= 2; // 数量
+}
+
+message DonateGoods_Resp_110902 {
+	optional int32 distribution_point = 1; // 分配点
+}
+
+// 分配
+message DistributionGoods_Req_110903 {
+	optional int64 rid 		= 1; // 分配给谁
+	optional int32 item_id 	= 2; // 物品id
+	optional int32 num 		= 3; // 数量
+}
+
+message DistributionGoods_Resp_110903 {
+	repeated Goods goods_list = 1; // 物品
+}

@@ -1,0 +1,12 @@
+syntax = "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "CdkeyProtocol";
+
+// 兑换
+message Exchange_Req_154001 {
+	optional string code 	= 1; //码 
+}
+
+message Exchange_Resp_154001 {
+    optional int32 code = 1; //0:成功1:兑换失败2:提示再尝试一次3.兑换码已使用
+}

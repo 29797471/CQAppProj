@@ -1,0 +1,46 @@
+syntax = "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "LandmarkFightProtocol";
+import "Role.proto";
+import "Battle.proto";
+
+// 地标层
+message LandmarkFloor {
+	optional int32 floor					= 1; // 层数
+	optional int32 type                     = 2; // 类型 1.玩家 2.机器人
+    optional RoleHeadMessage head_info      = 3; // 玩家信息
+    repeated ManagerBattleMessage defenders = 4; // 阵容
+	optional int32 state					= 5; // 状态 0.可挑战 1.保护期 2.挑战冷却
+	optional int32 time						= 6; // 保护期、挑战冷却解除的时间戳
+}
+
+// 获取地标争夺详情
+message GetLandmarkFight_Req_161001 {
+	optional int64 bid 						= 1; // 建筑id
+}
+message GetLandmarkFight_Resp_161001 {
+	optional int64 bid 						= 1; // 建筑id
+	repeated LandmarkFloor landmark_floors	= 2; // 地标层列表
+	optional int32 power          			= 3; // 我的战力
+}
+
+// 挑战
+message BattleLandmark_Req_161002 {
+	optional int64 bid 						= 1; // 建筑id
+	optional int32 floor 					= 2; // 层数
+}
+message BattleLandmark_Resp_161002 {
+	optional int64 bid 						= 1; // 建筑id
+	optional int32 floor 					= 2; // 层数
+	optional BattleDetailsMessage battle    = 3; // 战斗详情
+}
+
+// 放弃
+message GiveUpLandmark_Req_161003 {
+	optional int64 bid 						= 1; // 建筑id
+	optional int32 floor 					= 2; // 层数
+}
+message GiveUpLandmark_Resp_161003 {
+	optional int64 bid 						= 1; // 建筑id
+	optional int32 floor 					= 2; // 层数
+}

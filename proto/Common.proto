@@ -1,0 +1,41 @@
+syntax = "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "CommonProtocol";
+
+
+// 通用语言消息
+message MessageData {
+	optional int32 message_id = 1; // 消息id
+	optional int32 flag				= 2; // 多段文本筛选
+	repeated string args			= 3; // 参数列表
+}
+
+// 模版
+message MessageTempleteData {
+	repeated MessageData message_prev 	= 1;//前缀
+	repeated MessageData messages  		= 2; // 多段文本
+	repeated MessageData message_end	= 3;//后缀
+}
+
+message LineChartData{
+	optional int32 x = 1;//x轴 时间
+	optional int64 y = 2;//y轴 数值
+}
+
+message ShowTitle{
+	optional int32 configId = 1;//配置id
+	optional int32 index = 2;//位置
+}
+
+message GuildBuff{
+	optional int32 buff_end_time			= 1; //buff结束时间
+	optional int32 buff_type				= 2; //buff类型 嘉奖/制裁
+	optional int64 officer_rid				= 3; //给予buff玩家 rid
+	optional string officer_nick			= 4; //给予buff玩家 昵称
+	optional int32 guild_type				= 5; //行业类型
+}
+
+message ManagerSlot {
+	optional int32 slot       = 1;    // 位置
+	optional int64 manager_id = 2;    // 经理id
+}

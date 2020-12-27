@@ -1,0 +1,47 @@
+syntax = "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "WorldBossProtocol";
+import "Battle.proto";
+import "Values.proto";
+
+// 攻击boss
+message AttackBoss_Req_139001 {
+}
+
+message AttackBoss_Resp_139001 {
+    optional BattleDetailsMessage battle = 1;    // 战斗
+    repeated ValuesMessage reward        = 2;    // 奖励
+    optional RewardsMessage rewards      = 3;    // 实际获得
+}
+
+// 伤害排行榜
+message DamageRank_Req_139002 {
+    optional int32 num  = 1; // 请求多少条排行数据
+}
+
+message DamageRank_Resp_139002 {
+    repeated DamageRank rank = 1;   //排行数据
+}
+
+// 排行数据
+message DamageRank {
+    optional int64 rid          = 1; // rid
+    optional int32 rank         = 2; // 排行
+    optional int64 damage_num   = 3; // 伤害值
+    optional string name        = 4; // 名字
+    optional int32 head         = 5; // 头像
+    optional string clan_name   = 6; // 商会名字
+    optional int32 vip_level    = 7; // vip等级
+}
+
+// boss信息
+message BossMessage_Req_139003 {
+}
+
+message BossMessage_Resp_139003 {
+    optional int32 config_id    = 1; // boss配置id
+    optional int32 num          = 2; // 攻击了多少次
+    optional bool  boss_alive   = 3; // boss存活 true:存活 false:死亡
+	optional int32 rank         = 4; // 排行
+    optional int64 damage_num   = 5; // 伤害值
+}

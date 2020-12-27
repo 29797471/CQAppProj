@@ -1,0 +1,36 @@
+syntax = "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "CharityDonationProtocol";
+import "Role.proto";
+
+// 排名信息
+message CharityRankInfo {
+	optional int32 rank 			= 1; // 名次(1开始)
+	optional int64 donation 		= 2; // 捐款总额
+	optional RoleHeadMessage role 	= 3; // 玩家信息
+}
+
+// 获取排名信息
+message ListCharityRank_Req_160001 {
+}
+message ListCharityRank_Resp_160001 {
+	repeated CharityRankInfo list 		= 1; // 排名信息列表
+	optional int32 self_rank			= 2; // 自己的名次 -1:未上榜 0:未参与
+	optional int64 self_donation		= 3; // 当前捐款
+	optional int32 next_refresh_time	= 4; // 下一次刷新时间
+	optional bool reward				= 5; // 奖励是否领取
+}
+
+// 捐款
+message DonationCharity_Req_160002 {
+	optional int64 donation = 1; // 捐款金额
+}
+message DonationCharity_Resp_160002 {
+	optional int64 self_donation = 1; // 当前捐款
+}
+
+// 领奖
+message RewardCharity_Req_160003 {
+}
+message RewardCharity_Resp_160003 {
+}

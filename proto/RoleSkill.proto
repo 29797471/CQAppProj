@@ -1,0 +1,42 @@
+syntax = "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "RoleSkillProtocol";
+
+// 主角技能信息
+message RoleSkillInfo {
+	optional int32 config_id	= 1; // 技能配置ID
+	optional int32 level		= 2; // 等级
+	optional int64 exp			= 3; // 经验
+}
+
+// 获取技能信息列表
+message ListRoleSkill_Req_159001 {
+}
+message ListRoleSkill_Resp_159001 {
+	repeated RoleSkillInfo list = 1; // 主角技能信息列表(已激活)
+}
+
+// 激活技能
+message ActiveRoleSkill_Req_159002 {
+	optional int32 config_id = 1; // 技能配置ID
+}
+message ActiveRoleSkill_Resp_159002 {
+	optional RoleSkillInfo info = 1; // 主角技能信息
+}
+
+// 学习技能
+message LearnRoleSkill_Req_159003 {
+	optional int32 config_id 	= 1; // 技能配置ID
+	optional int32 cost_type	= 2; // 消耗类型 (根据配置表的定义)
+}
+message LearnRoleSkill_Resp_159003 {
+	optional RoleSkillInfo info = 1; // 主角技能信息
+}
+
+// 重置技能
+message ResetRoleSkill_Req_159004 {
+	optional int32 config_id = 1; // 技能配置ID
+}
+message ResetRoleSkill_Resp_159004 {
+	optional int32 config_id = 1; // 技能配置ID
+}

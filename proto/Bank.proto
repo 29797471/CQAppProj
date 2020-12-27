@@ -1,0 +1,65 @@
+syntax = "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "BankProtocol";
+
+enum LoanType{
+    CREDIT_LOAN       = 1;//信用贷款
+    COLLATERAL_LOAN   = 2;//抵押贷款
+}
+
+message Loan{
+	optional int64 cash 	= 1;//贷款金额
+	repeated int64 shop_ids = 2;//抵押店铺id
+	optional LoanType type  = 3;
+}
+
+//贷款
+message Loan_Req_178001{
+	optional int64 cash 	= 1;//贷款金额
+	repeated int64 shop_ids = 2;//抵押店铺id
+	optional LoanType type  = 3;
+}
+
+message Loan_Resp_178001{
+	optional Loan loan 		= 1;//贷款
+}
+
+
+//存款
+message Deposit_Req_178002{
+	optional int64 cash 	= 1;//存款金额
+}
+message Deposit_Resp_178002{
+	optional int64 cash 	= 1;//存款金额
+}
+
+//还款
+message RepaymentLoan_Req_178003{
+	optional LoanType type  = 1;
+}
+message RepaymentLoan_Resp_178003{
+	optional LoanType type  = 1;
+}
+
+
+//取款
+message RemoveMoney_Req_178004{
+}
+message RemoveMoney_Resp_178004{
+}
+
+//贷款记录
+message LoanList_Req_178005{
+}
+message LoanList_Resp_178005{
+	repeated Loan list 		= 1;//贷款
+}
+
+//获取存款信息
+message GetDeposit_Req_178006{
+}
+message GetDeposit_Resp_178006{
+	optional int64 cash 	= 1;//存款金额
+	optional bool unlock	= 2;//是否可以取出
+	optional int64 interest = 3; //利息
+}

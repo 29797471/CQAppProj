@@ -1,0 +1,41 @@
+syntax = "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "RobListProtocol";
+import "Role.proto";
+
+message RoleRank {
+    optional RoleHeadMessage role			= 1;      // rid
+    optional int64 progress              	= 2;    // 进度
+}
+message ClanRank {
+    optional int64 clan_id            		= 1;    // rid
+    optional int64 progress              	= 2;    // 进度
+    optional int32 level 					= 3;    // 
+	optional string clan_name				= 4;
+	optional int32 head						= 5;
+	optional int64 president_rid			= 6;	//会长rid
+}
+
+//
+message GetRoleRankList_Req_170001{
+	optional int32 activity_id				= 1;
+}
+
+message GetRoleRankList_Resp_170001{
+	repeated RoleRank list 					= 1;
+	optional int32 activity_id				= 2;
+	optional int32 my_rank					= 3;
+	optional int64 progress              	= 4; 
+}
+
+message GetClanRankList_Req_170002{
+	optional int32 activity_id				= 1;
+}
+
+message GetClanRankList_Resp_170002{
+	repeated ClanRank list 					= 1;
+	optional int32 activity_id				= 2;
+	optional int32 my_rank					= 3;
+	optional int64 progress              	= 4; 
+}
+

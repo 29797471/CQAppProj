@@ -1,0 +1,296 @@
+syntax = "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "GuildProtocol";
+import "Clan.proto";
+import "Role.proto";
+import "Common.proto";
+
+// 行会列表
+message GuildList_Req_157001{
+}
+
+message GuildList_Resp_157001{
+	repeated BusinessEntity entities = 1;
+}
+
+// 行业详情
+message BusinessEntity {
+	optional int32 type 		= 1; //类型
+	optional int64 quailty 		= 2; //能力
+	optional int32 addition 	= 3; //加成
+	optional int32 level		= 4; //等级
+}
+
+// 行会加成信息
+message GuildAddedMsg_Req_157002{
+	optional int32 type = 1; // 类型
+}
+
+message GuildAddedMsg_Resp_157002{
+	optional ManagerAddition addition = 1;
+}
+
+// 经理加成
+message ManagerAddition {
+	optional int32 type 				= 1; // 类型
+	optional int32 total_addition 		= 2; // 总加成
+	optional int64 total_daily_profit	= 3; // 总日利润
+	optional int64 research_ability		= 4; // 研究能力
+	repeated ManagerSimpleMsg manager 	= 5; // 任命的经理
+}
+
+message ManagerSimpleMsg {
+	optional int32 index 		= 1; // 位置
+	optional int64 manager_id 	= 2; // id
+}
+
+// 行会排行榜
+message GuildRank_Req_157003 {
+	optional int32 page = 1;  // 页数
+}
+
+message GuildRank_Resp_157003 {
+	repeated GuildRankData rank 			= 1; // 排行数据
+	optional int32 settle_time  			= 2; // 排行结算时间
+	repeated GuildVoteRankData vote_rank 	= 3; // 投票排行数据
+}
+
+// 行会排行榜数据
+message GuildRankData {
+	optional int32 type 		= 1; // 类型	
+	repeated GuildRankMsg msg 	= 2; // 玩家
+}
+
+// 行会排行榜信息
+message GuildRankMsg {
+	optional RoleHeadMessage player 	= 1; // 玩家
+	optional int64 research_ability 	= 2; // 研究能力	
+	optional int64 vote_num 			= 3; // 投票数量
+
+}
+
+// 行会投票排行榜数据
+message GuildVoteRankData {
+	optional int32 type 			= 1; // 类型	
+	repeated GuildRankMsg msg 		= 2; // 玩家
+}
+
+
+// 官员详情
+message OfficerDetailMsg_Req_157004 {
+}
+
+message OfficerDetailMsg_Resp_157004 {
+	repeated OfficerMsg officer         	= 1; // 官员列表
+	optional int32 status      				= 2; // 1:未开始 2:进行中 3:cd中
+	optional int32 now_vote_end_time    	= 3; // 当前轮次的选举主席结束时间
+	optional int32 next_vote_end_time    	= 4; // 下一轮次的选举主席结束时间
+}
+
+// 官员信息
+message OfficerMsg {
+	optional int32 type					= 1; // 类型
+	optional RoleHeadMessage player  	= 2; // 玩家信息
+	optional int32 tick_num				= 3; // 票数
+	optional int32 rewards_num			= 4; // 嘉奖人数
+	optional int32 sanction_num			= 5; // 制裁人数 
+	repeated ClanProto rewards_clan 	= 6; // 嘉奖的商会
+	repeated ClanProto sanction_clan 	= 7; // 制裁的商会
+	optional bool is_chairman			= 8; // 是否是主席
+}
+
+// 投票主席
+message Vote_Req_157005 {
+	optional int32 type = 1; // 类型
+	optional int32 num 	= 2; // 数量
+}
+
+message Vote_Resp_157005 {
+	optional OfficerBaseMsg officer = 1; // 官员信息
+}
+
+// 投票基础信息
+message OfficerBaseMsg {
+	optional int32 type					= 1; // 类型
+	optional RoleHeadMessage player  	= 2; // 玩家信息
+	optional int32 tick_num				= 3; // 票数
+}
+
+// 投票排行榜
+message VoteRank_Req_157006 {
+	required RankType type 		= 1; // 类型 
+	optional int32 page    		= 2; // 页
+	required int32 guild_type   = 3; // 行会类型
+}
+
+message VoteRank_Resp_157006 {
+	required RankType type 				= 1; // 类型 
+	repeated OfficerVoteRankData data 	= 2; // 排行数据
+	optional int32 page    				= 3; // 页
+	required int32 guild_type   		= 4; // 行会类型
+}
+
+// 排行榜类型
+enum RankType {
+	PLAYER = 1; // 玩家
+	CLAN   = 2; // 商会
+}
+
+// 官员投票排行数据
+message OfficerVoteRankData {
+	optional int64 id 			= 1; // id (rid 或 clanId)
+	optional string role_nick 	= 2; // 玩家名字
+	optional string clan_nick   = 3; // 商会名字
+	optional int32 tick_num 	= 4; // 票数
+}
+
+// 投票详情
+message VoteDetailMsg_Req_157007 {
+	
+}
+
+message VoteDetailMsg_Resp_157007 {
+	
+}
+
+// 购买选票
+message BuyVote_Req_157008 {
+	optional int32 num 			= 1; // 购买数量
+}
+
+message BuyVote_Resp_157008 {
+	optional int32 total_num 	= 2; // 拥有的总数量
+}
+
+// 官员操作
+enum OfficerOpreateType {
+	REWARDS 	= 1; // 嘉奖
+	SANCTION   	= 2; // 制裁
+}
+
+// 目标类型
+enum TargetType {
+	GUILD_PALYER = 1; // 玩家
+	GUILD_CLAN   = 2; // 商会
+}
+
+// 官员操作
+message OfficerOperate_Req_157009 {
+	required OfficerOpreateType type 	= 1; // 操作
+	required TargetType target 			= 2; // 目标
+	optional int64 id 					= 3; // 唯一id (rid 或 clanId)
+	optional int32 guild_type			= 4; // 行业类型
+}
+
+message OfficerOperate_Resp_157009 {
+	required OfficerOpreateType type 	= 1; // 操作
+	required TargetType target 			= 2; // 目标
+	optional int64 id 					= 3; // 唯一id (rid 或 clanId)
+	optional int32 guild_type			= 4; // 行业类型
+	
+}
+
+// 拥有buff的玩家
+message HaveBuffPlayer {
+	optional RoleHeadMessage player 	= 1; // 玩家信息
+	optional int32 rewards_end_time		= 2; // 嘉奖结束时间
+	optional int32 sanction_end_time	= 3; // 制裁结束时间
+}
+
+// 官员特权
+message OfficerPrivilege_Req_157010 {
+	optional int32 guild_type			= 1; // 行业类型
+}
+
+message OfficerPrivilege_Resp_157010 {
+	repeated HaveBuffPlayer player 		= 1; // 玩家数据
+	optional int32 guild_type			= 2; // 行业类型
+	optional int32 reward_num = 3; 	//已经嘉奖次数
+	optional int32 sanction_num = 4;//已经制裁次数
+}
+
+// 拥有buff的商会
+message HaveBuffClan {
+	optional ClanProto clan 	= 1; // 玩家信息
+	optional int32 rewards_end_time	= 2; // 嘉奖结束时间
+	optional int32 sanction_end_time	= 3; // 制裁结束时间
+}
+
+// 主席特权
+message ChairmanPrivilege_Req_157011 {
+}
+
+message ChairmanPrivilege_Resp_157011 {
+	repeated HaveBuffClan clan 	= 1; // 商会数据
+	optional int32 reward_num = 2; 	//已经嘉奖次数
+	optional int32 sanction_num = 3;//已经制裁次数
+}
+
+// 获取排行数据根据类型
+message GuildRankByType_Req_157012 {
+	required int32 type = 1; // 类型
+	required int32 page = 2; // 行数
+}
+
+message GuildRankByType_Resp_157012 {
+	repeated GuildRankMsg rank = 1; // 排行数据
+	optional int32 my_rank     = 2; // 我的排名
+}
+
+//buff推送
+message PushBuff_Resp_157013{
+	optional TargetType target 				= 1;//目标类型 (玩家/商会)
+	optional int64 id 						= 2; //(玩家rid/商会id)
+	repeated GuildBuff buff				    = 3;   //buff数据(当前所有的buff)
+}
+
+//获取嘉奖/制裁的目标玩家
+message GetTargetRoleList_Req_157014{
+}
+message GetTargetRoleList_Resp_157014{
+	repeated RoleHeadMessage other 		= 1; // 其他数据(好友/黑名单)
+}
+
+// 猎聘经理
+message HuntingManager_Req_157015 {
+	required int32 type 		= 1; // 类型
+	optional int32 index 		= 2; // 位置
+	optional int32 cost_type 	= 3; // 花费类型
+}
+
+message HuntingManager_Resp_157015 {
+	required bool is_success 	= 1; // 是否成功
+	optional int64 manager_id 	= 2;  //经理id
+	optional int32 guild_type  	= 3;  //行会类型
+	optional int32 index		= 4;  //任命的位置
+	optional int32 num   		= 5;  //失败次数
+}
+
+// 猎聘经理次数
+message HuntingManagerNum_Req_157016 {
+}
+
+message HuntingManagerNum_Resp_157016 {
+	repeated HuntingNum msg = 1; // 猎聘次数信息
+}
+
+// 猎聘次数
+message HuntingNum {
+	optional int32 guild_type  	= 1;  //行会类型
+	optional int32 index		= 2;  //任命的位置
+	optional int32 num   		= 3;  //失败次数
+}
+
+// 行会投票
+message VoteGuild_Req_157017 {
+	optional int32 item_id 		= 1; // 道具
+	optional int32 num 			= 2; // 数量
+	optional int32 guild_type 	= 3; // 行会类型
+	optional int64 vote_rid 	= 4; // 投给那个人
+}
+
+message VoteGuild_Resp_157017 {
+	optional GuildRankData rank 			= 1; // 排行数据
+	optional GuildVoteRankData vote_rank 	= 2; // 投票排行数据
+}
+

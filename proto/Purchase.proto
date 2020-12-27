@@ -1,0 +1,100 @@
+syntax = "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "PurchaseProtocol";
+import "Role.proto";
+
+message IndustryPurchase{
+	optional int32 industry 		= 1;//行业
+	optional int64 total_profit 	= 2;//行业利润
+	optional int64 my_invest_num 	= 3;//我的投资金额
+	optional int64 expected_bonus	= 4;//预计分红
+	optional int64 total_invest_num = 5;//总投资金额
+	optional int32 cut_supply_num	= 6;//断供数次
+}
+//股东头衔
+enum ShareholderTitle{
+	NO					= 0;
+	SMALL				= 1;	// 小股东
+	TOP_TEN				= 2;	// 十大股东
+	FIRST				= 3;	// 第一股东
+	HOLDING 			= 4;	// 控股股东
+	ABSOLUTE_HOLDING 	= 5;	// 绝对控股股东
+}
+
+message PurchaseRank{
+	optional RoleHeadMessage role	= 1;
+	optional int64 my_invest_num 	= 2;//我的投资金额
+	optional ShareholderTitle title	= 3; //股东名称
+	optional int64 expected_bonus	= 4;//预计分红
+}
+
+message PurchaseRole{
+	optional RoleHeadMessage role	= 1;
+	optional ShareholderTitle title	= 2; //股东名称
+	optional int64 income			= 3; //收入
+	optional int32 state			= 4; // 1 断供
+}
+
+//采购中心
+message PurchaseCenter_Req_177001{
+}
+message PurchaseCenter_Resp_177001{
+	repeated IndustryPurchase list	= 1;
+}
+
+//投资
+message IndustryInvest_Req_177002{
+	optional int32 industry 		= 1;//行业
+	optional int64 num				= 2;//增加投资金额
+}
+message IndustryInvest_Resp_177002{
+}
+
+//投资排行
+message IndustryPurchaseRank_Req_177003{
+	optional int32 industry 		= 1;//行业
+	optional int32 page    			= 2;
+	optional int32 page_size		= 3;
+}
+message IndustryPurchaseRank_Resp_177003{
+	optional int32 industry 		= 1;//行业
+	repeated PurchaseRank rank		= 2;
+	optional int32 page    			= 3;
+	optional int64 total_invest_num = 4;//总投资金额
+	optional int32 page_size		= 5;
+	optional int32 total			= 6;//总记录数
+} 
+
+//更新行业获得可操作断供玩家
+message GetCanCutSupplyList_Req_177004{
+	optional int32 industry 		= 1;//行业
+	optional int32 page    			= 2;
+	optional int32 page_size		= 3;
+}
+message GetCanCutSupplyList_Resp_177004{
+	optional int32 industry 		= 1;//行业
+	optional int32 page    			= 2;
+	repeated PurchaseRole info		= 3;
+	optional int32 page_size		= 4;
+	optional int32 total			= 5;//总记录数
+}
+//模糊查找
+message VagueCutSupplyList_Req_177005{
+	optional string nick			= 1;
+	optional int32 industry 		= 2;//行业
+}
+message VagueCutSupplyList_Resp_177005{
+	optional string nick			= 1;
+	repeated PurchaseRole info		= 2;
+	optional int32 industry 		= 3;//行业
+}
+
+//断供
+message CutSupply_Req_177006{
+	optional int32 industry 		= 1;//行业
+	optional int64 rid				= 2;
+}
+message CutSupply_Resp_177006{
+	optional int32 industry 		= 1;//行业
+	optional int64 rid				= 2;
+}

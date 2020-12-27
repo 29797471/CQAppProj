@@ -1,0 +1,59 @@
+syntax = "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "RedPacketProtocol";
+
+// 发红包请求
+message SendRedPacket_Req_145001 {
+	optional int32 red_packet_id = 1;   // 红包id
+}
+
+// 发红包返回
+message SendRedPacket_Resp_145001 {
+	optional int32 red_packet_id = 1;	// 红包id
+}
+
+// 红包提醒推送
+message RedPacketNotice_Resp_145002 {
+	optional int64 red_packet_uid 	= 1;	// 红包uid
+	optional int32 red_packet_count = 2;	// 可领红包的数量
+}
+
+message SenderRoleInfo{
+	optional int64 rid 			= 1;
+	optional int32 headId 		= 2;
+	optional string nick 		= 3;
+	optional int32 level 		= 4;
+	optional int32 vip_level 	= 7;
+}
+
+message GainerRoleInfo{
+	optional int64 rid 			= 1;
+	optional int32 headId 		= 2;
+	optional string nick 		= 3;
+	optional int32 money_count 	= 4;	// 货币数量
+}
+
+// 领取红包请求
+message GainRedPacket_Req_145003 {
+	optional int64 red_packet_uid = 1;	// 红包uid
+}
+
+// 领取红包返回
+message GainRedPacket_Resp_145003 {
+	optional int64 red_packet_uid 				= 1;	// 红包uid
+	optional int32 money_type 					= 2;	// 货币类型
+	optional int32 gainer_count 				= 3;	// 已领红包人数
+	optional int32 gainer_max_count 			= 4;	// 红包人数上限
+	optional int32 gainer_money_count 			= 5;	// 已领红包金额
+	optional int32 red_packet_money_count 		= 6;	// 红包总金额
+	optional SenderRoleInfo sender_role_info 	= 7;	// 发送者
+	repeated GainerRoleInfo gainer_role_info 	= 8;	// 领取者
+	optional int32 flag 						= 9;	// 标志 1=成功，0=失败(已抢完)，2=失败(不能抢自己)，3=失败(已领取)
+	optional int32 red_packet_count				= 10;	// 可领红包的数量
+	optional int64 next_red_packet_uid 			= 11;	// 下一个红包uid
+	optional int32 red_packet_id 				= 12;	// 红包配置id
+}
+
+
+
+

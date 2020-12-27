@@ -1,0 +1,91 @@
+syntax = "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "MailProtocol";
+import "Battle.proto";
+import "Common.proto";
+
+message Mail{
+    required int64 id                           = 1;
+    required int32 msgType                      = 2;
+    optional MessageTempleteData args           = 3; // 参数列表 
+    required int32 sendTime                     = 4;
+    required int32 expiryTime                   = 5;//过期时间
+    required bool isRead                        = 6;
+    repeated MailItem enclosureItems            = 7;//附件
+    optional bool isReceive                     = 8;// 1 领取  0 没有领取
+    optional string title                       = 9; //标题
+    optional bool hasBattleRecord               = 10;//是否有战斗回放
+    optional int32 head                         = 11;//图标
+    optional int32 type                         = 12;//分类类型
+}
+message MailItem{
+    required int32 itemId = 1;
+    required int64 count = 2;
+    optional int32 type = 3; // 0 道具 1 产品 2 经理
+}
+
+//玩家根据类型获取所有邮箱
+message GetMailByType_Req_109201{
+    required int32 type = 1;//分类类型 1 公告 2 系统 3 展会 4 商会
+}
+message GetMailByType_Resp_109201{
+    repeated Mail mailList = 1;
+    required int32 type = 2;//分类类型
+}
+
+//领取附件
+message ReceiveItem_Req_109202{
+    repeated int64 mailIds = 1;
+}
+message ReceiveItem_Resp_109202{
+    repeated int64 mailIds = 1;
+}
+
+//标志已读
+message ReadMail_Req_109203{
+    repeated int64 mailIds = 1;
+}
+message ReadMail_Resp_109203{
+    repeated int64 mailIds = 1;
+}
+//删除邮件
+message DeleteMail_Req_109204{
+    repeated int64 mailIds = 1;
+}
+message DeleteMail_Resp_109204{
+    repeated int64 mailIds = 1;
+}
+
+
+//战斗回放获取返回
+message GetBattleRecord_Req_109205{
+    optional int64 mailId = 1;//邮件id
+}
+message GetBattleRecord_Resp_109205{
+    optional BattleDetailsMessage battle = 1;    // 战斗   // 战斗
+    optional int32 result                = 2;    // 结果 1, 进攻胜利 2, 进攻失败 3, 防守胜利 4, 防守失败 5，复仇成功 6，复仇失败
+}
+
+//防守推送状态
+message PushDefenseMailState_Resp_109206{
+    optional bool show = 1;//true 有 
+}
+//取消状态
+message CancelDefenseMailState_Req_109207{
+}
+message CancelDefenseMailState_Resp_109207{
+}
+
+//获取离线区间的工作汇报
+message GetWorkReportList_Resp_109209 {
+    repeated MessageTempleteData content    = 1;
+    optional int64 offline_profit           = 2; // 离线利润
+    optional int32 offline_duration         = 3; // 离线时长
+    optional bool double_profit_buff_exists = 4; // 双倍收益效果是否存在
+}
+
+// 推送在线期间的工作汇报
+message PushOnlineWorkReports_Resp_109210 {
+    optional MessageTempleteData content    = 1;
+    optional int32 send_time                = 2;
+}

@@ -1,0 +1,153 @@
+syntax = "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "BuildingProtocol";
+import "Road.proto";
+import "Values.proto";
+import "Battle.proto";
+import "Role.proto";
+import "Manager.proto";
+import "Map.proto";
+
+// 建造建筑
+message BuildBuilding_Req_108001 {
+    optional int64 map_id                   = 1;    // 地图id
+    optional int32 building_type            = 3;    // 建筑类型
+    optional float local_x                  = 4;    // x坐标
+    optional float local_y                  = 5;    // y坐标
+    optional int32 direction                = 6;    // 方向
+    optional Point road_start               = 7;    // 路起点
+    optional Point road_end                 = 8;    // 路终点
+}
+
+message BuildBuilding_Resp_108001 {
+    optional int64 map_id                   = 1;    // 地图id
+    optional MapBuildingMessage building    = 2;    // 建筑信息 
+    optional bool success                   = 8;    // 是否成功
+}
+
+// 移除建筑
+message RemoveBuilding_Req_108003 {
+    optional int64 building_id              = 1;    // 建筑id
+}
+
+message RemoveBuilding_Resp_108003 {
+    optional int64 map_id                   = 1;    // 地图id
+    optional int64 building_id              = 2;    // 建筑id
+    optional int32 building_type            = 3;    // 建筑类型
+}
+
+// 查看建筑简要信息 (返回消息在各自协议里)
+message GetBuildingBriefInfo_Req_108005 {
+    optional int64 building_id              = 1;    // 建筑id
+}
+
+// 查看建筑详情信息请求 (返回消息在各自协议里)
+message GetBuildingDetailInfo_Req_108006 {
+    optional int64 building_id              = 1;    // 建筑id
+    optional int32 building_type            = 2;    // 建筑类型
+}
+
+// 布局信息
+message PlacementMessage {
+    optional int64 building_id              = 1;    // 建筑id
+    optional float local_x                  = 2;    // x坐标
+    optional float local_y                  = 3;    // y坐标
+    optional int32 direction                = 4;    // 方向
+    optional Point road_start               = 5;    // 路起点
+    optional Point road_end                 = 6;    // 路终点
+    optional PlaceHandleType handle_type    = 7;    // 操作类型
+}
+
+// 布局操作类型
+enum PlaceHandleType {
+    RELOCATE = 0; // 搬迁
+    DEPLOY   = 1; // 展开
+    UNDEPLOY = 2; // 收起
+}
+
+// 建筑布局
+message PlaceBuildings_Req_108010 {
+    optional int64 map_id               = 1;    // 地图id
+    optional PlacementMessage placement = 2;    // 布局信息
+}
+
+message PlaceBuildings_Resp_108010 {
+    optional bool success                = 1;    // 成功
+    optional int64 map_id                = 2;    // 地图id
+    optional MapBuildingMessage building = 3;    // 建筑信息
+}
+
+//膜拜
+message WorshipBuilding_Req_108013{
+    optional int64 building_id              = 1;    // 建筑id
+}
+
+message WorshipBuilding_Resp_108013{
+    optional int64 building_id              = 1;    // 建筑id
+    optional int32 worship_num              = 2;    // 膜拜次数
+    optional int32 limit_num                = 3;    // 最大次数
+    optional int32 my_num                   = 4;    //   我的次数
+    optional int32 my_limit_num             = 5;    // 我的最大次数
+}
+
+//获取已经膜拜的次数
+message GetWorshipBuildingNum_Req_108014{
+    optional int64 building_id              = 1;    // 建筑id
+}
+
+message GetWorshipBuildingNum_Resp_108014{
+    optional int64 building_id              = 1;    // 建筑id
+    optional int32 worship_num              = 2;    // 膜拜次数
+    optional int32 limit_num                = 3;    // 最大次数
+    optional bool is_worship                = 4;    // 是否膜拜过
+}
+
+// 建筑名片
+message GetBuildingCard_Req_108015 {
+    optional int64 building_id              = 1;    // 建筑id
+    optional int32 building_type            = 2;    // 建筑类型
+}
+
+message GetBuildingCard_Resp_108015 {
+    optional bool success                   = 1;    // 是否成功
+    optional int64 building_id              = 2;    // 建筑id
+    optional int32 building_type            = 3;    // 建筑类型
+    optional int64 map_id                   = 4;    // 地图id 
+    optional int32 map_type                 = 5;    // 地图配置id
+    optional int32 map_index                = 6;    // 同类型地图索引
+    optional float local_x                  = 7;    // X坐标
+    optional float local_y                  = 8;    // Y坐标
+    optional bool is_activated              = 9;    // 是否激活
+    optional bool is_undeployed             = 10;   // 是否收起
+}
+
+// 获取建筑挖人信息
+message GetPreBuildingPoachingInfo_Req_108016 {
+    optional int64 bid = 1;  // 建筑id
+}
+
+message GetPreBuildingPoachingInfo_Resp_108016 {
+    optional int64 bid                     = 1; // 建筑id
+    optional int32 building_type           = 2; // 建筑类型
+    optional ManagerMsg manager            = 3; // 经理
+    optional RoleHeadMessage defender_head = 4; // 守方头像
+}
+
+// 建筑挖人
+message BuildingPoaching_Req_108017 {
+    optional int64 bid        = 1; // 建筑id
+    optional int64 manager_id = 2; // 经理id
+}
+
+message BuildingPoaching_Resp_108017 {
+    optional int64 bid                             = 1; // 建筑id
+    optional BattleDetailsMessage battle           = 2; // 战斗
+    optional int32 defender_manager_loyalty_reduce = 3; // 守方经理忠诚度下降
+    optional int32 attacker_morale_reduce          = 4; // 攻方士气下降
+    optional ManagerValuesMessage manager          = 5; // 经理
+}
+
+// 推送建筑建造记录
+message PushBuildingBuildRecords_Resp_108018 {
+    repeated int32 building_type = 1; // 建筑类型
+}

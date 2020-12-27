@@ -1,0 +1,84 @@
+syntax = "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "RoadProtocol";
+import "Battle.proto";
+import "Role.proto";
+
+//点
+message Point{
+	optional float x = 1;
+	optional float y = 2;
+}
+
+//路
+message Road{
+	optional Point startP = 1;//起点
+	optional Point endP = 2;//终点
+	optional int32 type = 3;//路类型
+	optional int64 rid = 4;//玩家rid
+}
+
+
+//建路
+message CreateRoad_Req_136001 {
+	optional Road road  = 1;
+}
+message CreateRoad_Resp_136001 {
+	optional bool result = 1;//是否成功
+	optional Road road  = 2;
+}
+
+// 路的列表
+message RoadList_Resp_136002 {
+	repeated Road roads = 1;
+}
+
+//拆路
+message RemoveRoad_Req_136003 {
+	optional Road road = 1;
+}
+message RemoveRoad_Resp_136003 {
+	optional bool result = 1;//是否成功
+	optional Road road  = 2;
+}
+//路的操作类型
+enum RoadOperateType{	
+	CREATE = 1;
+	REMOVE =2 ;
+}
+
+//路操作通知
+message RoadOperateNotice_Resp_136004 {
+	optional RoadOperateType operate_type = 1;//
+	optional Road road  = 2;
+}
+//拆别人的路
+message RemoveOtherRoad_Resp_136005{
+	optional Road road			         		= 1;    // 删除的路
+    optional BattleDetailsMessage battle 		= 2;    // 战斗
+	optional int32 attacker_morale_reduce       = 3; // 攻方士气下降
+}
+
+//获取玩家战力信息
+message DemolitionRoadRoleInfo_Req_136006{
+	required Road road = 1;
+}
+message DemolitionRoadRoleInfo_Resp_136006{
+	optional RoleHeadMessage vs_head        = 1;    // 对手头像
+	required int32 cost = 2;
+}
+//拆别人的路通过邮件获取删除路信息
+message RoadDeletedMailInfo_Req_136007{
+	optional int64 mailId = 1;
+}
+message RoadDeletedMailInfo_Resp_136007{
+	optional int64 mailId = 1;
+	repeated Road roads = 2;
+}
+
+
+
+//移除指定玩家所有的路
+message RemoveRoleAllRoad_Resp_136010{
+	optional int64 rid = 1;
+}

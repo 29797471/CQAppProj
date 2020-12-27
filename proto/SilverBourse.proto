@@ -1,0 +1,155 @@
+syntax = "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "SilverBourseProtocol";
+import "Common.proto";
+
+// 获取下一次刷新时间
+message GetNextRefreshTime_Req_151001 {
+
+}
+message GetNextRefreshTime_Resp_151001 {
+	optional int32 remaining_time = 1; // 剩余时间（单位：秒）
+}
+
+// 获取走势图
+message ListTrendChart_Req_151002 {
+
+}
+message ListTrendChart_Resp_151002 {
+	repeated LineChartData transaction_price 			= 1; // 成交价
+	repeated LineChartData average_transaction_price 	= 2; // 平均成交价
+}
+
+// 获取走势图最新的点
+message GetLatestTrendChartPoint_Req_151003 {
+
+}
+message GetLatestTrendChartPoint_Resp_151003 {
+	optional LineChartData transaction_price 			= 1; // 成交价
+	optional LineChartData average_transaction_price 	= 2; // 平均成交价
+}
+
+// 交易意愿
+message BourseWish {
+	optional int64 price	= 1; // 单价
+	optional int64 sum		= 2; // 总额
+}
+
+// 获取交易行情
+message GetBourseMarket_Req_151004 {
+	
+}
+message GetBourseMarket_Resp_151004 {
+	optional int64 transaction_sum			= 1; // 成交额
+	optional int64 transaction_price		= 2; // 行情（当前成交价）
+	optional int64 transaction_before_price	= 3; // 上一次成交价
+	repeated BourseWish sell_wish			= 4; // 卖方意愿
+	repeated BourseWish buy_wish			= 5; // 买方意愿
+}
+
+// 银币出售
+message SellSilver_Req_151005 {
+	optional int64 price	= 1; // 单价 (金币)
+	optional int32 count	= 2; // 数量
+}
+message SellSilver_Resp_151005 {
+
+}
+
+// 银币购买
+message BuySilver_Req_151006 {
+	optional int64 price	= 1; // 单价 (金币)
+	optional int32 count	= 2; // 数量
+}
+message BuySilver_Resp_151006 {
+
+}
+
+// 交易订单
+message BourseOrder {
+	optional int64 order_id						= 1; // 订单ID
+	optional int64 silver				 		= 2; // 银币总价(商品)
+	optional int32 finish_progress				= 3; // 完成进度（0-99）
+	optional int32 change_time					= 4; // 变更时间
+	optional int64 gold							= 5; // 金币单价(价格)
+}
+
+// 获取银币订单（银币出售）
+message ListSilverOrder_Req_151007 {
+
+}
+message ListSilverOrder_Resp_151007 {
+	repeated BourseOrder orders = 1; // 交易订单列表
+}
+
+// 撤销银币订单
+message RevocationSilverOrder_Req_151008 {
+	optional int64 order_id	= 1; // 订单ID
+}
+message RevocationSilverOrder_Resp_151008 {
+
+}
+
+// 获取金币订单（银币购买）
+message ListGoldOrder_Req_151009 {
+
+}
+message ListGoldOrder_Resp_151009 {
+	repeated BourseOrder orders = 1; // 交易订单列表
+}
+
+// 撤销金币订单
+message RevocationGoldOrder_Req_151010 {
+	optional int64 order_id	= 1; // 订单ID
+}
+message RevocationGoldOrder_Resp_151010 {
+
+}
+
+// 交易记录
+message TransactionRecord {
+	optional int64 id						= 1; // ID
+	optional int32 type						= 2; // 类型 1:银币出售成功 2:银币购买成功 3:银币出售撤回 4:银币购买撤回
+	optional int32 transaction_time			= 3; // 成交时间
+	optional int64 price 					= 4; // 成交均价 为0代表无交易
+	optional int64 sum						= 5; // 成交额   为0代表无交易
+	optional int32 reward_type				= 6; // 成交获得类型
+	optional int64 reward_count				= 7; // 成交获得数量
+	optional bool is_reward					= 8; // 是否领取
+}
+
+// 登录时推送，后续有变化持续推送
+message ListTransactionRecord_Resp_151011 {
+	repeated TransactionRecord records 	= 1; // 交易记录列表
+}
+
+// 领取记录奖励
+message RewardTransactionRecord_Req_151012 {
+
+}
+message RewardTransactionRecord_Resp_151012 {
+	repeated int64 reward_id_list	= 1; // 已领奖励的交易记录ID列表
+}
+
+// 成交量
+message TransactionSilver {
+	optional int32 time		= 1; // 时间
+	optional int64 red		= 2; // 红色数值
+	optional int64 green	= 3; // 绿色数值
+}
+
+// 获取成交量
+message ListTransactionSilver_Req_151013 {
+
+}
+message ListTransactionSilver_Resp_151013 {
+	repeated TransactionSilver list = 1; // 成交量列表
+}
+
+// 获取最新的成交量
+message GetLatestTransactionSilver_Req_151014 {
+
+}
+message GetLatestTransactionSilver_Resp_151014 {
+	optional TransactionSilver transaction_silver = 1; // 成交量
+}

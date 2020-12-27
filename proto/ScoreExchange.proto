@@ -1,0 +1,27 @@
+syntax = "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "ScoreExchangeProtocol";
+
+// 积分兑换
+message Exchange_Req_149001 {
+	optional int32 id 		= 1;   // 配置ID
+	optional int32 count	= 2;   // 数量
+}
+
+message Exchange_Resp_149001 {
+	optional int32 id 		= 1;   // 配置ID
+	optional int32 count	= 2;   // 数量
+}
+
+
+// 兑换数量信息
+message ExchangeCount {
+	optional int32 id 		= 1;   // 配置ID
+	optional int32 count	= 2;   // 数量
+}
+
+
+// 推送积分兑换已兑换数量(登录时)
+message ListExchangeCount_Resp_149002 {
+	repeated ExchangeCount exchange_counts = 1; // 兑换数量信息列表
+}

@@ -1,0 +1,297 @@
+syntax =  "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "ManagerProtocol";
+import "Battle.proto";
+import "Role.proto";
+
+//经理的信息
+message ManagerMsg {
+    optional int64 id                   = 1; //唯一id
+    optional int32 config_id            = 2; //配置id
+    repeated SkillMsg skills            = 3; //技能信息
+    optional int32 level                = 4; //等级
+    optional int32 exp                  = 5; //经验
+    optional int32 talent               = 6; //天赋
+    optional int32 talent_level         = 8; //天赋等级
+    optional int32 color                = 9; //品质
+    optional int32 star                 = 10; //星级
+    optional int64 map_type             = 11; //地图配置id
+    optional float x                    = 13; //x坐标
+    optional float y                    = 14; //y坐标
+    optional int32 status               = 15; //经理状态 0:空闲, 1:在职 
+    optional int32 trade_status         = 16; //交易状态 0:木有交易过, 1:已经交易过
+    optional int32 building_type        = 18; //建筑配置id
+    optional int64 building_id          = 19; // 建筑id
+    optional int32 index                = 20; // 谈判团位置 大于0表示任命在谈判团
+    optional int32 position             = 21; // 建筑职位
+    optional int32 guild_type           = 22; // 行会类型
+    optional int32 guild_index          = 23; // 行会职位
+    optional int32 building_index       = 24; // 建筑任命位置
+	optional int32 air_line_id 			= 27; // 航线id(配置表)
+	optional int32 loyalty 				= 28; // 忠诚度
+	optional int64 dug_times			= 29; // 被挖次数
+	optional int64 pay_cut 				= 30; // 降薪
+    optional int32 pay_cut_num 			= 33; // 降薪次数
+    optional int32 market_type          = 34; // 市场部类型
+    optional int32 market_index         = 35; // 市场部位置
+}
+
+// 分页查询经理的信息 
+message ManagerList_Req_104001 {
+    optional int32 page = 1;    //页数
+    optional int32 order = 2;   //0:等级排序 1:星级排序 2:天赋排序
+}
+
+message ManagerList_Resp_104001 {
+    required int32 ManagerCount = 1;    // 全部经理数量
+    repeated ManagerMsg msg = 2;        //数据
+    required bool send_status = 3;      //0:未传输完1:传输完成
+}
+
+
+//技能信息
+message SkillMsg {
+    optional int32 config_id    = 1; //技能id
+    optional int32 level        = 2; //等级
+    optional int32 refresh_num  = 3; //洗练次数
+}
+
+// 分解经理
+message DecomposeManager_Req_104003 {
+    optional int64 manager_id = 1; //经理id
+}
+
+message DecomposeManager_Resp_104003 {
+    optional int32 item_id = 1; //碎片id
+    optional int32 num = 2;     //碎片数量
+}
+
+// 经理升级
+message ManagerLevelUp_Req_104004 {
+    optional int64 manager_id   = 1;    //经理id
+    optional int32 type         = 2;    //类型
+}
+
+message ManagerLevelUp_Resp_104004 {
+    optional int64 manager_id = 1;  //经理id
+    optional int32 level      = 2;  //经理等级
+}
+
+// 经理升阶
+message ManagerPromotePhases_Req_104005 {
+    optional int64 manager_id = 1;      //经理id
+}
+
+message ManagerPromotePhases_Resp_104005 {
+    optional int64 manager_id   = 1;        //经理id
+    optional int32 talent_level = 2;        //天赋等级
+}
+
+// 经理升星
+message ManagerPromoteStar_Req_104006 {
+    optional int64 manager_id   = 1;    //经理id
+    optional int32 type         = 2;    // 类型
+}
+
+message ManagerPromoteStar_Resp_104006 {
+    optional int64 manager_id   = 1;    //经理id
+    optional int32 star         = 2;    // 星级
+	optional int32 add_star 	= 3;	// 增加的星级
+}
+
+// 经理技能升级
+message ManagerSkillLevelUp_Req_104007 {
+    optional int64 manager_id   = 1;    //经理id
+    optional int32 skill_id     = 2;    //技能id
+    optional int32 type         = 3;    //升级类型
+}
+
+message ManagerSkillLevelUp_Resp_104007 {
+    optional int64 manager_id   = 1;    //经理id
+    optional int32 skill_id     = 2;    //技能id
+    optional int32 level        = 3;    //等级
+}
+
+//推送经理的改变信息
+message ManagerPushAddOrDelete_Resp_104011 {
+    repeated ManagerMsg managers 	= 1; // 推送的经理信息
+    optional int32 type          	= 2; //1:添加2:删除3:修改
+	optional bool not_change_other 	= 3; // 不改变其他属性(前端使用)
+}
+
+//任命
+message ManagerAppoint_Req_104012 {
+    optional int64 manager_id       = 1;    //经理id
+    optional int64 shop_id          = 2;    //建筑id
+    optional int32 index            = 3;    //任命的位置 (只任命一个经理的默认为0)
+    optional int32 building_type    = 4;    //建筑类型 1:店铺 2:商业 3:旅游 4:环境 5:写字楼 6:工厂 7:港口
+}
+
+message ManagerAppoint_Resp_104012 {
+    optional int64 manager_id       = 1;  //经理id
+    optional int64 shop_id          = 2;  //建筑id
+    optional int32 index            = 3;  //任命的位置 (只任命一个经理的默认为0)
+    optional int32 building_type    = 4;  //建筑类型 1:店铺 2:商业 3:旅游 4:环境 5:写字楼 6:工厂 7:港口
+}
+
+// 卸任经理
+message ResignManager_Req_104017 {
+    optional int64 manager_id = 1;  // 经理id
+}
+
+message ResignManager_Resp_104017 {
+}
+
+// 经理任命谈判团
+message ManagerAppointNegotiators_Req_104018 {
+    optional int64 manager_id   = 1;  // 经理id
+    optional int32 index        = 2;  // 任命位置
+}
+
+message ManagerAppointNegotiators_Resp_104018 {
+    optional int64 manager_id   					= 1;  // 经理id
+    optional int32 index        					= 2;  // 任命位置
+	repeated NegotiationTeamBattlePosition position = 3; // 经理战位信息
+}
+
+// 获取谈判团信息
+message GetNegotiationTeam_Req_104019 {
+}
+
+message GetNegotiationTeam_Resp_104019 {
+    repeated NegotiationTeam team 					= 1; // 经理id
+	repeated NegotiationTeamBattlePosition position = 2; // 经理战位信息
+}
+
+// 谈判团
+message NegotiationTeam{
+    optional int64 manager_id = 1;  // 经理id
+    optional int32 index      = 2;  // 所处位置
+}
+
+// 谈判团战位信息
+message NegotiationTeamBattlePosition {
+    optional int32 position 	= 1;  // 战位(前中后排)
+    optional int32 morale      	= 2;  // 士气
+	optional int32 calc_time	= 3;  // 计算开始时间
+}
+
+// 获取谈判团信息
+message GetOtherNegotiationTeam_Req_104021 {
+    optional int64 rid = 1; // rid
+}
+
+message GetOtherNegotiationTeam_Resp_104021 {
+    repeated ManagerBattleMessage manager 			= 1; // 经理战场信息
+    optional RoleHeadMessage role_info    			= 2; // 玩家信息
+	repeated NegotiationTeamBattlePosition position = 3; // 战位信息(前中后排)
+}
+
+// 洗练经理技能
+message RefreshManagerSkill_Req_104022 {
+    optional int64 manager_id       = 1; // 经理id
+    optional int32 skill_id         = 2; // 指定的技能id
+    optional int32 type             = 3; // 洗练类型 0:银币 1:金币
+}
+
+message RefreshManagerSkill_Resp_104022 {
+    optional ManagerMsg manager     = 1; // 经理信息
+}
+
+// 行会任命经理
+message ManagerAppointGuild_Req_104025 {
+    required int32 type         = 1; // 行会类型
+    required int64 manager_id   = 2; // 经理id
+    required int32 index        = 3; // 位置
+}
+
+message ManagerAppointGuild_Resp_104025 {
+    optional int64 manager_id       = 1;  //经理id
+    optional int32 guild_type       = 2;  //行会类型
+    optional int32 index            = 3;  //任命的位置   
+}
+
+// 经理名片
+message ManagerCard_Req_104026 {
+    required int64 id       = 1; // 经理id
+}
+
+message ManagerCard_Resp_104026 {
+    optional ManagerMsg msg = 1; // 经理信息
+}
+
+// 一键卸任
+message OneClickResignShop_Req_104027 {
+	optional int64 map_id  = 1; // 地图id
+}
+
+message OneClickResignShop_Resp_104027 {
+}
+
+// 一键升星
+message OneClickUpgradeStar_Req_104028 {
+	repeated int64 manager_ids 		= 1; // 经理ids
+	optional int32 type         	= 2; // 类型
+}
+
+message OneClickUpgradeStar_Resp_104028 {
+}
+
+// 增加士气
+message AddMorale_Req_104029 {
+	optional int32 config         	= 1; // 前中后排(配置读取)
+}
+
+message AddMorale_Resp_104029 {
+	repeated NegotiationTeamBattlePosition position = 1; // 战位信息(前中后排) 
+}
+
+// 增加忠诚度
+message AddLoyalty_Req_104030 {
+	optional int64 manager_id 		= 1; // 经理id
+	optional int32 item_id 			= 2; // 道具id
+	optional int32 item_num         = 3; // 道具数量
+}
+
+message AddLoyalty_Resp_104030 {
+}
+
+// 降薪
+message PayCut_Req_104031 {
+	optional int64 manager_id 		= 1; // 经理id
+	optional int32 item_id 			= 2; // 道具id
+	optional int32 num				= 3; // 道具数量
+}
+
+message PayCut_Resp_104031 {
+}
+
+// 一键满级(受星级限制)
+message OneClickFullLevel_Req_104032 {
+	repeated int64 manager_ids 		= 1; // 经理ids
+	optional int32 type         	= 2; // 类型
+}
+
+message OneClickFullLevel_Resp_104032 {
+}
+
+// 批量升级
+message OneClickLevelUp_Req_104033 {
+	repeated int64 manager_ids 		= 1; // 经理ids
+	optional int32 type         	= 2; // 类型
+}
+
+message OneClickLevelUp_Resp_104033 {
+}
+
+// 经理批量技能升级
+message BatchSkillLevelUp_Req_104034 {
+	required int64 mananger_id 		= 1; // 经理id
+	repeated int32 skill_id 		= 2; // 技能ids
+	optional int32 level         	= 3; // 升到多少级
+	optional int32 type         	= 4; //升级类型
+}
+
+message BatchSkillLevelUp_Resp_104034 {
+}
+

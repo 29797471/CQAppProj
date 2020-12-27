@@ -1,0 +1,90 @@
+syntax = "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "ClanTitleProtocol";
+import "Clan.proto";
+import "Role.proto";
+
+// 城市冠名
+message CityTitle {
+	optional int32 id						= 1; // 城市ID
+	optional int64 clan_id					= 2; // 商会ID
+	optional string clan_name				= 3; // 商会名称
+	optional int32 member_shop_count		= 4; // 成员店铺数量
+	optional int32 refresh_time			 	= 5; // 竞争下次刷新时间  当时间小于0时代表 竞选未开始
+}
+
+// 获取城市冠名列表
+message ListCityTitle_Req_156001 {
+
+}
+message ListCityTitle_Resp_156001 {
+	repeated CityTitle list = 1; // 城市冠名列表
+}
+
+// 投资记录排名
+message InvestRecordRank {
+	optional int32 rank 		= 1; // 排名
+	optional int64 clan_id		= 2; // 商会ID
+	optional string clan_name	= 3; // 商会名称
+}
+
+// 获取投资记录排名列表
+message ListInvestRecordRank_Req_156002 {
+	optional int32 id = 1; // 城市ID
+}
+message ListInvestRecordRank_Resp_156002 {
+	optional int32 id 						= 1; // 城市ID
+	repeated InvestRecordRank record_list 	= 2; // 投资记录排名列表
+	optional int32 refresh_time				= 3; // 刷新时间
+	optional int64 clan_invest_fund			= 4; // 我的商会投资基金
+}
+
+// 出价
+message InvestCity_Req_156003 {
+	optional int32 id	= 1; // 城市ID
+	optional int64 fund = 2; // 投资基金
+}
+message InvestCity_Resp_156003 {
+
+}
+
+// 获取城市冠名
+message GetCityTitle_Req_156004 {
+	optional int32 id	= 1; // 城市ID
+}
+message GetCityTitle_Resp_156004 {
+	optional CityTitle city_title = 1; // 城市冠名
+}
+
+
+// 城市冠名信息
+message CityTitleBrief {
+	optional int32 id							= 1; // 城市ID
+	optional ClanHeadMessage clan_head_message 	= 2; // 商会头部信息
+	optional int32 expire_time					= 3; // 冠名buff刷新时间
+}
+
+// 获取城市冠名信息
+message ListCityTitleBrief_Req_156005 {
+
+}
+message ListCityTitleBrief_Resp_156005 {
+	repeated CityTitleBrief list	= 1; // 城市冠名信息列表（如果该城市有商会冠名才包含）
+}
+
+// 商会冠名日志
+message CityTitleRecord {
+	optional int64 record_id		= 1; // 日志ID
+	optional RoleHeadMessage role	= 2; // 角色头像
+	optional int64 fund 			= 3; // 投资基金
+}
+
+// 获取商会冠名日志
+message ListCityTitleRecord_Req_156006 {
+	optional int32 id				= 1; // 城市ID
+}
+// (当有本商会成员出价时 推送此接口)
+message ListCityTitleRecord_Resp_156006 {
+	optional int32 id				= 1; // 城市ID
+	repeated CityTitleRecord list	= 2; // 日志列表
+}

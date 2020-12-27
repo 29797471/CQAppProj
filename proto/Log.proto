@@ -1,0 +1,38 @@
+syntax = "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "LogProtocol";
+
+message Log{
+	optional int32 type = 2;//1 消耗 2获得
+	optional int32 time = 3;
+	repeated LogItem items = 4;
+}
+
+message LogItem{
+	optional int32 itemId = 1;
+	optional int64 count = 2;
+	optional int64 entityId = 3;//数据表id
+	optional int32 itemType = 4;//1 道具 2 经理
+	optional int32 quality = 5;//经理品质
+}
+//获取道具日志
+message LogList_Req_141001{
+	
+}
+message LogList_Resp_141001{
+	repeated Log logList = 1;
+}
+//推送日志
+message PushLog_Resp_141002{
+	optional Log log = 1;
+}
+
+//点击日志上传
+message ClickLog_Req_141003{
+	optional int32 game_event = 1;
+	optional int32 click_num = 2;
+	optional int32 time = 3;
+	optional int32 type = 4;//1 事件打点 2 活动打点
+}
+message ClickLog_Resp_141003{
+}

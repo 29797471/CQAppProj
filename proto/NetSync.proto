@@ -1,0 +1,41 @@
+syntax = "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "NetSyncProtocol";
+
+
+////////////网络信息同步////////////////////////
+
+// 信息同步数据
+message AttrSyncInfo {
+    optional int32 arrive_time = 1;	// 属性改变的时间戳
+	optional int32 type = 2;		// 1.车类型&位置(类型为0时收起)	2.车线性运动目标位置 3.车曲线运动控制点和目标位置 4.退出商务考察
+	repeated int32 data1 = 3;
+	repeated float data2 = 4;
+}
+
+// 玩家同步数据结构
+message PlayerSyncInfo {
+    optional int64 rid = 1;	// 玩家id
+	repeated AttrSyncInfo data = 2;		// 同步数据
+}
+
+// 请求场景玩家同步信息
+message PlayerSync_Req_146001 {
+	optional bool start_sync = 1;	// 开启或者关闭数据同步
+}
+
+// 下发场景玩家同步信息
+message PlayerSync_Resp_146001 {
+	repeated PlayerSyncInfo list = 1;
+}
+
+// 上传更新同步信息
+message UpdatePlayerSyncInfo_Req_146002 {
+	repeated AttrSyncInfo data = 1;
+}
+
+// 下发更新同步信息
+message UpdatePlayerSyncInfo_Resp_146002 {
+	optional int64 rid = 1;	// 玩家id
+	repeated AttrSyncInfo data = 2;	// 玩家同步数据
+}

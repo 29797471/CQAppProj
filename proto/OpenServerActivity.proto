@@ -1,0 +1,33 @@
+syntax = "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "OpenServerActivityProtocol";
+
+// 冲级任务信息
+message RushLevelTask {
+    optional int32 config_id			= 1; // 配置id
+    optional int64 progress				= 2; // 进度
+    optional int32 state				= 3; // 0 未完成 1可领取 2已领取
+	optional int64 value				= 4; // 目标值
+}
+
+// 获取冲级任务
+message ListRushLevelTask_Req_169001 {
+	optional int32 activity_type		= 1; // 冲级活动的类型
+}
+message ListRushLevelTask_Resp_169001 {
+	optional int32 activity_type		= 1; // 冲级活动的类型
+	repeated RushLevelTask list 		= 2; // 列表
+}
+
+// 领取节任务奖励请求
+message RewardRushLevelTask_Req_169002 {
+    optional int32 config_id 			= 1; // 配置id
+}
+message RewardRushLevelTask_Resp_169002 {
+    optional int32 config_id 			= 1; // 配置id
+}
+
+// 推送节任务(任务发生变化)
+message PushRushLevelTask_Resp_169003 {
+    repeated RushLevelTask list 		= 1; // 节
+}

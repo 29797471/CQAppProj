@@ -1,0 +1,59 @@
+syntax = "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "BuildingEnvironmentProtocol";
+import "Values.proto";
+import "Role.proto";
+
+// 查看建筑简要信息返回
+message GetBuildingEnvironmentBriefInfo_Resp_122001 {
+    optional int64 building_id              = 1;    // 建筑id
+    optional int32 building_type            = 2;    // 建筑类型
+    optional RoleHeadMessage owner          = 3;    // 拥有者
+    optional float key_info                 = 6;    // 关键信息
+}
+
+message BuildingEnvironmentElem {
+    optional int64 building_id      = 1;    // 建筑id
+    optional int32 building_type    = 2;    // 建筑类型
+    optional int64 map_id           = 3;    // 地图id 
+    optional float local_x          = 4;    // X坐标
+    optional float local_y          = 5;    // Y坐标
+    optional int32 direction        = 6;    // 方向
+    optional bool is_activated      = 7;    // 是否激活
+    optional bool is_undeployed     = 8;    // 是否收起
+    optional int32 undeploy_time    = 9;    // 收起时间
+    optional int32 map_type         = 10;   // 地图配置id
+    optional int32 map_index        = 11;   // 同类型地图索引
+    optional int32 build_state      = 12;   // 建造状态 0,建造完成 1,建造中 
+    optional int32 build_finish_time= 13;   // 建造完成时间
+}
+
+// 环境建筑列表
+message BuildingEnvironmentList_Resp_122002 {
+    repeated BuildingEnvironmentElem buildings = 1;
+}
+
+// 推送环境建筑更新(包括建造)
+message PushEnvironmentUpdates_Resp_122003 {
+    repeated BuildingEnvironmentElem buildings = 1;
+}
+
+// 获取强拆建筑信息
+message GetPreForceRemoveBuildingInfo_Req_122004 {
+    optional int64 bid = 1;  // 建筑id
+}
+
+message GetPreForceRemoveBuildingInfo_Resp_122004 {
+    optional int64 bid                     = 1; // 建筑id
+    repeated ValuesMessage cost            = 2; // 花费
+    optional RoleHeadMessage defender_head = 3; // 守方头像
+}
+
+// 强拆建筑
+message ForceRemoveBuilding_Req_122005 {
+    optional int64 bid = 1; // 建筑id 
+}
+
+message ForceRemoveBuilding_Resp_122005 {
+    optional int64 bid = 1; // 建筑id 
+}

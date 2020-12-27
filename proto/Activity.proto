@@ -1,0 +1,46 @@
+syntax = "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "ActivityProtocol";
+
+// 获取活动列表请求
+message ListAllActivities_Req_127001 {
+    
+}
+
+// 获取活动列表返回
+message ListAllActivities_Resp_127001 {
+    repeated ActivityMessage activities = 1;    // 活动列表
+}
+
+// 活动信息
+message ActivityMessage {
+    optional int32 activity_type         = 1;    // 活动类型
+    repeated int32 open_week_days        = 2;    // 活动开放日 eg: [1,2] 周一周二开
+    repeated TimeInterval open_intervals = 3;    // 活动开放时间区间 eg: [43200, 44999] 即 ["12:00:00", "12:29:59"]
+    optional int32 prepare_time          = 4;    // 活动准备时间
+    optional int32 begin_time            = 5;    // 活动开放时间
+    optional int32 end_time              = 6;    // 活动结束时间
+    optional int32 finish_time           = 7;    // 活动终止时间
+}
+
+// 时间区间
+message TimeInterval {
+    optional int32 start_seconds = 1;    // 当天秒数
+    optional int32 end_seconds   = 2;    // 当天秒数
+}
+
+// 活动开放关闭通知
+message ActivityOpenNotify_Resp_127002 {
+    optional int32 activity_type = 1;    // 活动类型
+    optional bool open           = 2;    // true 开放 false 关闭
+}
+
+// 活动准备通知
+message ActivityPrepareNotify_Resp_127003 {
+    optional ActivityMessage activity = 1;    // 活动
+}
+
+// 活动终止通知
+message ActivityFinishNotify_Resp_127004 {
+    optional int32 activity_type = 1;    // 活动类型
+}

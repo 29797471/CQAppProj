@@ -1,0 +1,105 @@
+syntax = "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "BuildingStaffProtocol";
+import "Role.proto";
+import "Common.proto";
+
+
+// 查看建筑简要信息返回
+message GetBuildingStaffBriefInfo_Resp_113001 {
+    optional int64 building_id              = 1;    // 建筑id
+    optional int32 building_type            = 2;    // 建筑类型
+    optional RoleHeadMessage owner          = 3;    // 拥有者
+    optional float key_info                 = 4;    // 关键信息
+    repeated ManagerSlot manager_slots      = 5;    // 经理
+}
+
+
+message BuildingStaffElem {
+    optional int64 building_id         = 1;    // 建筑id
+    optional int32 building_type       = 2;    // 建筑类型
+    optional int64 map_id              = 3;    // 地图id 
+    optional float local_x             = 4;    // X坐标
+    optional float local_y             = 5;    // Y坐标
+    optional int32 direction           = 6;    // 方向
+    optional bool is_activated         = 7;    // 是否激活
+    optional bool is_undeployed        = 8;    // 是否收起
+    optional int32 undeploy_time       = 9;    // 收起时间
+    optional int32 map_type            = 10;   // 地图配置id
+    optional int32 map_index           = 11;   // 同类型地图索引
+    repeated ManagerSlot manager_slots = 12;   // 经理
+    optional int32 add_staff           = 13;   // 增加员工
+    optional int32 build_state         = 14;   // 建造状态 0,建造完成 1,建造中 
+    optional int32 build_finish_time   = 15;   // 建造完成时间
+}
+
+// 查看建筑详情信息返回
+message GetBuildingStaffDetailInfo_Resp_113002 {
+    optional bool success                           = 1;    // 是否成功
+    optional int64 building_id                      = 2;    // 建筑id
+    optional int32 building_type                    = 3;    // 建筑类型
+    optional int64 map_id                           = 4;    // 地图id
+    optional int32 map_type                         = 5;    // 地图配置id
+    optional int32 map_index                        = 6;    // 同类型地图索引
+    optional float local_x                          = 7;    // X坐标
+    optional float local_y                          = 8;    // Y坐标
+    optional bool is_activated                      = 9;    // 是否激活
+    optional bool is_undeployed                     = 10;   // 是否收起
+    optional RoleHeadMessage owner                  = 11;   // 拥有者
+    repeated StaffManagerMessage manager            = 12;   // 经理
+    optional int32 add_staff                        = 13;   // 增加员工
+}
+
+message StaffManagerMessage {
+    optional int64 id                 = 1;    // 唯一id
+    optional int32 config_id          = 2;    // 配置id
+    optional int32 level              = 3;    // 等级
+    optional int32 star               = 4;    // 星级
+    optional int32 talent             = 5;    // 天赋
+    optional int32 talent_level       = 6;    // 天赋等级
+    optional int32 color              = 7;    // 品质
+    optional int32 index              = 8;    // 槽位
+}
+
+message PushBuildingStaffUpdates_Resp_113003 {
+    repeated BuildingStaffElem buildings = 1;
+}
+
+message BuildingStaffList_Resp_113004 {
+    repeated BuildingStaffElem buildings = 1;
+}
+
+// 猎聘
+message StaffHunting_Req_113005 {
+    optional int64 building_id              = 1;    // 建筑id
+    optional int32 index                    = 2;    // 位置
+    optional int32 cost_type                = 3;    // 花费方式
+}
+
+message StaffHunting_Resp_113005 {
+    required bool is_success                = 1; // 是否成功
+    optional int64 building_id              = 2; // 建筑id
+    optional int32 index                    = 3; // 位置  
+    optional int64 manager_id               = 4; // 经理id
+    optional int32 num                      = 5; // 失败次数
+}
+
+// 员工建筑类型猎聘次数
+message StaffTypeHuntingNum_Req_113006 {
+	optional int32 building_type       	= 1;    // 建筑类型
+	optional int32 index 				= 2;	// 位置
+}
+
+message StaffTypeHuntingNum_Resp_113006 {
+	optional int32 num       			= 1;    // 已经猎聘的次数
+}
+
+// 员工建筑猎聘失败次数
+message StaffBuildingHuntingFailureNum_Req_113007 {
+	optional int64 bid       	= 1;    // 建筑id
+	optional int32 index 		= 2;	// 位置
+}
+
+message StaffBuildingHuntingFailureNum_Resp_113007 {
+	optional int32 num       	= 1;    // 失败次数
+}

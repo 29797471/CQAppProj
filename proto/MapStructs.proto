@@ -1,0 +1,15 @@
+syntax = "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "MapStructsProtocol";
+
+// 地图详情
+message MapDetailsMessage {
+    optional int32 map_type                 = 1;    // 地图配置id
+    optional int64 map_id                   = 2;    // 地图id
+    optional int64 daily_profit             = 3;    // 日利润
+    optional int32 traffic                  = 4;    // 客流
+    optional int32 shop_count               = 5;    // 店铺数量
+    optional int32 tourism_count            = 6;    // 旅游建筑数量
+    optional int32 environment_count        = 7;    // 环境建筑数量
+    optional int32 factory_count            = 9;    // 工厂数量
+}

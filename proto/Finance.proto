@@ -1,0 +1,118 @@
+syntax = "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "FinanceProtocol";
+import "Role.proto";
+
+
+message FinanceInfo {
+    optional RoleHeadMessage role_head  = 1; // 角色
+    optional int64 sale_value           = 4; // 市值
+    optional int32 end_time             = 5; // 结束时间
+    optional bool lock                  = 6; // 是否有锁
+    optional int64 id                   = 8;
+}
+
+message InvestmentInfo {
+    optional RoleHeadMessage role_head  = 1; // 角色
+    optional int32 hold_stock_num       = 6; // 当前持股数量
+    optional bool friend                = 7; // 是否好友
+}
+
+message FinanceDetail {
+    optional RoleHeadMessage role_head  = 1;  // 角色
+    optional int64 sale_value           = 4;  // 市值
+    optional int32 sale_stock_num       = 10; // 出让股数
+    optional int32 hold_stock_num       = 11; // 当前持股数量
+    optional bool lock                  = 13; // 是否有锁
+    optional int64 id                   = 14;
+}
+
+//融资列表
+message FinanceList_Req_162001{
+    optional int32 page                 = 1;
+}
+message FinanceList_Resp_162001{
+    repeated FinanceInfo list           = 1;
+    optional int32 page                 = 2;
+}
+//发布融资
+message Finance_Req_162002{
+    optional string password            = 1;
+}
+message Finance_Resp_162002{
+    optional FinanceInfo info           = 1;
+}
+
+//获取融资详情
+message FinanceDetail_Req_162003{
+    optional int64 rid                  = 1;
+    optional int64 id                   = 2;
+}
+message FinanceDetail_Resp_162003{
+    optional FinanceDetail detail       = 1;
+}
+
+//投资
+message Invested_Req_162004{
+    optional string password            = 1;
+    optional int64 rid                  = 2;
+    optional int64 id                   = 3;
+}
+message Invested_Resp_162004{
+    optional int64 rid                  = 1;
+    optional int64 id                   = 2;
+}
+
+//我的投资
+message InvestmentList_Req_162005{
+}
+message InvestmentList_Resp_162005{
+    repeated InvestmentInfo list        = 1;
+}
+
+//发布融资广播
+message FinanceBroadcast_Req_162006{
+    
+}
+message FinanceBroadcast_Resp_162006{
+    
+}
+
+//获取广播cd
+message GetBroadcastCd_Req_162007{
+    
+}
+message GetBroadcastCd_Resp_162007{
+    optional int32 broadcast_cd         = 1;//广播cd结束时间 0是没有发布融资
+    optional int32 end_time             = 2;
+}
+//获取市值
+message GetSaleValue_Req_162008{
+}
+message GetSaleValue_Resp_162008{
+    optional int64 sale_value           = 4;//市值
+}
+
+
+//获取股权市场列表
+message StockMarketList_Req_162201{
+    optional int32 page                 = 1;
+}
+message StockMarketList_Resp_162201{
+    repeated FinanceInfo list           = 1;
+    optional int32 page                 = 2;
+}
+//获取股权市场情
+message StockMarketDetail_Req_162202{
+    optional int64 rid                  = 1;
+}
+message StockMarketDetail_Resp_162202{
+    optional FinanceDetail detail       = 1;
+}
+//从股权市场购买
+message BuyStockMarket_Req_162203{
+    optional int64 rid                  = 1;
+}
+message BuyStockMarket_Resp_162203{
+    optional int64 rid                  = 1;
+}

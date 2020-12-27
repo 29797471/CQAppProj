@@ -1,0 +1,82 @@
+syntax = "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "RoleAuctionProtocol";
+import "Role.proto";
+
+// 竞拍物品信息
+message RoleAuctionItem {
+	optional int32 index  			= 1; //位置 
+	optional int32 item_id 			= 2; //道具id
+	optional int32 num 				= 3; //数量
+	optional int32 result 			= 4; // 结果：1 拍到 2 未拍到 3流拍
+	optional int32 state 			= 5; // 1、未开始 2、即将开始 3、正在进行 4、已结束
+	optional int64 total_num 		= 6; // 总竞拍值
+	optional int32 total_role_num 	= 7; // 总竞拍人数
+	optional RoleHeadMessage head 	= 8; // 中标人员 可能为空
+	
+}
+
+// 竞拍物品信息相关的玩家信息
+message RoleAuctionItemRoleMsg {
+	optional RoleAuctionItem item 	= 1; // 竞拍物品信息
+	repeated RoleHeadMessage roles 	= 2; // 参与玩家列表
+	optional int32 total_rows 		= 3; // 总条数
+}
+
+// 个人竞拍的记录
+message RoleAuctionMessage_Req_176001 {
+}
+
+message RoleAuctionMessage_Resp_176001 {
+	repeated AuctionMessage auction = 1; // 竞拍信息
+	optional int32 rounds 			= 2; // 当前轮数
+}
+
+// 竞拍信息
+message AuctionMessage {
+	optional int32 start_time 		= 1; // 开始时间
+	optional int32 end_time 		= 2; // 结束时间
+	optional int32 rounds 			= 3; // 轮次
+	repeated RoleAuctionItem items 	= 4; // 竞拍物品
+}
+
+// 竞拍
+message Auction_Req_176002 {
+    optional int32 unit 		= 1; //竞拍单位数量
+	optional int32 index  		= 2; //竞拍的位置
+	optional bool is_add_base 	= 3; //是否加基础的
+}
+
+message Auction_Resp_176002 {
+	optional int32 index 				= 1; // 竞拍位置
+	optional RoleAuctionItemRoleMsg msg	= 2; // 竞拍信息
+}
+
+//获取旧竞拍详情
+message OldAuctionDetail_Req_176003{
+	optional int32 rounds 		= 1;
+	optional int32 index 		= 2; // 位置
+	optional int32 page 		= 3; // 第几页 每一页50条
+}
+message OldAuctionDetail_Resp_176003{
+	optional RoleAuctionItemRoleMsg msg = 1; // 竞拍信息
+	optional int32 page 				= 2; // 请求页
+}
+
+//竞拍状态更新
+message AuctionStateUpdate_Resp_176004{
+	optional int32 rounds 		= 1;
+	optional int32 state 		= 2;
+}
+
+//结果推送
+message PushAuctionResult_Resp_176005{
+	repeated AuctionResult result = 1; // 结果
+}
+
+// 竞拍结果
+message AuctionResult {
+	optional int32 rounds 		= 1; // 
+	optional int32 result 		= 2; // 结果：1 拍到 2 未拍到 3流拍
+	optional int32 index 		= 3; // 位置
+}

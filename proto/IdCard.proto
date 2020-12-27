@@ -1,0 +1,37 @@
+syntax = "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "IdCardProtocol";
+
+// 身份卡信息
+message IdCard_Req_165001{
+}
+
+message IdCard_Resp_165001{
+	optional IdCardProto id_card = 1;
+}
+
+// 身份卡
+message IdCardProto {
+	optional int32 config_id 		= 1; //配置id
+	optional int32 start_time 		= 2; //开始时间
+	optional int32 end_time			= 3; //结束时间
+	optional bool is_get_reward 	= 4; //是否领取奖励
+}
+
+// 激活身份卡
+message ActiveIdCard_Req_165002 {
+	optional int32 config_id 	= 1; // 配置id
+}
+
+message ActiveIdCard_Resp_165002 {
+	optional IdCardProto id_card = 1;
+}
+
+// 身份卡领奖
+message IdCardReward_Req_165003 {
+}
+
+message IdCardReward_Resp_165003 {
+	optional IdCardProto id_card = 1;
+}
+

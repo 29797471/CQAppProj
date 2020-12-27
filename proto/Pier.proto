@@ -1,0 +1,122 @@
+syntax = "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "PierProtocol";
+import "Role.proto";
+
+// 获取港口属性
+message GetPier_Req_163001 {
+	optional int32 config_id	= 1; // 码头配置ID
+}
+message GetPier_Resp_163001 {
+	optional int32 config_id		= 1; 	// 码头配置ID
+	optional int32 open_route 		= 2; 	// 开通航路数量
+	optional int32 tourist			= 3; 	// 增加游客
+	optional int64 profit			= 4; 	// 增加利润
+	optional int32 state			= 5; 	// 码头状态 0未开通 1建设中 2已开通
+	optional int32 time				= 6; 	// state为1时，此时的time为开通时间戳
+	optional int32 route_state		= 7; 	// 航路开辟状态 0待开辟 1开辟中 
+	optional int32 route_time		= 8;	// route_state为1时，此时的route_time为开辟的时间戳
+}
+
+// 建设港口
+message BuildPier_Req_163002 {
+	optional int32 config_id	= 1; // 码头配置ID
+}
+message BuildPier_Resp_163002 {
+	optional int32 config_id	= 1; // 码头配置ID
+}
+
+// 港口直接完成
+message FinishPier_Req_163003 {
+	optional int32 config_id	= 1; // 码头配置ID
+}
+message FinishPier_Resp_163003 {
+	optional int32 config_id	= 1; // 码头配置ID
+}
+
+// 增加航线
+message AddRoute_Req_163004 {
+	optional int32 config_id	= 1; // 码头配置ID
+}
+message AddRoute_Resp_163004 {
+	optional int32 config_id	= 1; // 码头配置ID
+}
+
+// 航线直接完成
+message FinishRoute_Req_163005 {
+	optional int32 config_id	= 1; // 码头配置ID
+}
+message FinishRoute_Resp_163005 {
+	optional int32 config_id	= 1; // 码头配置ID
+}
+
+// 航路信息
+message Route {
+	optional int32 route_id			= 1; // 航路ID
+	optional RoleHeadMessage role 	= 2; // 玩家信息
+	optional int32 traffic			= 3; // 游客数量
+	optional int32 friendship_value	= 4; // 友好度
+	optional int32 tourist			= 5; // 增加游客
+	optional int64 profit			= 6; // 增加利润
+	optional int32 end_time			= 7; // 通航结束时间戳
+	optional int32 state			= 8; // 0未通航 1已通航未过期 2过期 3好友删除
+}
+
+// 获取航路信息
+message ListRoute_Req_163006 {
+	optional int32 config_id	= 1; // 码头配置ID
+}
+message ListRoute_Resp_163006 {
+	optional int32 config_id	= 1; // 码头配置ID
+	repeated Route list			= 2; // 航路信息列表
+}
+
+// 航路好友
+message RouteFriend {
+	optional RoleHeadMessage role 	= 1; // 玩家信息
+	optional int32 traffic			= 2; // 游客数量
+	optional int32 friendship_value	= 3; // 友好度
+	optional int32 tourist			= 4; // 可增加游客
+	optional int64 profit			= 5; // 可增加利润
+	optional int32 state			= 6; // 0未通航 1已通航
+}
+
+// 获取航路信息
+message ListRouteFriend_Req_163007 {
+	optional int32 config_id	= 1; // 码头配置ID
+	optional int32 route_id		= 2; // 航路ID
+}
+message ListRouteFriend_Resp_163007 {
+	optional int32 config_id	= 1; // 码头配置ID
+	optional int32 route_id		= 2; // 航路ID
+	repeated RouteFriend list	= 3; // 航路好友列表
+}
+
+// 通航
+message Navigable_Req_163008 {
+	optional int32 config_id	= 1; // 码头配置ID
+	optional int32 route_id		= 2; // 航路ID
+	optional int64 friend_rid 	= 3; // 好友rid
+}
+message Navigable_Resp_163008 {
+	optional int32 config_id	= 1; // 码头配置ID
+	optional int32 route_id		= 2; // 航路ID
+	optional int64 friend_rid 	= 3; // 好友rid
+}
+
+// 通航替换
+message NavigableReplace_Req_163009 {
+	optional int32 config_id	= 1; // 码头配置ID
+	optional int32 route_id		= 2; // 航路ID
+	optional int64 friend_rid 	= 3; // 好友rid
+}
+message NavigableReplace_Resp_163009 {
+	optional int32 config_id	= 1; // 码头配置ID
+	optional int32 route_id		= 2; // 航路ID
+	optional int64 friend_rid 	= 3; // 好友rid
+}
+
+
+
+
+

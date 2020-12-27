@@ -1,0 +1,111 @@
+syntax = "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "DailyActivitiesProtocol";
+import "Values.proto";
+
+message DailyActivity{
+	required int32 configId 		= 1;
+	optional bool isFinishActivity 	= 3;//是否已经完成活动
+	optional int32 finishNum 		= 4;
+	optional int32 time 			= 5; // 商业峰会和店铺订单的结束时间
+}
+
+message RewardItem{
+	required int32 itemId 	= 1; 	//物品id 
+	required int64 num	= 2;  	//数量
+}
+
+
+// 获取活动列表
+message GetDailyActivityList_Req_124001{
+}
+
+message GetDailyActivityList_Resp_124001{
+	repeated DailyActivity list = 1;
+}
+
+// 活动推送
+message PushDailyActivity_Resp_124012 {
+	repeated DailyActivity activities = 1;
+}
+
+//获取活动信息/贸易
+message GetDailyActivity_Req_124002{
+	required int32 configId = 1;//活动配置id
+}
+message GetDailyActivity_Resp_124002{
+	required int64 finishNum = 1;//完成次数
+	repeated int32 receiveBoxConfigId = 2;//领取宝箱配置id
+	required int32 configId = 3;//活动配置id
+}
+
+///贸易-宝箱领取
+message ReceiveBox_Req_124004{
+	repeated int32 boxConfigIds = 1;
+	required int32 configId = 2;//活动配置id
+}
+message ReceiveBox_Resp_124004{
+	repeated int32 boxConfigIds = 1;
+	required int32 configId = 2;
+}
+
+//做任务-答题活动
+message WorkAnswerActivity_Req_124005{
+	required int32 selectData = 1;//选项
+	required int32 titleId = 2;//题目id
+}
+message WorkAnswerActivity_Resp_124005{
+	required int32 titleId = 1;//题目id
+	required int32 selectData =2;//选项
+	required int32 rightOption = 3;//正确选项
+	required int32 rightNum = 4;//正确数量
+}
+ 
+//答题活动-活动信息
+message AnswerActivity_Req_124006{
+}
+message AnswerActivity_Resp_124006{
+	required int32 finishNum = 1;//完成数次
+	required int32 correctNum = 2;//正确数量
+	optional int32 startAnswerTime = 3;//开始答题时间
+	repeated int32 titleIds = 4;//未答题目
+	optional int32 integral = 5;//当前积分
+	optional int32 answerNum = 6;//剩余获取正确答案的次数
+}
+
+//推送贸易随机奖励
+message TradeRandomReward_Resp_124007{
+	required RewardItem randomReward = 1;//随机奖励
+}
+
+//开始答题
+message StartAnswer_Req_124008{	
+}
+message StartAnswer_Resp_124008{
+	optional int32 startAnswerTime = 1;//开始答题时间
+}
+
+//贸易活动 - 可领取通知
+message TradeReceiveNotice_Resp_124014{
+}
+
+//答题活动 - 获取答案
+message GetRightAnswer_Req_124015{
+	required int32 titleId = 1;//题目id
+}
+message GetRightAnswer_Resp_124015{
+	required int32 answer = 1;//答案
+}
+
+//活动完成次数推送
+message PushActivityFinishNum_Resp_124016{
+	required int32 configId 	= 1;//活动配置id
+	optional bool isFinish 		= 2;//活动完成状态
+	optional int32 finishNum 	= 4; 
+	optional int32 time 		= 5; // 商业峰会和店铺订单的结束时间
+}
+
+//答题结算推送
+message PushAnswerAccount_Resp_124017{
+	optional RewardsMessage reward = 1;//奖励道具
+}

@@ -1,0 +1,207 @@
+syntax = "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "BuildingFactoryProtocol";
+import "Manager.proto";
+import "Role.proto";
+import "Common.proto";
+import "Battle.proto";
+
+// 工厂信息
+message BuildingFactoryElem {
+    optional int64 building_id      	= 1;    // 建筑id
+    optional int32 building_type    	= 2;    // 建筑类型
+    optional int64 map_id           	= 3;    // 地图id 
+    optional float local_x          	= 4;    // X坐标
+    optional float local_y          	= 5;    // Y坐标
+    optional int32 direction        	= 6;    // 方向
+    optional int32 quality          	= 7;    // 竞争力(千分比)
+    optional int32 supply_shop_num		= 8;  	// 供货店铺数量
+    repeated ManagerSlot manager_slots  = 9;    // 经理
+    optional bool is_activated          = 10;   // 是否激活
+    optional bool is_undeployed         = 11;   // 是否收起
+    optional int32 undeploy_time        = 12;   // 收起时间
+    optional int32 map_type             = 13;   // 地图配置id
+    optional int32 map_index            = 14;   // 同类型地图索引
+    optional int32 shop_addition 		= 15;	// 加成
+    optional int32 research_chance 		= 16;	// 研发几率
+    optional int32 build_state          = 17;   // 建造状态 0,建造完成 1,建造中 
+    optional int32 build_finish_time    = 18;   // 建造完成时间
+}
+
+// 工厂列表返回
+message BuildingFactoryList_Resp_114001 {
+    repeated BuildingFactoryElem buildings = 1;    // 工厂
+}
+
+// 查看建筑详情信息返回
+message GetBuildingFactoryDetailInfo_Resp_114002 {
+    optional int64 building_id      	= 1;    // 建筑id
+    optional int32 building_type    	= 2;    // 建筑类型
+    optional int64 map_id           	= 3;    // 地图id
+    optional int32 map_type         	= 4;    // 地图配置id
+    optional int32 map_index        	= 5;    // 同类型地图索引
+    optional float local_x          	= 7;    // X坐标
+    optional float local_y          	= 8;    // Y坐标
+	optional int32 direction        	= 9;    // 方向
+    optional RoleHeadMessage owner      = 10;   // 拥有者
+    optional int32 radius               = 11;   // 影响半径
+    repeated FactoryManagerInfo manager = 15;   // 经理
+    optional bool is_activated      	= 16;   // 是否激活
+    repeated SupplyList supply          = 17;   // 供货列表
+    optional bool is_undeployed         = 18;   // 是否收起
+    optional bool success               = 19;   // 是否成功
+    optional int32 quality 				= 20;	// 竞争力(千分比)
+    optional int32 shop_addition 		= 21;	// 加成
+}
+
+// 供货列表
+message SupplyList {
+    optional int32 building_type    = 1;    // 建筑类型
+    optional float local_x          = 2;    // X坐标
+    optional float local_y          = 3;    // Y坐标
+    optional int32 level            = 4;    // 等级
+    optional int32 income           = 5;    // 收入
+    optional int64 map_id           = 6;    // 地图id
+    optional int64 building_id      = 7;    // 建筑id
+    optional int32 competition_num  = 8;    // 竞争数量
+}
+
+// 生产线经理
+message FactoryManagerInfo {
+    optional int64 id               = 1;    // 唯一id
+    optional int32 config_id        = 2;    // 配置id
+    optional int32 talent           = 3;    // 天赋
+    optional int32 talent_level     = 4;    // 天赋等级
+	optional int32 level			= 5;	// 等级
+	optional int32 star				= 6;	// 星级
+	optional int32 color			= 7;  	// 颜色
+	repeated SkillMsg skills 		= 8;	// 经理技能
+	optional int32 index 			= 9;	// 位置
+	optional int32 research_chance 	= 10;	// 研发几率
+}
+
+// 推送工厂更新(包括建造)
+message PushFactoryUpdates_Resp_114010 {
+    repeated BuildingFactoryElem buildings = 1;    // 工厂
+}
+
+// 查看建筑简要信息返回
+message GetBuildingFactoryBriefInfo_Resp_114011 {
+    optional int64 building_id              = 1;    // 建筑id
+    optional int32 building_type            = 2;    // 建筑类型
+    optional RoleHeadMessage owner          = 3;    // 拥有者
+    optional float key_info                 = 6;    // 关键信息
+}
+
+// 工厂生产信息
+message FactoryProductionMsg_Req_114013 {
+	required int64 bid = 1; // 工厂id
+}
+
+message FactoryProductionMsg_Resp_114013 {
+	repeated FactoryProduction production_list 	= 1; // 生产信息列表
+	optional int32 research_chance 				= 2; // 研发几率	
+}
+
+// 工厂生产信息
+message FactoryProduction {
+	optional int64 bid 			= 1; // 工厂id
+	optional int32 index 		= 2; // 位置
+	optional int32 progress 	= 3; // 进度
+	optional bool is_activated  = 4; // 是否激活
+	optional bool is_complete 	= 5; // 是否完成
+}
+
+// 研发
+message Research_Req_114014 {
+	optional int64 bid 		= 1; // 工厂id
+	optional int32 index 	= 2; // 位置
+}
+
+message Research_Resp_114014 {
+	repeated FactoryProduction production_list 	= 1; // 生产信息列表
+	optional int64 bid 							= 2; // 工厂id
+	required bool is_success					= 3; // 成功true 失败
+}
+
+// 共同研发列表
+message ToDevelopRoleList_Req_114015 {
+	required int64 bid 	= 1; // 工厂id
+	required int32 page = 2; // 页数
+}
+
+message ToDevelopRoleList_Resp_114015 {
+	repeated ToDevelopRole roles 	= 1; // 生产信息 
+	required int64 bid 				= 2; // 工厂id
+	required int32 page 			= 3; // 页数
+	required int32 total			= 4; // 总条数
+}
+
+// 标记的共同研究好友列表
+message SignToDevelopFriends_Req_114016 {
+	required int64 bid = 1; // 工厂id
+}
+
+message SignToDevelopFriends_Resp_114016 {
+	repeated ToDevelopRole roles 	= 1; // 记录的玩家的rid
+	required int64 bid 				= 2; // 工厂id
+}
+
+// 共同研究玩家信息
+message ToDevelopRole {
+	required RoleHeadMessage role 		= 1; // 玩家信息
+	optional int32 friendliness_level	= 2; // 友好度等级
+	optional int32 research_chance 		= 3; // 研发几率
+}
+
+// 联合
+message Union_Req_114017 {
+	repeated int64 rids 	= 1; //联合的玩家rid
+	optional int64 bid 		= 2; // 工厂id
+}
+
+message Union_Resp_114017 {
+	repeated int64 rids  	         = 1; // 联合的玩家rid
+    repeated int64 non_friend_rids   = 2; // 非好友rid
+	optional int64 bid 		         = 3; // 工厂id
+}
+
+// 获取强拆建筑信息
+message GetPreForceRemoveBuildingInfo_Req_114018 {
+    optional int64 bid = 1;  // 建筑id
+}
+
+message GetPreForceRemoveBuildingInfo_Resp_114018 {
+    optional int64 bid                     = 1; // 建筑id
+    optional int32 building_type           = 2; // 建筑类型
+    optional RoleHeadMessage defender_head = 3; // 守方头像
+}
+
+// 强拆建筑
+message ForceRemoveBuilding_Req_114019 {
+    optional int64 bid = 1; // 建筑id 
+}
+
+message ForceRemoveBuilding_Resp_114019 {
+    optional int64 bid                    = 1; // 建筑id 
+    optional BattleDetailsMessage battle  = 2; // 战斗
+    optional int32 attacker_morale_reduce = 3; // 攻方士气下降
+}
+
+// 获取精力
+message GetFactoryEnergyNum_Req_114020 {
+}
+
+// 获取精力
+message GetFactoryEnergyNum_Resp_114020 {
+    optional int32 num = 1;         // 精力
+    optional int32 calc_time = 2;   // 计算本次的数量的时间
+}
+
+// 购买精力
+message BuyFactoryEnergy_Req_114021 {
+}
+
+message BuyFactoryEnergy_Resp_114021 {
+    optional int32 num = 1;     // 精力
+}

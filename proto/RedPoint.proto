@@ -1,0 +1,33 @@
+syntax = "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "RedPointProtocol";
+
+// 红点实体
+message RedPoint {
+	optional int32 id				= 1; // 红点大体类型
+	optional int32 type 			= 2; // 红点配置类型(配置表对应,0:没有分支类型)
+	repeated RedPointExtension data = 3; // 红点扩展数据
+}
+
+// 红点扩展数据
+message RedPointExtension {
+	optional int64 index_id = 1;	// 索引id(根据类型获取具体的对应的数据,比如:id,配置Id,类型)
+	optional int32 num		= 2;	// 红点数量
+}
+
+// 红点
+message GetRedPoint_Req_120001{
+}
+
+message GetRedPoint_Resp_120001{
+	repeated RedPoint red_point = 1; // 红点
+}
+
+// 标记红点
+message SignRedPoint_Req_120002{
+	optional int32 red_point_id = 1; //红点id
+	optional int64 id			= 2; //标识id
+}
+
+message SignRedPoint_Resp_120002{
+}

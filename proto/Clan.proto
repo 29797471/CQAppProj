@@ -1,0 +1,516 @@
+syntax = "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "ClanProtocol";
+import "Common.proto";
+import "Role.proto";
+
+message ClanHeadMessage {
+	optional int64 clan_id                  = 1; // 公会id
+    optional string name                    = 2; // 名字
+    optional int32 level                    = 3; // 等级
+    optional int32 head                     = 4; // 头像
+}
+
+message ClanProto{
+	required int64 clan_id 					= 1; //公会id
+	required string name 					= 2; //名字
+	optional int32 level 					= 3; //等级
+	optional int32 head 					= 5; //头像
+	optional int32 people_num 				= 6; //人员数量
+	optional int64 daily_profit 			= 7; //总日利润
+	optional string content 				= 8; //公告
+	optional int32 create_time 				= 9; //创建时间
+	optional int64 creator 					= 10; //创建者
+	optional string president_name 			= 11; //会长名字
+	optional int64 total_fund  				= 12; //总商会基金
+	repeated int32 have_head                = 13; //拥有的头像
+	repeated GuildBuff buff					= 14; //buff数据
+	optional int64 today_fund_num			= 15; //今日捐赠数量
+	optional bool is_system_clan			= 16; //系统商会 true:是 false:否
+	optional int32 type 					= 17; // 申请方式: 1:自动加入 2:手动操作
+	optional int32 company_level			= 18; // 申请公司等级
+	optional int32 vip_level 				= 19; // 申请vip等级
+	optional bool is_system_content 		= 20; // 显示为系统公告 true:是 false: 显示自定公告
+}
+
+//随机名字
+message GenerateName_Req_110001{
+}
+message GenerateName_Resp_110001{
+	optional string name = 1;
+}
+
+//创建商会
+message Create_Req_110002{
+	required string name = 1;
+}
+message Create_Resp_110002{
+	optional ClanProto clan = 1;
+	optional bool isCreate = 2;  // true:创建成功 false:创建失败
+	optional string name = 3;	 // 创建失败后推荐的名字
+}
+
+//申请加入商会
+message ApplicationJoin_Req_110003{
+	required int64 clan_id = 1;//商会id
+}
+message ApplicationJoin_Resp_110003{
+	optional int64 clan_id  = 1; //商会id
+}
+
+//退出商会
+message Exit_Req_110004{
+}
+message Exit_Resp_110004{
+	optional int64 clan_id = 1;//商会id
+}
+
+//解散商会
+message Disband_Req_110005{
+}
+message Disband_Resp_110005{
+	optional int64 clan_id = 1;//商会id
+}
+
+//申请列表
+message ApplyList_Req_110006{
+}
+message ApplyList_Resp_110006{
+	repeated RoleHeadMessage message = 1; //申请人信息列表
+}
+
+// 申请操作类型
+enum ApplyOperateType{
+	Agree 	= 0;	// 同意
+	Refuse 	= 1;	// 拒绝
+}
+
+//同意或拒绝加入
+message AgreeOrRefuseJoin_Req_110007{
+	optional int64 rid 				= 1;	// 请求id
+	optional ApplyOperateType type 	= 2; 	// 申请操作类型
+}
+message AgreeOrRefuseJoin_Resp_110007{
+	optional int64 rid = 1;	//被操作者的rid
+	optional ApplyOperateType type 	= 2; 	// 申请操作类型
+}
+
+//一键拒绝
+message RefuseAllJoin_Req_110008{
+}
+message RefuseAllJoin_Resp_110008{
+}
+
+//获取商会列表
+message GetClanList_Req_110009{
+	optional int32 page = 1; // 页数,默认条数20
+}
+message GetClanList_Resp_110009{
+	repeated ClanProto clan = 1;
+	repeated int64 clan_id_list = 2; // 申请的商会id
+	optional int32 count = 3;		 // 总条数
+	optional int32 page = 4;		 // 请求的页数
+}
+
+//商会详情
+message ClanDetailMessage_Req_110010{
+	required int64 clan_id = 1; //商会id
+}
+message ClanDetailMessage_Resp_110010{
+	optional ClanProto 				clan = 1; // 公会信息
+	optional ClanMemberProto 	  member = 2; // 会长信息
+}
+
+// 商会成员
+message ClanMemberProto{
+	optional RoleHeadMessage head 		= 1; // rid
+	optional int64 week_contribution 	= 2; // 7天捐献基金
+	optional int32 last_offline_time 	= 3; //	最近下线时间点 0:在线 其他:下线时间点
+	optional int64 history_contribution = 4; // 总捐献基金
+	optional int32 distribution_point 	= 5; // 分配点
+}
+
+//获取商会成员列表
+message GetClanMemberList_Req_110011{
+}
+message GetClanMemberList_Resp_110011{
+	repeated ClanMemberProto clan_member_list = 1; // 成员列表
+}
+
+//过滤商会
+message FilterClanList_Req_110012{
+	required string key = 1; // 过滤字段
+	required int32 page = 2; // 页数
+}
+message FilterClanList_Resp_110012{
+	repeated ClanProto clan 	= 1; // 列表
+	repeated int64 clan_id_list = 2; // 申请的商会id
+	optional int32 count 		= 3; // 总条数
+	optional int32 page  		= 4; // 页数
+}
+
+// 商会发送公告
+message SendBulletin_Req_110014{
+	optional string content = 1; //公告内容
+}
+message SendBulletin_Resp_110014{
+}
+
+// 商会推送招人通知
+message SendNoticeToRecruit_Req_110015{
+	optional int64 clan_id = 1; // 商会id
+}
+message SendNoticeToRecruit_Resp_110015{
+	optional int32 time  = 1; // 上一次推送时间
+}
+
+
+// 权限块
+
+// 踢出
+message KickOutClan_Req_110019{
+	optional int64 rid = 1;
+}
+message KickOutClan_Resp_110019{
+	optional int64 rid = 1;
+}
+
+// 职位
+enum Position{
+	Normal 			= 0; // 普通成员
+	Vice_President 	= 1; // 副会长
+	President 		= 2; // 会长
+}
+
+// 操作职位类型
+enum OperatePositionType{
+	Promotion 	= 0; // 升职
+	Demotion 	= 1; // 降职
+}
+
+// 升职或降职
+message PromotionOrDemotion_Req_110020{
+	optional int64 rid 						= 1; // 升职或降职的rid
+	optional Position position 				= 2; // 达到的职位
+	optional OperatePositionType operate 	= 3; // 职位操作
+}
+message PromotionOrDemotion_Resp_110020{
+	optional int64 rid 			= 1; // rid
+	optional Position position 	= 2; // 职位
+}
+
+//转让会长
+message TransferPresident_Req_110021{
+	optional int64 rid 			= 1; // rid
+}
+message TransferPresident_Resp_110021{
+	optional int64 rid			= 1; // 会长rid
+}
+//任务模块
+//任务
+message Task{
+	required int32 task_id = 1; // 任务配置id
+	required int32 progress =  2; // 进度
+	required int32 state =3;//任务状态  -2 失效 -1未开始 0未完成 1 可领取 2已领取 3 退出商会cd限制不可领取
+	required int32  self_state = 4; //我自己的状态 0 未完成 1已完成
+}
+
+//获取任务进度
+message GetTaskProgress_Req_110022{
+}
+message GetTaskProgress_Resp_110022{
+	repeated Task tasks = 1; //任务
+	optional int32 awardTime =2;//公共发放时间（秒）
+	optional bool hasClanExp = 3;//是否有商会经验
+}
+
+//领取奖励
+message GetAward_Req_110023{
+	optional int32 config_id 	= 1; // 配置id
+	optional int32 type 		= 2; // 0:单个领取 1:全部领取
+}
+message GetAward_Resp_110023{
+	repeated int32 receive_config_id = 1;//领取宝箱配置id
+}
+
+//商会的任务是否领完
+message IsTaskAwardFinish_Resp_110024{
+	optional bool finish = 1; //true 完成 
+}
+
+//商会升级
+message ClanLevelUp_Req_110025{
+}
+message ClanLevelUp_Resp_110025{
+	optional int32 level = 1;
+}
+
+
+message ClanGoldDonation_Resp_110026{
+}
+//商会基金捐赠
+message ClanDonation_Req_110027{
+	optional int64 cash = 1;//捐赠G币
+}
+message ClanDonation_Resp_110027{
+	optional int64 today_fund_num 		= 1; //今日捐赠数量
+	optional int64 sum_fund_num			= 2; //总捐赠数量
+	optional int64 seven_day_fund_num 	= 3; //7天捐献数量
+	optional int64 first_rid			= 4; // 第一名rid
+	optional int64 today_cash_num 		= 5; //今日G币捐赠的数量
+	optional ClanMemberProto member 	= 6; //自己的成员信息
+}
+
+//获取今日捐赠基金
+message GetTodayClanDonationNum_Req_110028{
+}
+message GetTodayClanDonationNum_Resp_110028{
+	optional int64 fund_num 		= 1;//今日捐赠数量
+	optional int64 today_cash_num 	= 2;//今日G币捐赠的数量
+}
+
+// 权限
+// 取代会长
+message ReplacePresident_Req_110029 {
+}
+
+message ReplacePresident_Resp_110029 {
+	optional int64 rid     = 1; // 新会长的rid 
+	optional int64 old_rid = 2; // 旧会长的rid
+}
+
+// 改名
+message ClanRename_Req_110030 {
+	optional string new_name = 1;    // 新的品牌名
+}
+
+message ClanRename_Resp_110030 {
+	optional string clan_name     		= 1;    // 品牌名
+    optional bool is_rename_success    	= 2;    // 是否改名成功 true:改名成功 false:改名失败
+    optional string recommend_name 		= 3;    // 推荐名 改名失败后:系统推荐名
+}
+
+// 改头像
+message ClanChangeHead_Req_110031 {
+	required int32 config_id = 1;    // 头像的配置id
+}
+
+message ClanChangeHead_Resp_110031 {
+}
+
+// 购买头像
+message BuyHead_Req_110032 {
+	required int32 config_id = 1;    // 头像的配置id
+}
+
+message BuyHead_Resp_110032 {
+	required int32 config_id = 1;    // 头像的配置id
+}
+
+// 推送
+
+// 通知角色商会变更
+message RoleClanChange_Resp_110034{
+	optional int64 clan_id = 1; // 商会id
+}
+
+// 推送招人推送时间
+message	RecruitPushTime_Resp_110035 {
+	optional int32 push_time = 1; // 推送时间
+}
+
+
+// 商会建筑
+message ClanBuilding {
+	required int32 building_type 	= 1;	// 建筑类型
+	required int32 state 			= 2;	// 状态 0=未解锁 1=已解锁,待捐款 2=已完成
+	required int64 progress 		= 3;	// 捐款进度
+	optional int32 level			= 4;	// 建筑等级
+}
+
+// 获取商会建筑列表
+message ListClanBuilding_Req_110051 {
+
+}
+message ListClanBuilding_Resp_110051 {
+	repeated ClanBuilding clan_building_list = 1;	// 商会建筑列表
+}
+
+// 对商会建筑捐款
+message DonationClanBuilding_Req_110052 {
+	required int32 building_type = 1;	// 建筑类型
+	required int64 donation = 2;		// 捐款数
+}
+message DonationClanBuilding_Resp_110052 {
+	required ClanBuilding clan_building = 1;	// 商会建筑
+}
+
+// 推送玩家所在商会信息
+message PushRoleClanHeadMessage_Resp_110053 {
+	optional ClanHeadMessage clan_message = 1;  // 商会信息	
+}
+
+// 商会建筑捐款记录
+message ClanBuildingDonationResult {
+	optional int64 id		= 1; // 记录ID
+	optional int64 rid 		= 2; // 玩家ID
+	optional int32 position = 3; // 职位
+	optional string name 	= 4; // 名称
+	optional int64 donation = 5; // 捐款数
+}
+
+// 获取商会建筑捐款记录
+message ListClanBuildingDonationResult_Req_110054 {
+	optional int32 building_type = 1;	// 建筑类型 
+}
+message ListClanBuildingDonationResult_Resp_110054 {
+	repeated ClanBuildingDonationResult resultList 	= 1; // 记录列表
+	optional int64 selfDonation						= 2; // 个人捐款数
+	optional int64 otherDonation					= 3; // 其他来源捐款数
+}
+
+// 商会建筑捐款排名
+message ClanBuildingDonationRank {
+	optional int64 id		= 1; // 最早的记录ID
+	optional int64 rid 		= 2; // 玩家ID
+	optional string name 	= 3; // 名称
+	optional int64 donation = 4; // 捐款数
+}
+
+// 获取商会建筑捐款排名列表
+message ListClanBuildingDonationRank_Req_110055 {
+	optional int32 type	= 1; // 类型
+}
+message ListClanBuildingDonationRank_Resp_110055 {
+	repeated ClanBuildingDonationRank list = 1; // 商会建筑捐款排名列表
+}
+
+//商会建筑升级
+message ClanBuildingUpgrade_Req_110056 {
+	optional int32 building_type	= 1;
+}
+message ClanBuildingUpgrade_Resp_110056 {
+	optional int32 building_type	= 1;
+	optional int32 level			= 2;
+}
+
+
+// 商会名片
+message ClanCard{
+	required int64 clan_id 					= 1; //商会id
+	required string name 					= 2; //名字
+	optional int32 level 					= 3; //等级
+	optional int32 exp						= 4; //经验
+	optional int32 head 					= 5; //头像
+	optional int32 people_num 				= 6; //人员数量
+	optional string president_name 			= 7; //会长名字
+	optional int64 total_fund  				= 8; //总商会基金
+	repeated int32 finish_building_type_list= 9; //完成资金募集的商会建筑列表
+	optional int64 president_rid			= 10; //会长rid
+	optional int32 rank						= 11; //排名
+	optional int32 addition					= 12;// 加成
+	optional string content 				= 13; //公告
+	optional int32 type 					= 14; // 申请方式: 1:自动加入 2:手动操作
+	optional int32 company_level			= 15; // 申请公司等级
+	optional int32 vip_level 				= 16; // 申请vip等级
+}
+
+// 获取商会名片
+message GetClanCard_Req_110061 {
+	required int64 clan_id 					= 1; // 商会id
+}
+message GetClanCard_Resp_110061 {
+	required ClanCard clan_card 			= 1; // 商会名片
+}
+
+// 银币池信息
+message SilverPoolMessage_Req_110062 {
+}
+
+message SilverPoolMessage_Resp_110062 {
+	optional int64 total_num 		= 1; // 银币池总量
+	optional int64 can_get_num 		= 2; // 能够获取的量
+	optional int32 last_get_time 	= 3; // 上次获取的时间(秒) 
+	optional int32 get_times		= 4; // 获取次数 
+}
+
+// 获取银币
+message GetSilver_Req_110063 {
+}
+
+message GetSilver_Resp_110063 {
+	optional int64 total_num 		= 1; // 银币池总量
+	optional int64 can_get_num 		= 2; // 能够获取的量
+	optional int32 last_get_time 	= 3; // 上次获取的时间(秒) 
+	optional int32 get_times		= 4; // 获取次数 
+}
+
+// 清除银币cd
+message ClearSilverCd_Req_110064 {
+}
+
+message ClearSilverCd_Resp_110064 {
+	optional int64 total_num 		= 1; // 银币池总量
+	optional int64 can_get_num 		= 2; // 能够获取的量
+	optional int32 last_get_time 	= 3; // 上次获取的时间(秒) 
+	optional int32 get_times		= 4; // 获取次数 
+}
+
+// 设置申请条件
+message SetApplyCondition_Req_110065 {
+	optional int32 type 			= 1; // 1:自动加入 2:手动操作
+	optional int32 company_level	= 2; // 公司等级
+	optional int32 vip_level 		= 3; // vip等级
+}
+
+message SetApplyCondition_Resp_110065 {
+	optional int32 type 			= 1; // 1:自动加入 2:手动操作
+	optional int32 company_level	= 2; // 公司等级
+	optional int32 vip_level 		= 3; // vip等级
+}
+
+// 互助列表
+message MutualAssistanceList_Req_110066 {
+}
+
+message MutualAssistanceList_Resp_110066 {
+	repeated RoleMutualAssistance list = 1; // 求助信息列表
+}
+
+// 玩家互助信息
+message RoleMutualAssistance {
+	optional int64 id 				= 1; // id
+	optional int32 type 			= 2; // 配置类型
+	optional int32 config_id 		= 3; // 配置类型对应得配置id
+	optional int32 end_time 		= 4; // 结束时间
+	optional RoleHeadMessage role 	= 5; // 玩家基础信息
+	optional int32 position 		= 6; // 职位
+	optional int64 num 				= 7; // 货币数量
+	optional bool is_send 			= 8; // 是否发送请求互助
+}
+
+// 互助
+message MutualAssistance_Req_110067 { 
+	optional int64 id 	= 1; // id
+}
+
+message MutualAssistance_Resp_110067 { 
+	optional int64 id = 1; // id
+}
+
+// 自己互助列表
+message SelfMutualAssistanceList_Req_110068 {
+}
+
+message SelfMutualAssistanceList_Resp_110068 {
+	repeated RoleMutualAssistance list = 1; // 求助信息列表
+}
+
+// 发送互助请求
+message SendMutualAssistanceRequest_Req_110069 { 
+	optional int64 id 	= 1; // id
+}
+
+message SendMutualAssistanceRequest_Resp_110069 { 
+	optional int64 id = 1; // id
+}

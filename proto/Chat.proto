@@ -1,0 +1,127 @@
+syntax = "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "ChatProtocol";
+import "Role.proto";
+
+enum ChatChannelType{
+		WORLD 				= 101;//世界
+        TRADER_MEETING 		= 102;//商会
+        ANNOUNCEMENT		= 103;//公告
+        PRIVATE_CHAT		= 104;//私聊
+		CROSS_SERVICE 		= 107;//跨服
+}
+
+
+message ChatMsg{ 
+	required int64 senderId			= 1;//发送者id
+	required int32 msgType 			= 4;//0 普通信息  1 表情 其他（事件）
+	required int32 time 			= 5;//发送时间
+	repeated string params 			= 8;//事件交互需要的参数
+	required string uuid 			= 9;
+	optional string clanName 		= 13;//商会名称
+	optional int32 clanHeadId 		= 14;//商会头像
+	optional int32 voice_seconds 	= 18;//语音的秒数
+	optional string voice_uuid 		= 19;//语音的唯一识别码
+	optional RoleHeadMessage role	= 22;//发送者
+}
+
+message BroadCast{
+	required string uuid 				= 1;
+	required int32 broadCast_id 		= 2;
+	repeated string params 				= 3;//事件交互需要的参数
+	required int32 intervalBroadTime 	= 4;//广播间隔时间
+	required int32 endBroadTime 		= 5;//广播间隔结束
+	required int32 cycleTimes 			= 6;//循环播放次数
+}
+
+//发送聊天消息
+message SendMsg_Req_109001{
+	repeated string params 			= 1;//事件交互需要的参数
+	required int32 channel 			= 2;
+	optional int32 msgType 			= 3;
+	optional int64 receiverId 		= 4;//接收者id 私聊必填
+	optional int32 voice_seconds	= 5;//语音的秒数
+	optional string voice_uuid 		= 6;//语音的唯一识别码
+}
+message SendMsg_Resp_109001{
+}
+//接收推送消息
+message ReceivePushMsg_Resp_109002{
+	required ChatMsg msg 			= 1;
+	required int32 channel 			= 2;
+}
+
+//根据频道获取消息（世界/商会）
+message ChannelMsgList_Req_109003{
+	required int32 channel 			= 1; //
+}
+message ChannelMsgList_Resp_109003{
+	repeated ChatMsg msgList 		= 1;
+	required int32 channel 			= 2;
+	optional int32 readMsgTime 		= 3;//上次阅读时间
+}
+
+message ChatContacts{
+    optional int32 time				= 5;//最新发送时间
+	optional int32 readMsgTime 		= 6;//上次阅读时间
+	optional RoleHeadMessage role	= 8;  
+}
+
+//私聊联系人列表
+message GetChatContacts_Req_109004{
+}
+message GetChatContacts_Resp_109004{
+	repeated ChatContacts contactsList = 1;
+}
+//私聊频道-获取某个玩家信息记录
+message PrivateChat_Req_109005{
+	required int64 contactRId	= 1;
+}
+message PrivateChat_Resp_109005{
+	repeated ChatMsg msgList 	= 1;
+	required int64 contactRId 	= 2;
+}
+//屏蔽玩家消息
+message ChatShield_Req_109006{
+	required int64 rid			= 1;
+}
+message ChatShield_Resp_109006{
+	required int64 rid			= 1;
+}
+
+//删除联系人
+message DeleteChatContacts_Req_109007{
+	required int64 rid=1;
+}
+message DeleteChatContacts_Resp_109007{
+	required int64 rid=1;
+}
+//清空所有联系人
+message ClearEmptyContacts_Req_109008{
+}
+message ClearEmptyContacts_Resp_109008{
+
+}
+//取消广播
+message CancelBroadCast_Resp_109009{
+	required string uuid = 1;
+}
+
+message TestCancelBroadCast_Req_109011{
+	required int64 id = 1;
+}
+message TestCancelBroadCast_Resp_109011{
+}
+
+//更新读信息的时间
+message ReadMsg_Req_109012{
+	optional int64 contactRid 	= 1;//等于0时 表示是商会
+}
+message ReadMsg_Resp_109012{
+	optional int64 contactRid 	= 1;
+	required int32 readMsgTime 	= 2;
+}
+//广播推送-（登陆推送/实时推送）
+message PushBroadCast_Resp_109013{
+	repeated BroadCast broadCasts = 1;
+}

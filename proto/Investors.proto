@@ -1,0 +1,58 @@
+syntax =  "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "InvestorsProtocol";
+import "Items.proto";
+
+// 获取的道具列表
+message GetItemsList_Resp_166001 {
+	optional int32 use_num			= 1; // 使用的数量
+	repeated Items produce_items 	= 2; // 产生的道具
+}
+
+
+// 箱子信息列表
+message BoxMsgList_Req_166002 {
+}
+
+
+message BoxMsgList_Resp_166002 {
+	repeated BoxMsg box_list = 1; // 箱子信息
+}
+
+// 箱子信息
+message BoxMsg {
+	optional int32 type 		= 1; // 箱子类型
+	optional int32 cd_end_time 	= 2; // cd时间
+	optional int32 num 			= 3; // 已经开始箱子的次数
+}
+
+// 开箱子
+message OpenBox_Req_166003 {
+	optional int32 type 	= 1; // 箱子类型
+}
+
+message OpenBox_Resp_166003 {
+	optional BoxMsg box 	= 1; //箱子
+}
+
+// 清cd
+message ClearCd_Req_166004 {
+	optional int32 type 	= 1; // 箱子类型
+}
+
+message ClearCd_Resp_166004 {
+	optional BoxMsg box = 1; // 箱子详情
+}
+
+// 开始计时
+message BoxStartCalcTime_Req_166005 {
+	optional int32 type 	= 1; // 箱子类型
+}
+
+// 开始计时
+message BoxStartCalcTime_Resp_166005 {
+	optional int32 type 		= 1; // 箱子类型
+	optional int32 cd_end_time 	= 2; // 结束时间
+	optional bool is_success 	= 3; // 是否成功
+	optional int32 num 			= 4; // 已经开始箱子的次数
+}

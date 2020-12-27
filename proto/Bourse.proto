@@ -1,0 +1,189 @@
+syntax = "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "BourseProtocol";
+import "Common.proto";
+import "Role.proto";
+
+
+
+// 股票信息
+message StockMessage {
+    optional int64 stock_id             = 1;    // 股票id
+    optional string stock_code          = 2;    // 股票代码
+	optional int64 price                = 3;    // 售价(每一股)
+	optional int32 shares               = 4;    // 在售手数
+	optional int32 bonus                = 5;    // 分红(每一股)
+	optional int32 hold_shares          = 6;    // 持仓手数
+	optional RoleHeadMessage player_info = 7;    // 玩家信息
+	optional int32 config_id			= 8;    // 股票发行阶段配置id
+	optional int32 speed_up				= 9;    // 涨速（放大1000倍）
+	optional int64 sale_value			=10;	// 在售总价值
+}
+
+// 持仓股票信息
+message HoldingStockMessage {
+    optional int64 stock_id             = 1;    // 股票id
+    optional string stock_code          = 2;    // 股票代码
+	optional int64 price                = 3;    // 现价
+	optional int32 cost                 = 4;    // 成本
+	optional int64 total_bonus          = 5;    // 累计分红
+	optional int32 hold_shares          = 6;    // 持仓手数
+	optional RoleHeadMessage player_info = 7;    // 玩家信息
+	optional int32 shares               = 8;    // 在售手数
+	optional int32 speed_up				= 9;    // 涨速（放大1000倍）
+}
+
+// 查看上市信息
+message ListingInfo_Req_119001 {
+
+}
+
+// 查看上市信息
+message ListingInfo_Resp_119001 {
+	optional int64 stock_id 		= 1;
+	optional string stock_code 		= 2;
+	optional int32 my_stock_num 	= 3;//自己的占股数量
+	optional int32 config_id 		= 4;//配置表id
+} 
+
+// 发行新股
+message IssuingNewShares_Req_119002 {
+
+}
+// 发行新股
+message IssuingNewShares_Resp_119002 {
+}
+
+// 买入股票
+message BuyStock_Req_119003 {
+    optional int64 stock_id 		= 1;		//股票id
+    optional int32 num 				= 2;		//买入手数量
+	optional int64 price 			= 3;		//价格
+}
+// 买入股票
+message BuyStock_Resp_119003 {
+	optional int32 state 			= 1;// 0 失败 1 成功
+}
+
+
+// 查看上市购买列表
+message StockMarketList_Req_119005 {
+    optional int32 stock_num 		= 1;    // 股票数量
+}
+
+// 查看上市购买列表
+message StockMarketList_Resp_119005 {
+    repeated StockMessage stocks     = 1;    // 股票信息
+    optional int32 total_hold_shares = 2;    // 总共持仓
+}
+
+
+// 刷新上市购买列表请求
+message RefreshStockMarketList_Req_119019 {
+    repeated int64 stock_id = 1;    // 股票id
+}
+
+// 刷新上市购买列表返回
+message RefreshStockMarketList_Resp_119019 {
+    repeated StockMessage stocks     = 1;    // 股票信息
+    optional int32 total_hold_shares = 2;    // 总共持仓
+}
+
+// 刷新上市持股列表请求
+message RefreshHoldingStockList_Req_119020 {
+    optional int64 stock_id = 1;    // 股票id
+}
+
+// 刷新上市持股列表返回
+message RefreshHoldingStockList_Resp_119020 {
+    optional HoldingStockMessage hold_stock = 1;    // 持仓股票信息
+}
+
+// 搜索股票请求
+message SearchStock_Req_119021 {
+    optional string name = 1;    // 股票名称
+}
+
+// 搜索股票返回
+message SearchStock_Resp_119021 {
+    repeated StockMessage stocks = 1;    // 股票信息
+}
+
+
+
+// 获取持仓股票信息请求
+message ListHoldingStocks_Req_119006 {
+	optional int32 page = 1; // 页数
+    
+}
+
+// 获取持仓股票信息返回
+message ListHoldingStocks_Resp_119006 {
+	repeated HoldingStockMessage holding_stocks = 1; // 持仓股票信息
+	optional int32 page 						= 2; // 页数
+}
+
+// 搜索持股列表请求
+message SearchHoldingStock_Req_119013 {
+     optional string name = 1;    // 股票名称
+}
+
+// 搜索持股列表请求
+message SearchHoldingStock_Resp_119013 {
+    repeated HoldingStockMessage stocks = 1;    // 股票信息
+}
+
+// 股票排行榜
+message BourseRankInfo_Req_119008 {
+	optional int32 page = 1; // 页数
+}
+
+message BourseRankInfo_Resp_119008 {
+	repeated BourseRankProtocol msg = 1; // 排行信息
+	optional int32 self_rank 		= 2; // 自己排名
+}
+
+// 股票排行信息
+message BourseRankProtocol {
+	optional RoleHeadMessage head 	= 1; // 玩家头信息
+	optional int64 price 			= 2; // 价格
+	optional int32 sale_num 		= 3; // 售卖数量
+	optional int32 dividend 		= 4; // 分红
+	optional string bourse_code 	= 5; // 股票代码
+}
+
+message StockLog{
+	optional int32 lang = 1; //多语言id
+	repeated string  args = 2; //参数
+}
+//股票日志记录
+message StockLogRecord_Req_119009{
+}
+message StockLogRecord_Resp_119009{
+	repeated StockLog list = 1;
+}
+
+//获取分红日志
+message BonusLogRecord_Req_119010{
+}
+message BonusLogRecord_Resp_119010{
+	repeated StockLog list = 1;
+}
+
+//公司7天日利润记录
+message DailyProfitDayRecord_Req_119011{
+}
+message DailyProfitDayRecord_Resp_119011{
+	repeated LineChartData list 	= 1;
+	repeated LineChartData sys_list = 2;
+}
+
+//上市股票最近几小时日利润记录
+message DailyProfitTimeRecord_Req_119012{
+	optional int64 stock_id = 1;
+}
+message DailyProfitTimeRecord_Resp_119012{
+	optional int64 stock_id = 1;
+	repeated LineChartData list = 2;
+}
+

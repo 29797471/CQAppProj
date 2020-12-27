@@ -1,0 +1,36 @@
+syntax = "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "OpenServiceBigGiftProtocol";
+
+// 获取开服大礼状态
+message OpenServiceBigGift_Req_153001 {
+	
+}
+message OpenServiceBigGift_Resp_153001 {
+	optional int32 type 			= 1; // 关闭中,准备开启:0, 大礼类型:1 2 3, 彻底关闭:-1
+	optional int32 remaining_time	= 2; // 活动剩余时间
+}
+
+// 开服大礼礼包信息
+message OpenServiceBigGiftBag {
+	optional int32 gift_bag_id 	= 1; // 礼包ID (礼包配置表ID)
+	optional int32 buyCount 	= 2; // 已购次数
+	optional int32 state		= 3; // 未完成:0, 已购买可领取:1, 已经领取:2
+}
+
+// 获取开服大礼礼包列表
+message ListOpenServiceBigGiftBag_Req_153002 {
+
+}
+message ListOpenServiceBigGiftBag_Resp_153002 {
+	repeated OpenServiceBigGiftBag gift_bags 	= 1; // 礼包列表
+	optional int32 type 						= 2; // 关闭:0, 大礼类型:1 2 3
+}
+
+// 领取礼包奖励
+message RewardOpenServiceBigGiftBag_Req_153003 {
+	optional int32 gift_bag_id 	= 1; // 礼包ID (礼包配置表ID)
+}
+message RewardOpenServiceBigGiftBag_Resp_153003 {
+	optional OpenServiceBigGiftBag gift_bag = 1; // 礼包信息
+}

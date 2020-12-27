@@ -1,0 +1,80 @@
+syntax = "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "SilverMarketProtocol";
+
+// 市场意愿
+message MarketWish {
+	optional int64 sell	= 1;	// 出售
+	optional int64 buy	= 2;	// 收购
+}
+
+// 挂单记录
+message OrderRecord {
+	optional int32 config_id	= 1;	// 订单配置表ID
+	optional int32 count		= 2;	// 数量
+}
+
+// 银币收购列表
+message ListBuyMarket_Req_148001 {
+
+}
+message ListBuyMarket_Resp_148001 {
+	optional MarketWish market_wish		= 1;	// 市场意愿
+	repeated OrderRecord order_records	= 2;	// 挂单记录列表
+}
+
+
+// 银币出售列表
+message ListSellMarket_Req_148002 {
+
+}
+message ListSellMarket_Resp_148002 {
+	optional MarketWish market_wish		= 1;	// 市场意愿
+	repeated OrderRecord order_records	= 2;	// 挂单记录列表
+}
+
+// 收购银币
+message Buy_Req_148003 {
+	optional int32 config_id	= 1;	// 订单配置表ID
+}
+message Buy_Resp_148003 {
+	optional int32 config_id				= 1;	// 订单配置表ID
+	optional MarketWish market_wish			= 2;	// 市场意愿
+	optional int32 order_record_count		= 3;	// 挂单数量
+	optional int64 need_entry_order_silver	= 4;	// 需挂单收购的银币数量
+}
+
+
+// 出售银币
+message Sell_Req_148004 {
+	optional int32 config_id	= 1;	// 订单配置表ID
+}
+message Sell_Resp_148004 {
+	optional int32 config_id				= 1;	// 订单配置表ID
+	optional MarketWish market_wish			= 2;	// 市场意愿
+	optional int32 order_record_count		= 3;	// 挂单数量
+	optional int64 need_entry_order_silver	= 4;	// 需挂单出售的银币数量
+}
+
+// 收购完成的推送
+message BuyFinish_Resp_148005 {
+	optional int32 config_id			= 1;	// 订单配置表ID
+	optional MarketWish market_wish		= 2;	// 市场意愿
+	optional int32 order_record_count	= 3;	// 挂单数量
+}
+
+// 出售完成的推送
+message SellFinish_Resp_148006 {
+	optional int32 config_id			= 1;	// 订单配置表ID
+	optional MarketWish market_wish		= 2;	// 市场意愿
+	optional int32 order_record_count	= 3;	// 挂单数量
+}
+
+// 购买系统银币
+message BuySystem_Req_148007 {
+	optional int32 config_id	= 1;	// 订单配置表ID
+}
+message BuySystem_Resp_148007 {
+	optional int32 config_id	= 1;	// 订单配置表ID
+}
+

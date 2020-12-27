@@ -1,0 +1,302 @@
+syntax = "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "MallProtocol";
+
+message GoodsBuyCount{
+    optional int32 configId = 1;
+    optional int32 boughtCount = 2;//已经购买数量
+}
+
+//获取折扣商品限制时间信息
+message GetLimitTime_Req_121001{
+    optional int32 type =  1;//1 折扣商品  2 礼包
+}
+message GetLimitTime_Resp_121001{
+    optional int32 type =  1;
+    optional int32 limitBuyStartTime = 2;//限时的开始时间 0 时 没有限时
+    optional int32 limitBuyEndTime = 3;//限时的结束时间 0 时 没有限时
+}
+
+//返回充值玩家信息
+message GetRechargeInfo_Req_121002{
+    optional int32 type =  1;//1 折扣商品  2 礼包
+}
+
+message GetRechargeInfo_Resp_121002{
+    repeated GoodsBuyCount list = 1;
+    optional int32 type =  2;
+}
+
+//金币兑换道具
+message ExchangeItem_Req_121003{
+    optional int32 goodsConfigId = 1;
+    optional int32 num = 2;//数量
+    optional int32 type = 3; // 1 热销商品 2折扣商品 3 礼包
+}
+
+message ExchangeItem_Resp_121003{
+    optional int32 goodsConfigId = 1;
+    optional int32 num = 2;//数量
+    optional int32 type = 3; // 1 热销商品 2折扣商品
+}
+
+//充值测试回调
+message TestRechargeCallback_Req_121004{
+    optional int64 orderId = 1;
+    optional int32 configId = 2;
+}
+message TestRechargeCallback_Resp_121004{
+    optional int64 orderId = 1;
+    optional int32 configId = 2;
+}
+
+// 福利卡信息
+message WelfareCardInfo {
+    optional int32 card_type = 1;       //类型 1周卡 2月卡 3年卡
+    optional int32 card_time = 2;       //剩余天数
+    optional int32 card_reward_time = 3;    //上次领奖时间 0没有领取过奖励
+}
+
+// 福利卡信息
+message WelfareCardList_Req_121005 {
+}
+
+message WelfareCardList_Resp_121005 {
+    repeated WelfareCardInfo list = 1;  //福利卡信息
+}
+
+// 领取福利卡奖励
+message ReceiveReward_Req_121006 {
+    optional int32 card_type = 1;   //类型 1周卡 2月卡 3年卡
+}
+
+message ReceiveReward_Resp_121006 {
+    optional int32 card_type = 1;   
+}
+
+// 购买 vip礼包
+message BuyVipGiftPackage_Req_121009{
+    optional int32 vipLevel = 1;
+}
+message BuyVipGiftPackage_Resp_121009{
+    optional int32 buy_vip_gift_mark   = 1;   //购买vip礼包标识(2进制位)
+}
+
+// 年卡礼包
+message YearGiftBagRecord {
+    optional int32 gift_bag_id          = 1; // 礼包id
+    optional int32 already_received_num = 2; // 已经领取次数
+}
+// 获取年卡礼包
+message ListYearGiftBag_Req_121016 {
+}
+
+message ListYearGiftBag_Resp_121016 {
+    repeated YearGiftBagRecord records  = 1; // 年卡礼包列表 
+    optional int32 year_card_player     = 2; // 是否为年卡玩家 1 是 0 否
+}
+
+// 商品发货通知
+message ShipTheOrderResult_Resp_121017 {
+    optional int32 goods_id = 1;
+}
+
+// 限时等级礼包信息
+message TimeLimitedGradeGiftMsg_Req_121018 {
+}
+message TimeLimitedGradeGiftMsg_Resp_121018 {
+    repeated TimeLimitedGradeGift gift = 1; // 礼包列表
+}
+
+//限时等级礼包
+message TimeLimitedGradeGift {
+    optional int32 config_id            = 1; // 配置id
+    optional int32 end_time             = 2; // 结束时间 
+    optional int32 buy_times            = 3; // 已经购买的次数
+    optional int32 get_reward_times     = 4; // 获取奖励的次数
+}
+
+// 领取
+message TimeLimitedGradeGiftGetReward_Req_121019 {
+    optional int32 config_id    = 1; // 配置id
+}
+
+message TimeLimitedGradeGiftGetReward_Resp_121019 {
+    optional TimeLimitedGradeGift gift = 1;
+}
+//兑换vip经验兑换码
+message ExchangeVipExpCode_Req_121020 {
+    optional string code = 1;//兑换码
+}
+message ExchangeVipExpCode_Resp_121020 {
+}
+
+
+// 限时等级经理礼包信息
+message TimeLimitedLevelManagerGift {
+    optional int32 config_id    = 1; // 配置ID
+    optional int32 end_time     = 2; // 结束时间
+    optional int32 buy_count    = 3; // 购买次数
+    optional int32 reward_count = 4; // 领取次数
+}
+
+// 获取限时等级经理礼包列表
+message ListTimeLimitedLevelManagerGift_Req_121021 {
+}
+message ListTimeLimitedLevelManagerGift_Resp_121021 {
+    repeated TimeLimitedLevelManagerGift list = 1; // 限时等级经理礼包列表
+}
+
+// 领取限时等级经理礼包
+message RewardTimeLimitedLevelManagerGift_Req_121022 {
+    optional int32 config_id = 1; // 配置ID
+}
+message RewardTimeLimitedLevelManagerGift_Resp_121022 {
+    optional TimeLimitedLevelManagerGift gift = 1; // 限时等级经理礼包信息
+}
+
+// 限时等级经理礼包推送
+message PushTimeLimitedLevelManagerGift_Resp_121023 {
+    optional TimeLimitedLevelManagerGift gift = 1; // 限时等级经理礼包信息
+}
+
+// 成长基金信息
+message GrowthFund {
+    optional int32 config_id    = 1; // 配置ID
+    optional bool is_reward     = 2; // 是否领取
+}
+
+// 获取成长基金列表
+message ListGrowthFund_Req_121024 {
+}
+message ListGrowthFund_Resp_121024 {
+    optional bool is_buy_fund   = 1; // 是否购买了基金
+    repeated GrowthFund list    = 2; // 成长基金列表
+}
+
+// 购买成长基金
+message BuyGrowthFund_Req_121025 {
+}
+message BuyGrowthFund_Resp_121025 {
+}
+
+// 领取成长基金奖励
+message RewardGrowthFund_Req_121026 {
+    optional int32 config_id = 1; // 配置ID
+}
+message RewardGrowthFund_Resp_121026 {
+    optional int32 config_id = 1; // 配置ID
+}
+
+message VipExpCode{
+    optional string code = 1;
+    optional int32 exp = 2;
+}
+
+//获取兑换码列表
+message ExchangeVipExpCodeList_Req_121027 {
+}
+message ExchangeVipExpCodeList_Resp_121027 {
+    repeated VipExpCode list = 1;
+}
+
+// 推送成长基金(登录时)
+message PushGrowthFundOpen_Resp_121028 {
+}
+
+// 购买道具
+message BuyItem_Req_121029 {
+    optional int32 config_id = 1; // 配置ID
+}
+message BuyItem_Resp_121029 {
+    optional int32 config_id = 1; // 配置ID
+}
+
+//  购买商品历史记录
+message GetPurchaseHistory_Req_121030 {
+    
+}
+
+message GetPurchaseHistory_Resp_121030 {
+    repeated GoodsBuyCount history = 1;
+}
+
+// 推送购买商品历史记录
+message PushPurchaseHistory_Resp_121031 {
+    optional GoodsBuyCount history = 1;
+}
+
+//获取新手礼包状态
+message GetNoviceGift_Req_121032 {
+}
+message GetNoviceGift_Resp_121032 {
+    optional bool daily_reward      = 1; //每日奖励是否已经领取
+    optional int32 has_num          = 2; //剩余每次领取次数
+    optional bool open              = 3; //是否礼包开启
+    optional int32 config_id        = 4;//配置表id
+}
+
+//领取新手礼包
+message GetRewardNoviceGift_Req_121033 {
+}
+message GetRewardNoviceGift_Resp_121033 {
+}
+
+
+// 推送累积充值礼包(如果存在礼包，登录时、充值时推送)
+message PushCumulativeGift_Resp_121034 {
+    optional int32 config_id        = 1; // 礼包配置ID
+    optional bool can_reward        = 2; // 可否领取
+    optional int32 money            = 3; // 累充金额(精确到分)
+}
+
+message RewardCumulativeGift_Req_121035 {
+
+}
+message RewardCumulativeGift_Resp_121035 {
+    optional int32 config_id        = 1; // 下一个礼包配置ID (0:没有礼包)
+    optional bool can_reward        = 2; // 下一个礼包可否领取
+}
+
+
+//人资经理购买-领取
+message ReceiveHRBuyManager_Req_121036 {
+}
+message ReceiveHRBuyManager_Resp_121036 {
+}
+//人资经理购买-获取信息
+message GetHRBuyManager_Req_121037 {
+}
+message GetHRBuyManager_Resp_121037 {
+    optional int32 config_id    = 1;
+    optional bool can_receive   = 2;
+}
+
+// 获取双倍收入卡信息
+message GetDoubleProfitCardInfo_Req_121038 {
+    
+}
+
+message GetDoubleProfitCardInfo_Resp_121038 {
+    optional int32 expired_time           = 1; // 过期时间
+    optional int64 projected_shop_profit  = 2; // 预计店铺利润
+}
+
+
+
+// 推送首充累积充值礼包(登录时、充值时推送)
+message PushFirstCumulativeGift_Resp_121039 {
+    optional int32 config_id        = 1; // 礼包配置ID
+    optional bool can_reward        = 2; // 可否领取
+    optional int32 money            = 3; // 累充金额(精确到分)
+    repeated int32 reward_config_id = 4; // 已领取的配置ID
+}
+
+message RewardFirstCumulativeGift_Req_121040 {
+
+}
+message RewardFirstCumulativeGift_Resp_121040 {
+    optional int32 config_id        = 1; // 下一个礼包配置ID (0:没有礼包)
+    optional bool can_reward        = 2; // 下一个礼包可否领取
+    repeated int32 reward_config_id = 3; // 已领取的配置ID
+}

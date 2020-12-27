@@ -1,0 +1,139 @@
+syntax = "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "ShopBrandProtocol";
+
+// 品牌信息
+message ShopBrandMessage {
+    optional int32 brand_type                   = 1;    // 品牌类型
+    optional int32 brand_level                  = 2;    // 品牌等级
+    optional string brand_name                  = 3;    // 品牌名
+    optional int64 total_daily_profits          = 4;    // 店铺总日利润列表
+    optional int32 total_shop_num               = 5;    // 店铺总数量
+    optional int32 shop_power                   = 6;    // 店铺竞争力(千分比)
+    optional int32 progress                     = 7;    // 进度
+    repeated BrandDimensionMessage dimension    = 8;    // 品牌维度
+}
+
+// 品牌维度
+message BrandDimensionMessage {
+    optional DimensionType type     = 1; // 维度类型 
+    optional int32 exp              = 2;  // 经验
+}
+
+// 招聘类型
+enum DimensionType {
+    MOUTHWORD   = 0; //口碑
+    IMPACT      = 1; //影响
+    POPULARITY  = 2; // 热度
+    LOYALTY     = 3; //忠诚
+}
+
+// 生成随机品牌名请求
+message GenerateRandShopBrandName_Req_115001 {
+    optional int32 type = 1;  // 品牌类型
+}
+
+// 生成随机品牌名返回
+message GenerateRandShopBrandName_Resp_115001 {
+    optional string brand_name  = 1;    // 品牌名
+    optional int32 type         = 2;  // 品牌类型
+}
+
+// 创建品牌请求
+message CreateShopBrand_Req_115002 {
+    optional int32 brand_type  = 1;    // 品牌类型
+    optional string brand_name = 2;    // 品牌名
+}
+
+// 创建品牌返回
+message CreateShopBrand_Resp_115002 {
+    optional ShopBrandMessage shop_brand = 1;   // 品牌
+    optional bool is_registered          = 2;   // 是否已被注册
+    optional string recommend_name       = 3;   // 推荐名，如果已被注册
+}
+
+// 品牌列表请求
+message GetShopBrandList_Req_115003 {
+    
+}
+
+// 品牌列表返回
+message GetShopBrandList_Resp_115003 {
+    repeated ShopBrandMessage shop_brands = 1;    // 品牌列表
+}
+
+// 品牌改名请求
+message ShopBrandRename_Req_115004 {
+    optional int32 brand_type      = 1;    // 品牌类型
+    optional string new_brand_name = 2;    // 新的品牌名
+}
+
+// 品牌改名返回
+message ShopBrandRename_Resp_115004 {
+    optional int32 brand_type      = 1;    // 品牌类型
+    optional string brand_name     = 2;    // 品牌名
+    optional bool is_registered    = 3;    // 是否已被注册
+    optional string recommend_name = 4;    // 推荐名，如果已被注册
+}
+
+// 品牌升级请求
+message ShopBrandUpgrade_Req_115005 {
+    optional int32 brand_type = 1;    // 品牌类型
+}
+
+// 品牌升级返回
+message ShopBrandUpgrade_Resp_115005 {
+    optional int32 brand_type           = 1;    // 品牌类型
+    optional ShopBrandMessage msg       = 2;    // 品牌等级
+}
+
+// 品牌维度加经验信息
+message BrandDimensionAddExpMessage {
+    optional DimensionType type     = 1; // 维度类型 
+    optional int32 add_exp          = 2; // 增加的经验
+}
+
+// 品牌推广结果
+message BrandPromotionResultMsg {
+    optional int32 type                             = 1; // 推广类型    
+    repeated BrandDimensionAddExpMessage message    = 2; // 结果
+}
+
+
+// 推广类型请求
+message BrandPromotionModel {
+    optional int32 type = 1; // 推广类型
+    optional int32 num  = 2; // 推广次数
+}
+
+// 品牌推广
+message BrandPromotion_Req_115006 {
+    optional int32 brand_type           = 1;  // 品牌类型
+    repeated BrandPromotionModel promotion   = 2;  // 推广内容
+}
+
+// 品牌推广
+message BrandPromotion_Resp_115006 {
+    repeated BrandPromotionResultMsg result = 1; // 品牌推广结果
+    optional ShopBrandMessage message       = 2; // 品牌
+}
+
+// 获取精力
+message GetEnergyNum_Req_115007 {
+}
+
+// 获取精力
+message GetEnergyNum_Resp_115007 {
+    optional int32 num = 1;         // 精力
+    optional int32 calc_time = 2;   // 计算本次的数量的时间
+    optional int32 buy_num = 3;     // 购买的次数
+}
+
+// 购买精力
+message BuyEnergy_Req_115008 {
+}
+
+message BuyEnergy_Resp_115008 {
+    optional int32 buy_num = 1; // 购买的次数
+    optional int32 num = 2;     // 精力
+}

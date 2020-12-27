@@ -1,0 +1,52 @@
+syntax = "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "TitleProtocol";
+
+// 称号列表
+message TitleList_Req_128001{
+}
+
+message TitleList_Resp_128001{
+	repeated TitleProto titles = 1;
+}
+
+// 称号
+message TitleProto {
+	optional int32 config_id 		= 1; //称号配置id
+	optional int32 end_time			= 2; //结束时间
+	optional int32 rank				= 3; //排名 -1:功能未开启 0:未上榜
+	optional int32 rank_settle_time = 4; //排行榜结算时间
+	optional bool is_active			= 5; //是否激活
+	optional int32 total_num 		= 6; //总数
+}
+
+// 推送称号
+message PushTitle_Resp_128002{
+	optional TitleProto active_title 	= 1; //称号
+	optional int32 status 				= 2; //1:激活2:删除
+}
+
+//通过rid获取称号列表
+message TitleListForRid_Req_128003{
+	optional int64 rid = 1;
+}
+message TitleListForRid_Resp_128003{
+	repeated TitleProto titles = 1;
+	optional int64 rid = 2;
+}
+
+// 获取单个称号信息
+message GetTitleMsg_Req_128004 {
+	optional int64 rid 			= 1; // rid
+	optional int32 config_id 	= 2; // 配置id
+}
+
+message GetTitleMsg_Resp_128004 {
+	optional int64 rid 		  	= 1; // rid
+	optional TitleProto title 	= 2; // 称号
+	optional bool is_exist		= 3; // 是否存在
+}
+
+
+
+

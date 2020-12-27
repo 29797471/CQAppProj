@@ -1,0 +1,28 @@
+syntax = "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "ValuesProtocol";
+
+// 物品
+message ValuesMessage {
+    optional int32 values_id = 1;    // 物品id
+    optional int64 count     = 2;    // 物品数量
+}
+
+// 奖励
+message RewardsMessage {
+    optional int32 game_event                      = 1;    // 事件
+    repeated ValuesMessage values_messages         = 2;    // 物品
+    repeated ManagerValuesMessage manager_messages = 3;    // 经理
+}
+
+// 经理物品
+message ManagerValuesMessage {
+    optional int32 values_id         = 1;    // 物品id
+    optional int64 id                = 2;    // 经理唯一id
+    optional int32 config_id         = 3;    // 经理配置id
+    optional int32 quality           = 4;    // 品质
+    optional int32 star              = 5;    // 星级
+    optional int32 level             = 6;    // 等级
+    optional int32 talent            = 7;    // 天赋
+    optional int32 talent_level      = 8;    // 天赋等级
+}

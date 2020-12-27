@@ -1,0 +1,90 @@
+syntax = "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "BackgroundActivityProtocol";
+import "Values.proto";
+
+// 获取每日充值活动信息
+message GetDailyRechargeActivityInfo_Req_123001 {
+	
+}
+
+message GetDailyRechargeActivityInfo_Resp_123001 {
+	repeated DailyRechargeActivityGoalMessage goal_messages = 1;    // 小目标信息
+	optional int64 progress                                 = 2;    // 进度
+}
+
+message DailyRechargeActivityGoalMessage {
+	optional int32 index          = 1;   // 目标序号
+	repeated ValuesMessage reward = 2;   // 奖励 
+	optional int64 condition      = 3;   // 条件
+	optional bool completed       = 4;   // 是否完成
+	optional bool rewarded        = 5;   // 是否已领取奖励
+}
+
+// 推送每日充值活动信息
+message PushDailyRechargeActivityInfo_Resp_123002 {
+	repeated DailyRechargeActivityGoalMessage goal_messages = 1;    // 小目标信息
+	optional int64 progress                                 = 2;    // 进度
+}
+
+// 领取每日充值活动奖励
+message ReceiveDailyRechargeActivityReward_Req_123003 {
+	optional int32 index          = 1;   // 目标序号
+}
+
+message ReceiveDailyRechargeActivityReward_Resp_123003 {
+	optional int32 index          = 1;   // 目标序号
+}
+
+
+// 获取累充礼包活动信息
+message GetRechargeGiftActivityInfo_Req_123004 {
+	
+}
+
+message GetRechargeGiftActivityInfo_Resp_123004 {
+	repeated RechargeGiftActivityGoalMessage goal_messages = 1;    // 小目标信息
+	optional int64 progress                                = 2;    // 进度
+}
+
+message RechargeGiftActivityGoalMessage {
+	optional int32 index          = 1;   // 目标序号
+	repeated ValuesMessage reward = 2;   // 奖励 
+	optional int64 condition      = 3;   // 条件
+	optional bool completed       = 4;   // 是否完成
+	optional bool rewarded        = 5;   // 是否已领取奖励
+}
+
+// 推送累充礼包活动信息
+message PushRechargeGiftActivityInfo_Resp_123005 {
+	repeated RechargeGiftActivityGoalMessage goal_messages = 1;    // 小目标信息
+	optional int64 progress                                = 2;    // 进度
+}
+
+// 领取累充礼包活动奖励
+message ReceiveRechargeGiftActivityReward_Req_123006 {
+	optional int32 index          = 1;   // 目标序号
+}
+
+message ReceiveRechargeGiftActivityReward_Resp_123006 {
+	optional int32 index          = 1;   // 目标序号
+}
+
+// 获取每日限购活动信息
+message GetDailyLimitedPurchaseActivityInfo_Req_123007 {
+	
+}
+
+message GetDailyLimitedPurchaseActivityInfo_Resp_123007 {
+	repeated DailyLimitedPurchaseActivityGoalMessage goal_messages = 1;    // 小目标信息
+}
+
+message DailyLimitedPurchaseActivityGoalMessage {
+	optional int32 index          = 1;   // 目标序号
+	optional int64 progress       = 4;   // 进度 
+}
+
+// 推送每日限购活动信息
+message PushDailyLimitedPurchaseActivityInfo_Resp_123008 {
+	repeated DailyLimitedPurchaseActivityGoalMessage goal_messages = 1;    // 小目标信息
+}

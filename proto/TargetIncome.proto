@@ -1,0 +1,24 @@
+syntax = "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "TargetIncomeProtocol";
+
+message RewardTerm{
+	optional int32 id 				= 1;//档次
+	optional int32 level 			= 2;//档次级别
+	optional bool is_receive_free	= 3;//免费是否领取
+	optional bool is_receive_pay	= 4;//付费是否领取
+}
+//推送领取公司目标奖励的状态
+message TargetIncome_Resp_175001{
+	repeated RewardTerm list 		= 1;
+	optional int32 curr_grade_id 	= 2;//当前档次
+}
+//领取公司目标奖励
+message ReceiveReward_Req_175002{
+	optional int32 id 				= 1;//档次
+	optional int32 level 			= 2;//档次级别
+	optional bool  is_pay			= 3;//是否是付费
+}
+
+message ReceiveReward_Resp_175002{
+}

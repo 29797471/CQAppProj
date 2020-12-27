@@ -1,0 +1,85 @@
+syntax =  "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "InterviewProtocol";
+import "Manager.proto";
+
+//获取面试信息
+message GetInterviewMsg_Req_167001 {
+}
+
+message GetInterviewMsg_Resp_167001 {
+	optional InterviewMessage interview		= 1; // 使用的数量
+	optional ManagerSample sample 			= 2; // 经理简单信息
+}
+
+// 面试信息
+message InterviewMessage {
+	optional int32 use_times 	= 1; // 使用次数
+	optional int32 end_time 	= 2; // 结束时间
+	optional bool is_time_out 	= 3; // 是否暂停
+}
+
+// 招聘预览
+message RecruitmentPreview_Req_167002{
+}
+message RecruitmentPreview_Resp_167002{
+	optional ManagerSample sample 		= 1; // 经理简单信息
+	optional InterviewMessage interview	= 2; // 使用的数量
+}
+
+// 经理简单信息
+message ManagerSample {
+	optional int32 config_id 	= 1; // 配置id 
+	optional int32 color 		= 2; // 品质
+	optional int32 level		= 3; // 等级
+	optional int32 cost_num		= 4; // 花费的数量
+}
+
+// 招聘
+message Recruitment_Req_167003 {
+}
+
+message Recruitment_Resp_167003 {
+    optional ManagerMsg manager 		= 1; // 经理信息
+	optional ManagerSample sample 		= 2; // 经理简单信息
+	optional InterviewMessage interview	= 3; // 使用的数量
+}
+
+// 清除cd
+message ClearCd_Req_167004 {
+}
+
+message ClearCd_Resp_167004 {
+	optional InterviewMessage interview	= 1; // 使用的数量
+}
+
+// 清除经理信息
+message ClearManagerSample_Req_167005 {
+}
+
+message ClearManagerSample_Resp_167005 {
+	optional InterviewMessage interview	= 1; // 使用的数量
+}
+
+// 猎聘预览
+message HuntingPreview_Req_167006{
+}
+message HuntingPreview_Resp_167006{
+	optional ManagerSample sample 		= 1; // 经理简单信息
+}
+
+// 猎聘
+message Hunting_Req_167007 {
+}
+
+message Hunting_Resp_167007 {
+    optional ManagerMsg manager 		= 1; // 经理信息
+	optional ManagerSample sample 		= 2; // 经理简单信息
+}
+
+// 猎聘详情
+message HuntingDetail_Req_167008{
+}
+message HuntingDetail_Resp_167008{
+	optional ManagerSample sample 		= 1; // 经理简单信息
+}

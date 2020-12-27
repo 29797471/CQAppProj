@@ -1,0 +1,115 @@
+syntax = "proto2";
+option java_package = "com.yaowan.game.dfh5.gameserver.protocol";
+option java_outer_classname = "FamilyProtocol";
+import "Role.proto";
+
+message FamilyProto{
+	required int64 family_id 				= 1; //家族id
+	required string name 					= 2; //名字
+	optional int32 level 					= 3; //等级
+	repeated Addition additions				= 4; //加成
+	optional int64 fund						= 5;//家族基金
+	repeated FamilyMember members			= 6;
+}
+
+
+message FamilyMember{
+	optional RoleHeadMessage role		  = 1;      // rid
+	optional FamilyPosition position	  = 2;	  //职位
+	optional int64 total_donation		  = 3;	 //累计捐赠	
+}
+
+message Addition {
+	optional int32 type			= 1;//C-创角特征 主键id
+	optional int32 num			= 2;
+}
+
+enum FamilyPosition{
+	PATRIARCH 	= 1;//族长
+	MEMBER	 	= 2;//成员
+}
+
+
+//随机名字
+message GenerateName_Req_172001{
+}
+message GenerateName_Resp_172001{
+	optional string name = 1;
+}
+
+//获取家族信息
+message GetFamily_Req_172002{
+}
+message GetFamily_Resp_172002{
+	optional FamilyProto family		= 1;
+}
+
+//创建家族
+message CreateFamily_Req_172003{
+	optional string name 			= 1;
+}
+message CreateFamily_Resp_172003{
+	optional string name 			= 1;
+}
+
+//退出家族
+message ExitFamily_Req_172004{
+}
+message ExitFamily_Resp_172004{
+}
+
+//加入家族
+message JoinFamily_Req_172005{
+	required int64 family_id 				= 1; //家族id
+}
+
+message JoinFamily_Resp_172005{
+	required int64 family_id 				= 1; //家族id
+}
+
+//获取邀请列表
+message GetApplyList_Req_172006{
+	required int32 actor					= 1;
+}
+message GetApplyList_Resp_172006{
+	required int32 actor					= 1;
+	repeated RoleHeadMessage list 			= 2;
+}
+
+//发送邀请
+message SendApply_Req_172007{
+	required int64 rid						= 1;
+}
+message SendApply_Resp_172007{
+	required int64 rid						= 1;
+}
+//捐赠
+message FamilyDonation_Req_172008{
+	required int32 cash					=1;
+}
+message FamilyDonation_Resp_172008{
+}
+//升级
+message UpgradeFamily_Req_172009{
+}
+message UpgradeFamily_Resp_172009{
+}
+
+//改名
+message RenameFamily_Req_172010{
+	optional string name = 1;
+}
+message RenameFamily_Resp_172010{
+	optional string name = 1;
+}
+
+//搜索
+message Search_Req_172011{
+	required string name					= 1;
+	optional int32 actor					= 2;
+}
+message Search_Resp_172011{
+	required string name					= 1;
+	optional int32 actor					= 2;
+	repeated RoleHeadMessage list 			= 3;
+}
