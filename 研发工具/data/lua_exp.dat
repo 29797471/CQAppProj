@@ -1,0 +1,623 @@
+{
+	children = 
+	[
+		{
+			nodeObj = 
+			CodeStyleGroup
+			{
+				mName = "计算";
+			};
+			children = 
+			[
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "number";
+						mContent = "在 %number0% 之间 %number1% 随机获取一个数";
+						mExecContent = "math.random( %number0%,%number1% )";
+						mName = "随机数";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "number";
+						mContent = "较小的数(%number0% ,%number1%)";
+						mExecContent = "math.min(%number0% , %number1%)";
+						mName = "取小";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "number";
+						mContent = "较大的数(%number0% ,%number1%)";
+						mExecContent = "math.max( %number0%,%number1% )";
+						mName = "取大";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "number";
+						mContent = "%number0% / %number1%";
+						mExecContent = "( (%number0%) / (%number1%) )";
+						mName = "除法";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "number";
+						mContent = "%number0% * %number1%";
+						mExecContent = "( (%number0%) * (%number1%) )";
+						mName = "乘法";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "number";
+						mContent = "换算百分比(%number0% : %number1%)";
+						mExecContent = "math.min(%number0%,%number1%)/%number1%*100";
+						mName = "换算百分比";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "number";
+						mContent = "%object0%长度";
+						mExecContent = "#%object0%";
+						mName = "列表长度";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "void";
+						mContent = "%number0%++";
+						mExecContent = "%number0%=%number0%+1";
+						mName = "++";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "void";
+						mContent = "%number0%--";
+						mExecContent = "%number0%=%number0%-1";
+						mName = "--";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "void";
+						mContent = "%number0%+=%number1%";
+						mExecContent = "%number0%=%number0%+%number1%";
+						mName = "+=";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "void";
+						mContent = "%number0%-=%number1%";
+						mExecContent = "%number0%=%number0%-%number1%";
+						mName = "-=";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "void";
+						mContent = "%number0%=%number1%";
+						mExecContent = "%number0%=%number1%";
+						mName = "=";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "number";
+						mContent = "随机(%number0% ~ %number1%)之间的一个浮点数";
+						mExecContent = "math.random( %number0%,%number1% )";
+						mName = "随机数";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "void";
+						mContent = "初始化随机种子";
+						mExecContent = "math.randomseed(tostring(os.time()):reverse():sub(1, 6)) ";
+						mName = "初始化随机种子";
+					};
+					children = 
+					[
+					];
+				}
+			];
+		},
+		{
+			nodeObj = 
+			CodeStyleGroup
+			{
+				mName = "逻辑运算";
+			};
+			children = 
+			[
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "bool";
+						mContent = "%bool0% 
+并且 
+%bool1%";
+						mExecContent = "(%bool0%) and (%bool1%)";
+						mName = "并且";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "bool";
+						mContent = "%bool0% 
+或者 
+%bool1%";
+						mExecContent = "(%bool0%) or (%bool1%)";
+						mName = "或者";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "bool";
+						mContent = "取反(%bool0%)";
+						mExecContent = "(not (%bool0%))";
+						mName = "取反";
+					};
+					children = 
+					[
+					];
+				}
+			];
+		},
+		{
+			nodeObj = 
+			CodeStyleGroup
+			{
+				mName = "比较";
+			};
+			children = 
+			[
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "bool";
+						mContent = "%bool0% %operator_object2%  %bool1%";
+						mExecContent = "(%bool0%) %operator_object2% (%bool1%)";
+						mName = "条件比较";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "bool";
+						mContent = "%number0% %operator2%  %number1%";
+						mExecContent = "(%number0%) %operator2% (%number1%)";
+						mName = "数值比较";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "bool";
+						mContent = "%string0% %operator_object2%  %string1%";
+						mExecContent = "(%string0%) %operator_object2% (%string1%)";
+						mName = "字符串比较";
+					};
+					children = 
+					[
+					];
+				}
+			];
+		},
+		{
+			nodeObj = 
+			CodeStyleGroup
+			{
+				mName = "逻辑";
+			};
+			children = 
+			[
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "void";
+						mContent = "满足(%bool0%)时
+    %void1%";
+						mExecContent = "if(%bool0%)
+{
+	%void1%
+}";
+						mName = "满足条件的执行";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "void";
+						mContent = "满足(%bool0%)时
+    %void1%
+否则
+    %void2%";
+						mExecContent = "if %bool0% then
+   %void1%
+else
+   %void2%
+end";
+						mName = "满足条件的执行否则执行2";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "void";
+						mContent = "在%number0%秒之后
+    %void1%";
+						mExecContent = "DelayCall.CallLuaFun(%number0%,function () %void1% end)";
+						mName = "延迟执行";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "void";
+						mContent = "遍历 %object0% 执行 
+	%void1%";
+						mExecContent = "for i,v in ipairs(%object0%) do
+	%void1%
+end";
+						mName = "数组遍历";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "void";
+						mContent = "遍历 %object0% 执行
+	%void1%";
+						mExecContent = "for i,v in ipairs(%object0%) do
+	for j,vv in ipairs(v) do
+		local fun=%void1%
+		fun(i,j,vv)
+	end
+end";
+						mName = "二维数组遍历";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "void";
+						mContent = "遍历 %object0% 执行 
+	%void1%";
+						mExecContent = "for k,v in pairs(%object0%) do
+	%void1%
+end";
+						mName = "键值遍历";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "void";
+						mContent = "%void0%
+%void1%";
+						mExecContent = "%void0%
+%void1%";
+						mName = "执行两件事";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "void";
+						mContent = "%void0%
+%void1%
+%void2%";
+						mExecContent = "%void0%
+%void1%
+%void2%";
+						mName = "执行三件事";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "void";
+						mContent = "满足条件(%bool0%)时 
+	%void1% 
+否则
+	%void2%";
+						mExecContent = "if %bool0% then 
+	%void1% 
+else 
+	%void2% 
+end";
+						mName = "满足条件的执行,否则执行";
+					};
+					children = 
+					[
+					];
+				}
+			];
+		},
+		{
+			nodeObj = 
+			CodeStyleGroup
+			{
+				mName = "UI";
+			};
+			children = 
+			[
+				{
+					nodeObj = 
+					CodeStyleGroup
+					{
+						mName = "窗口";
+					};
+					children = 
+					[
+						{
+							nodeObj = 
+							CodeStyleNode
+							{
+								mTypeName = "bool";
+								mContent = "是否打开窗口(%string0%)";
+								mExecContent = "WindowStack.GetSelf():IsWindowOpened(%string0%)";
+								mName = "是否打开窗口";
+							};
+							children = 
+							[
+							];
+						},
+						{
+							nodeObj = 
+							CodeStyleNode
+							{
+								mTypeName = "void";
+								mContent = "关闭窗口(%string0%)";
+								mExecContent = "DlgMgr.Inst:Close(%string0%)";
+								mName = "关闭窗口";
+							};
+							children = 
+							[
+							];
+						},
+						{
+							nodeObj = 
+							CodeStyleNode
+							{
+								mTypeName = "void";
+								mContent = "打开窗口(%string0%)";
+								mExecContent = "DlgMgr.Inst:Open(%string0%)";
+								mName = "打开窗口";
+							};
+							children = 
+							[
+							];
+						},
+						{
+							nodeObj = 
+							CodeStyleNode
+							{
+								mTypeName = "void";
+								mContent = "关闭自己";
+								mExecContent = "Close();";
+								mName = "关闭自己";
+							};
+							children = 
+							[
+							];
+						}
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "void";
+						mContent = "通用提示(%number0%)";
+						mExecContent = "CommonWinMgr.Open(%number0%)";
+						mName = "通用提示";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleGroup
+					{
+						mName = "控件";
+					};
+					children = 
+					[
+						{
+							nodeObj = 
+							CodeStyleNode
+							{
+								mTypeName = "void";
+								mContent = "设置窗口(%string0%)中控件(%string1%)显示状态为%bool2%";
+								mExecContent = "SetActiveByPath(%string0%,%string1%,%bool2%)";
+								mName = "设置控件显示或者隐藏";
+							};
+							children = 
+							[
+							];
+						},
+						{
+							nodeObj = 
+							CodeStyleNode
+							{
+								mTypeName = "void";
+								mContent = "克隆控件(%string0%*%number1% )";
+								mExecContent = "self:GetCreateItem():CreateItem(%string0%,%number1%)";
+								mName = "克隆控件";
+							};
+							children = 
+							[
+							];
+						},
+						{
+							nodeObj = 
+							CodeStyleNode
+							{
+								mTypeName = "void";
+								mContent = "控件%string1%(窗口%object0%)与%object2%中属性%string3%关联(%delegate4%)";
+								mExecContent = "BindingControl(%object0%,%string1%,%object2%,%string3%,%delegate4%)";
+								mName = "控件绑定";
+							};
+							children = 
+							[
+							];
+						},
+						{
+							nodeObj = 
+							CodeStyleNode
+							{
+								mTypeName = "void";
+								mContent = "设置克隆样式( 横向最大数量=%number0% 横向偏移=%number1% 纵向偏移=%number2%)";
+								mExecContent = "self:GetCreateItem():SetStyle(%number0%,%number1%,%number2%)";
+								mName = "设置克隆样式";
+							};
+							children = 
+							[
+							];
+						}
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "string";
+						mContent = "文本(%number0%)";
+						mExecContent = "GetText(%number0%)";
+						mName = "获取翻译文本";
+					};
+					children = 
+					[
+					];
+				}
+			];
+		}
+	];
+}

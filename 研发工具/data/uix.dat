@@ -1,0 +1,67 @@
+[
+	{
+		name = "登陆窗口";
+		winName = "LoginWin";
+		buttonList = 
+		[
+			{
+				path = "Vertical Group/hint/Button (1)";
+				mAction = 
+				ExprCodeTemplate
+				{
+					mLanguage = "lua";
+					mStyleType = "void";
+					childs = 
+					[
+					];
+					mExpChooses = 
+					[
+						"UI",
+						"窗口",
+						"关闭自己"
+					];
+				};
+			}
+		];
+		mInitAction = 
+		ValueCodeTemplate
+		{
+			mLanguage = "lua";
+			mStyleType = "void";
+			mValueChooses = 
+			[
+				"执行",
+				"无"
+			];
+			customValue = false;
+			mData = "";
+		};
+		mOpenActionX = 
+		ValueCodeTemplate
+		{
+			mLanguage = "lua";
+			mStyleType = "void";
+			mValueChooses = 
+			[
+				"执行",
+				"无"
+			];
+			customValue = true;
+			mData = "Debug.Log(\"aaa\");";
+		};
+		mCloseActionX = 
+		ValueCodeTemplate
+		{
+			mLanguage = "lua";
+			mStyleType = "void";
+			mValueChooses = 
+			[
+				"执行",
+				"无"
+			];
+			customValue = true;
+			mData = " Debug.Log(\"bbb\");";
+		};
+		mCustomCode = "";
+	}
+]

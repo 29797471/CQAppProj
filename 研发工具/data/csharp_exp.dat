@@ -1,0 +1,474 @@
+{
+	children = 
+	[
+		{
+			nodeObj = 
+			CodeStyleGroup
+			{
+				mName = "窗口编辑器";
+			};
+			children = 
+			[
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "void";
+						mContent = "水平布局%void0%";
+						mExecContent = "EditorGUILayout.BeginHorizontal();
+%void0%
+EditorGUILayout.EndHorizontal();";
+						mName = "水平布局";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "void";
+						mContent = "垂直布局%void0%";
+						mExecContent = "EditorGUILayout.BeginVertical();
+%void0%
+EditorGUILayout.EndVertical();";
+						mName = "垂直布局";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "void";
+						mContent = "按钮(%string1%,%void0%)";
+						mExecContent = "if (GUILayout.Button(%string1%))
+{
+	%void0%
+}";
+						mName = "按钮";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "void";
+						mContent = "文本(%string0%)";
+						mExecContent = "EditorGUILayout.LabelField(%string0%);";
+						mName = "静态文本";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "string";
+						mContent = "输入文本(%string0%,%string1%)";
+						mExecContent = " EditorGUILayout.TextField(%string0%,%string1%)";
+						mName = "文本编辑";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "void";
+						mContent = "滑动条(%string0%, %float1%, %float2%, %float3%)";
+						mExecContent = "EditorGUILayout.Slider(%string0%, %float1%, %float2%, %float3%)";
+						mName = "滑动条";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "curve";
+						mContent = "曲线(%curve0%)";
+						mExecContent = "EditorGUILayout.CurveField(%curve0%)";
+						mName = "曲线";
+					};
+					children = 
+					[
+					];
+				}
+			];
+		},
+		{
+			nodeObj = 
+			CodeStyleGroup
+			{
+				mName = "属性";
+			};
+			children = 
+			[
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "void";
+						mContent = "%object0%[%string1%]=%object2%;";
+						mExecContent = "AssemblyUtil.SetPropertyValue(%object0%,%string1%,%object2%);";
+						mName = "set属性";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "object";
+						mContent = "%object0%[%string1%]";
+						mExecContent = "AssemblyUtil.GetPropertyValue(%object0%,%string1%)";
+						mName = "get属性";
+					};
+					children = 
+					[
+					];
+				}
+			];
+		},
+		{
+			nodeObj = 
+			CodeStyleGroup
+			{
+				mName = "逻辑";
+			};
+			children = 
+			[
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "void";
+						mContent = "%void0%
+%void1%
+%void2%";
+						mExecContent = "%void0%
+%void1%
+%void2%";
+						mName = "执行三件事";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "void";
+						mContent = "满足条件(%bool0%)时%void1%";
+						mExecContent = "if(%bool0%)
+{
+	%void1%
+}";
+						mName = "满足条件的执行";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "void";
+						mContent = "满足条件(%bool0%)时%void1%否则%void2%";
+						mExecContent = "if(%bool0%)
+{
+	%void1%
+}
+else
+{
+	%void2%
+}";
+						mName = "满足条件的执行否则执行2";
+					};
+					children = 
+					[
+					];
+				}
+			];
+		},
+		{
+			nodeObj = 
+			CodeStyleGroup
+			{
+				mName = "比较";
+			};
+			children = 
+			[
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "bool";
+						mContent = "%bool0% %operator_object2%  %bool1%";
+						mExecContent = "(%bool0%) %operator_object2% (%bool1%)";
+						mName = "条件比较";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "bool";
+						mContent = "%int0% %operator2%  %int1%";
+						mExecContent = "(%int0%) %operator2% (%int1%)";
+						mName = "数值比较";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "bool";
+						mContent = "%string0% %operator_object2%  %string1%";
+						mExecContent = "(%string0%) %operator_object2% (%string1%)";
+						mName = "字符串比较";
+					};
+					children = 
+					[
+					];
+				}
+			];
+		},
+		{
+			nodeObj = 
+			CodeStyleGroup
+			{
+				mName = "逻辑运算";
+			};
+			children = 
+			[
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "bool";
+						mContent = "%bool0% 
+并且 
+%bool1%";
+						mExecContent = "(%bool0%) && (%bool1%)";
+						mName = "并且";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "bool";
+						mContent = "%bool0% 
+或者 
+%bool1%";
+						mExecContent = "(%bool0%) || (%bool1%)";
+						mName = "或者";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "bool";
+						mContent = "取反(%bool0%)";
+						mExecContent = "(! (%bool0%))";
+						mName = "取反";
+					};
+					children = 
+					[
+					];
+				}
+			];
+		},
+		{
+			nodeObj = 
+			CodeStyleGroup
+			{
+				mName = "UI";
+			};
+			children = 
+			[
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "void";
+						mContent = "UI返回";
+						mExecContent = "UIMgr.instance.Return();";
+						mName = "UI返回";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "void";
+						mContent = "打开窗口(%string0%)";
+						mExecContent = "UIMgr.instance.OpenWindow(%string0%);";
+						mName = "打开窗口";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "void";
+						mContent = "关闭窗口(%string0%)";
+						mExecContent = "UIMgr.instance.CloseWindow(%string0%);";
+						mName = "关闭窗口";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "void";
+						mContent = "关闭自己";
+						mExecContent = "UIMgr.instance.CloseWindow(data.winName);";
+						mName = "关闭自己";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "void";
+						mContent = "打开/关闭窗口(%string0%)";
+						mExecContent = "UIMgr.instance.ChangeWindow(%string0%);";
+						mName = "打开/关闭窗口";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "void";
+						mContent = "打开关闭窗口(%string0%,%bool1%)";
+						mExecContent = "UIMgr.instance.OpenCloseWindow(%string0%,%bool1%);";
+						mName = "打开关闭窗口";
+					};
+					children = 
+					[
+					];
+				}
+			];
+		},
+		{
+			nodeObj = 
+			CodeStyleGroup
+			{
+				mName = "事件";
+			};
+			children = 
+			[
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "void";
+						mContent = "事件通知(%event0%)";
+						mExecContent = "EventMgr.%event0%.Notify();";
+						mName = "事件通知";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "void";
+						mContent = "事件通知(%event0%,%string1%,%string2%)";
+						mExecContent = "EventMgr.%event0%.Notify(%string1%,%string2%);";
+						mName = "事件通知(2参数)";
+					};
+					children = 
+					[
+					];
+				}
+			];
+		},
+		{
+			nodeObj = 
+			CodeStyleGroup
+			{
+				mName = "计算";
+			};
+			children = 
+			[
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "void";
+						mContent = "%bool0%=%bool1%;";
+						mExecContent = "%bool0%=%bool1%;";
+						mName = "布尔=布尔";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "void";
+						mContent = "%int0%=%int1%;";
+						mExecContent = "%int0%=%int1%;";
+						mName = "数值=数值";
+					};
+					children = 
+					[
+					];
+				}
+			];
+		}
+	];
+}

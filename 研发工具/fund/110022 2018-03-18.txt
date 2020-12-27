@@ -1,0 +1,10911 @@
+{
+	fundcode = "110022";
+	name = "易方达消费行业";
+	data = 
+	[
+		{
+			x = 1282233600000;
+			y = 1;
+			equityReturn = 0;
+			unitMoney = "";
+		},
+		{
+			x = 1282838400000;
+			y = 1.001;
+			equityReturn = 0.1;
+			unitMoney = "";
+		},
+		{
+			x = 1283443200000;
+			y = 1.006;
+			equityReturn = 0.4995;
+			unitMoney = "";
+		},
+		{
+			x = 1284048000000;
+			y = 1.006;
+			equityReturn = 0;
+			unitMoney = "";
+		},
+		{
+			x = 1284652800000;
+			y = 1.004;
+			equityReturn = -0.1988;
+			unitMoney = "";
+		},
+		{
+			x = 1284998400000;
+			y = 1.005;
+			equityReturn = 0.0996;
+			unitMoney = "";
+		},
+		{
+			x = 1285776000000;
+			y = 1.007;
+			equityReturn = 0.199;
+			unitMoney = "";
+		},
+		{
+			x = 1286467200000;
+			y = 1.013;
+			equityReturn = 0.5958;
+			unitMoney = "";
+		},
+		{
+			x = 1287072000000;
+			y = 0.994;
+			equityReturn = -1.8756;
+			unitMoney = "";
+		},
+		{
+			x = 1287676800000;
+			y = 1.01;
+			equityReturn = 1.6097;
+			unitMoney = "";
+		},
+		{
+			x = 1288022400000;
+			y = 1.019;
+			equityReturn = 0.8911;
+			unitMoney = "";
+		},
+		{
+			x = 1288108800000;
+			y = 1.014;
+			equityReturn = -0.4907;
+			unitMoney = "";
+		},
+		{
+			x = 1288195200000;
+			y = 1.013;
+			equityReturn = -0.0986;
+			unitMoney = "";
+		},
+		{
+			x = 1288281600000;
+			y = 1.017;
+			equityReturn = 0.3949;
+			unitMoney = "";
+		},
+		{
+			x = 1288540800000;
+			y = 1.026;
+			equityReturn = 0.885;
+			unitMoney = "";
+		},
+		{
+			x = 1288627200000;
+			y = 1.024;
+			equityReturn = -0.1949;
+			unitMoney = "";
+		},
+		{
+			x = 1288713600000;
+			y = 1.024;
+			equityReturn = 0;
+			unitMoney = "";
+		},
+		{
+			x = 1288800000000;
+			y = 1.03;
+			equityReturn = 0.5859;
+			unitMoney = "";
+		},
+		{
+			x = 1288886400000;
+			y = 1.033;
+			equityReturn = 0.2913;
+			unitMoney = "";
+		},
+		{
+			x = 1289145600000;
+			y = 1.038;
+			equityReturn = 0.484;
+			unitMoney = "";
+		},
+		{
+			x = 1289232000000;
+			y = 1.045;
+			equityReturn = 0.6744;
+			unitMoney = "";
+		},
+		{
+			x = 1289318400000;
+			y = 1.058;
+			equityReturn = 1.244;
+			unitMoney = "";
+		},
+		{
+			x = 1289404800000;
+			y = 1.051;
+			equityReturn = -0.6616;
+			unitMoney = "";
+		},
+		{
+			x = 1289491200000;
+			y = 1.02;
+			equityReturn = -2.9496;
+			unitMoney = "";
+		},
+		{
+			x = 1289750400000;
+			y = 1.042;
+			equityReturn = 2.1569;
+			unitMoney = "";
+		},
+		{
+			x = 1289836800000;
+			y = 1.027;
+			equityReturn = -1.4395;
+			unitMoney = "";
+		},
+		{
+			x = 1289923200000;
+			y = 1.002;
+			equityReturn = -2.4343;
+			unitMoney = "";
+		},
+		{
+			x = 1290009600000;
+			y = 1.01;
+			equityReturn = 0.7984;
+			unitMoney = "";
+		},
+		{
+			x = 1290096000000;
+			y = 1.026;
+			equityReturn = 1.5842;
+			unitMoney = "";
+		},
+		{
+			x = 1290355200000;
+			y = 1.031;
+			equityReturn = 0.4873;
+			unitMoney = "";
+		},
+		{
+			x = 1290441600000;
+			y = 1.022;
+			equityReturn = -0.8729;
+			unitMoney = "";
+		},
+		{
+			x = 1290528000000;
+			y = 1.036;
+			equityReturn = 1.3699;
+			unitMoney = "";
+		},
+		{
+			x = 1290614400000;
+			y = 1.044;
+			equityReturn = 0.7722;
+			unitMoney = "";
+		},
+		{
+			x = 1290700800000;
+			y = 1.042;
+			equityReturn = -0.1916;
+			unitMoney = "";
+		},
+		{
+			x = 1290960000000;
+			y = 1.044;
+			equityReturn = 0.1919;
+			unitMoney = "";
+		},
+		{
+			x = 1291046400000;
+			y = 1.028;
+			equityReturn = -1.5326;
+			unitMoney = "";
+		},
+		{
+			x = 1291132800000;
+			y = 1.024;
+			equityReturn = -0.3891;
+			unitMoney = "";
+		},
+		{
+			x = 1291219200000;
+			y = 1.02;
+			equityReturn = -0.3906;
+			unitMoney = "";
+		},
+		{
+			x = 1291305600000;
+			y = 1.014;
+			equityReturn = -0.5882;
+			unitMoney = "";
+		},
+		{
+			x = 1291564800000;
+			y = 1.002;
+			equityReturn = -1.1834;
+			unitMoney = "";
+		},
+		{
+			x = 1291651200000;
+			y = 1.009;
+			equityReturn = 0.6986;
+			unitMoney = "";
+		},
+		{
+			x = 1291737600000;
+			y = 1.008;
+			equityReturn = -0.0991;
+			unitMoney = "";
+		},
+		{
+			x = 1291824000000;
+			y = 0.993;
+			equityReturn = -1.4881;
+			unitMoney = "";
+		},
+		{
+			x = 1291910400000;
+			y = 0.999;
+			equityReturn = 0.6042;
+			unitMoney = "";
+		},
+		{
+			x = 1292169600000;
+			y = 1.018;
+			equityReturn = 1.9019;
+			unitMoney = "";
+		},
+		{
+			x = 1292256000000;
+			y = 1.021;
+			equityReturn = 0.2947;
+			unitMoney = "";
+		},
+		{
+			x = 1292342400000;
+			y = 1.016;
+			equityReturn = -0.4897;
+			unitMoney = "";
+		},
+		{
+			x = 1292428800000;
+			y = 1.013;
+			equityReturn = -0.2953;
+			unitMoney = "";
+		},
+		{
+			x = 1292515200000;
+			y = 1.01;
+			equityReturn = -0.2962;
+			unitMoney = "";
+		},
+		{
+			x = 1292774400000;
+			y = 1.002;
+			equityReturn = -0.7921;
+			unitMoney = "";
+		},
+		{
+			x = 1292860800000;
+			y = 1.004;
+			equityReturn = 0.1996;
+			unitMoney = "";
+		},
+		{
+			x = 1292947200000;
+			y = 0.995;
+			equityReturn = -0.8964;
+			unitMoney = "";
+		},
+		{
+			x = 1293033600000;
+			y = 0.985;
+			equityReturn = -1.005;
+			unitMoney = "";
+		},
+		{
+			x = 1293120000000;
+			y = 0.975;
+			equityReturn = -1.0152;
+			unitMoney = "";
+		},
+		{
+			x = 1293379200000;
+			y = 0.958;
+			equityReturn = -1.7436;
+			unitMoney = "";
+		},
+		{
+			x = 1293465600000;
+			y = 0.952;
+			equityReturn = -0.6263;
+			unitMoney = "";
+		},
+		{
+			x = 1293552000000;
+			y = 0.963;
+			equityReturn = 1.1555;
+			unitMoney = "";
+		},
+		{
+			x = 1293638400000;
+			y = 0.966;
+			equityReturn = 0.3115;
+			unitMoney = "";
+		},
+		{
+			x = 1293724800000;
+			y = 0.983;
+			equityReturn = 1.7598;
+			unitMoney = "";
+		},
+		{
+			x = 1294070400000;
+			y = 0.986;
+			equityReturn = 0.3052;
+			unitMoney = "";
+		},
+		{
+			x = 1294156800000;
+			y = 0.98;
+			equityReturn = -0.6085;
+			unitMoney = "";
+		},
+		{
+			x = 1294243200000;
+			y = 0.975;
+			equityReturn = -0.5102;
+			unitMoney = "";
+		},
+		{
+			x = 1294329600000;
+			y = 0.971;
+			equityReturn = -0.4103;
+			unitMoney = "";
+		},
+		{
+			x = 1294588800000;
+			y = 0.952;
+			equityReturn = -1.9567;
+			unitMoney = "";
+		},
+		{
+			x = 1294675200000;
+			y = 0.95;
+			equityReturn = -0.2101;
+			unitMoney = "";
+		},
+		{
+			x = 1294761600000;
+			y = 0.951;
+			equityReturn = 0.1053;
+			unitMoney = "";
+		},
+		{
+			x = 1294848000000;
+			y = 0.957;
+			equityReturn = 0.6309;
+			unitMoney = "";
+		},
+		{
+			x = 1294934400000;
+			y = 0.948;
+			equityReturn = -0.9404;
+			unitMoney = "";
+		},
+		{
+			x = 1295193600000;
+			y = 0.918;
+			equityReturn = -3.1646;
+			unitMoney = "";
+		},
+		{
+			x = 1295280000000;
+			y = 0.927;
+			equityReturn = 0.9804;
+			unitMoney = "";
+		},
+		{
+			x = 1295366400000;
+			y = 0.94;
+			equityReturn = 1.4024;
+			unitMoney = "";
+		},
+		{
+			x = 1295452800000;
+			y = 0.916;
+			equityReturn = -2.5532;
+			unitMoney = "";
+		},
+		{
+			x = 1295539200000;
+			y = 0.911;
+			equityReturn = -0.5459;
+			unitMoney = "";
+		},
+		{
+			x = 1295798400000;
+			y = 0.894;
+			equityReturn = -1.8661;
+			unitMoney = "";
+		},
+		{
+			x = 1295884800000;
+			y = 0.887;
+			equityReturn = -0.783;
+			unitMoney = "";
+		},
+		{
+			x = 1295971200000;
+			y = 0.897;
+			equityReturn = 1.1274;
+			unitMoney = "";
+		},
+		{
+			x = 1296057600000;
+			y = 0.905;
+			equityReturn = 0.8919;
+			unitMoney = "";
+		},
+		{
+			x = 1296144000000;
+			y = 0.915;
+			equityReturn = 1.105;
+			unitMoney = "";
+		},
+		{
+			x = 1296403200000;
+			y = 0.923;
+			equityReturn = 0.8743;
+			unitMoney = "";
+		},
+		{
+			x = 1296489600000;
+			y = 0.921;
+			equityReturn = -0.2167;
+			unitMoney = "";
+		},
+		{
+			x = 1297180800000;
+			y = 0.918;
+			equityReturn = -0.3257;
+			unitMoney = "";
+		},
+		{
+			x = 1297267200000;
+			y = 0.94;
+			equityReturn = 2.3965;
+			unitMoney = "";
+		},
+		{
+			x = 1297353600000;
+			y = 0.949;
+			equityReturn = 0.9574;
+			unitMoney = "";
+		},
+		{
+			x = 1297612800000;
+			y = 0.962;
+			equityReturn = 1.3699;
+			unitMoney = "";
+		},
+		{
+			x = 1297699200000;
+			y = 0.957;
+			equityReturn = -0.5198;
+			unitMoney = "";
+		},
+		{
+			x = 1297785600000;
+			y = 0.962;
+			equityReturn = 0.5225;
+			unitMoney = "";
+		},
+		{
+			x = 1297872000000;
+			y = 0.956;
+			equityReturn = -0.6237;
+			unitMoney = "";
+		},
+		{
+			x = 1297958400000;
+			y = 0.952;
+			equityReturn = -0.4184;
+			unitMoney = "";
+		},
+		{
+			x = 1298217600000;
+			y = 0.967;
+			equityReturn = 1.5756;
+			unitMoney = "";
+		},
+		{
+			x = 1298304000000;
+			y = 0.949;
+			equityReturn = -1.8614;
+			unitMoney = "";
+		},
+		{
+			x = 1298390400000;
+			y = 0.952;
+			equityReturn = 0.3161;
+			unitMoney = "";
+		},
+		{
+			x = 1298476800000;
+			y = 0.951;
+			equityReturn = -0.105;
+			unitMoney = "";
+		},
+		{
+			x = 1298563200000;
+			y = 0.954;
+			equityReturn = 0.3155;
+			unitMoney = "";
+		},
+		{
+			x = 1298822400000;
+			y = 0.967;
+			equityReturn = 1.3627;
+			unitMoney = "";
+		},
+		{
+			x = 1298908800000;
+			y = 0.975;
+			equityReturn = 0.8273;
+			unitMoney = "";
+		},
+		{
+			x = 1298995200000;
+			y = 0.977;
+			equityReturn = 0.2051;
+			unitMoney = "";
+		},
+		{
+			x = 1299081600000;
+			y = 0.964;
+			equityReturn = -1.3306;
+			unitMoney = "";
+		},
+		{
+			x = 1299168000000;
+			y = 0.972;
+			equityReturn = 0.8299;
+			unitMoney = "";
+		},
+		{
+			x = 1299427200000;
+			y = 0.981;
+			equityReturn = 0.9259;
+			unitMoney = "";
+		},
+		{
+			x = 1299513600000;
+			y = 0.986;
+			equityReturn = 0.5097;
+			unitMoney = "";
+		},
+		{
+			x = 1299600000000;
+			y = 0.987;
+			equityReturn = 0.1014;
+			unitMoney = "";
+		},
+		{
+			x = 1299686400000;
+			y = 0.985;
+			equityReturn = -0.2026;
+			unitMoney = "";
+		},
+		{
+			x = 1299772800000;
+			y = 0.979;
+			equityReturn = -0.6091;
+			unitMoney = "";
+		},
+		{
+			x = 1300032000000;
+			y = 0.987;
+			equityReturn = 0.8172;
+			unitMoney = "";
+		},
+		{
+			x = 1300118400000;
+			y = 0.97;
+			equityReturn = -1.7224;
+			unitMoney = "";
+		},
+		{
+			x = 1300204800000;
+			y = 0.98;
+			equityReturn = 1.0309;
+			unitMoney = "";
+		},
+		{
+			x = 1300291200000;
+			y = 0.964;
+			equityReturn = -1.6327;
+			unitMoney = "";
+		},
+		{
+			x = 1300377600000;
+			y = 0.965;
+			equityReturn = 0.1037;
+			unitMoney = "";
+		},
+		{
+			x = 1300636800000;
+			y = 0.957;
+			equityReturn = -0.829;
+			unitMoney = "";
+		},
+		{
+			x = 1300723200000;
+			y = 0.956;
+			equityReturn = -0.1045;
+			unitMoney = "";
+		},
+		{
+			x = 1300809600000;
+			y = 0.964;
+			equityReturn = 0.8368;
+			unitMoney = "";
+		},
+		{
+			x = 1300896000000;
+			y = 0.961;
+			equityReturn = -0.3112;
+			unitMoney = "";
+		},
+		{
+			x = 1300982400000;
+			y = 0.964;
+			equityReturn = 0.3122;
+			unitMoney = "";
+		},
+		{
+			x = 1301241600000;
+			y = 0.951;
+			equityReturn = -1.3485;
+			unitMoney = "";
+		},
+		{
+			x = 1301328000000;
+			y = 0.934;
+			equityReturn = -1.7876;
+			unitMoney = "";
+		},
+		{
+			x = 1301414400000;
+			y = 0.931;
+			equityReturn = -0.3212;
+			unitMoney = "";
+		},
+		{
+			x = 1301500800000;
+			y = 0.929;
+			equityReturn = -0.2148;
+			unitMoney = "";
+		},
+		{
+			x = 1301587200000;
+			y = 0.933;
+			equityReturn = 0.4306;
+			unitMoney = "";
+		},
+		{
+			x = 1302019200000;
+			y = 0.924;
+			equityReturn = -0.9646;
+			unitMoney = "";
+		},
+		{
+			x = 1302105600000;
+			y = 0.93;
+			equityReturn = 0.6494;
+			unitMoney = "";
+		},
+		{
+			x = 1302192000000;
+			y = 0.943;
+			equityReturn = 1.3978;
+			unitMoney = "";
+		},
+		{
+			x = 1302451200000;
+			y = 0.935;
+			equityReturn = -0.8484;
+			unitMoney = "";
+		},
+		{
+			x = 1302537600000;
+			y = 0.936;
+			equityReturn = 0.107;
+			unitMoney = "";
+		},
+		{
+			x = 1302624000000;
+			y = 0.95;
+			equityReturn = 1.4957;
+			unitMoney = "";
+		},
+		{
+			x = 1302710400000;
+			y = 0.948;
+			equityReturn = -0.2105;
+			unitMoney = "";
+		},
+		{
+			x = 1302796800000;
+			y = 0.946;
+			equityReturn = -0.211;
+			unitMoney = "";
+		},
+		{
+			x = 1303056000000;
+			y = 0.945;
+			equityReturn = -0.1057;
+			unitMoney = "";
+		},
+		{
+			x = 1303142400000;
+			y = 0.947;
+			equityReturn = 0.2116;
+			unitMoney = "";
+		},
+		{
+			x = 1303228800000;
+			y = 0.954;
+			equityReturn = 0.7392;
+			unitMoney = "";
+		},
+		{
+			x = 1303315200000;
+			y = 0.956;
+			equityReturn = 0.2096;
+			unitMoney = "";
+		},
+		{
+			x = 1303401600000;
+			y = 0.953;
+			equityReturn = -0.3138;
+			unitMoney = "";
+		},
+		{
+			x = 1303660800000;
+			y = 0.962;
+			equityReturn = 0.9444;
+			unitMoney = "";
+		},
+		{
+			x = 1303747200000;
+			y = 0.95;
+			equityReturn = -1.2474;
+			unitMoney = "";
+		},
+		{
+			x = 1303833600000;
+			y = 0.944;
+			equityReturn = -0.6316;
+			unitMoney = "";
+		},
+		{
+			x = 1303920000000;
+			y = 0.924;
+			equityReturn = -2.1186;
+			unitMoney = "";
+		},
+		{
+			x = 1304006400000;
+			y = 0.935;
+			equityReturn = 1.1905;
+			unitMoney = "";
+		},
+		{
+			x = 1304352000000;
+			y = 0.948;
+			equityReturn = 1.3904;
+			unitMoney = "";
+		},
+		{
+			x = 1304438400000;
+			y = 0.938;
+			equityReturn = -1.0549;
+			unitMoney = "";
+		},
+		{
+			x = 1304524800000;
+			y = 0.95;
+			equityReturn = 1.2793;
+			unitMoney = "";
+		},
+		{
+			x = 1304611200000;
+			y = 0.955;
+			equityReturn = 0.5263;
+			unitMoney = "";
+		},
+		{
+			x = 1304870400000;
+			y = 0.958;
+			equityReturn = 0.3141;
+			unitMoney = "";
+		},
+		{
+			x = 1304956800000;
+			y = 0.955;
+			equityReturn = -0.3132;
+			unitMoney = "";
+		},
+		{
+			x = 1305043200000;
+			y = 0.958;
+			equityReturn = 0.3141;
+			unitMoney = "";
+		},
+		{
+			x = 1305129600000;
+			y = 0.957;
+			equityReturn = -0.1044;
+			unitMoney = "";
+		},
+		{
+			x = 1305216000000;
+			y = 0.956;
+			equityReturn = -0.1045;
+			unitMoney = "";
+		},
+		{
+			x = 1305475200000;
+			y = 0.955;
+			equityReturn = -0.1046;
+			unitMoney = "";
+		},
+		{
+			x = 1305561600000;
+			y = 0.947;
+			equityReturn = -0.8377;
+			unitMoney = "";
+		},
+		{
+			x = 1305648000000;
+			y = 0.955;
+			equityReturn = 0.8448;
+			unitMoney = "";
+		},
+		{
+			x = 1305734400000;
+			y = 0.957;
+			equityReturn = 0.2094;
+			unitMoney = "";
+		},
+		{
+			x = 1305820800000;
+			y = 0.956;
+			equityReturn = -0.1045;
+			unitMoney = "";
+		},
+		{
+			x = 1306080000000;
+			y = 0.928;
+			equityReturn = -2.9289;
+			unitMoney = "";
+		},
+		{
+			x = 1306166400000;
+			y = 0.923;
+			equityReturn = -0.5388;
+			unitMoney = "";
+		},
+		{
+			x = 1306252800000;
+			y = 0.912;
+			equityReturn = -1.1918;
+			unitMoney = "";
+		},
+		{
+			x = 1306339200000;
+			y = 0.907;
+			equityReturn = -0.5482;
+			unitMoney = "";
+		},
+		{
+			x = 1306425600000;
+			y = 0.894;
+			equityReturn = -1.4333;
+			unitMoney = "";
+		},
+		{
+			x = 1306684800000;
+			y = 0.897;
+			equityReturn = 0.3356;
+			unitMoney = "";
+		},
+		{
+			x = 1306771200000;
+			y = 0.905;
+			equityReturn = 0.8919;
+			unitMoney = "";
+		},
+		{
+			x = 1306857600000;
+			y = 0.917;
+			equityReturn = 1.326;
+			unitMoney = "";
+		},
+		{
+			x = 1306944000000;
+			y = 0.914;
+			equityReturn = -0.3272;
+			unitMoney = "";
+		},
+		{
+			x = 1307030400000;
+			y = 0.927;
+			equityReturn = 1.4223;
+			unitMoney = "";
+		},
+		{
+			x = 1307376000000;
+			y = 0.93;
+			equityReturn = 0.3236;
+			unitMoney = "";
+		},
+		{
+			x = 1307462400000;
+			y = 0.932;
+			equityReturn = 0.2151;
+			unitMoney = "";
+		},
+		{
+			x = 1307548800000;
+			y = 0.918;
+			equityReturn = -1.5021;
+			unitMoney = "";
+		},
+		{
+			x = 1307635200000;
+			y = 0.923;
+			equityReturn = 0.5447;
+			unitMoney = "";
+		},
+		{
+			x = 1307894400000;
+			y = 0.912;
+			equityReturn = -1.1918;
+			unitMoney = "";
+		},
+		{
+			x = 1307980800000;
+			y = 0.92;
+			equityReturn = 0.8772;
+			unitMoney = "";
+		},
+		{
+			x = 1308067200000;
+			y = 0.915;
+			equityReturn = -0.5435;
+			unitMoney = "";
+		},
+		{
+			x = 1308153600000;
+			y = 0.904;
+			equityReturn = -1.2022;
+			unitMoney = "";
+		},
+		{
+			x = 1308240000000;
+			y = 0.898;
+			equityReturn = -0.6637;
+			unitMoney = "";
+		},
+		{
+			x = 1308499200000;
+			y = 0.887;
+			equityReturn = -1.2249;
+			unitMoney = "";
+		},
+		{
+			x = 1308585600000;
+			y = 0.898;
+			equityReturn = 1.2401;
+			unitMoney = "";
+		},
+		{
+			x = 1308672000000;
+			y = 0.904;
+			equityReturn = 0.6682;
+			unitMoney = "";
+		},
+		{
+			x = 1308758400000;
+			y = 0.914;
+			equityReturn = 1.1062;
+			unitMoney = "";
+		},
+		{
+			x = 1308844800000;
+			y = 0.928;
+			equityReturn = 1.5317;
+			unitMoney = "";
+		},
+		{
+			x = 1309104000000;
+			y = 0.936;
+			equityReturn = 0.8621;
+			unitMoney = "";
+		},
+		{
+			x = 1309190400000;
+			y = 0.935;
+			equityReturn = -0.1068;
+			unitMoney = "";
+		},
+		{
+			x = 1309276800000;
+			y = 0.928;
+			equityReturn = -0.7487;
+			unitMoney = "";
+		},
+		{
+			x = 1309363200000;
+			y = 0.939;
+			equityReturn = 1.1853;
+			unitMoney = "";
+		},
+		{
+			x = 1309449600000;
+			y = 0.941;
+			equityReturn = 0.213;
+			unitMoney = "";
+		},
+		{
+			x = 1309708800000;
+			y = 0.962;
+			equityReturn = 2.2317;
+			unitMoney = "";
+		},
+		{
+			x = 1309795200000;
+			y = 0.964;
+			equityReturn = 0.2079;
+			unitMoney = "";
+		},
+		{
+			x = 1309881600000;
+			y = 0.963;
+			equityReturn = -0.1037;
+			unitMoney = "";
+		},
+		{
+			x = 1309968000000;
+			y = 0.973;
+			equityReturn = 1.0384;
+			unitMoney = "";
+		},
+		{
+			x = 1310054400000;
+			y = 0.976;
+			equityReturn = 0.3083;
+			unitMoney = "";
+		},
+		{
+			x = 1310313600000;
+			y = 0.989;
+			equityReturn = 1.332;
+			unitMoney = "";
+		},
+		{
+			x = 1310400000000;
+			y = 0.985;
+			equityReturn = -0.4044;
+			unitMoney = "";
+		},
+		{
+			x = 1310486400000;
+			y = 1.001;
+			equityReturn = 1.6244;
+			unitMoney = "";
+		},
+		{
+			x = 1310572800000;
+			y = 0.996;
+			equityReturn = -0.4995;
+			unitMoney = "";
+		},
+		{
+			x = 1310659200000;
+			y = 0.999;
+			equityReturn = 0.3012;
+			unitMoney = "";
+		},
+		{
+			x = 1310918400000;
+			y = 1.005;
+			equityReturn = 0.6006;
+			unitMoney = "";
+		},
+		{
+			x = 1311004800000;
+			y = 0.991;
+			equityReturn = -1.393;
+			unitMoney = "";
+		},
+		{
+			x = 1311091200000;
+			y = 0.995;
+			equityReturn = 0.4036;
+			unitMoney = "";
+		},
+		{
+			x = 1311177600000;
+			y = 0.998;
+			equityReturn = 0.3015;
+			unitMoney = "";
+		},
+		{
+			x = 1311264000000;
+			y = 0.999;
+			equityReturn = 0.1002;
+			unitMoney = "";
+		},
+		{
+			x = 1311523200000;
+			y = 0.97;
+			equityReturn = -2.9029;
+			unitMoney = "";
+		},
+		{
+			x = 1311609600000;
+			y = 0.973;
+			equityReturn = 0.3093;
+			unitMoney = "";
+		},
+		{
+			x = 1311696000000;
+			y = 0.985;
+			equityReturn = 1.2333;
+			unitMoney = "";
+		},
+		{
+			x = 1311782400000;
+			y = 0.984;
+			equityReturn = -0.1015;
+			unitMoney = "";
+		},
+		{
+			x = 1311868800000;
+			y = 0.977;
+			equityReturn = -0.7114;
+			unitMoney = "";
+		},
+		{
+			x = 1312128000000;
+			y = 0.974;
+			equityReturn = -0.3071;
+			unitMoney = "";
+		},
+		{
+			x = 1312214400000;
+			y = 0.969;
+			equityReturn = -0.5133;
+			unitMoney = "";
+		},
+		{
+			x = 1312300800000;
+			y = 0.976;
+			equityReturn = 0.7224;
+			unitMoney = "";
+		},
+		{
+			x = 1312387200000;
+			y = 0.982;
+			equityReturn = 0.6148;
+			unitMoney = "";
+		},
+		{
+			x = 1312473600000;
+			y = 0.977;
+			equityReturn = -0.5092;
+			unitMoney = "";
+		},
+		{
+			x = 1312732800000;
+			y = 0.962;
+			equityReturn = -1.5353;
+			unitMoney = "";
+		},
+		{
+			x = 1312819200000;
+			y = 0.968;
+			equityReturn = 0.6237;
+			unitMoney = "";
+		},
+		{
+			x = 1312905600000;
+			y = 0.982;
+			equityReturn = 1.4463;
+			unitMoney = "";
+		},
+		{
+			x = 1312992000000;
+			y = 1.008;
+			equityReturn = 2.6477;
+			unitMoney = "";
+		},
+		{
+			x = 1313078400000;
+			y = 1.01;
+			equityReturn = 0.1984;
+			unitMoney = "";
+		},
+		{
+			x = 1313337600000;
+			y = 1.011;
+			equityReturn = 0.099;
+			unitMoney = "";
+		},
+		{
+			x = 1313424000000;
+			y = 1.002;
+			equityReturn = -0.8902;
+			unitMoney = "";
+		},
+		{
+			x = 1313510400000;
+			y = 1.001;
+			equityReturn = -0.0998;
+			unitMoney = "";
+		},
+		{
+			x = 1313596800000;
+			y = 0.99;
+			equityReturn = -1.0989;
+			unitMoney = "";
+		},
+		{
+			x = 1313683200000;
+			y = 0.99;
+			equityReturn = 0;
+			unitMoney = "";
+		},
+		{
+			x = 1313942400000;
+			y = 0.969;
+			equityReturn = -2.1212;
+			unitMoney = "";
+		},
+		{
+			x = 1314028800000;
+			y = 0.975;
+			equityReturn = 0.6192;
+			unitMoney = "";
+		},
+		{
+			x = 1314115200000;
+			y = 0.973;
+			equityReturn = -0.2051;
+			unitMoney = "";
+		},
+		{
+			x = 1314201600000;
+			y = 0.989;
+			equityReturn = 1.6444;
+			unitMoney = "";
+		},
+		{
+			x = 1314288000000;
+			y = 0.988;
+			equityReturn = -0.1011;
+			unitMoney = "";
+		},
+		{
+			x = 1314547200000;
+			y = 0.992;
+			equityReturn = 0.4049;
+			unitMoney = "";
+		},
+		{
+			x = 1314633600000;
+			y = 0.987;
+			equityReturn = -0.504;
+			unitMoney = "";
+		},
+		{
+			x = 1314720000000;
+			y = 0.988;
+			equityReturn = 0.1013;
+			unitMoney = "";
+		},
+		{
+			x = 1314806400000;
+			y = 0.98;
+			equityReturn = -0.8097;
+			unitMoney = "";
+		},
+		{
+			x = 1314892800000;
+			y = 0.97;
+			equityReturn = -1.0204;
+			unitMoney = "";
+		},
+		{
+			x = 1315152000000;
+			y = 0.961;
+			equityReturn = -0.9278;
+			unitMoney = "";
+		},
+		{
+			x = 1315238400000;
+			y = 0.949;
+			equityReturn = -1.2487;
+			unitMoney = "";
+		},
+		{
+			x = 1315324800000;
+			y = 0.965;
+			equityReturn = 1.686;
+			unitMoney = "";
+		},
+		{
+			x = 1315411200000;
+			y = 0.96;
+			equityReturn = -0.5181;
+			unitMoney = "";
+		},
+		{
+			x = 1315497600000;
+			y = 0.952;
+			equityReturn = -0.8333;
+			unitMoney = "";
+		},
+		{
+			x = 1315843200000;
+			y = 0.943;
+			equityReturn = -0.9454;
+			unitMoney = "";
+		},
+		{
+			x = 1315929600000;
+			y = 0.945;
+			equityReturn = 0.2121;
+			unitMoney = "";
+		},
+		{
+			x = 1316016000000;
+			y = 0.946;
+			equityReturn = 0.1058;
+			unitMoney = "";
+		},
+		{
+			x = 1316102400000;
+			y = 0.948;
+			equityReturn = 0.2114;
+			unitMoney = "";
+		},
+		{
+			x = 1316361600000;
+			y = 0.935;
+			equityReturn = -1.3713;
+			unitMoney = "";
+		},
+		{
+			x = 1316448000000;
+			y = 0.933;
+			equityReturn = -0.2139;
+			unitMoney = "";
+		},
+		{
+			x = 1316534400000;
+			y = 0.949;
+			equityReturn = 1.7149;
+			unitMoney = "";
+		},
+		{
+			x = 1316620800000;
+			y = 0.933;
+			equityReturn = -1.686;
+			unitMoney = "";
+		},
+		{
+			x = 1316707200000;
+			y = 0.916;
+			equityReturn = -1.8221;
+			unitMoney = "";
+		},
+		{
+			x = 1316966400000;
+			y = 0.9;
+			equityReturn = -1.7467;
+			unitMoney = "";
+		},
+		{
+			x = 1317052800000;
+			y = 0.907;
+			equityReturn = 0.7778;
+			unitMoney = "";
+		},
+		{
+			x = 1317139200000;
+			y = 0.901;
+			equityReturn = -0.6615;
+			unitMoney = "";
+		},
+		{
+			x = 1317225600000;
+			y = 0.889;
+			equityReturn = -1.3319;
+			unitMoney = "";
+		},
+		{
+			x = 1317312000000;
+			y = 0.888;
+			equityReturn = -0.1125;
+			unitMoney = "";
+		},
+		{
+			x = 1318176000000;
+			y = 0.876;
+			equityReturn = -1.3514;
+			unitMoney = "";
+		},
+		{
+			x = 1318262400000;
+			y = 0.869;
+			equityReturn = -0.7991;
+			unitMoney = "";
+		},
+		{
+			x = 1318348800000;
+			y = 0.891;
+			equityReturn = 2.5316;
+			unitMoney = "";
+		},
+		{
+			x = 1318435200000;
+			y = 0.899;
+			equityReturn = 0.8979;
+			unitMoney = "";
+		},
+		{
+			x = 1318521600000;
+			y = 0.896;
+			equityReturn = -0.3337;
+			unitMoney = "";
+		},
+		{
+			x = 1318780800000;
+			y = 0.907;
+			equityReturn = 1.2277;
+			unitMoney = "";
+		},
+		{
+			x = 1318867200000;
+			y = 0.897;
+			equityReturn = -1.1025;
+			unitMoney = "";
+		},
+		{
+			x = 1318953600000;
+			y = 0.892;
+			equityReturn = -0.5574;
+			unitMoney = "";
+		},
+		{
+			x = 1319040000000;
+			y = 0.873;
+			equityReturn = -2.13;
+			unitMoney = "";
+		},
+		{
+			x = 1319126400000;
+			y = 0.868;
+			equityReturn = -0.5727;
+			unitMoney = "";
+		},
+		{
+			x = 1319385600000;
+			y = 0.885;
+			equityReturn = 1.9585;
+			unitMoney = "";
+		},
+		{
+			x = 1319472000000;
+			y = 0.901;
+			equityReturn = 1.8079;
+			unitMoney = "";
+		},
+		{
+			x = 1319558400000;
+			y = 0.911;
+			equityReturn = 1.1099;
+			unitMoney = "";
+		},
+		{
+			x = 1319644800000;
+			y = 0.913;
+			equityReturn = 0.2195;
+			unitMoney = "";
+		},
+		{
+			x = 1319731200000;
+			y = 0.922;
+			equityReturn = 0.9858;
+			unitMoney = "";
+		},
+		{
+			x = 1319990400000;
+			y = 0.924;
+			equityReturn = 0.2169;
+			unitMoney = "";
+		},
+		{
+			x = 1320076800000;
+			y = 0.927;
+			equityReturn = 0.3247;
+			unitMoney = "";
+		},
+		{
+			x = 1320163200000;
+			y = 0.941;
+			equityReturn = 1.5102;
+			unitMoney = "";
+		},
+		{
+			x = 1320249600000;
+			y = 0.944;
+			equityReturn = 0.3188;
+			unitMoney = "";
+		},
+		{
+			x = 1320336000000;
+			y = 0.95;
+			equityReturn = 0.6356;
+			unitMoney = "";
+		},
+		{
+			x = 1320595200000;
+			y = 0.948;
+			equityReturn = -0.2105;
+			unitMoney = "";
+		},
+		{
+			x = 1320681600000;
+			y = 0.943;
+			equityReturn = -0.5274;
+			unitMoney = "";
+		},
+		{
+			x = 1320768000000;
+			y = 0.949;
+			equityReturn = 0.6363;
+			unitMoney = "";
+		},
+		{
+			x = 1320854400000;
+			y = 0.944;
+			equityReturn = -0.5269;
+			unitMoney = "";
+		},
+		{
+			x = 1320940800000;
+			y = 0.943;
+			equityReturn = -0.1059;
+			unitMoney = "";
+		},
+		{
+			x = 1321200000000;
+			y = 0.953;
+			equityReturn = 1.0604;
+			unitMoney = "";
+		},
+		{
+			x = 1321286400000;
+			y = 0.949;
+			equityReturn = -0.4197;
+			unitMoney = "";
+		},
+		{
+			x = 1321372800000;
+			y = 0.934;
+			equityReturn = -1.5806;
+			unitMoney = "";
+		},
+		{
+			x = 1321459200000;
+			y = 0.933;
+			equityReturn = -0.1071;
+			unitMoney = "";
+		},
+		{
+			x = 1321545600000;
+			y = 0.921;
+			equityReturn = -1.2862;
+			unitMoney = "";
+		},
+		{
+			x = 1321804800000;
+			y = 0.921;
+			equityReturn = 0;
+			unitMoney = "";
+		},
+		{
+			x = 1321891200000;
+			y = 0.924;
+			equityReturn = 0.3257;
+			unitMoney = "";
+		},
+		{
+			x = 1321977600000;
+			y = 0.924;
+			equityReturn = 0;
+			unitMoney = "";
+		},
+		{
+			x = 1322064000000;
+			y = 0.926;
+			equityReturn = 0.2165;
+			unitMoney = "";
+		},
+		{
+			x = 1322150400000;
+			y = 0.922;
+			equityReturn = -0.432;
+			unitMoney = "";
+		},
+		{
+			x = 1322409600000;
+			y = 0.926;
+			equityReturn = 0.4338;
+			unitMoney = "";
+		},
+		{
+			x = 1322496000000;
+			y = 0.933;
+			equityReturn = 0.7559;
+			unitMoney = "";
+		},
+		{
+			x = 1322582400000;
+			y = 0.916;
+			equityReturn = -1.8221;
+			unitMoney = "";
+		},
+		{
+			x = 1322668800000;
+			y = 0.924;
+			equityReturn = 0.8734;
+			unitMoney = "";
+		},
+		{
+			x = 1322755200000;
+			y = 0.914;
+			equityReturn = -1.0823;
+			unitMoney = "";
+		},
+		{
+			x = 1323014400000;
+			y = 0.897;
+			equityReturn = -1.86;
+			unitMoney = "";
+		},
+		{
+			x = 1323100800000;
+			y = 0.89;
+			equityReturn = -0.7804;
+			unitMoney = "";
+		},
+		{
+			x = 1323187200000;
+			y = 0.892;
+			equityReturn = 0.2247;
+			unitMoney = "";
+		},
+		{
+			x = 1323273600000;
+			y = 0.891;
+			equityReturn = -0.1121;
+			unitMoney = "";
+		},
+		{
+			x = 1323360000000;
+			y = 0.878;
+			equityReturn = -1.459;
+			unitMoney = "";
+		},
+		{
+			x = 1323619200000;
+			y = 0.868;
+			equityReturn = -1.139;
+			unitMoney = "";
+		},
+		{
+			x = 1323705600000;
+			y = 0.853;
+			equityReturn = -1.7281;
+			unitMoney = "";
+		},
+		{
+			x = 1323792000000;
+			y = 0.847;
+			equityReturn = -0.7034;
+			unitMoney = "";
+		},
+		{
+			x = 1323878400000;
+			y = 0.844;
+			equityReturn = -0.3542;
+			unitMoney = "";
+		},
+		{
+			x = 1323964800000;
+			y = 0.855;
+			equityReturn = 1.3033;
+			unitMoney = "";
+		},
+		{
+			x = 1324224000000;
+			y = 0.855;
+			equityReturn = 0;
+			unitMoney = "";
+		},
+		{
+			x = 1324310400000;
+			y = 0.854;
+			equityReturn = -0.117;
+			unitMoney = "";
+		},
+		{
+			x = 1324396800000;
+			y = 0.846;
+			equityReturn = -0.9368;
+			unitMoney = "";
+		},
+		{
+			x = 1324483200000;
+			y = 0.847;
+			equityReturn = 0.1182;
+			unitMoney = "";
+		},
+		{
+			x = 1324569600000;
+			y = 0.85;
+			equityReturn = 0.3542;
+			unitMoney = "";
+		},
+		{
+			x = 1324828800000;
+			y = 0.84;
+			equityReturn = -1.1765;
+			unitMoney = "";
+		},
+		{
+			x = 1324915200000;
+			y = 0.819;
+			equityReturn = -2.5;
+			unitMoney = "";
+		},
+		{
+			x = 1325001600000;
+			y = 0.817;
+			equityReturn = -0.2442;
+			unitMoney = "";
+		},
+		{
+			x = 1325088000000;
+			y = 0.823;
+			equityReturn = 0.7344;
+			unitMoney = "";
+		},
+		{
+			x = 1325174400000;
+			y = 0.835;
+			equityReturn = 1.4581;
+			unitMoney = "";
+		},
+		{
+			x = 1325260800000;
+			y = 0.835;
+			equityReturn = 0;
+			unitMoney = "";
+		},
+		{
+			x = 1325606400000;
+			y = 0.811;
+			equityReturn = -2.8743;
+			unitMoney = "";
+		},
+		{
+			x = 1325692800000;
+			y = 0.787;
+			equityReturn = -2.9593;
+			unitMoney = "";
+		},
+		{
+			x = 1325779200000;
+			y = 0.785;
+			equityReturn = -0.2541;
+			unitMoney = "";
+		},
+		{
+			x = 1326038400000;
+			y = 0.799;
+			equityReturn = 1.7834;
+			unitMoney = "";
+		},
+		{
+			x = 1326124800000;
+			y = 0.819;
+			equityReturn = 2.5031;
+			unitMoney = "";
+		},
+		{
+			x = 1326211200000;
+			y = 0.816;
+			equityReturn = -0.3663;
+			unitMoney = "";
+		},
+		{
+			x = 1326297600000;
+			y = 0.807;
+			equityReturn = -1.1029;
+			unitMoney = "";
+		},
+		{
+			x = 1326384000000;
+			y = 0.786;
+			equityReturn = -2.6022;
+			unitMoney = "";
+		},
+		{
+			x = 1326643200000;
+			y = 0.759;
+			equityReturn = -3.4351;
+			unitMoney = "";
+		},
+		{
+			x = 1326729600000;
+			y = 0.785;
+			equityReturn = 3.4256;
+			unitMoney = "";
+		},
+		{
+			x = 1326816000000;
+			y = 0.767;
+			equityReturn = -2.293;
+			unitMoney = "";
+		},
+		{
+			x = 1326902400000;
+			y = 0.778;
+			equityReturn = 1.4342;
+			unitMoney = "";
+		},
+		{
+			x = 1326988800000;
+			y = 0.797;
+			equityReturn = 2.4422;
+			unitMoney = "";
+		},
+		{
+			x = 1327852800000;
+			y = 0.791;
+			equityReturn = -0.7528;
+			unitMoney = "";
+		},
+		{
+			x = 1327939200000;
+			y = 0.793;
+			equityReturn = 0.2528;
+			unitMoney = "";
+		},
+		{
+			x = 1328025600000;
+			y = 0.791;
+			equityReturn = -0.2522;
+			unitMoney = "";
+		},
+		{
+			x = 1328112000000;
+			y = 0.797;
+			equityReturn = 0.7585;
+			unitMoney = "";
+		},
+		{
+			x = 1328198400000;
+			y = 0.804;
+			equityReturn = 0.8783;
+			unitMoney = "";
+		},
+		{
+			x = 1328457600000;
+			y = 0.811;
+			equityReturn = 0.8706;
+			unitMoney = "";
+		},
+		{
+			x = 1328544000000;
+			y = 0.801;
+			equityReturn = -1.233;
+			unitMoney = "";
+		},
+		{
+			x = 1328630400000;
+			y = 0.812;
+			equityReturn = 1.3733;
+			unitMoney = "";
+		},
+		{
+			x = 1328716800000;
+			y = 0.815;
+			equityReturn = 0.3695;
+			unitMoney = "";
+		},
+		{
+			x = 1328803200000;
+			y = 0.814;
+			equityReturn = -0.1227;
+			unitMoney = "";
+		},
+		{
+			x = 1329062400000;
+			y = 0.823;
+			equityReturn = 1.1057;
+			unitMoney = "";
+		},
+		{
+			x = 1329148800000;
+			y = 0.824;
+			equityReturn = 0.1215;
+			unitMoney = "";
+		},
+		{
+			x = 1329235200000;
+			y = 0.832;
+			equityReturn = 0.9709;
+			unitMoney = "";
+		},
+		{
+			x = 1329321600000;
+			y = 0.833;
+			equityReturn = 0.1202;
+			unitMoney = "";
+		},
+		{
+			x = 1329408000000;
+			y = 0.831;
+			equityReturn = -0.2401;
+			unitMoney = "";
+		},
+		{
+			x = 1329667200000;
+			y = 0.832;
+			equityReturn = 0.1203;
+			unitMoney = "";
+		},
+		{
+			x = 1329753600000;
+			y = 0.837;
+			equityReturn = 0.601;
+			unitMoney = "";
+		},
+		{
+			x = 1329840000000;
+			y = 0.846;
+			equityReturn = 1.0753;
+			unitMoney = "";
+		},
+		{
+			x = 1329926400000;
+			y = 0.852;
+			equityReturn = 0.7092;
+			unitMoney = "";
+		},
+		{
+			x = 1330012800000;
+			y = 0.861;
+			equityReturn = 1.0563;
+			unitMoney = "";
+		},
+		{
+			x = 1330272000000;
+			y = 0.866;
+			equityReturn = 0.5807;
+			unitMoney = "";
+		},
+		{
+			x = 1330358400000;
+			y = 0.864;
+			equityReturn = -0.2309;
+			unitMoney = "";
+		},
+		{
+			x = 1330444800000;
+			y = 0.86;
+			equityReturn = -0.463;
+			unitMoney = "";
+		},
+		{
+			x = 1330531200000;
+			y = 0.864;
+			equityReturn = 0.4651;
+			unitMoney = "";
+		},
+		{
+			x = 1330617600000;
+			y = 0.875;
+			equityReturn = 1.2731;
+			unitMoney = "";
+		},
+		{
+			x = 1330876800000;
+			y = 0.871;
+			equityReturn = -0.4571;
+			unitMoney = "";
+		},
+		{
+			x = 1330963200000;
+			y = 0.865;
+			equityReturn = -0.6889;
+			unitMoney = "";
+		},
+		{
+			x = 1331049600000;
+			y = 0.867;
+			equityReturn = 0.2312;
+			unitMoney = "";
+		},
+		{
+			x = 1331136000000;
+			y = 0.873;
+			equityReturn = 0.692;
+			unitMoney = "";
+		},
+		{
+			x = 1331222400000;
+			y = 0.888;
+			equityReturn = 1.7182;
+			unitMoney = "";
+		},
+		{
+			x = 1331481600000;
+			y = 0.89;
+			equityReturn = 0.2252;
+			unitMoney = "";
+		},
+		{
+			x = 1331568000000;
+			y = 0.9;
+			equityReturn = 1.1236;
+			unitMoney = "";
+		},
+		{
+			x = 1331654400000;
+			y = 0.884;
+			equityReturn = -1.7778;
+			unitMoney = "";
+		},
+		{
+			x = 1331740800000;
+			y = 0.893;
+			equityReturn = 1.0181;
+			unitMoney = "";
+		},
+		{
+			x = 1331827200000;
+			y = 0.911;
+			equityReturn = 2.0157;
+			unitMoney = "";
+		},
+		{
+			x = 1332086400000;
+			y = 0.909;
+			equityReturn = -0.2195;
+			unitMoney = "";
+		},
+		{
+			x = 1332172800000;
+			y = 0.888;
+			equityReturn = -2.3102;
+			unitMoney = "";
+		},
+		{
+			x = 1332259200000;
+			y = 0.88;
+			equityReturn = -0.9009;
+			unitMoney = "";
+		},
+		{
+			x = 1332345600000;
+			y = 0.877;
+			equityReturn = -0.3409;
+			unitMoney = "";
+		},
+		{
+			x = 1332432000000;
+			y = 0.865;
+			equityReturn = -1.3683;
+			unitMoney = "";
+		},
+		{
+			x = 1332691200000;
+			y = 0.87;
+			equityReturn = 0.578;
+			unitMoney = "";
+		},
+		{
+			x = 1332777600000;
+			y = 0.86;
+			equityReturn = -1.1494;
+			unitMoney = "";
+		},
+		{
+			x = 1332864000000;
+			y = 0.836;
+			equityReturn = -2.7907;
+			unitMoney = "";
+		},
+		{
+			x = 1332950400000;
+			y = 0.831;
+			equityReturn = -0.5981;
+			unitMoney = "";
+		},
+		{
+			x = 1333036800000;
+			y = 0.828;
+			equityReturn = -0.361;
+			unitMoney = "";
+		},
+		{
+			x = 1333123200000;
+			y = 0.828;
+			equityReturn = 0;
+			unitMoney = "";
+		},
+		{
+			x = 1333555200000;
+			y = 0.849;
+			equityReturn = 2.5362;
+			unitMoney = "";
+		},
+		{
+			x = 1333641600000;
+			y = 0.853;
+			equityReturn = 0.4711;
+			unitMoney = "";
+		},
+		{
+			x = 1333900800000;
+			y = 0.849;
+			equityReturn = -0.4689;
+			unitMoney = "";
+		},
+		{
+			x = 1333987200000;
+			y = 0.849;
+			equityReturn = 0;
+			unitMoney = "";
+		},
+		{
+			x = 1334073600000;
+			y = 0.85;
+			equityReturn = 0.1178;
+			unitMoney = "";
+		},
+		{
+			x = 1334160000000;
+			y = 0.861;
+			equityReturn = 1.2941;
+			unitMoney = "";
+		},
+		{
+			x = 1334246400000;
+			y = 0.861;
+			equityReturn = 0;
+			unitMoney = "";
+		},
+		{
+			x = 1334505600000;
+			y = 0.861;
+			equityReturn = 0;
+			unitMoney = "";
+		},
+		{
+			x = 1334592000000;
+			y = 0.849;
+			equityReturn = -1.3937;
+			unitMoney = "";
+		},
+		{
+			x = 1334678400000;
+			y = 0.865;
+			equityReturn = 1.8846;
+			unitMoney = "";
+		},
+		{
+			x = 1334764800000;
+			y = 0.86;
+			equityReturn = -0.578;
+			unitMoney = "";
+		},
+		{
+			x = 1334851200000;
+			y = 0.863;
+			equityReturn = 0.3488;
+			unitMoney = "";
+		},
+		{
+			x = 1335110400000;
+			y = 0.856;
+			equityReturn = -0.8111;
+			unitMoney = "";
+		},
+		{
+			x = 1335196800000;
+			y = 0.851;
+			equityReturn = -0.5841;
+			unitMoney = "";
+		},
+		{
+			x = 1335283200000;
+			y = 0.862;
+			equityReturn = 1.2926;
+			unitMoney = "";
+		},
+		{
+			x = 1335369600000;
+			y = 0.87;
+			equityReturn = 0.9281;
+			unitMoney = "";
+		},
+		{
+			x = 1335456000000;
+			y = 0.87;
+			equityReturn = 0;
+			unitMoney = "";
+		},
+		{
+			x = 1335888000000;
+			y = 0.877;
+			equityReturn = 0.8046;
+			unitMoney = "";
+		},
+		{
+			x = 1335974400000;
+			y = 0.882;
+			equityReturn = 0.5701;
+			unitMoney = "";
+		},
+		{
+			x = 1336060800000;
+			y = 0.896;
+			equityReturn = 1.5873;
+			unitMoney = "";
+		},
+		{
+			x = 1336320000000;
+			y = 0.902;
+			equityReturn = 0.6696;
+			unitMoney = "";
+		},
+		{
+			x = 1336406400000;
+			y = 0.9;
+			equityReturn = -0.2217;
+			unitMoney = "";
+		},
+		{
+			x = 1336492800000;
+			y = 0.886;
+			equityReturn = -1.5556;
+			unitMoney = "";
+		},
+		{
+			x = 1336579200000;
+			y = 0.886;
+			equityReturn = 0;
+			unitMoney = "";
+		},
+		{
+			x = 1336665600000;
+			y = 0.883;
+			equityReturn = -0.3386;
+			unitMoney = "";
+		},
+		{
+			x = 1336924800000;
+			y = 0.874;
+			equityReturn = -1.0193;
+			unitMoney = "";
+		},
+		{
+			x = 1337011200000;
+			y = 0.88;
+			equityReturn = 0.6865;
+			unitMoney = "";
+		},
+		{
+			x = 1337097600000;
+			y = 0.873;
+			equityReturn = -0.7955;
+			unitMoney = "";
+		},
+		{
+			x = 1337184000000;
+			y = 0.88;
+			equityReturn = 0.8018;
+			unitMoney = "";
+		},
+		{
+			x = 1337270400000;
+			y = 0.865;
+			equityReturn = -1.7045;
+			unitMoney = "";
+		},
+		{
+			x = 1337529600000;
+			y = 0.868;
+			equityReturn = 0.3468;
+			unitMoney = "";
+		},
+		{
+			x = 1337616000000;
+			y = 0.878;
+			equityReturn = 1.1521;
+			unitMoney = "";
+		},
+		{
+			x = 1337702400000;
+			y = 0.877;
+			equityReturn = -0.1139;
+			unitMoney = "";
+		},
+		{
+			x = 1337788800000;
+			y = 0.863;
+			equityReturn = -1.5964;
+			unitMoney = "";
+		},
+		{
+			x = 1337875200000;
+			y = 0.852;
+			equityReturn = -1.2746;
+			unitMoney = "";
+		},
+		{
+			x = 1338134400000;
+			y = 0.861;
+			equityReturn = 1.0563;
+			unitMoney = "";
+		},
+		{
+			x = 1338220800000;
+			y = 0.869;
+			equityReturn = 0.9292;
+			unitMoney = "";
+		},
+		{
+			x = 1338307200000;
+			y = 0.864;
+			equityReturn = -0.5754;
+			unitMoney = "";
+		},
+		{
+			x = 1338393600000;
+			y = 0.869;
+			equityReturn = 0.5787;
+			unitMoney = "";
+		},
+		{
+			x = 1338480000000;
+			y = 0.874;
+			equityReturn = 0.5754;
+			unitMoney = "";
+		},
+		{
+			x = 1338739200000;
+			y = 0.859;
+			equityReturn = -1.7162;
+			unitMoney = "";
+		},
+		{
+			x = 1338825600000;
+			y = 0.862;
+			equityReturn = 0.3492;
+			unitMoney = "";
+		},
+		{
+			x = 1338912000000;
+			y = 0.856;
+			equityReturn = -0.6961;
+			unitMoney = "";
+		},
+		{
+			x = 1338998400000;
+			y = 0.86;
+			equityReturn = 0.4673;
+			unitMoney = "";
+		},
+		{
+			x = 1339084800000;
+			y = 0.857;
+			equityReturn = -0.3488;
+			unitMoney = "";
+		},
+		{
+			x = 1339344000000;
+			y = 0.865;
+			equityReturn = 0.9335;
+			unitMoney = "";
+		},
+		{
+			x = 1339430400000;
+			y = 0.87;
+			equityReturn = 0.578;
+			unitMoney = "";
+		},
+		{
+			x = 1339516800000;
+			y = 0.892;
+			equityReturn = 2.5287;
+			unitMoney = "";
+		},
+		{
+			x = 1339603200000;
+			y = 0.897;
+			equityReturn = 0.5605;
+			unitMoney = "";
+		},
+		{
+			x = 1339689600000;
+			y = 0.888;
+			equityReturn = -1.0033;
+			unitMoney = "";
+		},
+		{
+			x = 1339948800000;
+			y = 0.895;
+			equityReturn = 0.7883;
+			unitMoney = "";
+		},
+		{
+			x = 1340035200000;
+			y = 0.89;
+			equityReturn = -0.5587;
+			unitMoney = "";
+		},
+		{
+			x = 1340121600000;
+			y = 0.885;
+			equityReturn = -0.5618;
+			unitMoney = "";
+		},
+		{
+			x = 1340208000000;
+			y = 0.879;
+			equityReturn = -0.678;
+			unitMoney = "";
+		},
+		{
+			x = 1340553600000;
+			y = 0.867;
+			equityReturn = -1.3652;
+			unitMoney = "";
+		},
+		{
+			x = 1340640000000;
+			y = 0.866;
+			equityReturn = -0.1153;
+			unitMoney = "";
+		},
+		{
+			x = 1340726400000;
+			y = 0.865;
+			equityReturn = -0.1155;
+			unitMoney = "";
+		},
+		{
+			x = 1340812800000;
+			y = 0.861;
+			equityReturn = -0.4624;
+			unitMoney = "";
+		},
+		{
+			x = 1340899200000;
+			y = 0.873;
+			equityReturn = 1.3937;
+			unitMoney = "";
+		},
+		{
+			x = 1340985600000;
+			y = 0.873;
+			equityReturn = 0;
+			unitMoney = "";
+		},
+		{
+			x = 1341158400000;
+			y = 0.877;
+			equityReturn = 0.4582;
+			unitMoney = "";
+		},
+		{
+			x = 1341244800000;
+			y = 0.885;
+			equityReturn = 0.9122;
+			unitMoney = "";
+		},
+		{
+			x = 1341331200000;
+			y = 0.885;
+			equityReturn = 0;
+			unitMoney = "";
+		},
+		{
+			x = 1341417600000;
+			y = 0.877;
+			equityReturn = -0.904;
+			unitMoney = "";
+		},
+		{
+			x = 1341504000000;
+			y = 0.901;
+			equityReturn = 2.7366;
+			unitMoney = "";
+		},
+		{
+			x = 1341763200000;
+			y = 0.893;
+			equityReturn = -0.8879;
+			unitMoney = "";
+		},
+		{
+			x = 1341849600000;
+			y = 0.884;
+			equityReturn = -1.0078;
+			unitMoney = "";
+		},
+		{
+			x = 1341936000000;
+			y = 0.889;
+			equityReturn = 0.5656;
+			unitMoney = "";
+		},
+		{
+			x = 1342022400000;
+			y = 0.894;
+			equityReturn = 0.5624;
+			unitMoney = "";
+		},
+		{
+			x = 1342108800000;
+			y = 0.894;
+			equityReturn = 0;
+			unitMoney = "";
+		},
+		{
+			x = 1342368000000;
+			y = 0.869;
+			equityReturn = -2.7964;
+			unitMoney = "";
+		},
+		{
+			x = 1342454400000;
+			y = 0.863;
+			equityReturn = -0.6904;
+			unitMoney = "";
+		},
+		{
+			x = 1342540800000;
+			y = 0.861;
+			equityReturn = -0.2317;
+			unitMoney = "";
+		},
+		{
+			x = 1342627200000;
+			y = 0.866;
+			equityReturn = 0.5807;
+			unitMoney = "";
+		},
+		{
+			x = 1342713600000;
+			y = 0.863;
+			equityReturn = -0.3464;
+			unitMoney = "";
+		},
+		{
+			x = 1342972800000;
+			y = 0.858;
+			equityReturn = -0.5794;
+			unitMoney = "";
+		},
+		{
+			x = 1343059200000;
+			y = 0.864;
+			equityReturn = 0.6993;
+			unitMoney = "";
+		},
+		{
+			x = 1343145600000;
+			y = 0.861;
+			equityReturn = -0.3472;
+			unitMoney = "";
+		},
+		{
+			x = 1343232000000;
+			y = 0.851;
+			equityReturn = -1.1614;
+			unitMoney = "";
+		},
+		{
+			x = 1343318400000;
+			y = 0.849;
+			equityReturn = -0.235;
+			unitMoney = "";
+		},
+		{
+			x = 1343577600000;
+			y = 0.846;
+			equityReturn = -0.3534;
+			unitMoney = "";
+		},
+		{
+			x = 1343664000000;
+			y = 0.842;
+			equityReturn = -0.4728;
+			unitMoney = "";
+		},
+		{
+			x = 1343750400000;
+			y = 0.847;
+			equityReturn = 0.5938;
+			unitMoney = "";
+		},
+		{
+			x = 1343836800000;
+			y = 0.84;
+			equityReturn = -0.8264;
+			unitMoney = "";
+		},
+		{
+			x = 1343923200000;
+			y = 0.849;
+			equityReturn = 1.0714;
+			unitMoney = "";
+		},
+		{
+			x = 1344182400000;
+			y = 0.859;
+			equityReturn = 1.1779;
+			unitMoney = "";
+		},
+		{
+			x = 1344268800000;
+			y = 0.858;
+			equityReturn = -0.1164;
+			unitMoney = "";
+		},
+		{
+			x = 1344355200000;
+			y = 0.852;
+			equityReturn = -0.6993;
+			unitMoney = "";
+		},
+		{
+			x = 1344441600000;
+			y = 0.869;
+			equityReturn = 1.9953;
+			unitMoney = "";
+		},
+		{
+			x = 1344528000000;
+			y = 0.867;
+			equityReturn = -0.2301;
+			unitMoney = "";
+		},
+		{
+			x = 1344787200000;
+			y = 0.859;
+			equityReturn = -0.9227;
+			unitMoney = "";
+		},
+		{
+			x = 1344873600000;
+			y = 0.858;
+			equityReturn = -0.1164;
+			unitMoney = "";
+		},
+		{
+			x = 1344960000000;
+			y = 0.852;
+			equityReturn = -0.6993;
+			unitMoney = "";
+		},
+		{
+			x = 1345046400000;
+			y = 0.844;
+			equityReturn = -0.939;
+			unitMoney = "";
+		},
+		{
+			x = 1345132800000;
+			y = 0.838;
+			equityReturn = -0.7109;
+			unitMoney = "";
+		},
+		{
+			x = 1345392000000;
+			y = 0.842;
+			equityReturn = 0.4773;
+			unitMoney = "";
+		},
+		{
+			x = 1345478400000;
+			y = 0.853;
+			equityReturn = 1.3064;
+			unitMoney = "";
+		},
+		{
+			x = 1345564800000;
+			y = 0.844;
+			equityReturn = -1.0551;
+			unitMoney = "";
+		},
+		{
+			x = 1345651200000;
+			y = 0.844;
+			equityReturn = 0;
+			unitMoney = "";
+		},
+		{
+			x = 1345737600000;
+			y = 0.84;
+			equityReturn = -0.4739;
+			unitMoney = "";
+		},
+		{
+			x = 1345996800000;
+			y = 0.833;
+			equityReturn = -0.8333;
+			unitMoney = "";
+		},
+		{
+			x = 1346083200000;
+			y = 0.828;
+			equityReturn = -0.6002;
+			unitMoney = "";
+		},
+		{
+			x = 1346169600000;
+			y = 0.82;
+			equityReturn = -0.9662;
+			unitMoney = "";
+		},
+		{
+			x = 1346256000000;
+			y = 0.808;
+			equityReturn = -1.4634;
+			unitMoney = "";
+		},
+		{
+			x = 1346342400000;
+			y = 0.807;
+			equityReturn = -0.1238;
+			unitMoney = "";
+		},
+		{
+			x = 1346601600000;
+			y = 0.823;
+			equityReturn = 1.9827;
+			unitMoney = "";
+		},
+		{
+			x = 1346688000000;
+			y = 0.814;
+			equityReturn = -1.0936;
+			unitMoney = "";
+		},
+		{
+			x = 1346774400000;
+			y = 0.813;
+			equityReturn = -0.1229;
+			unitMoney = "";
+		},
+		{
+			x = 1346860800000;
+			y = 0.812;
+			equityReturn = -0.123;
+			unitMoney = "";
+		},
+		{
+			x = 1346947200000;
+			y = 0.834;
+			equityReturn = 2.7094;
+			unitMoney = "";
+		},
+		{
+			x = 1347206400000;
+			y = 0.84;
+			equityReturn = 0.7194;
+			unitMoney = "";
+		},
+		{
+			x = 1347292800000;
+			y = 0.837;
+			equityReturn = -0.3571;
+			unitMoney = "";
+		},
+		{
+			x = 1347379200000;
+			y = 0.838;
+			equityReturn = 0.1195;
+			unitMoney = "";
+		},
+		{
+			x = 1347465600000;
+			y = 0.835;
+			equityReturn = -0.358;
+			unitMoney = "";
+		},
+		{
+			x = 1347552000000;
+			y = 0.839;
+			equityReturn = 0.479;
+			unitMoney = "";
+		},
+		{
+			x = 1347811200000;
+			y = 0.825;
+			equityReturn = -1.6687;
+			unitMoney = "";
+		},
+		{
+			x = 1347897600000;
+			y = 0.822;
+			equityReturn = -0.3636;
+			unitMoney = "";
+		},
+		{
+			x = 1347984000000;
+			y = 0.822;
+			equityReturn = 0;
+			unitMoney = "";
+		},
+		{
+			x = 1348070400000;
+			y = 0.81;
+			equityReturn = -1.4599;
+			unitMoney = "";
+		},
+		{
+			x = 1348156800000;
+			y = 0.813;
+			equityReturn = 0.3704;
+			unitMoney = "";
+		},
+		{
+			x = 1348416000000;
+			y = 0.815;
+			equityReturn = 0.246;
+			unitMoney = "";
+		},
+		{
+			x = 1348502400000;
+			y = 0.817;
+			equityReturn = 0.2454;
+			unitMoney = "";
+		},
+		{
+			x = 1348588800000;
+			y = 0.81;
+			equityReturn = -0.8568;
+			unitMoney = "";
+		},
+		{
+			x = 1348675200000;
+			y = 0.824;
+			equityReturn = 1.7284;
+			unitMoney = "";
+		},
+		{
+			x = 1348761600000;
+			y = 0.839;
+			equityReturn = 1.8204;
+			unitMoney = "";
+		},
+		{
+			x = 1348934400000;
+			y = 0.839;
+			equityReturn = 0;
+			unitMoney = "";
+		},
+		{
+			x = 1349625600000;
+			y = 0.83;
+			equityReturn = -1.0727;
+			unitMoney = "";
+		},
+		{
+			x = 1349712000000;
+			y = 0.844;
+			equityReturn = 1.6867;
+			unitMoney = "";
+		},
+		{
+			x = 1349798400000;
+			y = 0.847;
+			equityReturn = 0.3555;
+			unitMoney = "";
+		},
+		{
+			x = 1349884800000;
+			y = 0.839;
+			equityReturn = -0.9445;
+			unitMoney = "";
+		},
+		{
+			x = 1349971200000;
+			y = 0.839;
+			equityReturn = 0;
+			unitMoney = "";
+		},
+		{
+			x = 1350230400000;
+			y = 0.842;
+			equityReturn = 0.3576;
+			unitMoney = "";
+		},
+		{
+			x = 1350316800000;
+			y = 0.848;
+			equityReturn = 0.7126;
+			unitMoney = "";
+		},
+		{
+			x = 1350403200000;
+			y = 0.846;
+			equityReturn = -0.2358;
+			unitMoney = "";
+		},
+		{
+			x = 1350489600000;
+			y = 0.856;
+			equityReturn = 1.182;
+			unitMoney = "";
+		},
+		{
+			x = 1350576000000;
+			y = 0.854;
+			equityReturn = -0.2336;
+			unitMoney = "";
+		},
+		{
+			x = 1350835200000;
+			y = 0.853;
+			equityReturn = -0.1171;
+			unitMoney = "";
+		},
+		{
+			x = 1350921600000;
+			y = 0.837;
+			equityReturn = -1.8757;
+			unitMoney = "";
+		},
+		{
+			x = 1351008000000;
+			y = 0.836;
+			equityReturn = -0.1195;
+			unitMoney = "";
+		},
+		{
+			x = 1351094400000;
+			y = 0.831;
+			equityReturn = -0.5981;
+			unitMoney = "";
+		},
+		{
+			x = 1351180800000;
+			y = 0.82;
+			equityReturn = -1.3237;
+			unitMoney = "";
+		},
+		{
+			x = 1351440000000;
+			y = 0.82;
+			equityReturn = 0;
+			unitMoney = "";
+		},
+		{
+			x = 1351526400000;
+			y = 0.823;
+			equityReturn = 0.3659;
+			unitMoney = "";
+		},
+		{
+			x = 1351612800000;
+			y = 0.83;
+			equityReturn = 0.8505;
+			unitMoney = "";
+		},
+		{
+			x = 1351699200000;
+			y = 0.84;
+			equityReturn = 1.2048;
+			unitMoney = "";
+		},
+		{
+			x = 1351785600000;
+			y = 0.841;
+			equityReturn = 0.119;
+			unitMoney = "";
+		},
+		{
+			x = 1352044800000;
+			y = 0.832;
+			equityReturn = -1.0702;
+			unitMoney = "";
+		},
+		{
+			x = 1352131200000;
+			y = 0.823;
+			equityReturn = -1.0817;
+			unitMoney = "";
+		},
+		{
+			x = 1352217600000;
+			y = 0.823;
+			equityReturn = 0;
+			unitMoney = "";
+		},
+		{
+			x = 1352304000000;
+			y = 0.816;
+			equityReturn = -0.8505;
+			unitMoney = "";
+		},
+		{
+			x = 1352390400000;
+			y = 0.812;
+			equityReturn = -0.4902;
+			unitMoney = "";
+		},
+		{
+			x = 1352649600000;
+			y = 0.802;
+			equityReturn = -1.2315;
+			unitMoney = "";
+		},
+		{
+			x = 1352736000000;
+			y = 0.793;
+			equityReturn = -1.1222;
+			unitMoney = "";
+		},
+		{
+			x = 1352822400000;
+			y = 0.799;
+			equityReturn = 0.7566;
+			unitMoney = "";
+		},
+		{
+			x = 1352908800000;
+			y = 0.793;
+			equityReturn = -0.7509;
+			unitMoney = "";
+		},
+		{
+			x = 1352995200000;
+			y = 0.782;
+			equityReturn = -1.3871;
+			unitMoney = "";
+		},
+		{
+			x = 1353254400000;
+			y = 0.768;
+			equityReturn = -1.7903;
+			unitMoney = "";
+		},
+		{
+			x = 1353340800000;
+			y = 0.767;
+			equityReturn = -0.1302;
+			unitMoney = "";
+		},
+		{
+			x = 1353427200000;
+			y = 0.769;
+			equityReturn = 0.2608;
+			unitMoney = "";
+		},
+		{
+			x = 1353513600000;
+			y = 0.759;
+			equityReturn = -1.3004;
+			unitMoney = "";
+		},
+		{
+			x = 1353600000000;
+			y = 0.768;
+			equityReturn = 1.1858;
+			unitMoney = "";
+		},
+		{
+			x = 1353859200000;
+			y = 0.758;
+			equityReturn = -1.3021;
+			unitMoney = "";
+		},
+		{
+			x = 1353945600000;
+			y = 0.751;
+			equityReturn = -0.9235;
+			unitMoney = "";
+		},
+		{
+			x = 1354032000000;
+			y = 0.744;
+			equityReturn = -0.9321;
+			unitMoney = "";
+		},
+		{
+			x = 1354118400000;
+			y = 0.747;
+			equityReturn = 0.4032;
+			unitMoney = "";
+		},
+		{
+			x = 1354204800000;
+			y = 0.752;
+			equityReturn = 0.6693;
+			unitMoney = "";
+		},
+		{
+			x = 1354464000000;
+			y = 0.729;
+			equityReturn = -3.0585;
+			unitMoney = "";
+		},
+		{
+			x = 1354550400000;
+			y = 0.731;
+			equityReturn = 0.2743;
+			unitMoney = "";
+		},
+		{
+			x = 1354636800000;
+			y = 0.742;
+			equityReturn = 1.5048;
+			unitMoney = "";
+		},
+		{
+			x = 1354723200000;
+			y = 0.737;
+			equityReturn = -0.6739;
+			unitMoney = "";
+		},
+		{
+			x = 1354809600000;
+			y = 0.744;
+			equityReturn = 0.9498;
+			unitMoney = "";
+		},
+		{
+			x = 1355068800000;
+			y = 0.748;
+			equityReturn = 0.5376;
+			unitMoney = "";
+		},
+		{
+			x = 1355155200000;
+			y = 0.75;
+			equityReturn = 0.2674;
+			unitMoney = "";
+		},
+		{
+			x = 1355241600000;
+			y = 0.755;
+			equityReturn = 0.6667;
+			unitMoney = "";
+		},
+		{
+			x = 1355328000000;
+			y = 0.748;
+			equityReturn = -0.9272;
+			unitMoney = "";
+		},
+		{
+			x = 1355414400000;
+			y = 0.765;
+			equityReturn = 2.2727;
+			unitMoney = "";
+		},
+		{
+			x = 1355673600000;
+			y = 0.769;
+			equityReturn = 0.5229;
+			unitMoney = "";
+		},
+		{
+			x = 1355760000000;
+			y = 0.772;
+			equityReturn = 0.3901;
+			unitMoney = "";
+		},
+		{
+			x = 1355846400000;
+			y = 0.779;
+			equityReturn = 0.9067;
+			unitMoney = "";
+		},
+		{
+			x = 1355932800000;
+			y = 0.782;
+			equityReturn = 0.3851;
+			unitMoney = "";
+		},
+		{
+			x = 1356019200000;
+			y = 0.783;
+			equityReturn = 0.1279;
+			unitMoney = "";
+		},
+		{
+			x = 1356278400000;
+			y = 0.78;
+			equityReturn = -0.3831;
+			unitMoney = "";
+		},
+		{
+			x = 1356364800000;
+			y = 0.793;
+			equityReturn = 1.6667;
+			unitMoney = "";
+		},
+		{
+			x = 1356451200000;
+			y = 0.796;
+			equityReturn = 0.3783;
+			unitMoney = "";
+		},
+		{
+			x = 1356537600000;
+			y = 0.798;
+			equityReturn = 0.2513;
+			unitMoney = "";
+		},
+		{
+			x = 1356624000000;
+			y = 0.808;
+			equityReturn = 1.2531;
+			unitMoney = "";
+		},
+		{
+			x = 1356883200000;
+			y = 0.816;
+			equityReturn = 0.9901;
+			unitMoney = "";
+		},
+		{
+			x = 1357228800000;
+			y = 0.811;
+			equityReturn = -0.6127;
+			unitMoney = "";
+		},
+		{
+			x = 1357488000000;
+			y = 0.814;
+			equityReturn = 0.3699;
+			unitMoney = "";
+		},
+		{
+			x = 1357574400000;
+			y = 0.824;
+			equityReturn = 1.2285;
+			unitMoney = "";
+		},
+		{
+			x = 1357660800000;
+			y = 0.832;
+			equityReturn = 0.9709;
+			unitMoney = "";
+		},
+		{
+			x = 1357747200000;
+			y = 0.831;
+			equityReturn = -0.1202;
+			unitMoney = "";
+		},
+		{
+			x = 1357833600000;
+			y = 0.822;
+			equityReturn = -1.083;
+			unitMoney = "";
+		},
+		{
+			x = 1358092800000;
+			y = 0.843;
+			equityReturn = 2.5547;
+			unitMoney = "";
+		},
+		{
+			x = 1358179200000;
+			y = 0.846;
+			equityReturn = 0.3559;
+			unitMoney = "";
+		},
+		{
+			x = 1358265600000;
+			y = 0.843;
+			equityReturn = -0.3546;
+			unitMoney = "";
+		},
+		{
+			x = 1358352000000;
+			y = 0.842;
+			equityReturn = -0.1186;
+			unitMoney = "";
+		},
+		{
+			x = 1358438400000;
+			y = 0.86;
+			equityReturn = 2.1378;
+			unitMoney = "";
+		},
+		{
+			x = 1358697600000;
+			y = 0.852;
+			equityReturn = -0.9302;
+			unitMoney = "";
+		},
+		{
+			x = 1358784000000;
+			y = 0.841;
+			equityReturn = -1.2911;
+			unitMoney = "";
+		},
+		{
+			x = 1358870400000;
+			y = 0.843;
+			equityReturn = 0.2378;
+			unitMoney = "";
+		},
+		{
+			x = 1358956800000;
+			y = 0.831;
+			equityReturn = -1.4235;
+			unitMoney = "";
+		},
+		{
+			x = 1359043200000;
+			y = 0.829;
+			equityReturn = -0.2407;
+			unitMoney = "";
+		},
+		{
+			x = 1359302400000;
+			y = 0.839;
+			equityReturn = 1.2063;
+			unitMoney = "";
+		},
+		{
+			x = 1359388800000;
+			y = 0.839;
+			equityReturn = 0;
+			unitMoney = "";
+		},
+		{
+			x = 1359475200000;
+			y = 0.843;
+			equityReturn = 0.4768;
+			unitMoney = "";
+		},
+		{
+			x = 1359561600000;
+			y = 0.837;
+			equityReturn = -0.7117;
+			unitMoney = "";
+		},
+		{
+			x = 1359648000000;
+			y = 0.845;
+			equityReturn = 0.9558;
+			unitMoney = "";
+		},
+		{
+			x = 1359907200000;
+			y = 0.839;
+			equityReturn = -0.7101;
+			unitMoney = "";
+		},
+		{
+			x = 1359993600000;
+			y = 0.857;
+			equityReturn = 2.1454;
+			unitMoney = "";
+		},
+		{
+			x = 1360080000000;
+			y = 0.854;
+			equityReturn = -0.3501;
+			unitMoney = "";
+		},
+		{
+			x = 1360166400000;
+			y = 0.865;
+			equityReturn = 1.2881;
+			unitMoney = "";
+		},
+		{
+			x = 1360252800000;
+			y = 0.882;
+			equityReturn = 1.9653;
+			unitMoney = "";
+		},
+		{
+			x = 1361116800000;
+			y = 0.871;
+			equityReturn = -1.2472;
+			unitMoney = "";
+		},
+		{
+			x = 1361203200000;
+			y = 0.855;
+			equityReturn = -1.837;
+			unitMoney = "";
+		},
+		{
+			x = 1361289600000;
+			y = 0.872;
+			equityReturn = 1.9883;
+			unitMoney = "";
+		},
+		{
+			x = 1361376000000;
+			y = 0.862;
+			equityReturn = -1.1468;
+			unitMoney = "";
+		},
+		{
+			x = 1361462400000;
+			y = 0.864;
+			equityReturn = 0.232;
+			unitMoney = "";
+		},
+		{
+			x = 1361721600000;
+			y = 0.866;
+			equityReturn = 0.2315;
+			unitMoney = "";
+		},
+		{
+			x = 1361808000000;
+			y = 0.855;
+			equityReturn = -1.2702;
+			unitMoney = "";
+		},
+		{
+			x = 1361894400000;
+			y = 0.853;
+			equityReturn = -0.2339;
+			unitMoney = "";
+		},
+		{
+			x = 1361980800000;
+			y = 0.866;
+			equityReturn = 1.524;
+			unitMoney = "";
+		},
+		{
+			x = 1362067200000;
+			y = 0.872;
+			equityReturn = 0.6928;
+			unitMoney = "";
+		},
+		{
+			x = 1362326400000;
+			y = 0.859;
+			equityReturn = -1.4908;
+			unitMoney = "";
+		},
+		{
+			x = 1362412800000;
+			y = 0.871;
+			equityReturn = 1.397;
+			unitMoney = "";
+		},
+		{
+			x = 1362499200000;
+			y = 0.879;
+			equityReturn = 0.9185;
+			unitMoney = "";
+		},
+		{
+			x = 1362585600000;
+			y = 0.873;
+			equityReturn = -0.6826;
+			unitMoney = "";
+		},
+		{
+			x = 1362672000000;
+			y = 0.867;
+			equityReturn = -0.6873;
+			unitMoney = "";
+		},
+		{
+			x = 1362931200000;
+			y = 0.864;
+			equityReturn = -0.346;
+			unitMoney = "";
+		},
+		{
+			x = 1363017600000;
+			y = 0.855;
+			equityReturn = -1.0417;
+			unitMoney = "";
+		},
+		{
+			x = 1363104000000;
+			y = 0.847;
+			equityReturn = -0.9357;
+			unitMoney = "";
+		},
+		{
+			x = 1363190400000;
+			y = 0.852;
+			equityReturn = 0.5903;
+			unitMoney = "";
+		},
+		{
+			x = 1363276800000;
+			y = 0.855;
+			equityReturn = 0.3521;
+			unitMoney = "";
+		},
+		{
+			x = 1363536000000;
+			y = 0.848;
+			equityReturn = -0.8187;
+			unitMoney = "";
+		},
+		{
+			x = 1363622400000;
+			y = 0.848;
+			equityReturn = 0;
+			unitMoney = "";
+		},
+		{
+			x = 1363708800000;
+			y = 0.868;
+			equityReturn = 2.3585;
+			unitMoney = "";
+		},
+		{
+			x = 1363795200000;
+			y = 0.874;
+			equityReturn = 0.6912;
+			unitMoney = "";
+		},
+		{
+			x = 1363881600000;
+			y = 0.874;
+			equityReturn = 0;
+			unitMoney = "";
+		},
+		{
+			x = 1364140800000;
+			y = 0.866;
+			equityReturn = -0.9153;
+			unitMoney = "";
+		},
+		{
+			x = 1364227200000;
+			y = 0.867;
+			equityReturn = 0.1155;
+			unitMoney = "";
+		},
+		{
+			x = 1364313600000;
+			y = 0.866;
+			equityReturn = -0.1153;
+			unitMoney = "";
+		},
+		{
+			x = 1364400000000;
+			y = 0.855;
+			equityReturn = -1.2702;
+			unitMoney = "";
+		},
+		{
+			x = 1364486400000;
+			y = 0.847;
+			equityReturn = -0.9357;
+			unitMoney = "";
+		},
+		{
+			x = 1364745600000;
+			y = 0.845;
+			equityReturn = -0.2361;
+			unitMoney = "";
+		},
+		{
+			x = 1364832000000;
+			y = 0.837;
+			equityReturn = -0.9467;
+			unitMoney = "";
+		},
+		{
+			x = 1364918400000;
+			y = 0.831;
+			equityReturn = -0.7168;
+			unitMoney = "";
+		},
+		{
+			x = 1365350400000;
+			y = 0.842;
+			equityReturn = 1.3237;
+			unitMoney = "";
+		},
+		{
+			x = 1365436800000;
+			y = 0.843;
+			equityReturn = 0.1188;
+			unitMoney = "";
+		},
+		{
+			x = 1365523200000;
+			y = 0.841;
+			equityReturn = -0.2372;
+			unitMoney = "";
+		},
+		{
+			x = 1365609600000;
+			y = 0.839;
+			equityReturn = -0.2378;
+			unitMoney = "";
+		},
+		{
+			x = 1365696000000;
+			y = 0.842;
+			equityReturn = 0.3576;
+			unitMoney = "";
+		},
+		{
+			x = 1365955200000;
+			y = 0.835;
+			equityReturn = -0.8314;
+			unitMoney = "";
+		},
+		{
+			x = 1366041600000;
+			y = 0.838;
+			equityReturn = 0.3593;
+			unitMoney = "";
+		},
+		{
+			x = 1366128000000;
+			y = 0.851;
+			equityReturn = 1.5513;
+			unitMoney = "";
+		},
+		{
+			x = 1366214400000;
+			y = 0.853;
+			equityReturn = 0.235;
+			unitMoney = "";
+		},
+		{
+			x = 1366300800000;
+			y = 0.866;
+			equityReturn = 1.524;
+			unitMoney = "";
+		},
+		{
+			x = 1366560000000;
+			y = 0.864;
+			equityReturn = -0.2309;
+			unitMoney = "";
+		},
+		{
+			x = 1366646400000;
+			y = 0.848;
+			equityReturn = -1.8519;
+			unitMoney = "";
+		},
+		{
+			x = 1366732800000;
+			y = 0.859;
+			equityReturn = 1.2972;
+			unitMoney = "";
+		},
+		{
+			x = 1366819200000;
+			y = 0.853;
+			equityReturn = -0.6985;
+			unitMoney = "";
+		},
+		{
+			x = 1366905600000;
+			y = 0.846;
+			equityReturn = -0.8206;
+			unitMoney = "";
+		},
+		{
+			x = 1367424000000;
+			y = 0.849;
+			equityReturn = 0.3546;
+			unitMoney = "";
+		},
+		{
+			x = 1367510400000;
+			y = 0.863;
+			equityReturn = 1.649;
+			unitMoney = "";
+		},
+		{
+			x = 1367769600000;
+			y = 0.872;
+			equityReturn = 1.0429;
+			unitMoney = "";
+		},
+		{
+			x = 1367856000000;
+			y = 0.876;
+			equityReturn = 0.4587;
+			unitMoney = "";
+		},
+		{
+			x = 1367942400000;
+			y = 0.884;
+			equityReturn = 0.9132;
+			unitMoney = "";
+		},
+		{
+			x = 1368028800000;
+			y = 0.881;
+			equityReturn = -0.3394;
+			unitMoney = "";
+		},
+		{
+			x = 1368115200000;
+			y = 0.882;
+			equityReturn = 0.1135;
+			unitMoney = "";
+		},
+		{
+			x = 1368374400000;
+			y = 0.875;
+			equityReturn = -0.7937;
+			unitMoney = "";
+		},
+		{
+			x = 1368460800000;
+			y = 0.852;
+			equityReturn = -2.6286;
+			unitMoney = "";
+		},
+		{
+			x = 1368547200000;
+			y = 0.862;
+			equityReturn = 1.1737;
+			unitMoney = "";
+		},
+		{
+			x = 1368633600000;
+			y = 0.877;
+			equityReturn = 1.7401;
+			unitMoney = "";
+		},
+		{
+			x = 1368720000000;
+			y = 0.886;
+			equityReturn = 1.0262;
+			unitMoney = "";
+		},
+		{
+			x = 1368979200000;
+			y = 0.891;
+			equityReturn = 0.5643;
+			unitMoney = "";
+		},
+		{
+			x = 1369065600000;
+			y = 0.891;
+			equityReturn = 0;
+			unitMoney = "";
+		},
+		{
+			x = 1369152000000;
+			y = 0.89;
+			equityReturn = -0.1122;
+			unitMoney = "";
+		},
+		{
+			x = 1369238400000;
+			y = 0.882;
+			equityReturn = -0.8989;
+			unitMoney = "";
+		},
+		{
+			x = 1369324800000;
+			y = 0.883;
+			equityReturn = 0.1134;
+			unitMoney = "";
+		},
+		{
+			x = 1369584000000;
+			y = 0.889;
+			equityReturn = 0.6795;
+			unitMoney = "";
+		},
+		{
+			x = 1369670400000;
+			y = 0.894;
+			equityReturn = 0.5624;
+			unitMoney = "";
+		},
+		{
+			x = 1369756800000;
+			y = 0.896;
+			equityReturn = 0.2237;
+			unitMoney = "";
+		},
+		{
+			x = 1369843200000;
+			y = 0.889;
+			equityReturn = -0.7813;
+			unitMoney = "";
+		},
+		{
+			x = 1369929600000;
+			y = 0.882;
+			equityReturn = -0.7874;
+			unitMoney = "";
+		},
+		{
+			x = 1370188800000;
+			y = 0.879;
+			equityReturn = -0.3401;
+			unitMoney = "";
+		},
+		{
+			x = 1370275200000;
+			y = 0.867;
+			equityReturn = -1.3652;
+			unitMoney = "";
+		},
+		{
+			x = 1370361600000;
+			y = 0.872;
+			equityReturn = 0.5767;
+			unitMoney = "";
+		},
+		{
+			x = 1370448000000;
+			y = 0.87;
+			equityReturn = -0.2294;
+			unitMoney = "";
+		},
+		{
+			x = 1370534400000;
+			y = 0.861;
+			equityReturn = -1.0345;
+			unitMoney = "";
+		},
+		{
+			x = 1371052800000;
+			y = 0.846;
+			equityReturn = -1.7422;
+			unitMoney = "";
+		},
+		{
+			x = 1371139200000;
+			y = 0.854;
+			equityReturn = 0.9456;
+			unitMoney = "";
+		},
+		{
+			x = 1371398400000;
+			y = 0.85;
+			equityReturn = -0.4684;
+			unitMoney = "";
+		},
+		{
+			x = 1371484800000;
+			y = 0.864;
+			equityReturn = 1.6471;
+			unitMoney = "";
+		},
+		{
+			x = 1371571200000;
+			y = 0.866;
+			equityReturn = 0.2315;
+			unitMoney = "";
+		},
+		{
+			x = 1371657600000;
+			y = 0.847;
+			equityReturn = -2.194;
+			unitMoney = "";
+		},
+		{
+			x = 1371744000000;
+			y = 0.848;
+			equityReturn = 0.1181;
+			unitMoney = "";
+		},
+		{
+			x = 1372003200000;
+			y = 0.817;
+			equityReturn = -3.6557;
+			unitMoney = "";
+		},
+		{
+			x = 1372089600000;
+			y = 0.828;
+			equityReturn = 1.3464;
+			unitMoney = "";
+		},
+		{
+			x = 1372176000000;
+			y = 0.839;
+			equityReturn = 1.3285;
+			unitMoney = "";
+		},
+		{
+			x = 1372262400000;
+			y = 0.834;
+			equityReturn = -0.5959;
+			unitMoney = "";
+		},
+		{
+			x = 1372348800000;
+			y = 0.839;
+			equityReturn = 0.5995;
+			unitMoney = "";
+		},
+		{
+			x = 1372521600000;
+			y = 0.839;
+			equityReturn = 0;
+			unitMoney = "";
+		},
+		{
+			x = 1372608000000;
+			y = 0.855;
+			equityReturn = 1.907;
+			unitMoney = "";
+		},
+		{
+			x = 1372694400000;
+			y = 0.867;
+			equityReturn = 1.4035;
+			unitMoney = "";
+		},
+		{
+			x = 1372780800000;
+			y = 0.876;
+			equityReturn = 1.0381;
+			unitMoney = "";
+		},
+		{
+			x = 1372867200000;
+			y = 0.878;
+			equityReturn = 0.2283;
+			unitMoney = "";
+		},
+		{
+			x = 1372953600000;
+			y = 0.873;
+			equityReturn = -0.5695;
+			unitMoney = "";
+		},
+		{
+			x = 1373212800000;
+			y = 0.863;
+			equityReturn = -1.1455;
+			unitMoney = "";
+		},
+		{
+			x = 1373299200000;
+			y = 0.864;
+			equityReturn = 0.1159;
+			unitMoney = "";
+		},
+		{
+			x = 1373385600000;
+			y = 0.873;
+			equityReturn = 1.0417;
+			unitMoney = "";
+		},
+		{
+			x = 1373472000000;
+			y = 0.885;
+			equityReturn = 1.3746;
+			unitMoney = "";
+		},
+		{
+			x = 1373558400000;
+			y = 0.883;
+			equityReturn = -0.226;
+			unitMoney = "";
+		},
+		{
+			x = 1373817600000;
+			y = 0.896;
+			equityReturn = 1.4723;
+			unitMoney = "";
+		},
+		{
+			x = 1373904000000;
+			y = 0.899;
+			equityReturn = 0.3348;
+			unitMoney = "";
+		},
+		{
+			x = 1373990400000;
+			y = 0.883;
+			equityReturn = -1.7798;
+			unitMoney = "";
+		},
+		{
+			x = 1374076800000;
+			y = 0.874;
+			equityReturn = -1.0193;
+			unitMoney = "";
+		},
+		{
+			x = 1374163200000;
+			y = 0.855;
+			equityReturn = -2.1739;
+			unitMoney = "";
+		},
+		{
+			x = 1374422400000;
+			y = 0.867;
+			equityReturn = 1.4035;
+			unitMoney = "";
+		},
+		{
+			x = 1374508800000;
+			y = 0.887;
+			equityReturn = 2.3068;
+			unitMoney = "";
+		},
+		{
+			x = 1374595200000;
+			y = 0.889;
+			equityReturn = 0.2255;
+			unitMoney = "";
+		},
+		{
+			x = 1374681600000;
+			y = 0.881;
+			equityReturn = -0.8999;
+			unitMoney = "";
+		},
+		{
+			x = 1374768000000;
+			y = 0.877;
+			equityReturn = -0.454;
+			unitMoney = "";
+		},
+		{
+			x = 1375027200000;
+			y = 0.861;
+			equityReturn = -1.8244;
+			unitMoney = "";
+		},
+		{
+			x = 1375113600000;
+			y = 0.859;
+			equityReturn = -0.2323;
+			unitMoney = "";
+		},
+		{
+			x = 1375200000000;
+			y = 0.862;
+			equityReturn = 0.3492;
+			unitMoney = "";
+		},
+		{
+			x = 1375286400000;
+			y = 0.878;
+			equityReturn = 1.8561;
+			unitMoney = "";
+		},
+		{
+			x = 1375372800000;
+			y = 0.882;
+			equityReturn = 0.4556;
+			unitMoney = "";
+		},
+		{
+			x = 1375632000000;
+			y = 0.897;
+			equityReturn = 1.7007;
+			unitMoney = "";
+		},
+		{
+			x = 1375718400000;
+			y = 0.908;
+			equityReturn = 1.2263;
+			unitMoney = "";
+		},
+		{
+			x = 1375804800000;
+			y = 0.909;
+			equityReturn = 0.1101;
+			unitMoney = "";
+		},
+		{
+			x = 1375891200000;
+			y = 0.908;
+			equityReturn = -0.11;
+			unitMoney = "";
+		},
+		{
+			x = 1375977600000;
+			y = 0.913;
+			equityReturn = 0.5507;
+			unitMoney = "";
+		},
+		{
+			x = 1376236800000;
+			y = 0.918;
+			equityReturn = 0.5476;
+			unitMoney = "";
+		},
+		{
+			x = 1376323200000;
+			y = 0.911;
+			equityReturn = -0.7625;
+			unitMoney = "";
+		},
+		{
+			x = 1376409600000;
+			y = 0.908;
+			equityReturn = -0.3293;
+			unitMoney = "";
+		},
+		{
+			x = 1376496000000;
+			y = 0.898;
+			equityReturn = -1.1013;
+			unitMoney = "";
+		},
+		{
+			x = 1376582400000;
+			y = 0.882;
+			equityReturn = -1.7817;
+			unitMoney = "";
+		},
+		{
+			x = 1376841600000;
+			y = 0.901;
+			equityReturn = 2.1542;
+			unitMoney = "";
+		},
+		{
+			x = 1376928000000;
+			y = 0.902;
+			equityReturn = 0.111;
+			unitMoney = "";
+		},
+		{
+			x = 1377014400000;
+			y = 0.896;
+			equityReturn = -0.6652;
+			unitMoney = "";
+		},
+		{
+			x = 1377100800000;
+			y = 0.896;
+			equityReturn = 0;
+			unitMoney = "";
+		},
+		{
+			x = 1377187200000;
+			y = 0.892;
+			equityReturn = -0.4464;
+			unitMoney = "";
+		},
+		{
+			x = 1377446400000;
+			y = 0.905;
+			equityReturn = 1.4574;
+			unitMoney = "";
+		},
+		{
+			x = 1377532800000;
+			y = 0.904;
+			equityReturn = -0.1105;
+			unitMoney = "";
+		},
+		{
+			x = 1377619200000;
+			y = 0.895;
+			equityReturn = -0.9956;
+			unitMoney = "";
+		},
+		{
+			x = 1377705600000;
+			y = 0.891;
+			equityReturn = -0.4469;
+			unitMoney = "";
+		},
+		{
+			x = 1377792000000;
+			y = 0.886;
+			equityReturn = -0.5612;
+			unitMoney = "";
+		},
+		{
+			x = 1378051200000;
+			y = 0.889;
+			equityReturn = 0.3386;
+			unitMoney = "";
+		},
+		{
+			x = 1378137600000;
+			y = 0.902;
+			equityReturn = 1.4623;
+			unitMoney = "";
+		},
+		{
+			x = 1378224000000;
+			y = 0.902;
+			equityReturn = 0;
+			unitMoney = "";
+		},
+		{
+			x = 1378310400000;
+			y = 0.911;
+			equityReturn = 0.9978;
+			unitMoney = "";
+		},
+		{
+			x = 1378396800000;
+			y = 0.91;
+			equityReturn = -0.1098;
+			unitMoney = "";
+		},
+		{
+			x = 1378656000000;
+			y = 0.915;
+			equityReturn = 0.5495;
+			unitMoney = "";
+		},
+		{
+			x = 1378742400000;
+			y = 0.918;
+			equityReturn = 0.3279;
+			unitMoney = "";
+		},
+		{
+			x = 1378828800000;
+			y = 0.914;
+			equityReturn = -0.4357;
+			unitMoney = "";
+		},
+		{
+			x = 1378915200000;
+			y = 0.914;
+			equityReturn = 0;
+			unitMoney = "";
+		},
+		{
+			x = 1379001600000;
+			y = 0.928;
+			equityReturn = 1.5317;
+			unitMoney = "";
+		},
+		{
+			x = 1379260800000;
+			y = 0.933;
+			equityReturn = 0.5388;
+			unitMoney = "";
+		},
+		{
+			x = 1379347200000;
+			y = 0.926;
+			equityReturn = -0.7503;
+			unitMoney = "";
+		},
+		{
+			x = 1379433600000;
+			y = 0.927;
+			equityReturn = 0.108;
+			unitMoney = "";
+		},
+		{
+			x = 1379865600000;
+			y = 0.949;
+			equityReturn = 2.3732;
+			unitMoney = "";
+		},
+		{
+			x = 1379952000000;
+			y = 0.962;
+			equityReturn = 1.3699;
+			unitMoney = "";
+		},
+		{
+			x = 1380038400000;
+			y = 0.961;
+			equityReturn = -0.104;
+			unitMoney = "";
+		},
+		{
+			x = 1380124800000;
+			y = 0.952;
+			equityReturn = -0.9365;
+			unitMoney = "";
+		},
+		{
+			x = 1380211200000;
+			y = 0.96;
+			equityReturn = 0.8403;
+			unitMoney = "";
+		},
+		{
+			x = 1380470400000;
+			y = 0.968;
+			equityReturn = 0.8333;
+			unitMoney = "";
+		},
+		{
+			x = 1381161600000;
+			y = 0.977;
+			equityReturn = 0.9298;
+			unitMoney = "";
+		},
+		{
+			x = 1381248000000;
+			y = 0.988;
+			equityReturn = 1.1259;
+			unitMoney = "";
+		},
+		{
+			x = 1381334400000;
+			y = 0.99;
+			equityReturn = 0.2024;
+			unitMoney = "";
+		},
+		{
+			x = 1381420800000;
+			y = 1.001;
+			equityReturn = 1.1111;
+			unitMoney = "";
+		},
+		{
+			x = 1381680000000;
+			y = 1.004;
+			equityReturn = 0.2997;
+			unitMoney = "";
+		},
+		{
+			x = 1381766400000;
+			y = 1.008;
+			equityReturn = 0.3984;
+			unitMoney = "";
+		},
+		{
+			x = 1381852800000;
+			y = 0.991;
+			equityReturn = -1.6865;
+			unitMoney = "";
+		},
+		{
+			x = 1381939200000;
+			y = 0.981;
+			equityReturn = -1.0091;
+			unitMoney = "";
+		},
+		{
+			x = 1382025600000;
+			y = 0.993;
+			equityReturn = 1.2232;
+			unitMoney = "";
+		},
+		{
+			x = 1382284800000;
+			y = 1.028;
+			equityReturn = 3.5247;
+			unitMoney = "";
+		},
+		{
+			x = 1382371200000;
+			y = 1.018;
+			equityReturn = -0.9728;
+			unitMoney = "";
+		},
+		{
+			x = 1382457600000;
+			y = 0.988;
+			equityReturn = -2.947;
+			unitMoney = "";
+		},
+		{
+			x = 1382544000000;
+			y = 0.987;
+			equityReturn = -0.1012;
+			unitMoney = "";
+		},
+		{
+			x = 1382630400000;
+			y = 0.969;
+			equityReturn = -1.8237;
+			unitMoney = "";
+		},
+		{
+			x = 1382889600000;
+			y = 0.965;
+			equityReturn = -0.4128;
+			unitMoney = "";
+		},
+		{
+			x = 1382976000000;
+			y = 0.959;
+			equityReturn = -0.6218;
+			unitMoney = "";
+		},
+		{
+			x = 1383062400000;
+			y = 0.978;
+			equityReturn = 1.9812;
+			unitMoney = "";
+		},
+		{
+			x = 1383148800000;
+			y = 0.949;
+			equityReturn = -2.9652;
+			unitMoney = "";
+		},
+		{
+			x = 1383235200000;
+			y = 0.947;
+			equityReturn = -0.2107;
+			unitMoney = "";
+		},
+		{
+			x = 1383494400000;
+			y = 0.948;
+			equityReturn = 0.1056;
+			unitMoney = "";
+		},
+		{
+			x = 1383580800000;
+			y = 0.953;
+			equityReturn = 0.5274;
+			unitMoney = "";
+		},
+		{
+			x = 1383667200000;
+			y = 0.938;
+			equityReturn = -1.574;
+			unitMoney = "";
+		},
+		{
+			x = 1383753600000;
+			y = 0.924;
+			equityReturn = -1.4925;
+			unitMoney = "";
+		},
+		{
+			x = 1383840000000;
+			y = 0.913;
+			equityReturn = -1.1905;
+			unitMoney = "";
+		},
+		{
+			x = 1384099200000;
+			y = 0.919;
+			equityReturn = 0.6572;
+			unitMoney = "";
+		},
+		{
+			x = 1384185600000;
+			y = 0.927;
+			equityReturn = 0.8705;
+			unitMoney = "";
+		},
+		{
+			x = 1384272000000;
+			y = 0.912;
+			equityReturn = -1.6181;
+			unitMoney = "";
+		},
+		{
+			x = 1384358400000;
+			y = 0.928;
+			equityReturn = 1.7544;
+			unitMoney = "";
+		},
+		{
+			x = 1384444800000;
+			y = 0.943;
+			equityReturn = 1.6164;
+			unitMoney = "";
+		},
+		{
+			x = 1384704000000;
+			y = 0.952;
+			equityReturn = 0.9544;
+			unitMoney = "";
+		},
+		{
+			x = 1384790400000;
+			y = 0.942;
+			equityReturn = -1.0504;
+			unitMoney = "";
+		},
+		{
+			x = 1384876800000;
+			y = 0.946;
+			equityReturn = 0.4246;
+			unitMoney = "";
+		},
+		{
+			x = 1384963200000;
+			y = 0.938;
+			equityReturn = -0.8457;
+			unitMoney = "";
+		},
+		{
+			x = 1385049600000;
+			y = 0.938;
+			equityReturn = 0;
+			unitMoney = "";
+		},
+		{
+			x = 1385308800000;
+			y = 0.934;
+			equityReturn = -0.4264;
+			unitMoney = "";
+		},
+		{
+			x = 1385395200000;
+			y = 0.931;
+			equityReturn = -0.3212;
+			unitMoney = "";
+		},
+		{
+			x = 1385481600000;
+			y = 0.935;
+			equityReturn = 0.4296;
+			unitMoney = "";
+		},
+		{
+			x = 1385568000000;
+			y = 0.95;
+			equityReturn = 1.6043;
+			unitMoney = "";
+		},
+		{
+			x = 1385654400000;
+			y = 0.952;
+			equityReturn = 0.2105;
+			unitMoney = "";
+		},
+		{
+			x = 1385913600000;
+			y = 0.922;
+			equityReturn = -3.1513;
+			unitMoney = "";
+		},
+		{
+			x = 1386000000000;
+			y = 0.936;
+			equityReturn = 1.5184;
+			unitMoney = "";
+		},
+		{
+			x = 1386086400000;
+			y = 0.949;
+			equityReturn = 1.3889;
+			unitMoney = "";
+		},
+		{
+			x = 1386172800000;
+			y = 0.945;
+			equityReturn = -0.4215;
+			unitMoney = "";
+		},
+		{
+			x = 1386259200000;
+			y = 0.945;
+			equityReturn = 0;
+			unitMoney = "";
+		},
+		{
+			x = 1386518400000;
+			y = 0.954;
+			equityReturn = 0.9524;
+			unitMoney = "";
+		},
+		{
+			x = 1386604800000;
+			y = 0.956;
+			equityReturn = 0.2096;
+			unitMoney = "";
+		},
+		{
+			x = 1386691200000;
+			y = 0.952;
+			equityReturn = -0.4184;
+			unitMoney = "";
+		},
+		{
+			x = 1386777600000;
+			y = 0.957;
+			equityReturn = 0.5252;
+			unitMoney = "";
+		},
+		{
+			x = 1386864000000;
+			y = 0.962;
+			equityReturn = 0.5225;
+			unitMoney = "";
+		},
+		{
+			x = 1387123200000;
+			y = 0.947;
+			equityReturn = -1.5593;
+			unitMoney = "";
+		},
+		{
+			x = 1387209600000;
+			y = 0.938;
+			equityReturn = -0.9504;
+			unitMoney = "";
+		},
+		{
+			x = 1387296000000;
+			y = 0.939;
+			equityReturn = 0.1066;
+			unitMoney = "";
+		},
+		{
+			x = 1387382400000;
+			y = 0.932;
+			equityReturn = -0.7455;
+			unitMoney = "";
+		},
+		{
+			x = 1387468800000;
+			y = 0.927;
+			equityReturn = -0.5365;
+			unitMoney = "";
+		},
+		{
+			x = 1387728000000;
+			y = 0.931;
+			equityReturn = 0.4315;
+			unitMoney = "";
+		},
+		{
+			x = 1387814400000;
+			y = 0.937;
+			equityReturn = 0.6445;
+			unitMoney = "";
+		},
+		{
+			x = 1387900800000;
+			y = 0.947;
+			equityReturn = 1.0672;
+			unitMoney = "";
+		},
+		{
+			x = 1387987200000;
+			y = 0.939;
+			equityReturn = -0.8448;
+			unitMoney = "";
+		},
+		{
+			x = 1388073600000;
+			y = 0.95;
+			equityReturn = 1.1715;
+			unitMoney = "";
+		},
+		{
+			x = 1388332800000;
+			y = 0.954;
+			equityReturn = 0.4211;
+			unitMoney = "";
+		},
+		{
+			x = 1388419200000;
+			y = 0.958;
+			equityReturn = 0.4193;
+			unitMoney = "";
+		},
+		{
+			x = 1388592000000;
+			y = 0.953;
+			equityReturn = -0.5219;
+			unitMoney = "";
+		},
+		{
+			x = 1388678400000;
+			y = 0.952;
+			equityReturn = -0.1049;
+			unitMoney = "";
+		},
+		{
+			x = 1388937600000;
+			y = 0.932;
+			equityReturn = -2.1008;
+			unitMoney = "";
+		},
+		{
+			x = 1389024000000;
+			y = 0.931;
+			equityReturn = -0.1073;
+			unitMoney = "";
+		},
+		{
+			x = 1389110400000;
+			y = 0.946;
+			equityReturn = 1.6112;
+			unitMoney = "";
+		},
+		{
+			x = 1389196800000;
+			y = 0.932;
+			equityReturn = -1.4799;
+			unitMoney = "";
+		},
+		{
+			x = 1389283200000;
+			y = 0.927;
+			equityReturn = -0.5365;
+			unitMoney = "";
+		},
+		{
+			x = 1389542400000;
+			y = 0.923;
+			equityReturn = -0.4315;
+			unitMoney = "";
+		},
+		{
+			x = 1389628800000;
+			y = 0.939;
+			equityReturn = 1.7335;
+			unitMoney = "";
+		},
+		{
+			x = 1389715200000;
+			y = 0.943;
+			equityReturn = 0.426;
+			unitMoney = "";
+		},
+		{
+			x = 1389801600000;
+			y = 0.939;
+			equityReturn = -0.4242;
+			unitMoney = "";
+		},
+		{
+			x = 1389888000000;
+			y = 0.92;
+			equityReturn = -2.0234;
+			unitMoney = "";
+		},
+		{
+			x = 1390147200000;
+			y = 0.91;
+			equityReturn = -1.087;
+			unitMoney = "";
+		},
+		{
+			x = 1390233600000;
+			y = 0.917;
+			equityReturn = 0.7692;
+			unitMoney = "";
+		},
+		{
+			x = 1390320000000;
+			y = 0.938;
+			equityReturn = 2.2901;
+			unitMoney = "";
+		},
+		{
+			x = 1390406400000;
+			y = 0.947;
+			equityReturn = 0.9595;
+			unitMoney = "";
+		},
+		{
+			x = 1390492800000;
+			y = 0.948;
+			equityReturn = 0.1056;
+			unitMoney = "";
+		},
+		{
+			x = 1390752000000;
+			y = 0.928;
+			equityReturn = -2.1097;
+			unitMoney = "";
+		},
+		{
+			x = 1390838400000;
+			y = 0.925;
+			equityReturn = -0.3233;
+			unitMoney = "";
+		},
+		{
+			x = 1390924800000;
+			y = 0.924;
+			equityReturn = -0.1081;
+			unitMoney = "";
+		},
+		{
+			x = 1391011200000;
+			y = 0.914;
+			equityReturn = -1.0823;
+			unitMoney = "";
+		},
+		{
+			x = 1391702400000;
+			y = 0.925;
+			equityReturn = 1.2035;
+			unitMoney = "";
+		},
+		{
+			x = 1391961600000;
+			y = 0.948;
+			equityReturn = 2.4865;
+			unitMoney = "";
+		},
+		{
+			x = 1392048000000;
+			y = 0.944;
+			equityReturn = -0.4219;
+			unitMoney = "";
+		},
+		{
+			x = 1392134400000;
+			y = 0.943;
+			equityReturn = -0.1059;
+			unitMoney = "";
+		},
+		{
+			x = 1392220800000;
+			y = 0.936;
+			equityReturn = -0.7423;
+			unitMoney = "";
+		},
+		{
+			x = 1392307200000;
+			y = 0.942;
+			equityReturn = 0.641;
+			unitMoney = "";
+		},
+		{
+			x = 1392566400000;
+			y = 0.948;
+			equityReturn = 0.6369;
+			unitMoney = "";
+		},
+		{
+			x = 1392652800000;
+			y = 0.936;
+			equityReturn = -1.2658;
+			unitMoney = "";
+		},
+		{
+			x = 1392739200000;
+			y = 0.936;
+			equityReturn = 0;
+			unitMoney = "";
+		},
+		{
+			x = 1392825600000;
+			y = 0.93;
+			equityReturn = -0.641;
+			unitMoney = "";
+		},
+		{
+			x = 1392912000000;
+			y = 0.922;
+			equityReturn = -0.8602;
+			unitMoney = "";
+		},
+		{
+			x = 1393171200000;
+			y = 0.905;
+			equityReturn = -1.8438;
+			unitMoney = "";
+		},
+		{
+			x = 1393257600000;
+			y = 0.875;
+			equityReturn = -3.3149;
+			unitMoney = "";
+		},
+		{
+			x = 1393344000000;
+			y = 0.872;
+			equityReturn = -0.3429;
+			unitMoney = "";
+		},
+		{
+			x = 1393430400000;
+			y = 0.854;
+			equityReturn = -2.0642;
+			unitMoney = "";
+		},
+		{
+			x = 1393516800000;
+			y = 0.873;
+			equityReturn = 2.2248;
+			unitMoney = "";
+		},
+		{
+			x = 1393776000000;
+			y = 0.893;
+			equityReturn = 2.291;
+			unitMoney = "";
+		},
+		{
+			x = 1393862400000;
+			y = 0.885;
+			equityReturn = -0.8959;
+			unitMoney = "";
+		},
+		{
+			x = 1393948800000;
+			y = 0.876;
+			equityReturn = -1.0169;
+			unitMoney = "";
+		},
+		{
+			x = 1394035200000;
+			y = 0.872;
+			equityReturn = -0.4566;
+			unitMoney = "";
+		},
+		{
+			x = 1394121600000;
+			y = 0.88;
+			equityReturn = 0.9174;
+			unitMoney = "";
+		},
+		{
+			x = 1394380800000;
+			y = 0.86;
+			equityReturn = -2.2727;
+			unitMoney = "";
+		},
+		{
+			x = 1394467200000;
+			y = 0.865;
+			equityReturn = 0.5814;
+			unitMoney = "";
+		},
+		{
+			x = 1394553600000;
+			y = 0.866;
+			equityReturn = 0.1156;
+			unitMoney = "";
+		},
+		{
+			x = 1394640000000;
+			y = 0.876;
+			equityReturn = 1.1547;
+			unitMoney = "";
+		},
+		{
+			x = 1394726400000;
+			y = 0.869;
+			equityReturn = -0.7991;
+			unitMoney = "";
+		},
+		{
+			x = 1394985600000;
+			y = 0.879;
+			equityReturn = 1.1507;
+			unitMoney = "";
+		},
+		{
+			x = 1395072000000;
+			y = 0.882;
+			equityReturn = 0.3413;
+			unitMoney = "";
+		},
+		{
+			x = 1395158400000;
+			y = 0.865;
+			equityReturn = -1.9274;
+			unitMoney = "";
+		},
+		{
+			x = 1395244800000;
+			y = 0.839;
+			equityReturn = -3.0058;
+			unitMoney = "";
+		},
+		{
+			x = 1395331200000;
+			y = 0.853;
+			equityReturn = 1.6687;
+			unitMoney = "";
+		},
+		{
+			x = 1395590400000;
+			y = 0.85;
+			equityReturn = -0.3517;
+			unitMoney = "";
+		},
+		{
+			x = 1395676800000;
+			y = 0.854;
+			equityReturn = 0.4706;
+			unitMoney = "";
+		},
+		{
+			x = 1395763200000;
+			y = 0.858;
+			equityReturn = 0.4684;
+			unitMoney = "";
+		},
+		{
+			x = 1395849600000;
+			y = 0.846;
+			equityReturn = -1.3986;
+			unitMoney = "";
+		},
+		{
+			x = 1395936000000;
+			y = 0.843;
+			equityReturn = -0.3546;
+			unitMoney = "";
+		},
+		{
+			x = 1396195200000;
+			y = 0.847;
+			equityReturn = 0.4745;
+			unitMoney = "";
+		},
+		{
+			x = 1396281600000;
+			y = 0.858;
+			equityReturn = 1.2987;
+			unitMoney = "";
+		},
+		{
+			x = 1396368000000;
+			y = 0.856;
+			equityReturn = -0.2331;
+			unitMoney = "";
+		},
+		{
+			x = 1396454400000;
+			y = 0.852;
+			equityReturn = -0.4673;
+			unitMoney = "";
+		},
+		{
+			x = 1396540800000;
+			y = 0.862;
+			equityReturn = 1.1737;
+			unitMoney = "";
+		},
+		{
+			x = 1396886400000;
+			y = 0.879;
+			equityReturn = 1.9722;
+			unitMoney = "";
+		},
+		{
+			x = 1396972800000;
+			y = 0.881;
+			equityReturn = 0.2275;
+			unitMoney = "";
+		},
+		{
+			x = 1397059200000;
+			y = 0.889;
+			equityReturn = 0.9081;
+			unitMoney = "";
+		},
+		{
+			x = 1397145600000;
+			y = 0.897;
+			equityReturn = 0.8999;
+			unitMoney = "";
+		},
+		{
+			x = 1397404800000;
+			y = 0.902;
+			equityReturn = 0.5574;
+			unitMoney = "";
+		},
+		{
+			x = 1397491200000;
+			y = 0.89;
+			equityReturn = -1.3304;
+			unitMoney = "";
+		},
+		{
+			x = 1397577600000;
+			y = 0.888;
+			equityReturn = -0.2247;
+			unitMoney = "";
+		},
+		{
+			x = 1397664000000;
+			y = 0.889;
+			equityReturn = 0.1126;
+			unitMoney = "";
+		},
+		{
+			x = 1397750400000;
+			y = 0.888;
+			equityReturn = -0.1125;
+			unitMoney = "";
+		},
+		{
+			x = 1398009600000;
+			y = 0.878;
+			equityReturn = -1.1261;
+			unitMoney = "";
+		},
+		{
+			x = 1398096000000;
+			y = 0.875;
+			equityReturn = -0.3417;
+			unitMoney = "";
+		},
+		{
+			x = 1398182400000;
+			y = 0.877;
+			equityReturn = 0.2286;
+			unitMoney = "";
+		},
+		{
+			x = 1398268800000;
+			y = 0.874;
+			equityReturn = -0.3421;
+			unitMoney = "";
+		},
+		{
+			x = 1398355200000;
+			y = 0.856;
+			equityReturn = -2.0595;
+			unitMoney = "";
+		},
+		{
+			x = 1398614400000;
+			y = 0.839;
+			equityReturn = -1.986;
+			unitMoney = "";
+		},
+		{
+			x = 1398700800000;
+			y = 0.856;
+			equityReturn = 2.0262;
+			unitMoney = "";
+		},
+		{
+			x = 1398787200000;
+			y = 0.863;
+			equityReturn = 0.8178;
+			unitMoney = "";
+		},
+		{
+			x = 1399219200000;
+			y = 0.87;
+			equityReturn = 0.8111;
+			unitMoney = "";
+		},
+		{
+			x = 1399305600000;
+			y = 0.872;
+			equityReturn = 0.2299;
+			unitMoney = "";
+		},
+		{
+			x = 1399392000000;
+			y = 0.858;
+			equityReturn = -1.6055;
+			unitMoney = "";
+		},
+		{
+			x = 1399478400000;
+			y = 0.856;
+			equityReturn = -0.2331;
+			unitMoney = "";
+		},
+		{
+			x = 1399564800000;
+			y = 0.85;
+			equityReturn = -0.7009;
+			unitMoney = "";
+		},
+		{
+			x = 1399824000000;
+			y = 0.861;
+			equityReturn = 1.2941;
+			unitMoney = "";
+		},
+		{
+			x = 1399910400000;
+			y = 0.861;
+			equityReturn = 0;
+			unitMoney = "";
+		},
+		{
+			x = 1399996800000;
+			y = 0.855;
+			equityReturn = -0.6969;
+			unitMoney = "";
+		},
+		{
+			x = 1400083200000;
+			y = 0.846;
+			equityReturn = -1.0526;
+			unitMoney = "";
+		},
+		{
+			x = 1400169600000;
+			y = 0.841;
+			equityReturn = -0.591;
+			unitMoney = "";
+		},
+		{
+			x = 1400428800000;
+			y = 0.831;
+			equityReturn = -1.1891;
+			unitMoney = "";
+		},
+		{
+			x = 1400515200000;
+			y = 0.831;
+			equityReturn = 0;
+			unitMoney = "";
+		},
+		{
+			x = 1400601600000;
+			y = 0.838;
+			equityReturn = 0.8424;
+			unitMoney = "";
+		},
+		{
+			x = 1400688000000;
+			y = 0.839;
+			equityReturn = 0.1193;
+			unitMoney = "";
+		},
+		{
+			x = 1400774400000;
+			y = 0.845;
+			equityReturn = 0.7151;
+			unitMoney = "";
+		},
+		{
+			x = 1401033600000;
+			y = 0.854;
+			equityReturn = 1.0651;
+			unitMoney = "";
+		},
+		{
+			x = 1401120000000;
+			y = 0.852;
+			equityReturn = -0.2342;
+			unitMoney = "";
+		},
+		{
+			x = 1401206400000;
+			y = 0.86;
+			equityReturn = 0.939;
+			unitMoney = "";
+		},
+		{
+			x = 1401292800000;
+			y = 0.854;
+			equityReturn = -0.6977;
+			unitMoney = "";
+		},
+		{
+			x = 1401379200000;
+			y = 0.857;
+			equityReturn = 0.3513;
+			unitMoney = "";
+		},
+		{
+			x = 1401724800000;
+			y = 0.854;
+			equityReturn = -0.3501;
+			unitMoney = "";
+		},
+		{
+			x = 1401811200000;
+			y = 0.848;
+			equityReturn = -0.7026;
+			unitMoney = "";
+		},
+		{
+			x = 1401897600000;
+			y = 0.858;
+			equityReturn = 1.1792;
+			unitMoney = "";
+		},
+		{
+			x = 1401984000000;
+			y = 0.854;
+			equityReturn = -0.4662;
+			unitMoney = "";
+		},
+		{
+			x = 1402243200000;
+			y = 0.849;
+			equityReturn = -0.5855;
+			unitMoney = "";
+		},
+		{
+			x = 1402329600000;
+			y = 0.859;
+			equityReturn = 1.1779;
+			unitMoney = "";
+		},
+		{
+			x = 1402416000000;
+			y = 0.862;
+			equityReturn = 0.3492;
+			unitMoney = "";
+		},
+		{
+			x = 1402502400000;
+			y = 0.863;
+			equityReturn = 0.116;
+			unitMoney = "";
+		},
+		{
+			x = 1402588800000;
+			y = 0.873;
+			equityReturn = 1.1587;
+			unitMoney = "";
+		},
+		{
+			x = 1402848000000;
+			y = 0.876;
+			equityReturn = 0.3436;
+			unitMoney = "";
+		},
+		{
+			x = 1402934400000;
+			y = 0.864;
+			equityReturn = -1.3699;
+			unitMoney = "";
+		},
+		{
+			x = 1403020800000;
+			y = 0.86;
+			equityReturn = -0.463;
+			unitMoney = "";
+		},
+		{
+			x = 1403107200000;
+			y = 0.849;
+			equityReturn = -1.2791;
+			unitMoney = "";
+		},
+		{
+			x = 1403193600000;
+			y = 0.852;
+			equityReturn = 0.3534;
+			unitMoney = "";
+		},
+		{
+			x = 1403452800000;
+			y = 0.862;
+			equityReturn = 1.1737;
+			unitMoney = "";
+		},
+		{
+			x = 1403539200000;
+			y = 0.871;
+			equityReturn = 1.0441;
+			unitMoney = "";
+		},
+		{
+			x = 1403625600000;
+			y = 0.867;
+			equityReturn = -0.4592;
+			unitMoney = "";
+		},
+		{
+			x = 1403712000000;
+			y = 0.878;
+			equityReturn = 1.2687;
+			unitMoney = "";
+		},
+		{
+			x = 1403798400000;
+			y = 0.882;
+			equityReturn = 0.4556;
+			unitMoney = "";
+		},
+		{
+			x = 1404057600000;
+			y = 0.883;
+			equityReturn = 0.1134;
+			unitMoney = "";
+		},
+		{
+			x = 1404144000000;
+			y = 0.878;
+			equityReturn = -0.5663;
+			unitMoney = "";
+		},
+		{
+			x = 1404230400000;
+			y = 0.876;
+			equityReturn = -0.2278;
+			unitMoney = "";
+		},
+		{
+			x = 1404316800000;
+			y = 0.878;
+			equityReturn = 0.2283;
+			unitMoney = "";
+		},
+		{
+			x = 1404403200000;
+			y = 0.879;
+			equityReturn = 0.1139;
+			unitMoney = "";
+		},
+		{
+			x = 1404662400000;
+			y = 0.872;
+			equityReturn = -0.7964;
+			unitMoney = "";
+		},
+		{
+			x = 1404748800000;
+			y = 0.879;
+			equityReturn = 0.8028;
+			unitMoney = "";
+		},
+		{
+			x = 1404835200000;
+			y = 0.87;
+			equityReturn = -1.0239;
+			unitMoney = "";
+		},
+		{
+			x = 1404921600000;
+			y = 0.861;
+			equityReturn = -1.0345;
+			unitMoney = "";
+		},
+		{
+			x = 1405008000000;
+			y = 0.869;
+			equityReturn = 0.9292;
+			unitMoney = "";
+		},
+		{
+			x = 1405267200000;
+			y = 0.889;
+			equityReturn = 2.3015;
+			unitMoney = "";
+		},
+		{
+			x = 1405353600000;
+			y = 0.894;
+			equityReturn = 0.5624;
+			unitMoney = "";
+		},
+		{
+			x = 1405440000000;
+			y = 0.887;
+			equityReturn = -0.783;
+			unitMoney = "";
+		},
+		{
+			x = 1405526400000;
+			y = 0.881;
+			equityReturn = -0.6764;
+			unitMoney = "";
+		},
+		{
+			x = 1405612800000;
+			y = 0.893;
+			equityReturn = 1.3621;
+			unitMoney = "";
+		},
+		{
+			x = 1405872000000;
+			y = 0.896;
+			equityReturn = 0.3359;
+			unitMoney = "";
+		},
+		{
+			x = 1405958400000;
+			y = 0.909;
+			equityReturn = 1.4509;
+			unitMoney = "";
+		},
+		{
+			x = 1406044800000;
+			y = 0.903;
+			equityReturn = -0.6601;
+			unitMoney = "";
+		},
+		{
+			x = 1406131200000;
+			y = 0.912;
+			equityReturn = 0.9967;
+			unitMoney = "";
+		},
+		{
+			x = 1406217600000;
+			y = 0.92;
+			equityReturn = 0.8772;
+			unitMoney = "";
+		},
+		{
+			x = 1406476800000;
+			y = 0.934;
+			equityReturn = 1.5217;
+			unitMoney = "";
+		},
+		{
+			x = 1406563200000;
+			y = 0.936;
+			equityReturn = 0.2141;
+			unitMoney = "";
+		},
+		{
+			x = 1406649600000;
+			y = 0.939;
+			equityReturn = 0.3205;
+			unitMoney = "";
+		},
+		{
+			x = 1406736000000;
+			y = 0.95;
+			equityReturn = 1.1715;
+			unitMoney = "";
+		},
+		{
+			x = 1406822400000;
+			y = 0.947;
+			equityReturn = -0.3158;
+			unitMoney = "";
+		},
+		{
+			x = 1407081600000;
+			y = 0.961;
+			equityReturn = 1.4784;
+			unitMoney = "";
+		},
+		{
+			x = 1407168000000;
+			y = 0.964;
+			equityReturn = 0.3122;
+			unitMoney = "";
+		},
+		{
+			x = 1407254400000;
+			y = 0.961;
+			equityReturn = -0.3112;
+			unitMoney = "";
+		},
+		{
+			x = 1407340800000;
+			y = 0.944;
+			equityReturn = -1.769;
+			unitMoney = "";
+		},
+		{
+			x = 1407427200000;
+			y = 0.949;
+			equityReturn = 0.5297;
+			unitMoney = "";
+		},
+		{
+			x = 1407686400000;
+			y = 0.962;
+			equityReturn = 1.3699;
+			unitMoney = "";
+		},
+		{
+			x = 1407772800000;
+			y = 0.96;
+			equityReturn = -0.2079;
+			unitMoney = "";
+		},
+		{
+			x = 1407859200000;
+			y = 0.961;
+			equityReturn = 0.1042;
+			unitMoney = "";
+		},
+		{
+			x = 1407945600000;
+			y = 0.956;
+			equityReturn = -0.5203;
+			unitMoney = "";
+		},
+		{
+			x = 1408032000000;
+			y = 0.964;
+			equityReturn = 0.8368;
+			unitMoney = "";
+		},
+		{
+			x = 1408291200000;
+			y = 0.967;
+			equityReturn = 0.3112;
+			unitMoney = "";
+		},
+		{
+			x = 1408377600000;
+			y = 0.97;
+			equityReturn = 0.3102;
+			unitMoney = "";
+		},
+		{
+			x = 1408464000000;
+			y = 0.968;
+			equityReturn = -0.2062;
+			unitMoney = "";
+		},
+		{
+			x = 1408550400000;
+			y = 0.967;
+			equityReturn = -0.1033;
+			unitMoney = "";
+		},
+		{
+			x = 1408636800000;
+			y = 0.974;
+			equityReturn = 0.7239;
+			unitMoney = "";
+		},
+		{
+			x = 1408896000000;
+			y = 0.96;
+			equityReturn = -1.4374;
+			unitMoney = "";
+		},
+		{
+			x = 1408982400000;
+			y = 0.951;
+			equityReturn = -0.9375;
+			unitMoney = "";
+		},
+		{
+			x = 1409068800000;
+			y = 0.953;
+			equityReturn = 0.2103;
+			unitMoney = "";
+		},
+		{
+			x = 1409155200000;
+			y = 0.948;
+			equityReturn = -0.5247;
+			unitMoney = "";
+		},
+		{
+			x = 1409241600000;
+			y = 0.961;
+			equityReturn = 1.3713;
+			unitMoney = "";
+		},
+		{
+			x = 1409500800000;
+			y = 0.976;
+			equityReturn = 1.5609;
+			unitMoney = "";
+		},
+		{
+			x = 1409587200000;
+			y = 0.985;
+			equityReturn = 0.9221;
+			unitMoney = "";
+		},
+		{
+			x = 1409673600000;
+			y = 0.993;
+			equityReturn = 0.8122;
+			unitMoney = "";
+		},
+		{
+			x = 1409760000000;
+			y = 0.994;
+			equityReturn = 0.1007;
+			unitMoney = "";
+		},
+		{
+			x = 1409846400000;
+			y = 1.003;
+			equityReturn = 0.9054;
+			unitMoney = "";
+		},
+		{
+			x = 1410192000000;
+			y = 1.001;
+			equityReturn = -0.1994;
+			unitMoney = "";
+		},
+		{
+			x = 1410278400000;
+			y = 0.996;
+			equityReturn = -0.4995;
+			unitMoney = "";
+		},
+		{
+			x = 1410364800000;
+			y = 0.987;
+			equityReturn = -0.9036;
+			unitMoney = "";
+		},
+		{
+			x = 1410451200000;
+			y = 0.989;
+			equityReturn = 0.2026;
+			unitMoney = "";
+		},
+		{
+			x = 1410710400000;
+			y = 0.988;
+			equityReturn = -0.1011;
+			unitMoney = "";
+		},
+		{
+			x = 1410796800000;
+			y = 0.959;
+			equityReturn = -2.9352;
+			unitMoney = "";
+		},
+		{
+			x = 1410883200000;
+			y = 0.967;
+			equityReturn = 0.8342;
+			unitMoney = "";
+		},
+		{
+			x = 1410969600000;
+			y = 0.973;
+			equityReturn = 0.6205;
+			unitMoney = "";
+		},
+		{
+			x = 1411056000000;
+			y = 0.98;
+			equityReturn = 0.7194;
+			unitMoney = "";
+		},
+		{
+			x = 1411315200000;
+			y = 0.962;
+			equityReturn = -1.8367;
+			unitMoney = "";
+		},
+		{
+			x = 1411401600000;
+			y = 0.967;
+			equityReturn = 0.5198;
+			unitMoney = "";
+		},
+		{
+			x = 1411488000000;
+			y = 0.979;
+			equityReturn = 1.241;
+			unitMoney = "";
+		},
+		{
+			x = 1411574400000;
+			y = 0.977;
+			equityReturn = -0.2043;
+			unitMoney = "";
+		},
+		{
+			x = 1411660800000;
+			y = 0.978;
+			equityReturn = 0.1024;
+			unitMoney = "";
+		},
+		{
+			x = 1411920000000;
+			y = 0.985;
+			equityReturn = 0.7157;
+			unitMoney = "";
+		},
+		{
+			x = 1412006400000;
+			y = 0.983;
+			equityReturn = -0.203;
+			unitMoney = "";
+		},
+		{
+			x = 1412697600000;
+			y = 0.992;
+			equityReturn = 0.9156;
+			unitMoney = "";
+		},
+		{
+			x = 1412784000000;
+			y = 0.997;
+			equityReturn = 0.504;
+			unitMoney = "";
+		},
+		{
+			x = 1412870400000;
+			y = 0.993;
+			equityReturn = -0.4012;
+			unitMoney = "";
+		},
+		{
+			x = 1413129600000;
+			y = 0.983;
+			equityReturn = -1.007;
+			unitMoney = "";
+		},
+		{
+			x = 1413216000000;
+			y = 0.977;
+			equityReturn = -0.6104;
+			unitMoney = "";
+		},
+		{
+			x = 1413302400000;
+			y = 0.977;
+			equityReturn = 0;
+			unitMoney = "";
+		},
+		{
+			x = 1413388800000;
+			y = 0.961;
+			equityReturn = -1.6377;
+			unitMoney = "";
+		},
+		{
+			x = 1413475200000;
+			y = 0.968;
+			equityReturn = 0.7284;
+			unitMoney = "";
+		},
+		{
+			x = 1413734400000;
+			y = 0.977;
+			equityReturn = 0.9298;
+			unitMoney = "";
+		},
+		{
+			x = 1413820800000;
+			y = 0.969;
+			equityReturn = -0.8188;
+			unitMoney = "";
+		},
+		{
+			x = 1413907200000;
+			y = 0.958;
+			equityReturn = -1.1352;
+			unitMoney = "";
+		},
+		{
+			x = 1413993600000;
+			y = 0.948;
+			equityReturn = -1.0438;
+			unitMoney = "";
+		},
+		{
+			x = 1414080000000;
+			y = 0.949;
+			equityReturn = 0.1055;
+			unitMoney = "";
+		},
+		{
+			x = 1414339200000;
+			y = 0.951;
+			equityReturn = 0.2107;
+			unitMoney = "";
+		},
+		{
+			x = 1414425600000;
+			y = 0.959;
+			equityReturn = 0.8412;
+			unitMoney = "";
+		},
+		{
+			x = 1414512000000;
+			y = 0.968;
+			equityReturn = 0.9385;
+			unitMoney = "";
+		},
+		{
+			x = 1414598400000;
+			y = 0.965;
+			equityReturn = -0.3099;
+			unitMoney = "";
+		},
+		{
+			x = 1414684800000;
+			y = 0.968;
+			equityReturn = 0.3109;
+			unitMoney = "";
+		},
+		{
+			x = 1414944000000;
+			y = 0.966;
+			equityReturn = -0.2066;
+			unitMoney = "";
+		},
+		{
+			x = 1415030400000;
+			y = 0.954;
+			equityReturn = -1.2422;
+			unitMoney = "";
+		},
+		{
+			x = 1415116800000;
+			y = 0.95;
+			equityReturn = -0.4193;
+			unitMoney = "";
+		},
+		{
+			x = 1415203200000;
+			y = 0.954;
+			equityReturn = 0.4211;
+			unitMoney = "";
+		},
+		{
+			x = 1415289600000;
+			y = 0.949;
+			equityReturn = -0.5241;
+			unitMoney = "";
+		},
+		{
+			x = 1415548800000;
+			y = 0.969;
+			equityReturn = 2.1075;
+			unitMoney = "";
+		},
+		{
+			x = 1415635200000;
+			y = 0.95;
+			equityReturn = -1.9608;
+			unitMoney = "";
+		},
+		{
+			x = 1415721600000;
+			y = 0.96;
+			equityReturn = 1.0526;
+			unitMoney = "";
+		},
+		{
+			x = 1415808000000;
+			y = 0.958;
+			equityReturn = -0.2083;
+			unitMoney = "";
+		},
+		{
+			x = 1415894400000;
+			y = 0.963;
+			equityReturn = 0.5219;
+			unitMoney = "";
+		},
+		{
+			x = 1416153600000;
+			y = 0.966;
+			equityReturn = 0.3115;
+			unitMoney = "";
+		},
+		{
+			x = 1416240000000;
+			y = 0.96;
+			equityReturn = -0.6211;
+			unitMoney = "";
+		},
+		{
+			x = 1416326400000;
+			y = 0.956;
+			equityReturn = -0.4167;
+			unitMoney = "";
+		},
+		{
+			x = 1416412800000;
+			y = 0.95;
+			equityReturn = -0.6276;
+			unitMoney = "";
+		},
+		{
+			x = 1416499200000;
+			y = 0.959;
+			equityReturn = 0.9474;
+			unitMoney = "";
+		},
+		{
+			x = 1416758400000;
+			y = 0.966;
+			equityReturn = 0.7299;
+			unitMoney = "";
+		},
+		{
+			x = 1416844800000;
+			y = 0.978;
+			equityReturn = 1.2422;
+			unitMoney = "";
+		},
+		{
+			x = 1416931200000;
+			y = 0.979;
+			equityReturn = 0.1022;
+			unitMoney = "";
+		},
+		{
+			x = 1417017600000;
+			y = 0.983;
+			equityReturn = 0.4086;
+			unitMoney = "";
+		},
+		{
+			x = 1417104000000;
+			y = 0.985;
+			equityReturn = 0.2035;
+			unitMoney = "";
+		},
+		{
+			x = 1417363200000;
+			y = 0.993;
+			equityReturn = 0.8122;
+			unitMoney = "";
+		},
+		{
+			x = 1417449600000;
+			y = 1.011;
+			equityReturn = 1.8127;
+			unitMoney = "";
+		},
+		{
+			x = 1417536000000;
+			y = 1.026;
+			equityReturn = 1.4837;
+			unitMoney = "";
+		},
+		{
+			x = 1417622400000;
+			y = 1.045;
+			equityReturn = 1.8519;
+			unitMoney = "";
+		},
+		{
+			x = 1417708800000;
+			y = 1.028;
+			equityReturn = -1.6268;
+			unitMoney = "";
+		},
+		{
+			x = 1417968000000;
+			y = 1.038;
+			equityReturn = 0.9728;
+			unitMoney = "";
+		},
+		{
+			x = 1418054400000;
+			y = 1.007;
+			equityReturn = -2.9865;
+			unitMoney = "";
+		},
+		{
+			x = 1418140800000;
+			y = 1.042;
+			equityReturn = 3.4757;
+			unitMoney = "";
+		},
+		{
+			x = 1418227200000;
+			y = 1.038;
+			equityReturn = -0.3839;
+			unitMoney = "";
+		},
+		{
+			x = 1418313600000;
+			y = 1.043;
+			equityReturn = 0.4817;
+			unitMoney = "";
+		},
+		{
+			x = 1418572800000;
+			y = 1.059;
+			equityReturn = 1.534;
+			unitMoney = "";
+		},
+		{
+			x = 1418659200000;
+			y = 1.052;
+			equityReturn = -0.661;
+			unitMoney = "";
+		},
+		{
+			x = 1418745600000;
+			y = 1.038;
+			equityReturn = -1.3308;
+			unitMoney = "";
+		},
+		{
+			x = 1418832000000;
+			y = 1.046;
+			equityReturn = 0.7707;
+			unitMoney = "";
+		},
+		{
+			x = 1418918400000;
+			y = 1.038;
+			equityReturn = -0.7648;
+			unitMoney = "";
+		},
+		{
+			x = 1419177600000;
+			y = 1.035;
+			equityReturn = -0.289;
+			unitMoney = "";
+		},
+		{
+			x = 1419264000000;
+			y = 1.033;
+			equityReturn = -0.1932;
+			unitMoney = "";
+		},
+		{
+			x = 1419350400000;
+			y = 1.025;
+			equityReturn = -0.7744;
+			unitMoney = "";
+		},
+		{
+			x = 1419436800000;
+			y = 1.035;
+			equityReturn = 0.9756;
+			unitMoney = "";
+		},
+		{
+			x = 1419523200000;
+			y = 1.043;
+			equityReturn = 0.7729;
+			unitMoney = "";
+		},
+		{
+			x = 1419782400000;
+			y = 1.041;
+			equityReturn = -0.1918;
+			unitMoney = "";
+		},
+		{
+			x = 1419868800000;
+			y = 1.025;
+			equityReturn = -1.537;
+			unitMoney = "";
+		},
+		{
+			x = 1419955200000;
+			y = 1.039;
+			equityReturn = 1.3659;
+			unitMoney = "";
+		},
+		{
+			x = 1420387200000;
+			y = 1.093;
+			equityReturn = 5.1973;
+			unitMoney = "";
+		},
+		{
+			x = 1420473600000;
+			y = 1.109;
+			equityReturn = 1.4639;
+			unitMoney = "";
+		},
+		{
+			x = 1420560000000;
+			y = 1.1;
+			equityReturn = -0.8115;
+			unitMoney = "";
+		},
+		{
+			x = 1420646400000;
+			y = 1.099;
+			equityReturn = -0.0909;
+			unitMoney = "";
+		},
+		{
+			x = 1420732800000;
+			y = 1.086;
+			equityReturn = -1.1829;
+			unitMoney = "";
+		},
+		{
+			x = 1420992000000;
+			y = 1.094;
+			equityReturn = 0.7366;
+			unitMoney = "";
+		},
+		{
+			x = 1421078400000;
+			y = 1.108;
+			equityReturn = 1.2797;
+			unitMoney = "";
+		},
+		{
+			x = 1421164800000;
+			y = 1.087;
+			equityReturn = -1.8953;
+			unitMoney = "";
+		},
+		{
+			x = 1421251200000;
+			y = 1.095;
+			equityReturn = 0.736;
+			unitMoney = "";
+		},
+		{
+			x = 1421337600000;
+			y = 1.1;
+			equityReturn = 0.4566;
+			unitMoney = "";
+		},
+		{
+			x = 1421596800000;
+			y = 1.042;
+			equityReturn = -5.2727;
+			unitMoney = "";
+		},
+		{
+			x = 1421683200000;
+			y = 1.074;
+			equityReturn = 3.071;
+			unitMoney = "";
+		},
+		{
+			x = 1421769600000;
+			y = 1.102;
+			equityReturn = 2.6071;
+			unitMoney = "";
+		},
+		{
+			x = 1421856000000;
+			y = 1.106;
+			equityReturn = 0.363;
+			unitMoney = "";
+		},
+		{
+			x = 1421942400000;
+			y = 1.095;
+			equityReturn = -0.9946;
+			unitMoney = "";
+		},
+		{
+			x = 1422201600000;
+			y = 1.109;
+			equityReturn = 1.2785;
+			unitMoney = "";
+		},
+		{
+			x = 1422288000000;
+			y = 1.115;
+			equityReturn = 0.541;
+			unitMoney = "";
+		},
+		{
+			x = 1422374400000;
+			y = 1.105;
+			equityReturn = -0.8969;
+			unitMoney = "";
+		},
+		{
+			x = 1422460800000;
+			y = 1.098;
+			equityReturn = -0.6335;
+			unitMoney = "";
+		},
+		{
+			x = 1422547200000;
+			y = 1.099;
+			equityReturn = 0.0911;
+			unitMoney = "";
+		},
+		{
+			x = 1422806400000;
+			y = 1.09;
+			equityReturn = -0.8189;
+			unitMoney = "";
+		},
+		{
+			x = 1422892800000;
+			y = 1.108;
+			equityReturn = 1.6514;
+			unitMoney = "";
+		},
+		{
+			x = 1422979200000;
+			y = 1.105;
+			equityReturn = -0.2708;
+			unitMoney = "";
+		},
+		{
+			x = 1423065600000;
+			y = 1.096;
+			equityReturn = -0.8145;
+			unitMoney = "";
+		},
+		{
+			x = 1423152000000;
+			y = 1.091;
+			equityReturn = -0.4562;
+			unitMoney = "";
+		},
+		{
+			x = 1423411200000;
+			y = 1.098;
+			equityReturn = 0.6416;
+			unitMoney = "";
+		},
+		{
+			x = 1423497600000;
+			y = 1.114;
+			equityReturn = 1.4572;
+			unitMoney = "";
+		},
+		{
+			x = 1423584000000;
+			y = 1.119;
+			equityReturn = 0.4488;
+			unitMoney = "";
+		},
+		{
+			x = 1423670400000;
+			y = 1.119;
+			equityReturn = 0;
+			unitMoney = "";
+		},
+		{
+			x = 1423756800000;
+			y = 1.126;
+			equityReturn = 0.6256;
+			unitMoney = "";
+		},
+		{
+			x = 1424016000000;
+			y = 1.139;
+			equityReturn = 1.1545;
+			unitMoney = "";
+		},
+		{
+			x = 1424102400000;
+			y = 1.155;
+			equityReturn = 1.4047;
+			unitMoney = "";
+		},
+		{
+			x = 1424793600000;
+			y = 1.149;
+			equityReturn = -0.5195;
+			unitMoney = "";
+		},
+		{
+			x = 1424880000000;
+			y = 1.154;
+			equityReturn = 0.4352;
+			unitMoney = "";
+		},
+		{
+			x = 1424966400000;
+			y = 1.155;
+			equityReturn = 0.0867;
+			unitMoney = "";
+		},
+		{
+			x = 1425225600000;
+			y = 1.165;
+			equityReturn = 0.8658;
+			unitMoney = "";
+		},
+		{
+			x = 1425312000000;
+			y = 1.145;
+			equityReturn = -1.7167;
+			unitMoney = "";
+		},
+		{
+			x = 1425398400000;
+			y = 1.16;
+			equityReturn = 1.31;
+			unitMoney = "";
+		},
+		{
+			x = 1425484800000;
+			y = 1.146;
+			equityReturn = -1.2069;
+			unitMoney = "";
+		},
+		{
+			x = 1425571200000;
+			y = 1.144;
+			equityReturn = -0.1745;
+			unitMoney = "";
+		},
+		{
+			x = 1425830400000;
+			y = 1.165;
+			equityReturn = 1.8357;
+			unitMoney = "";
+		},
+		{
+			x = 1425916800000;
+			y = 1.172;
+			equityReturn = 0.6009;
+			unitMoney = "";
+		},
+		{
+			x = 1426003200000;
+			y = 1.18;
+			equityReturn = 0.6826;
+			unitMoney = "";
+		},
+		{
+			x = 1426089600000;
+			y = 1.184;
+			equityReturn = 0.339;
+			unitMoney = "";
+		},
+		{
+			x = 1426176000000;
+			y = 1.193;
+			equityReturn = 0.7601;
+			unitMoney = "";
+		},
+		{
+			x = 1426435200000;
+			y = 1.221;
+			equityReturn = 2.347;
+			unitMoney = "";
+		},
+		{
+			x = 1426521600000;
+			y = 1.231;
+			equityReturn = 0.819;
+			unitMoney = "";
+		},
+		{
+			x = 1426608000000;
+			y = 1.245;
+			equityReturn = 1.1373;
+			unitMoney = "";
+		},
+		{
+			x = 1426694400000;
+			y = 1.244;
+			equityReturn = -0.0803;
+			unitMoney = "";
+		},
+		{
+			x = 1426780800000;
+			y = 1.247;
+			equityReturn = 0.2412;
+			unitMoney = "";
+		},
+		{
+			x = 1427040000000;
+			y = 1.274;
+			equityReturn = 2.1652;
+			unitMoney = "";
+		},
+		{
+			x = 1427126400000;
+			y = 1.287;
+			equityReturn = 1.0204;
+			unitMoney = "";
+		},
+		{
+			x = 1427212800000;
+			y = 1.286;
+			equityReturn = -0.0777;
+			unitMoney = "";
+		},
+		{
+			x = 1427299200000;
+			y = 1.283;
+			equityReturn = -0.2333;
+			unitMoney = "";
+		},
+		{
+			x = 1427385600000;
+			y = 1.287;
+			equityReturn = 0.3118;
+			unitMoney = "";
+		},
+		{
+			x = 1427644800000;
+			y = 1.305;
+			equityReturn = 1.3986;
+			unitMoney = "";
+		},
+		{
+			x = 1427731200000;
+			y = 1.297;
+			equityReturn = -0.613;
+			unitMoney = "";
+		},
+		{
+			x = 1427817600000;
+			y = 1.321;
+			equityReturn = 1.8504;
+			unitMoney = "";
+		},
+		{
+			x = 1427904000000;
+			y = 1.329;
+			equityReturn = 0.6056;
+			unitMoney = "";
+		},
+		{
+			x = 1427990400000;
+			y = 1.333;
+			equityReturn = 0.301;
+			unitMoney = "";
+		},
+		{
+			x = 1428336000000;
+			y = 1.355;
+			equityReturn = 1.6504;
+			unitMoney = "";
+		},
+		{
+			x = 1428422400000;
+			y = 1.356;
+			equityReturn = 0.0738;
+			unitMoney = "";
+		},
+		{
+			x = 1428508800000;
+			y = 1.337;
+			equityReturn = -1.4012;
+			unitMoney = "";
+		},
+		{
+			x = 1428595200000;
+			y = 1.364;
+			equityReturn = 2.0194;
+			unitMoney = "";
+		},
+		{
+			x = 1428854400000;
+			y = 1.374;
+			equityReturn = 0.7331;
+			unitMoney = "";
+		},
+		{
+			x = 1428940800000;
+			y = 1.371;
+			equityReturn = -0.2183;
+			unitMoney = "";
+		},
+		{
+			x = 1429027200000;
+			y = 1.339;
+			equityReturn = -2.3341;
+			unitMoney = "";
+		},
+		{
+			x = 1429113600000;
+			y = 1.395;
+			equityReturn = 4.1822;
+			unitMoney = "";
+		},
+		{
+			x = 1429200000000;
+			y = 1.412;
+			equityReturn = 1.2186;
+			unitMoney = "";
+		},
+		{
+			x = 1429459200000;
+			y = 1.39;
+			equityReturn = -1.5581;
+			unitMoney = "";
+		},
+		{
+			x = 1429545600000;
+			y = 1.461;
+			equityReturn = 5.1079;
+			unitMoney = "";
+		},
+		{
+			x = 1429632000000;
+			y = 1.479;
+			equityReturn = 1.232;
+			unitMoney = "";
+		},
+		{
+			x = 1429718400000;
+			y = 1.474;
+			equityReturn = -0.3381;
+			unitMoney = "";
+		},
+		{
+			x = 1429804800000;
+			y = 1.471;
+			equityReturn = -0.2035;
+			unitMoney = "";
+		},
+		{
+			x = 1430064000000;
+			y = 1.481;
+			equityReturn = 0.6798;
+			unitMoney = "";
+		},
+		{
+			x = 1430150400000;
+			y = 1.458;
+			equityReturn = -1.553;
+			unitMoney = "";
+		},
+		{
+			x = 1430236800000;
+			y = 1.475;
+			equityReturn = 1.166;
+			unitMoney = "";
+		},
+		{
+			x = 1430323200000;
+			y = 1.47;
+			equityReturn = -0.339;
+			unitMoney = "";
+		},
+		{
+			x = 1430668800000;
+			y = 1.472;
+			equityReturn = 0.1361;
+			unitMoney = "";
+		},
+		{
+			x = 1430755200000;
+			y = 1.41;
+			equityReturn = -4.212;
+			unitMoney = "";
+		},
+		{
+			x = 1430841600000;
+			y = 1.397;
+			equityReturn = -0.922;
+			unitMoney = "";
+		},
+		{
+			x = 1430928000000;
+			y = 1.393;
+			equityReturn = -0.2863;
+			unitMoney = "";
+		},
+		{
+			x = 1431014400000;
+			y = 1.421;
+			equityReturn = 2.0101;
+			unitMoney = "";
+		},
+		{
+			x = 1431273600000;
+			y = 1.453;
+			equityReturn = 2.2519;
+			unitMoney = "";
+		},
+		{
+			x = 1431360000000;
+			y = 1.457;
+			equityReturn = 0.2753;
+			unitMoney = "";
+		},
+		{
+			x = 1431446400000;
+			y = 1.466;
+			equityReturn = 0.6177;
+			unitMoney = "";
+		},
+		{
+			x = 1431532800000;
+			y = 1.451;
+			equityReturn = -1.0232;
+			unitMoney = "";
+		},
+		{
+			x = 1431619200000;
+			y = 1.432;
+			equityReturn = -1.3094;
+			unitMoney = "";
+		},
+		{
+			x = 1431878400000;
+			y = 1.415;
+			equityReturn = -1.1872;
+			unitMoney = "";
+		},
+		{
+			x = 1431964800000;
+			y = 1.452;
+			equityReturn = 2.6148;
+			unitMoney = "";
+		},
+		{
+			x = 1432051200000;
+			y = 1.484;
+			equityReturn = 2.2039;
+			unitMoney = "";
+		},
+		{
+			x = 1432137600000;
+			y = 1.533;
+			equityReturn = 3.3019;
+			unitMoney = "";
+		},
+		{
+			x = 1432224000000;
+			y = 1.562;
+			equityReturn = 1.8917;
+			unitMoney = "";
+		},
+		{
+			x = 1432483200000;
+			y = 1.609;
+			equityReturn = 3.009;
+			unitMoney = "";
+		},
+		{
+			x = 1432569600000;
+			y = 1.634;
+			equityReturn = 1.5538;
+			unitMoney = "";
+		},
+		{
+			x = 1432656000000;
+			y = 1.614;
+			equityReturn = -1.224;
+			unitMoney = "";
+		},
+		{
+			x = 1432742400000;
+			y = 1.528;
+			equityReturn = -5.3284;
+			unitMoney = "";
+		},
+		{
+			x = 1432828800000;
+			y = 1.523;
+			equityReturn = -0.3272;
+			unitMoney = "";
+		},
+		{
+			x = 1433088000000;
+			y = 1.585;
+			equityReturn = 4.0709;
+			unitMoney = "";
+		},
+		{
+			x = 1433174400000;
+			y = 1.615;
+			equityReturn = 1.8927;
+			unitMoney = "";
+		},
+		{
+			x = 1433260800000;
+			y = 1.626;
+			equityReturn = 0.6811;
+			unitMoney = "";
+		},
+		{
+			x = 1433347200000;
+			y = 1.609;
+			equityReturn = -1.0455;
+			unitMoney = "";
+		},
+		{
+			x = 1433433600000;
+			y = 1.613;
+			equityReturn = 0.2486;
+			unitMoney = "";
+		},
+		{
+			x = 1433692800000;
+			y = 1.632;
+			equityReturn = 1.1779;
+			unitMoney = "";
+		},
+		{
+			x = 1433779200000;
+			y = 1.63;
+			equityReturn = -0.1225;
+			unitMoney = "";
+		},
+		{
+			x = 1433865600000;
+			y = 1.653;
+			equityReturn = 1.411;
+			unitMoney = "";
+		},
+		{
+			x = 1433952000000;
+			y = 1.65;
+			equityReturn = -0.1815;
+			unitMoney = "";
+		},
+		{
+			x = 1434038400000;
+			y = 1.688;
+			equityReturn = 2.303;
+			unitMoney = "";
+		},
+		{
+			x = 1434297600000;
+			y = 1.671;
+			equityReturn = -1.0071;
+			unitMoney = "";
+		},
+		{
+			x = 1434384000000;
+			y = 1.612;
+			equityReturn = -3.5308;
+			unitMoney = "";
+		},
+		{
+			x = 1434470400000;
+			y = 1.628;
+			equityReturn = 0.9926;
+			unitMoney = "";
+		},
+		{
+			x = 1434556800000;
+			y = 1.573;
+			equityReturn = -3.3784;
+			unitMoney = "";
+		},
+		{
+			x = 1434643200000;
+			y = 1.487;
+			equityReturn = -5.4673;
+			unitMoney = "";
+		},
+		{
+			x = 1434988800000;
+			y = 1.559;
+			equityReturn = 4.842;
+			unitMoney = "";
+		},
+		{
+			x = 1435075200000;
+			y = 1.606;
+			equityReturn = 3.0148;
+			unitMoney = "";
+		},
+		{
+			x = 1435161600000;
+			y = 1.55;
+			equityReturn = -3.4869;
+			unitMoney = "";
+		},
+		{
+			x = 1435248000000;
+			y = 1.45;
+			equityReturn = -6.4516;
+			unitMoney = "";
+		},
+		{
+			x = 1435507200000;
+			y = 1.428;
+			equityReturn = -1.5172;
+			unitMoney = "";
+		},
+		{
+			x = 1435593600000;
+			y = 1.513;
+			equityReturn = 5.9524;
+			unitMoney = "";
+		},
+		{
+			x = 1435680000000;
+			y = 1.448;
+			equityReturn = -4.2961;
+			unitMoney = "";
+		},
+		{
+			x = 1435766400000;
+			y = 1.382;
+			equityReturn = -4.558;
+			unitMoney = "";
+		},
+		{
+			x = 1435852800000;
+			y = 1.311;
+			equityReturn = -5.1375;
+			unitMoney = "";
+		},
+		{
+			x = 1436112000000;
+			y = 1.325;
+			equityReturn = 1.0679;
+			unitMoney = "";
+		},
+		{
+			x = 1436198400000;
+			y = 1.264;
+			equityReturn = -4.6038;
+			unitMoney = "";
+		},
+		{
+			x = 1436284800000;
+			y = 1.179;
+			equityReturn = -6.7247;
+			unitMoney = "";
+		},
+		{
+			x = 1436371200000;
+			y = 1.275;
+			equityReturn = 8.1425;
+			unitMoney = "";
+		},
+		{
+			x = 1436457600000;
+			y = 1.373;
+			equityReturn = 7.6863;
+			unitMoney = "";
+		},
+		{
+			x = 1436716800000;
+			y = 1.428;
+			equityReturn = 4.0058;
+			unitMoney = "";
+		},
+		{
+			x = 1436803200000;
+			y = 1.393;
+			equityReturn = -2.451;
+			unitMoney = "";
+		},
+		{
+			x = 1436889600000;
+			y = 1.331;
+			equityReturn = -4.4508;
+			unitMoney = "";
+		},
+		{
+			x = 1436976000000;
+			y = 1.348;
+			equityReturn = 1.2772;
+			unitMoney = "";
+		},
+		{
+			x = 1437062400000;
+			y = 1.396;
+			equityReturn = 3.5608;
+			unitMoney = "";
+		},
+		{
+			x = 1437321600000;
+			y = 1.39;
+			equityReturn = -0.4298;
+			unitMoney = "";
+		},
+		{
+			x = 1437408000000;
+			y = 1.393;
+			equityReturn = 0.2158;
+			unitMoney = "";
+		},
+		{
+			x = 1437494400000;
+			y = 1.387;
+			equityReturn = -0.4307;
+			unitMoney = "";
+		},
+		{
+			x = 1437580800000;
+			y = 1.411;
+			equityReturn = 1.7304;
+			unitMoney = "";
+		},
+		{
+			x = 1437667200000;
+			y = 1.393;
+			equityReturn = -1.2757;
+			unitMoney = "";
+		},
+		{
+			x = 1437926400000;
+			y = 1.284;
+			equityReturn = -7.8248;
+			unitMoney = "";
+		},
+		{
+			x = 1438012800000;
+			y = 1.29;
+			equityReturn = 0.4673;
+			unitMoney = "";
+		},
+		{
+			x = 1438099200000;
+			y = 1.317;
+			equityReturn = 2.093;
+			unitMoney = "";
+		},
+		{
+			x = 1438185600000;
+			y = 1.29;
+			equityReturn = -2.0501;
+			unitMoney = "";
+		},
+		{
+			x = 1438272000000;
+			y = 1.292;
+			equityReturn = 0.155;
+			unitMoney = "";
+		},
+		{
+			x = 1438531200000;
+			y = 1.301;
+			equityReturn = 0.6966;
+			unitMoney = "";
+		},
+		{
+			x = 1438617600000;
+			y = 1.334;
+			equityReturn = 2.5365;
+			unitMoney = "";
+		},
+		{
+			x = 1438704000000;
+			y = 1.312;
+			equityReturn = -1.6492;
+			unitMoney = "";
+		},
+		{
+			x = 1438790400000;
+			y = 1.306;
+			equityReturn = -0.4573;
+			unitMoney = "";
+		},
+		{
+			x = 1438876800000;
+			y = 1.324;
+			equityReturn = 1.3783;
+			unitMoney = "";
+		},
+		{
+			x = 1439136000000;
+			y = 1.367;
+			equityReturn = 3.2477;
+			unitMoney = "";
+		},
+		{
+			x = 1439222400000;
+			y = 1.371;
+			equityReturn = 0.2926;
+			unitMoney = "";
+		},
+		{
+			x = 1439308800000;
+			y = 1.345;
+			equityReturn = -1.8964;
+			unitMoney = "";
+		},
+		{
+			x = 1439395200000;
+			y = 1.357;
+			equityReturn = 0.8922;
+			unitMoney = "";
+		},
+		{
+			x = 1439481600000;
+			y = 1.355;
+			equityReturn = -0.1474;
+			unitMoney = "";
+		},
+		{
+			x = 1439740800000;
+			y = 1.361;
+			equityReturn = 0.4428;
+			unitMoney = "";
+		},
+		{
+			x = 1439827200000;
+			y = 1.278;
+			equityReturn = -6.0985;
+			unitMoney = "";
+		},
+		{
+			x = 1439913600000;
+			y = 1.299;
+			equityReturn = 1.6432;
+			unitMoney = "";
+		},
+		{
+			x = 1440000000000;
+			y = 1.258;
+			equityReturn = -3.1563;
+			unitMoney = "";
+		},
+		{
+			x = 1440086400000;
+			y = 1.199;
+			equityReturn = -4.69;
+			unitMoney = "";
+		},
+		{
+			x = 1440345600000;
+			y = 1.105;
+			equityReturn = -7.8399;
+			unitMoney = "";
+		},
+		{
+			x = 1440432000000;
+			y = 1.068;
+			equityReturn = -3.3484;
+			unitMoney = "";
+		},
+		{
+			x = 1440518400000;
+			y = 1.098;
+			equityReturn = 2.809;
+			unitMoney = "";
+		},
+		{
+			x = 1440604800000;
+			y = 1.152;
+			equityReturn = 4.918;
+			unitMoney = "";
+		},
+		{
+			x = 1440691200000;
+			y = 1.184;
+			equityReturn = 2.7778;
+			unitMoney = "";
+		},
+		{
+			x = 1440950400000;
+			y = 1.169;
+			equityReturn = -1.2669;
+			unitMoney = "";
+		},
+		{
+			x = 1441036800000;
+			y = 1.143;
+			equityReturn = -2.2241;
+			unitMoney = "";
+		},
+		{
+			x = 1441123200000;
+			y = 1.151;
+			equityReturn = 0.6999;
+			unitMoney = "";
+		},
+		{
+			x = 1441555200000;
+			y = 1.12;
+			equityReturn = -2.6933;
+			unitMoney = "";
+		},
+		{
+			x = 1441641600000;
+			y = 1.147;
+			equityReturn = 2.4107;
+			unitMoney = "";
+		},
+		{
+			x = 1441728000000;
+			y = 1.17;
+			equityReturn = 2.0052;
+			unitMoney = "";
+		},
+		{
+			x = 1441814400000;
+			y = 1.159;
+			equityReturn = -0.9402;
+			unitMoney = "";
+		},
+		{
+			x = 1441900800000;
+			y = 1.159;
+			equityReturn = 0;
+			unitMoney = "";
+		},
+		{
+			x = 1442160000000;
+			y = 1.126;
+			equityReturn = -2.8473;
+			unitMoney = "";
+		},
+		{
+			x = 1442246400000;
+			y = 1.092;
+			equityReturn = -3.0195;
+			unitMoney = "";
+		},
+		{
+			x = 1442332800000;
+			y = 1.151;
+			equityReturn = 5.4029;
+			unitMoney = "";
+		},
+		{
+			x = 1442419200000;
+			y = 1.121;
+			equityReturn = -2.6064;
+			unitMoney = "";
+		},
+		{
+			x = 1442505600000;
+			y = 1.127;
+			equityReturn = 0.5352;
+			unitMoney = "";
+		},
+		{
+			x = 1442764800000;
+			y = 1.151;
+			equityReturn = 2.1295;
+			unitMoney = "";
+		},
+		{
+			x = 1442851200000;
+			y = 1.155;
+			equityReturn = 0.3475;
+			unitMoney = "";
+		},
+		{
+			x = 1442937600000;
+			y = 1.131;
+			equityReturn = -2.0779;
+			unitMoney = "";
+		},
+		{
+			x = 1443024000000;
+			y = 1.139;
+			equityReturn = 0.7073;
+			unitMoney = "";
+		},
+		{
+			x = 1443110400000;
+			y = 1.116;
+			equityReturn = -2.0193;
+			unitMoney = "";
+		},
+		{
+			x = 1443369600000;
+			y = 1.125;
+			equityReturn = 0.8065;
+			unitMoney = "";
+		},
+		{
+			x = 1443456000000;
+			y = 1.114;
+			equityReturn = -0.9778;
+			unitMoney = "";
+		},
+		{
+			x = 1443542400000;
+			y = 1.128;
+			equityReturn = 1.2567;
+			unitMoney = "";
+		},
+		{
+			x = 1444233600000;
+			y = 1.165;
+			equityReturn = 3.2801;
+			unitMoney = "";
+		},
+		{
+			x = 1444320000000;
+			y = 1.171;
+			equityReturn = 0.515;
+			unitMoney = "";
+		},
+		{
+			x = 1444579200000;
+			y = 1.204;
+			equityReturn = 2.8181;
+			unitMoney = "";
+		},
+		{
+			x = 1444665600000;
+			y = 1.208;
+			equityReturn = 0.3322;
+			unitMoney = "";
+		},
+		{
+			x = 1444752000000;
+			y = 1.191;
+			equityReturn = -1.4073;
+			unitMoney = "";
+		},
+		{
+			x = 1444838400000;
+			y = 1.213;
+			equityReturn = 1.8472;
+			unitMoney = "";
+		},
+		{
+			x = 1444924800000;
+			y = 1.222;
+			equityReturn = 0.742;
+			unitMoney = "";
+		},
+		{
+			x = 1445184000000;
+			y = 1.231;
+			equityReturn = 0.7365;
+			unitMoney = "";
+		},
+		{
+			x = 1445270400000;
+			y = 1.235;
+			equityReturn = 0.3249;
+			unitMoney = "";
+		},
+		{
+			x = 1445356800000;
+			y = 1.18;
+			equityReturn = -4.4534;
+			unitMoney = "";
+		},
+		{
+			x = 1445443200000;
+			y = 1.207;
+			equityReturn = 2.2881;
+			unitMoney = "";
+		},
+		{
+			x = 1445529600000;
+			y = 1.234;
+			equityReturn = 2.237;
+			unitMoney = "";
+		},
+		{
+			x = 1445788800000;
+			y = 1.249;
+			equityReturn = 1.2156;
+			unitMoney = "";
+		},
+		{
+			x = 1445875200000;
+			y = 1.249;
+			equityReturn = 0;
+			unitMoney = "";
+		},
+		{
+			x = 1445961600000;
+			y = 1.227;
+			equityReturn = -1.7614;
+			unitMoney = "";
+		},
+		{
+			x = 1446048000000;
+			y = 1.242;
+			equityReturn = 1.2225;
+			unitMoney = "";
+		},
+		{
+			x = 1446134400000;
+			y = 1.242;
+			equityReturn = 0;
+			unitMoney = "";
+		},
+		{
+			x = 1446393600000;
+			y = 1.231;
+			equityReturn = -0.8857;
+			unitMoney = "";
+		},
+		{
+			x = 1446480000000;
+			y = 1.228;
+			equityReturn = -0.2437;
+			unitMoney = "";
+		},
+		{
+			x = 1446566400000;
+			y = 1.276;
+			equityReturn = 3.9088;
+			unitMoney = "";
+		},
+		{
+			x = 1446652800000;
+			y = 1.282;
+			equityReturn = 0.4702;
+			unitMoney = "";
+		},
+		{
+			x = 1446739200000;
+			y = 1.297;
+			equityReturn = 1.17;
+			unitMoney = "";
+		},
+		{
+			x = 1446998400000;
+			y = 1.307;
+			equityReturn = 0.771;
+			unitMoney = "";
+		},
+		{
+			x = 1447084800000;
+			y = 1.303;
+			equityReturn = -0.306;
+			unitMoney = "";
+		},
+		{
+			x = 1447171200000;
+			y = 1.301;
+			equityReturn = -0.1535;
+			unitMoney = "";
+		},
+		{
+			x = 1447257600000;
+			y = 1.301;
+			equityReturn = 0;
+			unitMoney = "";
+		},
+		{
+			x = 1447344000000;
+			y = 1.279;
+			equityReturn = -1.691;
+			unitMoney = "";
+		},
+		{
+			x = 1447603200000;
+			y = 1.281;
+			equityReturn = 0.1564;
+			unitMoney = "";
+		},
+		{
+			x = 1447689600000;
+			y = 1.283;
+			equityReturn = 0.1561;
+			unitMoney = "";
+		},
+		{
+			x = 1447776000000;
+			y = 1.272;
+			equityReturn = -0.8574;
+			unitMoney = "";
+		},
+		{
+			x = 1447862400000;
+			y = 1.287;
+			equityReturn = 1.1792;
+			unitMoney = "";
+		},
+		{
+			x = 1447948800000;
+			y = 1.282;
+			equityReturn = -0.3885;
+			unitMoney = "";
+		},
+		{
+			x = 1448208000000;
+			y = 1.27;
+			equityReturn = -0.936;
+			unitMoney = "";
+		},
+		{
+			x = 1448294400000;
+			y = 1.275;
+			equityReturn = 0.3937;
+			unitMoney = "";
+		},
+		{
+			x = 1448380800000;
+			y = 1.289;
+			equityReturn = 1.098;
+			unitMoney = "";
+		},
+		{
+			x = 1448467200000;
+			y = 1.286;
+			equityReturn = -0.2327;
+			unitMoney = "";
+		},
+		{
+			x = 1448553600000;
+			y = 1.229;
+			equityReturn = -4.4323;
+			unitMoney = "";
+		},
+		{
+			x = 1448812800000;
+			y = 1.235;
+			equityReturn = 0.4882;
+			unitMoney = "";
+		},
+		{
+			x = 1448899200000;
+			y = 1.248;
+			equityReturn = 1.0526;
+			unitMoney = "";
+		},
+		{
+			x = 1448985600000;
+			y = 1.28;
+			equityReturn = 2.5641;
+			unitMoney = "";
+		},
+		{
+			x = 1449072000000;
+			y = 1.283;
+			equityReturn = 0.2344;
+			unitMoney = "";
+		},
+		{
+			x = 1449158400000;
+			y = 1.275;
+			equityReturn = -0.6235;
+			unitMoney = "";
+		},
+		{
+			x = 1449417600000;
+			y = 1.283;
+			equityReturn = 0.6275;
+			unitMoney = "";
+		},
+		{
+			x = 1449504000000;
+			y = 1.251;
+			equityReturn = -2.4942;
+			unitMoney = "";
+		},
+		{
+			x = 1449590400000;
+			y = 1.258;
+			equityReturn = 0.5596;
+			unitMoney = "";
+		},
+		{
+			x = 1449676800000;
+			y = 1.254;
+			equityReturn = -0.318;
+			unitMoney = "";
+		},
+		{
+			x = 1449763200000;
+			y = 1.254;
+			equityReturn = 0;
+			unitMoney = "";
+		},
+		{
+			x = 1450022400000;
+			y = 1.274;
+			equityReturn = 1.5949;
+			unitMoney = "";
+		},
+		{
+			x = 1450108800000;
+			y = 1.279;
+			equityReturn = 0.3925;
+			unitMoney = "";
+		},
+		{
+			x = 1450195200000;
+			y = 1.273;
+			equityReturn = -0.4691;
+			unitMoney = "";
+		},
+		{
+			x = 1450281600000;
+			y = 1.295;
+			equityReturn = 1.7282;
+			unitMoney = "";
+		},
+		{
+			x = 1450368000000;
+			y = 1.305;
+			equityReturn = 0.7722;
+			unitMoney = "";
+		},
+		{
+			x = 1450627200000;
+			y = 1.35;
+			equityReturn = 3.4483;
+			unitMoney = "";
+		},
+		{
+			x = 1450713600000;
+			y = 1.36;
+			equityReturn = 0.7407;
+			unitMoney = "";
+		},
+		{
+			x = 1450800000000;
+			y = 1.357;
+			equityReturn = -0.2206;
+			unitMoney = "";
+		},
+		{
+			x = 1450886400000;
+			y = 1.344;
+			equityReturn = -0.958;
+			unitMoney = "";
+		},
+		{
+			x = 1450972800000;
+			y = 1.344;
+			equityReturn = 0;
+			unitMoney = "";
+		},
+		{
+			x = 1451232000000;
+			y = 1.315;
+			equityReturn = -2.1577;
+			unitMoney = "";
+		},
+		{
+			x = 1451318400000;
+			y = 1.332;
+			equityReturn = 1.2928;
+			unitMoney = "";
+		},
+		{
+			x = 1451404800000;
+			y = 1.33;
+			equityReturn = -0.1502;
+			unitMoney = "";
+		},
+		{
+			x = 1451491200000;
+			y = 1.318;
+			equityReturn = -0.9023;
+			unitMoney = "";
+		},
+		{
+			x = 1451836800000;
+			y = 1.233;
+			equityReturn = -6.4492;
+			unitMoney = "";
+		},
+		{
+			x = 1451923200000;
+			y = 1.241;
+			equityReturn = 0.6488;
+			unitMoney = "";
+		},
+		{
+			x = 1452009600000;
+			y = 1.256;
+			equityReturn = 1.2087;
+			unitMoney = "";
+		},
+		{
+			x = 1452096000000;
+			y = 1.178;
+			equityReturn = -6.2102;
+			unitMoney = "";
+		},
+		{
+			x = 1452182400000;
+			y = 1.197;
+			equityReturn = 1.6129;
+			unitMoney = "";
+		},
+		{
+			x = 1452441600000;
+			y = 1.138;
+			equityReturn = -4.929;
+			unitMoney = "";
+		},
+		{
+			x = 1452528000000;
+			y = 1.146;
+			equityReturn = 0.703;
+			unitMoney = "";
+		},
+		{
+			x = 1452614400000;
+			y = 1.129;
+			equityReturn = -1.4834;
+			unitMoney = "";
+		},
+		{
+			x = 1452700800000;
+			y = 1.155;
+			equityReturn = 2.3029;
+			unitMoney = "";
+		},
+		{
+			x = 1452787200000;
+			y = 1.125;
+			equityReturn = -2.5974;
+			unitMoney = "";
+		},
+		{
+			x = 1453046400000;
+			y = 1.132;
+			equityReturn = 0.6222;
+			unitMoney = "";
+		},
+		{
+			x = 1453132800000;
+			y = 1.167;
+			equityReturn = 3.0919;
+			unitMoney = "";
+		},
+		{
+			x = 1453219200000;
+			y = 1.144;
+			equityReturn = -1.9709;
+			unitMoney = "";
+		},
+		{
+			x = 1453305600000;
+			y = 1.11;
+			equityReturn = -2.972;
+			unitMoney = "";
+		},
+		{
+			x = 1453392000000;
+			y = 1.121;
+			equityReturn = 0.991;
+			unitMoney = "";
+		},
+		{
+			x = 1453651200000;
+			y = 1.13;
+			equityReturn = 0.8029;
+			unitMoney = "";
+		},
+		{
+			x = 1453737600000;
+			y = 1.081;
+			equityReturn = -4.3363;
+			unitMoney = "";
+		},
+		{
+			x = 1453824000000;
+			y = 1.072;
+			equityReturn = -0.8326;
+			unitMoney = "";
+		},
+		{
+			x = 1453910400000;
+			y = 1.049;
+			equityReturn = -2.1455;
+			unitMoney = "";
+		},
+		{
+			x = 1453996800000;
+			y = 1.078;
+			equityReturn = 2.7645;
+			unitMoney = "";
+		},
+		{
+			x = 1454256000000;
+			y = 1.079;
+			equityReturn = 0.0928;
+			unitMoney = "";
+		},
+		{
+			x = 1454342400000;
+			y = 1.103;
+			equityReturn = 2.2243;
+			unitMoney = "";
+		},
+		{
+			x = 1454428800000;
+			y = 1.103;
+			equityReturn = 0;
+			unitMoney = "";
+		},
+		{
+			x = 1454515200000;
+			y = 1.114;
+			equityReturn = 0.9973;
+			unitMoney = "";
+		},
+		{
+			x = 1454601600000;
+			y = 1.106;
+			equityReturn = -0.7181;
+			unitMoney = "";
+		},
+		{
+			x = 1455465600000;
+			y = 1.096;
+			equityReturn = -0.9042;
+			unitMoney = "";
+		},
+		{
+			x = 1455552000000;
+			y = 1.123;
+			equityReturn = 2.4635;
+			unitMoney = "";
+		},
+		{
+			x = 1455638400000;
+			y = 1.128;
+			equityReturn = 0.4452;
+			unitMoney = "";
+		},
+		{
+			x = 1455724800000;
+			y = 1.122;
+			equityReturn = -0.5319;
+			unitMoney = "";
+		},
+		{
+			x = 1455811200000;
+			y = 1.121;
+			equityReturn = -0.0891;
+			unitMoney = "";
+		},
+		{
+			x = 1456070400000;
+			y = 1.144;
+			equityReturn = 2.0517;
+			unitMoney = "";
+		},
+		{
+			x = 1456156800000;
+			y = 1.143;
+			equityReturn = -0.0874;
+			unitMoney = "";
+		},
+		{
+			x = 1456243200000;
+			y = 1.143;
+			equityReturn = 0;
+			unitMoney = "";
+		},
+		{
+			x = 1456329600000;
+			y = 1.076;
+			equityReturn = -5.8618;
+			unitMoney = "";
+		},
+		{
+			x = 1456416000000;
+			y = 1.084;
+			equityReturn = 0.7435;
+			unitMoney = "";
+		},
+		{
+			x = 1456675200000;
+			y = 1.047;
+			equityReturn = -3.4133;
+			unitMoney = "";
+		},
+		{
+			x = 1456761600000;
+			y = 1.068;
+			equityReturn = 2.0057;
+			unitMoney = "";
+		},
+		{
+			x = 1456848000000;
+			y = 1.113;
+			equityReturn = 4.2135;
+			unitMoney = "";
+		},
+		{
+			x = 1456934400000;
+			y = 1.117;
+			equityReturn = 0.3594;
+			unitMoney = "";
+		},
+		{
+			x = 1457020800000;
+			y = 1.115;
+			equityReturn = -0.1791;
+			unitMoney = "";
+		},
+		{
+			x = 1457280000000;
+			y = 1.124;
+			equityReturn = 0.8072;
+			unitMoney = "";
+		},
+		{
+			x = 1457366400000;
+			y = 1.123;
+			equityReturn = -0.089;
+			unitMoney = "";
+		},
+		{
+			x = 1457452800000;
+			y = 1.111;
+			equityReturn = -1.0686;
+			unitMoney = "";
+		},
+		{
+			x = 1457539200000;
+			y = 1.107;
+			equityReturn = -0.36;
+			unitMoney = "";
+		},
+		{
+			x = 1457625600000;
+			y = 1.105;
+			equityReturn = -0.1807;
+			unitMoney = "";
+		},
+		{
+			x = 1457884800000;
+			y = 1.119;
+			equityReturn = 1.267;
+			unitMoney = "";
+		},
+		{
+			x = 1457971200000;
+			y = 1.119;
+			equityReturn = 0;
+			unitMoney = "";
+		},
+		{
+			x = 1458057600000;
+			y = 1.108;
+			equityReturn = -0.983;
+			unitMoney = "";
+		},
+		{
+			x = 1458144000000;
+			y = 1.13;
+			equityReturn = 1.9856;
+			unitMoney = "";
+		},
+		{
+			x = 1458230400000;
+			y = 1.15;
+			equityReturn = 1.7699;
+			unitMoney = "";
+		},
+		{
+			x = 1458489600000;
+			y = 1.166;
+			equityReturn = 1.3913;
+			unitMoney = "";
+		},
+		{
+			x = 1458576000000;
+			y = 1.166;
+			equityReturn = 0;
+			unitMoney = "";
+		},
+		{
+			x = 1458662400000;
+			y = 1.167;
+			equityReturn = 0.0858;
+			unitMoney = "";
+		},
+		{
+			x = 1458748800000;
+			y = 1.165;
+			equityReturn = -0.1714;
+			unitMoney = "";
+		},
+		{
+			x = 1458835200000;
+			y = 1.172;
+			equityReturn = 0.6009;
+			unitMoney = "";
+		},
+		{
+			x = 1459094400000;
+			y = 1.181;
+			equityReturn = 0.7679;
+			unitMoney = "";
+		},
+		{
+			x = 1459180800000;
+			y = 1.164;
+			equityReturn = -1.4395;
+			unitMoney = "";
+		},
+		{
+			x = 1459267200000;
+			y = 1.188;
+			equityReturn = 2.0619;
+			unitMoney = "";
+		},
+		{
+			x = 1459353600000;
+			y = 1.194;
+			equityReturn = 0.5051;
+			unitMoney = "";
+		},
+		{
+			x = 1459440000000;
+			y = 1.187;
+			equityReturn = -0.5863;
+			unitMoney = "";
+		},
+		{
+			x = 1459785600000;
+			y = 1.205;
+			equityReturn = 1.5164;
+			unitMoney = "";
+		},
+		{
+			x = 1459872000000;
+			y = 1.219;
+			equityReturn = 1.1618;
+			unitMoney = "";
+		},
+		{
+			x = 1459958400000;
+			y = 1.201;
+			equityReturn = -1.4766;
+			unitMoney = "";
+		},
+		{
+			x = 1460044800000;
+			y = 1.194;
+			equityReturn = -0.5828;
+			unitMoney = "";
+		},
+		{
+			x = 1460304000000;
+			y = 1.209;
+			equityReturn = 1.2563;
+			unitMoney = "";
+		},
+		{
+			x = 1460390400000;
+			y = 1.205;
+			equityReturn = -0.3309;
+			unitMoney = "";
+		},
+		{
+			x = 1460476800000;
+			y = 1.21;
+			equityReturn = 0.4149;
+			unitMoney = "";
+		},
+		{
+			x = 1460563200000;
+			y = 1.22;
+			equityReturn = 0.8264;
+			unitMoney = "";
+		},
+		{
+			x = 1460649600000;
+			y = 1.215;
+			equityReturn = -0.4098;
+			unitMoney = "";
+		},
+		{
+			x = 1460908800000;
+			y = 1.206;
+			equityReturn = -0.7407;
+			unitMoney = "";
+		},
+		{
+			x = 1460995200000;
+			y = 1.211;
+			equityReturn = 0.4146;
+			unitMoney = "";
+		},
+		{
+			x = 1461081600000;
+			y = 1.176;
+			equityReturn = -2.8902;
+			unitMoney = "";
+		},
+		{
+			x = 1461168000000;
+			y = 1.173;
+			equityReturn = -0.2551;
+			unitMoney = "";
+		},
+		{
+			x = 1461254400000;
+			y = 1.194;
+			equityReturn = 1.7903;
+			unitMoney = "";
+		},
+		{
+			x = 1461513600000;
+			y = 1.19;
+			equityReturn = -0.335;
+			unitMoney = "";
+		},
+		{
+			x = 1461600000000;
+			y = 1.201;
+			equityReturn = 0.9244;
+			unitMoney = "";
+		},
+		{
+			x = 1461686400000;
+			y = 1.206;
+			equityReturn = 0.4163;
+			unitMoney = "";
+		},
+		{
+			x = 1461772800000;
+			y = 1.204;
+			equityReturn = -0.1658;
+			unitMoney = "";
+		},
+		{
+			x = 1461859200000;
+			y = 1.213;
+			equityReturn = 0.7475;
+			unitMoney = "";
+		},
+		{
+			x = 1462204800000;
+			y = 1.259;
+			equityReturn = 3.7923;
+			unitMoney = "";
+		},
+		{
+			x = 1462291200000;
+			y = 1.25;
+			equityReturn = -0.7149;
+			unitMoney = "";
+		},
+		{
+			x = 1462377600000;
+			y = 1.252;
+			equityReturn = 0.16;
+			unitMoney = "";
+		},
+		{
+			x = 1462464000000;
+			y = 1.212;
+			equityReturn = -3.1949;
+			unitMoney = "";
+		},
+		{
+			x = 1462723200000;
+			y = 1.202;
+			equityReturn = -0.8251;
+			unitMoney = "";
+		},
+		{
+			x = 1462809600000;
+			y = 1.218;
+			equityReturn = 1.3311;
+			unitMoney = "";
+		},
+		{
+			x = 1462896000000;
+			y = 1.235;
+			equityReturn = 1.3957;
+			unitMoney = "";
+		},
+		{
+			x = 1462982400000;
+			y = 1.233;
+			equityReturn = -0.1619;
+			unitMoney = "";
+		},
+		{
+			x = 1463068800000;
+			y = 1.221;
+			equityReturn = -0.9732;
+			unitMoney = "";
+		},
+		{
+			x = 1463328000000;
+			y = 1.238;
+			equityReturn = 1.3923;
+			unitMoney = "";
+		},
+		{
+			x = 1463414400000;
+			y = 1.225;
+			equityReturn = -1.0501;
+			unitMoney = "";
+		},
+		{
+			x = 1463500800000;
+			y = 1.2;
+			equityReturn = -2.0408;
+			unitMoney = "";
+		},
+		{
+			x = 1463587200000;
+			y = 1.199;
+			equityReturn = -0.0833;
+			unitMoney = "";
+		},
+		{
+			x = 1463673600000;
+			y = 1.21;
+			equityReturn = 0.9174;
+			unitMoney = "";
+		},
+		{
+			x = 1463932800000;
+			y = 1.224;
+			equityReturn = 1.157;
+			unitMoney = "";
+		},
+		{
+			x = 1464019200000;
+			y = 1.209;
+			equityReturn = -1.2255;
+			unitMoney = "";
+		},
+		{
+			x = 1464105600000;
+			y = 1.2;
+			equityReturn = -0.7444;
+			unitMoney = "";
+		},
+		{
+			x = 1464192000000;
+			y = 1.208;
+			equityReturn = 0.6667;
+			unitMoney = "";
+		},
+		{
+			x = 1464278400000;
+			y = 1.207;
+			equityReturn = -0.0828;
+			unitMoney = "";
+		},
+		{
+			x = 1464537600000;
+			y = 1.203;
+			equityReturn = -0.3314;
+			unitMoney = "";
+		},
+		{
+			x = 1464624000000;
+			y = 1.243;
+			equityReturn = 3.325;
+			unitMoney = "";
+		},
+		{
+			x = 1464710400000;
+			y = 1.246;
+			equityReturn = 0.2414;
+			unitMoney = "";
+		},
+		{
+			x = 1464796800000;
+			y = 1.252;
+			equityReturn = 0.4815;
+			unitMoney = "";
+		},
+		{
+			x = 1464883200000;
+			y = 1.279;
+			equityReturn = 2.1565;
+			unitMoney = "";
+		},
+		{
+			x = 1465142400000;
+			y = 1.284;
+			equityReturn = 0.3909;
+			unitMoney = "";
+		},
+		{
+			x = 1465228800000;
+			y = 1.288;
+			equityReturn = 0.3115;
+			unitMoney = "";
+		},
+		{
+			x = 1465315200000;
+			y = 1.274;
+			equityReturn = -1.087;
+			unitMoney = "";
+		},
+		{
+			x = 1465747200000;
+			y = 1.239;
+			equityReturn = -2.7473;
+			unitMoney = "";
+		},
+		{
+			x = 1465833600000;
+			y = 1.262;
+			equityReturn = 1.8563;
+			unitMoney = "";
+		},
+		{
+			x = 1465920000000;
+			y = 1.291;
+			equityReturn = 2.2979;
+			unitMoney = "";
+		},
+		{
+			x = 1466006400000;
+			y = 1.284;
+			equityReturn = -0.5422;
+			unitMoney = "";
+		},
+		{
+			x = 1466092800000;
+			y = 1.306;
+			equityReturn = 1.7134;
+			unitMoney = "";
+		},
+		{
+			x = 1466352000000;
+			y = 1.301;
+			equityReturn = -0.3828;
+			unitMoney = "";
+		},
+		{
+			x = 1466438400000;
+			y = 1.287;
+			equityReturn = -1.0761;
+			unitMoney = "";
+		},
+		{
+			x = 1466524800000;
+			y = 1.298;
+			equityReturn = 0.8547;
+			unitMoney = "";
+		},
+		{
+			x = 1466611200000;
+			y = 1.29;
+			equityReturn = -0.6163;
+			unitMoney = "";
+		},
+		{
+			x = 1466697600000;
+			y = 1.279;
+			equityReturn = -0.8527;
+			unitMoney = "";
+		},
+		{
+			x = 1466956800000;
+			y = 1.312;
+			equityReturn = 2.5801;
+			unitMoney = "";
+		},
+		{
+			x = 1467043200000;
+			y = 1.311;
+			equityReturn = -0.0762;
+			unitMoney = "";
+		},
+		{
+			x = 1467129600000;
+			y = 1.311;
+			equityReturn = 0;
+			unitMoney = "";
+		},
+		{
+			x = 1467216000000;
+			y = 1.316;
+			equityReturn = 0.3814;
+			unitMoney = "";
+		},
+		{
+			x = 1467302400000;
+			y = 1.316;
+			equityReturn = 0;
+			unitMoney = "";
+		},
+		{
+			x = 1467561600000;
+			y = 1.334;
+			equityReturn = 1.3678;
+			unitMoney = "";
+		},
+		{
+			x = 1467648000000;
+			y = 1.341;
+			equityReturn = 0.5247;
+			unitMoney = "";
+		},
+		{
+			x = 1467734400000;
+			y = 1.372;
+			equityReturn = 2.3117;
+			unitMoney = "";
+		},
+		{
+			x = 1467820800000;
+			y = 1.364;
+			equityReturn = -0.5831;
+			unitMoney = "";
+		},
+		{
+			x = 1467907200000;
+			y = 1.362;
+			equityReturn = -0.1466;
+			unitMoney = "";
+		},
+		{
+			x = 1468166400000;
+			y = 1.382;
+			equityReturn = 1.4684;
+			unitMoney = "";
+		},
+		{
+			x = 1468252800000;
+			y = 1.426;
+			equityReturn = 3.1838;
+			unitMoney = "";
+		},
+		{
+			x = 1468339200000;
+			y = 1.412;
+			equityReturn = -0.9818;
+			unitMoney = "";
+		},
+		{
+			x = 1468425600000;
+			y = 1.409;
+			equityReturn = -0.2125;
+			unitMoney = "";
+		},
+		{
+			x = 1468512000000;
+			y = 1.422;
+			equityReturn = 0.9226;
+			unitMoney = "";
+		},
+		{
+			x = 1468771200000;
+			y = 1.418;
+			equityReturn = -0.2813;
+			unitMoney = "";
+		},
+		{
+			x = 1468857600000;
+			y = 1.394;
+			equityReturn = -1.6925;
+			unitMoney = "";
+		},
+		{
+			x = 1468944000000;
+			y = 1.391;
+			equityReturn = -0.2152;
+			unitMoney = "";
+		},
+		{
+			x = 1469030400000;
+			y = 1.4;
+			equityReturn = 0.647;
+			unitMoney = "";
+		},
+		{
+			x = 1469116800000;
+			y = 1.374;
+			equityReturn = -1.8571;
+			unitMoney = "";
+		},
+		{
+			x = 1469376000000;
+			y = 1.375;
+			equityReturn = 0.0728;
+			unitMoney = "";
+		},
+		{
+			x = 1469462400000;
+			y = 1.414;
+			equityReturn = 2.8364;
+			unitMoney = "";
+		},
+		{
+			x = 1469548800000;
+			y = 1.387;
+			equityReturn = -1.9095;
+			unitMoney = "";
+		},
+		{
+			x = 1469635200000;
+			y = 1.41;
+			equityReturn = 1.6583;
+			unitMoney = "";
+		},
+		{
+			x = 1469721600000;
+			y = 1.408;
+			equityReturn = -0.1418;
+			unitMoney = "";
+		},
+		{
+			x = 1469980800000;
+			y = 1.382;
+			equityReturn = -1.8466;
+			unitMoney = "";
+		},
+		{
+			x = 1470067200000;
+			y = 1.381;
+			equityReturn = -0.0724;
+			unitMoney = "";
+		},
+		{
+			x = 1470153600000;
+			y = 1.385;
+			equityReturn = 0.2896;
+			unitMoney = "";
+		},
+		{
+			x = 1470240000000;
+			y = 1.384;
+			equityReturn = -0.0722;
+			unitMoney = "";
+		},
+		{
+			x = 1470326400000;
+			y = 1.377;
+			equityReturn = -0.5058;
+			unitMoney = "";
+		},
+		{
+			x = 1470585600000;
+			y = 1.388;
+			equityReturn = 0.7988;
+			unitMoney = "";
+		},
+		{
+			x = 1470672000000;
+			y = 1.406;
+			equityReturn = 1.2968;
+			unitMoney = "";
+		},
+		{
+			x = 1470758400000;
+			y = 1.397;
+			equityReturn = -0.6401;
+			unitMoney = "";
+		},
+		{
+			x = 1470844800000;
+			y = 1.396;
+			equityReturn = -0.0716;
+			unitMoney = "";
+		},
+		{
+			x = 1470931200000;
+			y = 1.403;
+			equityReturn = 0.5014;
+			unitMoney = "";
+		},
+		{
+			x = 1471190400000;
+			y = 1.432;
+			equityReturn = 2.067;
+			unitMoney = "";
+		},
+		{
+			x = 1471276800000;
+			y = 1.432;
+			equityReturn = 0;
+			unitMoney = "";
+		},
+		{
+			x = 1471363200000;
+			y = 1.437;
+			equityReturn = 0.3492;
+			unitMoney = "";
+		},
+		{
+			x = 1471449600000;
+			y = 1.424;
+			equityReturn = -0.9047;
+			unitMoney = "";
+		},
+		{
+			x = 1471536000000;
+			y = 1.417;
+			equityReturn = -0.4916;
+			unitMoney = "";
+		},
+		{
+			x = 1471795200000;
+			y = 1.413;
+			equityReturn = -0.2823;
+			unitMoney = "";
+		},
+		{
+			x = 1471881600000;
+			y = 1.412;
+			equityReturn = -0.0708;
+			unitMoney = "";
+		},
+		{
+			x = 1471968000000;
+			y = 1.403;
+			equityReturn = -0.6374;
+			unitMoney = "";
+		},
+		{
+			x = 1472054400000;
+			y = 1.392;
+			equityReturn = -0.784;
+			unitMoney = "";
+		},
+		{
+			x = 1472140800000;
+			y = 1.389;
+			equityReturn = -0.2155;
+			unitMoney = "";
+		},
+		{
+			x = 1472400000000;
+			y = 1.381;
+			equityReturn = -0.576;
+			unitMoney = "";
+		},
+		{
+			x = 1472486400000;
+			y = 1.382;
+			equityReturn = 0.0724;
+			unitMoney = "";
+		},
+		{
+			x = 1472572800000;
+			y = 1.386;
+			equityReturn = 0.2894;
+			unitMoney = "";
+		},
+		{
+			x = 1472659200000;
+			y = 1.379;
+			equityReturn = -0.5051;
+			unitMoney = "";
+		},
+		{
+			x = 1472745600000;
+			y = 1.371;
+			equityReturn = -0.5801;
+			unitMoney = "";
+		},
+		{
+			x = 1473004800000;
+			y = 1.376;
+			equityReturn = 0.3647;
+			unitMoney = "";
+		},
+		{
+			x = 1473091200000;
+			y = 1.388;
+			equityReturn = 0.8721;
+			unitMoney = "";
+		},
+		{
+			x = 1473177600000;
+			y = 1.38;
+			equityReturn = -0.5764;
+			unitMoney = "";
+		},
+		{
+			x = 1473264000000;
+			y = 1.377;
+			equityReturn = -0.2174;
+			unitMoney = "";
+		},
+		{
+			x = 1473350400000;
+			y = 1.367;
+			equityReturn = -0.7262;
+			unitMoney = "";
+		},
+		{
+			x = 1473609600000;
+			y = 1.337;
+			equityReturn = -2.1946;
+			unitMoney = "";
+		},
+		{
+			x = 1473696000000;
+			y = 1.342;
+			equityReturn = 0.374;
+			unitMoney = "";
+		},
+		{
+			x = 1473782400000;
+			y = 1.328;
+			equityReturn = -1.0432;
+			unitMoney = "";
+		},
+		{
+			x = 1474214400000;
+			y = 1.344;
+			equityReturn = 1.2048;
+			unitMoney = "";
+		},
+		{
+			x = 1474300800000;
+			y = 1.342;
+			equityReturn = -0.1488;
+			unitMoney = "";
+		},
+		{
+			x = 1474387200000;
+			y = 1.343;
+			equityReturn = 0.0745;
+			unitMoney = "";
+		},
+		{
+			x = 1474473600000;
+			y = 1.354;
+			equityReturn = 0.8191;
+			unitMoney = "";
+		},
+		{
+			x = 1474560000000;
+			y = 1.351;
+			equityReturn = -0.2216;
+			unitMoney = "";
+		},
+		{
+			x = 1474819200000;
+			y = 1.332;
+			equityReturn = -1.4064;
+			unitMoney = "";
+		},
+		{
+			x = 1474905600000;
+			y = 1.341;
+			equityReturn = 0.6757;
+			unitMoney = "";
+		},
+		{
+			x = 1474992000000;
+			y = 1.342;
+			equityReturn = 0.0746;
+			unitMoney = "";
+		},
+		{
+			x = 1475078400000;
+			y = 1.348;
+			equityReturn = 0.4471;
+			unitMoney = "";
+		},
+		{
+			x = 1475164800000;
+			y = 1.365;
+			equityReturn = 1.2611;
+			unitMoney = "";
+		},
+		{
+			x = 1476028800000;
+			y = 1.377;
+			equityReturn = 0.8791;
+			unitMoney = "";
+		},
+		{
+			x = 1476115200000;
+			y = 1.377;
+			equityReturn = 0;
+			unitMoney = "";
+		},
+		{
+			x = 1476201600000;
+			y = 1.375;
+			equityReturn = -0.1452;
+			unitMoney = "";
+		},
+		{
+			x = 1476288000000;
+			y = 1.369;
+			equityReturn = -0.4364;
+			unitMoney = "";
+		},
+		{
+			x = 1476374400000;
+			y = 1.368;
+			equityReturn = -0.073;
+			unitMoney = "";
+		},
+		{
+			x = 1476633600000;
+			y = 1.359;
+			equityReturn = -0.6579;
+			unitMoney = "";
+		},
+		{
+			x = 1476720000000;
+			y = 1.375;
+			equityReturn = 1.1773;
+			unitMoney = "";
+		},
+		{
+			x = 1476806400000;
+			y = 1.37;
+			equityReturn = -0.3636;
+			unitMoney = "";
+		},
+		{
+			x = 1476892800000;
+			y = 1.37;
+			equityReturn = 0;
+			unitMoney = "";
+		},
+		{
+			x = 1476979200000;
+			y = 1.369;
+			equityReturn = -0.073;
+			unitMoney = "";
+		},
+		{
+			x = 1477238400000;
+			y = 1.376;
+			equityReturn = 0.5113;
+			unitMoney = "";
+		},
+		{
+			x = 1477324800000;
+			y = 1.397;
+			equityReturn = 1.5262;
+			unitMoney = "";
+		},
+		{
+			x = 1477411200000;
+			y = 1.404;
+			equityReturn = 0.5011;
+			unitMoney = "";
+		},
+		{
+			x = 1477497600000;
+			y = 1.401;
+			equityReturn = -0.2137;
+			unitMoney = "";
+		},
+		{
+			x = 1477584000000;
+			y = 1.399;
+			equityReturn = -0.1428;
+			unitMoney = "";
+		},
+		{
+			x = 1477843200000;
+			y = 1.404;
+			equityReturn = 0.3574;
+			unitMoney = "";
+		},
+		{
+			x = 1477929600000;
+			y = 1.415;
+			equityReturn = 0.7835;
+			unitMoney = "";
+		},
+		{
+			x = 1478016000000;
+			y = 1.403;
+			equityReturn = -0.8481;
+			unitMoney = "";
+		},
+		{
+			x = 1478102400000;
+			y = 1.405;
+			equityReturn = 0.1426;
+			unitMoney = "";
+		},
+		{
+			x = 1478188800000;
+			y = 1.394;
+			equityReturn = -0.7829;
+			unitMoney = "";
+		},
+		{
+			x = 1478448000000;
+			y = 1.392;
+			equityReturn = -0.1435;
+			unitMoney = "";
+		},
+		{
+			x = 1478534400000;
+			y = 1.406;
+			equityReturn = 1.0057;
+			unitMoney = "";
+		},
+		{
+			x = 1478620800000;
+			y = 1.397;
+			equityReturn = -0.6401;
+			unitMoney = "";
+		},
+		{
+			x = 1478707200000;
+			y = 1.41;
+			equityReturn = 0.9306;
+			unitMoney = "";
+		},
+		{
+			x = 1478793600000;
+			y = 1.404;
+			equityReturn = -0.4255;
+			unitMoney = "";
+		},
+		{
+			x = 1479052800000;
+			y = 1.394;
+			equityReturn = -0.7123;
+			unitMoney = "";
+		},
+		{
+			x = 1479139200000;
+			y = 1.404;
+			equityReturn = 0.7174;
+			unitMoney = "";
+		},
+		{
+			x = 1479225600000;
+			y = 1.4;
+			equityReturn = -0.2849;
+			unitMoney = "";
+		},
+		{
+			x = 1479312000000;
+			y = 1.404;
+			equityReturn = 0.2857;
+			unitMoney = "";
+		},
+		{
+			x = 1479398400000;
+			y = 1.4;
+			equityReturn = -0.2849;
+			unitMoney = "";
+		},
+		{
+			x = 1479657600000;
+			y = 1.402;
+			equityReturn = 0.1429;
+			unitMoney = "";
+		},
+		{
+			x = 1479744000000;
+			y = 1.407;
+			equityReturn = 0.3566;
+			unitMoney = "";
+		},
+		{
+			x = 1479830400000;
+			y = 1.427;
+			equityReturn = 1.4215;
+			unitMoney = "";
+		},
+		{
+			x = 1479916800000;
+			y = 1.446;
+			equityReturn = 1.3315;
+			unitMoney = "";
+		},
+		{
+			x = 1480003200000;
+			y = 1.455;
+			equityReturn = 0.6224;
+			unitMoney = "";
+		},
+		{
+			x = 1480262400000;
+			y = 1.466;
+			equityReturn = 0.756;
+			unitMoney = "";
+		},
+		{
+			x = 1480348800000;
+			y = 1.496;
+			equityReturn = 2.0464;
+			unitMoney = "";
+		},
+		{
+			x = 1480435200000;
+			y = 1.475;
+			equityReturn = -1.4037;
+			unitMoney = "";
+		},
+		{
+			x = 1480521600000;
+			y = 1.495;
+			equityReturn = 1.3559;
+			unitMoney = "";
+		},
+		{
+			x = 1480608000000;
+			y = 1.469;
+			equityReturn = -1.7391;
+			unitMoney = "";
+		},
+		{
+			x = 1480867200000;
+			y = 1.438;
+			equityReturn = -2.1103;
+			unitMoney = "";
+		},
+		{
+			x = 1480953600000;
+			y = 1.452;
+			equityReturn = 0.9736;
+			unitMoney = "";
+		},
+		{
+			x = 1481040000000;
+			y = 1.455;
+			equityReturn = 0.2066;
+			unitMoney = "";
+		},
+		{
+			x = 1481126400000;
+			y = 1.469;
+			equityReturn = 0.9622;
+			unitMoney = "";
+		},
+		{
+			x = 1481212800000;
+			y = 1.475;
+			equityReturn = 0.4084;
+			unitMoney = "";
+		},
+		{
+			x = 1481472000000;
+			y = 1.435;
+			equityReturn = -2.7119;
+			unitMoney = "";
+		},
+		{
+			x = 1481558400000;
+			y = 1.446;
+			equityReturn = 0.7666;
+			unitMoney = "";
+		},
+		{
+			x = 1481644800000;
+			y = 1.43;
+			equityReturn = -1.1065;
+			unitMoney = "";
+		},
+		{
+			x = 1481731200000;
+			y = 1.409;
+			equityReturn = -1.4685;
+			unitMoney = "";
+		},
+		{
+			x = 1481817600000;
+			y = 1.42;
+			equityReturn = 0.7807;
+			unitMoney = "";
+		},
+		{
+			x = 1482076800000;
+			y = 1.418;
+			equityReturn = -0.1408;
+			unitMoney = "";
+		},
+		{
+			x = 1482163200000;
+			y = 1.411;
+			equityReturn = -0.4937;
+			unitMoney = "";
+		},
+		{
+			x = 1482249600000;
+			y = 1.417;
+			equityReturn = 0.4252;
+			unitMoney = "";
+		},
+		{
+			x = 1482336000000;
+			y = 1.418;
+			equityReturn = 0.0706;
+			unitMoney = "";
+		},
+		{
+			x = 1482422400000;
+			y = 1.4;
+			equityReturn = -1.2694;
+			unitMoney = "";
+		},
+		{
+			x = 1482681600000;
+			y = 1.404;
+			equityReturn = 0.2857;
+			unitMoney = "";
+		},
+		{
+			x = 1482768000000;
+			y = 1.407;
+			equityReturn = 0.2137;
+			unitMoney = "";
+		},
+		{
+			x = 1482854400000;
+			y = 1.401;
+			equityReturn = -0.4264;
+			unitMoney = "";
+		},
+		{
+			x = 1482940800000;
+			y = 1.401;
+			equityReturn = 0;
+			unitMoney = "";
+		},
+		{
+			x = 1483027200000;
+			y = 1.413;
+			equityReturn = 0.8565;
+			unitMoney = "";
+		},
+		{
+			x = 1483113600000;
+			y = 1.413;
+			equityReturn = 0;
+			unitMoney = "";
+		},
+		{
+			x = 1483372800000;
+			y = 1.426;
+			equityReturn = 0.92;
+			unitMoney = "";
+		},
+		{
+			x = 1483459200000;
+			y = 1.455;
+			equityReturn = 2.0337;
+			unitMoney = "";
+		},
+		{
+			x = 1483545600000;
+			y = 1.45;
+			equityReturn = -0.3436;
+			unitMoney = "";
+		},
+		{
+			x = 1483632000000;
+			y = 1.446;
+			equityReturn = -0.2759;
+			unitMoney = "";
+		},
+		{
+			x = 1483891200000;
+			y = 1.449;
+			equityReturn = 0.2075;
+			unitMoney = "";
+		},
+		{
+			x = 1483977600000;
+			y = 1.453;
+			equityReturn = 0.2761;
+			unitMoney = "";
+		},
+		{
+			x = 1484064000000;
+			y = 1.437;
+			equityReturn = -1.1012;
+			unitMoney = "";
+		},
+		{
+			x = 1484150400000;
+			y = 1.425;
+			equityReturn = -0.8351;
+			unitMoney = "";
+		},
+		{
+			x = 1484236800000;
+			y = 1.422;
+			equityReturn = -0.2105;
+			unitMoney = "";
+		},
+		{
+			x = 1484496000000;
+			y = 1.421;
+			equityReturn = -0.0703;
+			unitMoney = "";
+		},
+		{
+			x = 1484582400000;
+			y = 1.435;
+			equityReturn = 0.9852;
+			unitMoney = "";
+		},
+		{
+			x = 1484668800000;
+			y = 1.449;
+			equityReturn = 0.9756;
+			unitMoney = "";
+		},
+		{
+			x = 1484755200000;
+			y = 1.45;
+			equityReturn = 0.069;
+			unitMoney = "";
+		},
+		{
+			x = 1484841600000;
+			y = 1.461;
+			equityReturn = 0.7586;
+			unitMoney = "";
+		},
+		{
+			x = 1485100800000;
+			y = 1.459;
+			equityReturn = -0.1369;
+			unitMoney = "";
+		},
+		{
+			x = 1485187200000;
+			y = 1.46;
+			equityReturn = 0.0685;
+			unitMoney = "";
+		},
+		{
+			x = 1485273600000;
+			y = 1.464;
+			equityReturn = 0.274;
+			unitMoney = "";
+		},
+		{
+			x = 1485360000000;
+			y = 1.466;
+			equityReturn = 0.1366;
+			unitMoney = "";
+		},
+		{
+			x = 1486051200000;
+			y = 1.456;
+			equityReturn = -0.6821;
+			unitMoney = "";
+		},
+		{
+			x = 1486310400000;
+			y = 1.46;
+			equityReturn = 0.2747;
+			unitMoney = "";
+		},
+		{
+			x = 1486396800000;
+			y = 1.457;
+			equityReturn = -0.2055;
+			unitMoney = "";
+		},
+		{
+			x = 1486483200000;
+			y = 1.462;
+			equityReturn = 0.3432;
+			unitMoney = "";
+		},
+		{
+			x = 1486569600000;
+			y = 1.47;
+			equityReturn = 0.5472;
+			unitMoney = "";
+		},
+		{
+			x = 1486656000000;
+			y = 1.473;
+			equityReturn = 0.2041;
+			unitMoney = "";
+		},
+		{
+			x = 1486915200000;
+			y = 1.499;
+			equityReturn = 1.7651;
+			unitMoney = "";
+		},
+		{
+			x = 1487001600000;
+			y = 1.496;
+			equityReturn = -0.2001;
+			unitMoney = "";
+		},
+		{
+			x = 1487088000000;
+			y = 1.491;
+			equityReturn = -0.3342;
+			unitMoney = "";
+		},
+		{
+			x = 1487174400000;
+			y = 1.502;
+			equityReturn = 0.7378;
+			unitMoney = "";
+		},
+		{
+			x = 1487260800000;
+			y = 1.51;
+			equityReturn = 0.5326;
+			unitMoney = "";
+		},
+		{
+			x = 1487520000000;
+			y = 1.555;
+			equityReturn = 2.9801;
+			unitMoney = "";
+		},
+		{
+			x = 1487606400000;
+			y = 1.553;
+			equityReturn = -0.1286;
+			unitMoney = "";
+		},
+		{
+			x = 1487692800000;
+			y = 1.567;
+			equityReturn = 0.9015;
+			unitMoney = "";
+		},
+		{
+			x = 1487779200000;
+			y = 1.562;
+			equityReturn = -0.3191;
+			unitMoney = "";
+		},
+		{
+			x = 1487865600000;
+			y = 1.555;
+			equityReturn = -0.4481;
+			unitMoney = "";
+		},
+		{
+			x = 1488124800000;
+			y = 1.533;
+			equityReturn = -1.4148;
+			unitMoney = "";
+		},
+		{
+			x = 1488211200000;
+			y = 1.538;
+			equityReturn = 0.3262;
+			unitMoney = "";
+		},
+		{
+			x = 1488297600000;
+			y = 1.543;
+			equityReturn = 0.3251;
+			unitMoney = "";
+		},
+		{
+			x = 1488384000000;
+			y = 1.537;
+			equityReturn = -0.3889;
+			unitMoney = "";
+		},
+		{
+			x = 1488470400000;
+			y = 1.542;
+			equityReturn = 0.3253;
+			unitMoney = "";
+		},
+		{
+			x = 1488729600000;
+			y = 1.564;
+			equityReturn = 1.4267;
+			unitMoney = "";
+		},
+		{
+			x = 1488816000000;
+			y = 1.58;
+			equityReturn = 1.023;
+			unitMoney = "";
+		},
+		{
+			x = 1488902400000;
+			y = 1.576;
+			equityReturn = -0.2532;
+			unitMoney = "";
+		},
+		{
+			x = 1488988800000;
+			y = 1.569;
+			equityReturn = -0.4442;
+			unitMoney = "";
+		},
+		{
+			x = 1489075200000;
+			y = 1.587;
+			equityReturn = 1.1472;
+			unitMoney = "";
+		},
+		{
+			x = 1489334400000;
+			y = 1.597;
+			equityReturn = 0.6301;
+			unitMoney = "";
+		},
+		{
+			x = 1489420800000;
+			y = 1.595;
+			equityReturn = -0.1252;
+			unitMoney = "";
+		},
+		{
+			x = 1489507200000;
+			y = 1.608;
+			equityReturn = 0.815;
+			unitMoney = "";
+		},
+		{
+			x = 1489593600000;
+			y = 1.6;
+			equityReturn = -0.4975;
+			unitMoney = "";
+		},
+		{
+			x = 1489680000000;
+			y = 1.591;
+			equityReturn = -0.5625;
+			unitMoney = "";
+		},
+		{
+			x = 1489939200000;
+			y = 1.596;
+			equityReturn = 0.3143;
+			unitMoney = "";
+		},
+		{
+			x = 1490025600000;
+			y = 1.635;
+			equityReturn = 2.4436;
+			unitMoney = "";
+		},
+		{
+			x = 1490112000000;
+			y = 1.651;
+			equityReturn = 0.9786;
+			unitMoney = "";
+		},
+		{
+			x = 1490198400000;
+			y = 1.649;
+			equityReturn = -0.1211;
+			unitMoney = "";
+		},
+		{
+			x = 1490284800000;
+			y = 1.65;
+			equityReturn = 0.0606;
+			unitMoney = "";
+		},
+		{
+			x = 1490544000000;
+			y = 1.626;
+			equityReturn = -1.4545;
+			unitMoney = "";
+		},
+		{
+			x = 1490630400000;
+			y = 1.625;
+			equityReturn = -0.0615;
+			unitMoney = "";
+		},
+		{
+			x = 1490716800000;
+			y = 1.631;
+			equityReturn = 0.3692;
+			unitMoney = "";
+		},
+		{
+			x = 1490803200000;
+			y = 1.621;
+			equityReturn = -0.6131;
+			unitMoney = "";
+		},
+		{
+			x = 1490889600000;
+			y = 1.637;
+			equityReturn = 0.987;
+			unitMoney = "";
+		},
+		{
+			x = 1491321600000;
+			y = 1.637;
+			equityReturn = 0;
+			unitMoney = "";
+		},
+		{
+			x = 1491408000000;
+			y = 1.641;
+			equityReturn = 0.2443;
+			unitMoney = "";
+		},
+		{
+			x = 1491494400000;
+			y = 1.638;
+			equityReturn = -0.1828;
+			unitMoney = "";
+		},
+		{
+			x = 1491753600000;
+			y = 1.616;
+			equityReturn = -1.3431;
+			unitMoney = "";
+		},
+		{
+			x = 1491840000000;
+			y = 1.605;
+			equityReturn = -0.6807;
+			unitMoney = "";
+		},
+		{
+			x = 1491926400000;
+			y = 1.614;
+			equityReturn = 0.5607;
+			unitMoney = "";
+		},
+		{
+			x = 1492012800000;
+			y = 1.631;
+			equityReturn = 1.0533;
+			unitMoney = "";
+		},
+		{
+			x = 1492099200000;
+			y = 1.617;
+			equityReturn = -0.8584;
+			unitMoney = "";
+		},
+		{
+			x = 1492358400000;
+			y = 1.633;
+			equityReturn = 0.9895;
+			unitMoney = "";
+		},
+		{
+			x = 1492444800000;
+			y = 1.665;
+			equityReturn = 1.9596;
+			unitMoney = "";
+		},
+		{
+			x = 1492531200000;
+			y = 1.673;
+			equityReturn = 0.4805;
+			unitMoney = "";
+		},
+		{
+			x = 1492617600000;
+			y = 1.703;
+			equityReturn = 1.7932;
+			unitMoney = "";
+		},
+		{
+			x = 1492704000000;
+			y = 1.691;
+			equityReturn = -0.7046;
+			unitMoney = "";
+		},
+		{
+			x = 1492963200000;
+			y = 1.676;
+			equityReturn = -0.887;
+			unitMoney = "";
+		},
+		{
+			x = 1493049600000;
+			y = 1.714;
+			equityReturn = 2.2673;
+			unitMoney = "";
+		},
+		{
+			x = 1493136000000;
+			y = 1.702;
+			equityReturn = -0.7001;
+			unitMoney = "";
+		},
+		{
+			x = 1493222400000;
+			y = 1.705;
+			equityReturn = 0.1763;
+			unitMoney = "";
+		},
+		{
+			x = 1493308800000;
+			y = 1.681;
+			equityReturn = -1.4076;
+			unitMoney = "";
+		},
+		{
+			x = 1493654400000;
+			y = 1.685;
+			equityReturn = 0.238;
+			unitMoney = "";
+		},
+		{
+			x = 1493740800000;
+			y = 1.693;
+			equityReturn = 0.4748;
+			unitMoney = "";
+		},
+		{
+			x = 1493827200000;
+			y = 1.687;
+			equityReturn = -0.3544;
+			unitMoney = "";
+		},
+		{
+			x = 1493913600000;
+			y = 1.689;
+			equityReturn = 0.1186;
+			unitMoney = "";
+		},
+		{
+			x = 1494172800000;
+			y = 1.661;
+			equityReturn = -1.6578;
+			unitMoney = "";
+		},
+		{
+			x = 1494259200000;
+			y = 1.658;
+			equityReturn = -0.1806;
+			unitMoney = "";
+		},
+		{
+			x = 1494345600000;
+			y = 1.661;
+			equityReturn = 0.1809;
+			unitMoney = "";
+		},
+		{
+			x = 1494432000000;
+			y = 1.688;
+			equityReturn = 1.6255;
+			unitMoney = "";
+		},
+		{
+			x = 1494518400000;
+			y = 1.697;
+			equityReturn = 0.5332;
+			unitMoney = "";
+		},
+		{
+			x = 1494777600000;
+			y = 1.704;
+			equityReturn = 0.4125;
+			unitMoney = "";
+		},
+		{
+			x = 1494864000000;
+			y = 1.736;
+			equityReturn = 1.8779;
+			unitMoney = "";
+		},
+		{
+			x = 1494950400000;
+			y = 1.713;
+			equityReturn = -1.3249;
+			unitMoney = "";
+		},
+		{
+			x = 1495036800000;
+			y = 1.709;
+			equityReturn = -0.2335;
+			unitMoney = "";
+		},
+		{
+			x = 1495123200000;
+			y = 1.725;
+			equityReturn = 0.9362;
+			unitMoney = "";
+		},
+		{
+			x = 1495382400000;
+			y = 1.731;
+			equityReturn = 0.3478;
+			unitMoney = "";
+		},
+		{
+			x = 1495468800000;
+			y = 1.753;
+			equityReturn = 1.2709;
+			unitMoney = "";
+		},
+		{
+			x = 1495555200000;
+			y = 1.746;
+			equityReturn = -0.3993;
+			unitMoney = "";
+		},
+		{
+			x = 1495641600000;
+			y = 1.741;
+			equityReturn = -0.2864;
+			unitMoney = "";
+		},
+		{
+			x = 1495728000000;
+			y = 1.748;
+			equityReturn = 0.4021;
+			unitMoney = "";
+		},
+		{
+			x = 1496160000000;
+			y = 1.75;
+			equityReturn = 0.1144;
+			unitMoney = "";
+		},
+		{
+			x = 1496246400000;
+			y = 1.758;
+			equityReturn = 0.4571;
+			unitMoney = "";
+		},
+		{
+			x = 1496332800000;
+			y = 1.751;
+			equityReturn = -0.3982;
+			unitMoney = "";
+		},
+		{
+			x = 1496592000000;
+			y = 1.739;
+			equityReturn = -0.6853;
+			unitMoney = "";
+		},
+		{
+			x = 1496678400000;
+			y = 1.773;
+			equityReturn = 1.9551;
+			unitMoney = "";
+		},
+		{
+			x = 1496764800000;
+			y = 1.801;
+			equityReturn = 1.5792;
+			unitMoney = "";
+		},
+		{
+			x = 1496851200000;
+			y = 1.835;
+			equityReturn = 1.8878;
+			unitMoney = "";
+		},
+		{
+			x = 1496937600000;
+			y = 1.84;
+			equityReturn = 0.2725;
+			unitMoney = "";
+		},
+		{
+			x = 1497196800000;
+			y = 1.865;
+			equityReturn = 1.3587;
+			unitMoney = "";
+		},
+		{
+			x = 1497283200000;
+			y = 1.869;
+			equityReturn = 0.2145;
+			unitMoney = "";
+		},
+		{
+			x = 1497369600000;
+			y = 1.845;
+			equityReturn = -1.2841;
+			unitMoney = "";
+		},
+		{
+			x = 1497456000000;
+			y = 1.834;
+			equityReturn = -0.5962;
+			unitMoney = "";
+		},
+		{
+			x = 1497542400000;
+			y = 1.82;
+			equityReturn = -0.7634;
+			unitMoney = "";
+		},
+		{
+			x = 1497801600000;
+			y = 1.841;
+			equityReturn = 1.1538;
+			unitMoney = "";
+		},
+		{
+			x = 1497888000000;
+			y = 1.837;
+			equityReturn = -0.2173;
+			unitMoney = "";
+		},
+		{
+			x = 1497974400000;
+			y = 1.879;
+			equityReturn = 2.2863;
+			unitMoney = "";
+		},
+		{
+			x = 1498060800000;
+			y = 1.872;
+			equityReturn = -0.3725;
+			unitMoney = "";
+		},
+		{
+			x = 1498147200000;
+			y = 1.898;
+			equityReturn = 1.3889;
+			unitMoney = "";
+		},
+		{
+			x = 1498406400000;
+			y = 1.927;
+			equityReturn = 1.5279;
+			unitMoney = "";
+		},
+		{
+			x = 1498492800000;
+			y = 1.928;
+			equityReturn = 0.0519;
+			unitMoney = "";
+		},
+		{
+			x = 1498579200000;
+			y = 1.893;
+			equityReturn = -1.8154;
+			unitMoney = "";
+		},
+		{
+			x = 1498665600000;
+			y = 1.894;
+			equityReturn = 0.0528;
+			unitMoney = "";
+		},
+		{
+			x = 1498752000000;
+			y = 1.904;
+			equityReturn = 0.528;
+			unitMoney = "";
+		},
+		{
+			x = 1499011200000;
+			y = 1.874;
+			equityReturn = -1.5756;
+			unitMoney = "";
+		},
+		{
+			x = 1499097600000;
+			y = 1.852;
+			equityReturn = -1.174;
+			unitMoney = "";
+		},
+		{
+			x = 1499184000000;
+			y = 1.88;
+			equityReturn = 1.5119;
+			unitMoney = "";
+		},
+		{
+			x = 1499270400000;
+			y = 1.881;
+			equityReturn = 0.0532;
+			unitMoney = "";
+		},
+		{
+			x = 1499356800000;
+			y = 1.858;
+			equityReturn = -1.2228;
+			unitMoney = "";
+		},
+		{
+			x = 1499616000000;
+			y = 1.861;
+			equityReturn = 0.1615;
+			unitMoney = "";
+		},
+		{
+			x = 1499702400000;
+			y = 1.895;
+			equityReturn = 1.827;
+			unitMoney = "";
+		},
+		{
+			x = 1499788800000;
+			y = 1.87;
+			equityReturn = -1.3193;
+			unitMoney = "";
+		},
+		{
+			x = 1499875200000;
+			y = 1.865;
+			equityReturn = -0.2674;
+			unitMoney = "";
+		},
+		{
+			x = 1499961600000;
+			y = 1.877;
+			equityReturn = 0.6434;
+			unitMoney = "";
+		},
+		{
+			x = 1500220800000;
+			y = 1.858;
+			equityReturn = -1.0123;
+			unitMoney = "";
+		},
+		{
+			x = 1500307200000;
+			y = 1.855;
+			equityReturn = -0.1615;
+			unitMoney = "";
+		},
+		{
+			x = 1500393600000;
+			y = 1.867;
+			equityReturn = 0.6469;
+			unitMoney = "";
+		},
+		{
+			x = 1500480000000;
+			y = 1.895;
+			equityReturn = 1.4997;
+			unitMoney = "";
+		},
+		{
+			x = 1500566400000;
+			y = 1.894;
+			equityReturn = -0.0528;
+			unitMoney = "";
+		},
+		{
+			x = 1500825600000;
+			y = 1.921;
+			equityReturn = 1.4256;
+			unitMoney = "";
+		},
+		{
+			x = 1500912000000;
+			y = 1.916;
+			equityReturn = -0.2603;
+			unitMoney = "";
+		},
+		{
+			x = 1500998400000;
+			y = 1.879;
+			equityReturn = -1.9311;
+			unitMoney = "";
+		},
+		{
+			x = 1501084800000;
+			y = 1.872;
+			equityReturn = -0.3725;
+			unitMoney = "";
+		},
+		{
+			x = 1501171200000;
+			y = 1.904;
+			equityReturn = 1.7094;
+			unitMoney = "";
+		},
+		{
+			x = 1501430400000;
+			y = 1.9;
+			equityReturn = -0.2101;
+			unitMoney = "";
+		},
+		{
+			x = 1501516800000;
+			y = 1.905;
+			equityReturn = 0.2632;
+			unitMoney = "";
+		},
+		{
+			x = 1501603200000;
+			y = 1.895;
+			equityReturn = -0.5249;
+			unitMoney = "";
+		},
+		{
+			x = 1501689600000;
+			y = 1.865;
+			equityReturn = -1.5831;
+			unitMoney = "";
+		},
+		{
+			x = 1501776000000;
+			y = 1.851;
+			equityReturn = -0.7507;
+			unitMoney = "";
+		},
+		{
+			x = 1502035200000;
+			y = 1.89;
+			equityReturn = 2.107;
+			unitMoney = "";
+		},
+		{
+			x = 1502121600000;
+			y = 1.891;
+			equityReturn = 0.0529;
+			unitMoney = "";
+		},
+		{
+			x = 1502208000000;
+			y = 1.931;
+			equityReturn = 2.1153;
+			unitMoney = "";
+		},
+		{
+			x = 1502294400000;
+			y = 1.929;
+			equityReturn = -0.1036;
+			unitMoney = "";
+		},
+		{
+			x = 1502380800000;
+			y = 1.901;
+			equityReturn = -1.4515;
+			unitMoney = "";
+		},
+		{
+			x = 1502640000000;
+			y = 1.929;
+			equityReturn = 1.4729;
+			unitMoney = "";
+		},
+		{
+			x = 1502726400000;
+			y = 1.924;
+			equityReturn = -0.2592;
+			unitMoney = "";
+		},
+		{
+			x = 1502812800000;
+			y = 1.911;
+			equityReturn = -0.6757;
+			unitMoney = "";
+		},
+		{
+			x = 1502899200000;
+			y = 1.903;
+			equityReturn = -0.4186;
+			unitMoney = "";
+		},
+		{
+			x = 1502985600000;
+			y = 1.903;
+			equityReturn = 0;
+			unitMoney = "";
+		},
+		{
+			x = 1503244800000;
+			y = 1.911;
+			equityReturn = 0.4204;
+			unitMoney = "";
+		},
+		{
+			x = 1503331200000;
+			y = 1.909;
+			equityReturn = -0.1047;
+			unitMoney = "";
+		},
+		{
+			x = 1503417600000;
+			y = 1.917;
+			equityReturn = 0.4191;
+			unitMoney = "";
+		},
+		{
+			x = 1503504000000;
+			y = 1.915;
+			equityReturn = -0.1043;
+			unitMoney = "";
+		},
+		{
+			x = 1503590400000;
+			y = 1.925;
+			equityReturn = 0.5222;
+			unitMoney = "";
+		},
+		{
+			x = 1503849600000;
+			y = 1.941;
+			equityReturn = 0.8312;
+			unitMoney = "";
+		},
+		{
+			x = 1503936000000;
+			y = 1.926;
+			equityReturn = -0.7728;
+			unitMoney = "";
+		},
+		{
+			x = 1504022400000;
+			y = 1.944;
+			equityReturn = 0.9346;
+			unitMoney = "";
+		},
+		{
+			x = 1504108800000;
+			y = 1.939;
+			equityReturn = -0.2572;
+			unitMoney = "";
+		},
+		{
+			x = 1504195200000;
+			y = 1.937;
+			equityReturn = -0.1031;
+			unitMoney = "";
+		},
+		{
+			x = 1504454400000;
+			y = 1.921;
+			equityReturn = -0.826;
+			unitMoney = "";
+		},
+		{
+			x = 1504540800000;
+			y = 1.925;
+			equityReturn = 0.2082;
+			unitMoney = "";
+		},
+		{
+			x = 1504627200000;
+			y = 1.914;
+			equityReturn = -0.5714;
+			unitMoney = "";
+		},
+		{
+			x = 1504713600000;
+			y = 1.902;
+			equityReturn = -0.627;
+			unitMoney = "";
+		},
+		{
+			x = 1504800000000;
+			y = 1.889;
+			equityReturn = -0.6835;
+			unitMoney = "";
+		},
+		{
+			x = 1505059200000;
+			y = 1.895;
+			equityReturn = 0.3176;
+			unitMoney = "";
+		},
+		{
+			x = 1505145600000;
+			y = 1.902;
+			equityReturn = 0.3694;
+			unitMoney = "";
+		},
+		{
+			x = 1505232000000;
+			y = 1.93;
+			equityReturn = 1.4721;
+			unitMoney = "";
+		},
+		{
+			x = 1505318400000;
+			y = 1.928;
+			equityReturn = -0.1036;
+			unitMoney = "";
+		},
+		{
+			x = 1505404800000;
+			y = 1.944;
+			equityReturn = 0.8299;
+			unitMoney = "";
+		},
+		{
+			x = 1505664000000;
+			y = 1.966;
+			equityReturn = 1.1317;
+			unitMoney = "";
+		},
+		{
+			x = 1505750400000;
+			y = 1.95;
+			equityReturn = -0.8138;
+			unitMoney = "";
+		},
+		{
+			x = 1505836800000;
+			y = 1.965;
+			equityReturn = 0.7692;
+			unitMoney = "";
+		},
+		{
+			x = 1505923200000;
+			y = 1.962;
+			equityReturn = -0.1527;
+			unitMoney = "";
+		},
+		{
+			x = 1506009600000;
+			y = 1.978;
+			equityReturn = 0.8155;
+			unitMoney = "";
+		},
+		{
+			x = 1506268800000;
+			y = 1.993;
+			equityReturn = 0.7583;
+			unitMoney = "";
+		},
+		{
+			x = 1506355200000;
+			y = 1.981;
+			equityReturn = -0.6021;
+			unitMoney = "";
+		},
+		{
+			x = 1506441600000;
+			y = 1.98;
+			equityReturn = -0.0505;
+			unitMoney = "";
+		},
+		{
+			x = 1506528000000;
+			y = 1.991;
+			equityReturn = 0.5556;
+			unitMoney = "";
+		},
+		{
+			x = 1506614400000;
+			y = 2.004;
+			equityReturn = 0.6529;
+			unitMoney = "";
+		},
+		{
+			x = 1507478400000;
+			y = 2.042;
+			equityReturn = 1.8962;
+			unitMoney = "";
+		},
+		{
+			x = 1507564800000;
+			y = 2.054;
+			equityReturn = 0.5877;
+			unitMoney = "";
+		},
+		{
+			x = 1507651200000;
+			y = 2.092;
+			equityReturn = 1.85;
+			unitMoney = "";
+		},
+		{
+			x = 1507737600000;
+			y = 2.094;
+			equityReturn = 0.0956;
+			unitMoney = "";
+		},
+		{
+			x = 1507824000000;
+			y = 2.094;
+			equityReturn = 0;
+			unitMoney = "";
+		},
+		{
+			x = 1508083200000;
+			y = 2.079;
+			equityReturn = -0.7163;
+			unitMoney = "";
+		},
+		{
+			x = 1508169600000;
+			y = 2.088;
+			equityReturn = 0.4329;
+			unitMoney = "";
+		},
+		{
+			x = 1508256000000;
+			y = 2.117;
+			equityReturn = 1.3889;
+			unitMoney = "";
+		},
+		{
+			x = 1508342400000;
+			y = 2.138;
+			equityReturn = 0.992;
+			unitMoney = "";
+		},
+		{
+			x = 1508428800000;
+			y = 2.115;
+			equityReturn = -1.0758;
+			unitMoney = "";
+		},
+		{
+			x = 1508688000000;
+			y = 2.125;
+			equityReturn = 0.4728;
+			unitMoney = "";
+		},
+		{
+			x = 1508774400000;
+			y = 2.137;
+			equityReturn = 0.5647;
+			unitMoney = "";
+		},
+		{
+			x = 1508860800000;
+			y = 2.157;
+			equityReturn = 0.9359;
+			unitMoney = "";
+		},
+		{
+			x = 1508947200000;
+			y = 2.172;
+			equityReturn = 0.6954;
+			unitMoney = "";
+		},
+		{
+			x = 1509033600000;
+			y = 2.212;
+			equityReturn = 1.8416;
+			unitMoney = "";
+		},
+		{
+			x = 1509292800000;
+			y = 2.205;
+			equityReturn = -0.3165;
+			unitMoney = "";
+		},
+		{
+			x = 1509379200000;
+			y = 2.189;
+			equityReturn = -0.7256;
+			unitMoney = "";
+		},
+		{
+			x = 1509465600000;
+			y = 2.178;
+			equityReturn = -0.5025;
+			unitMoney = "";
+		},
+		{
+			x = 1509552000000;
+			y = 2.194;
+			equityReturn = 0.7346;
+			unitMoney = "";
+		},
+		{
+			x = 1509638400000;
+			y = 2.197;
+			equityReturn = 0.1367;
+			unitMoney = "";
+		},
+		{
+			x = 1509897600000;
+			y = 2.258;
+			equityReturn = 2.7765;
+			unitMoney = "";
+		},
+		{
+			x = 1509984000000;
+			y = 2.256;
+			equityReturn = -0.0886;
+			unitMoney = "";
+		},
+		{
+			x = 1510070400000;
+			y = 2.239;
+			equityReturn = -0.7535;
+			unitMoney = "";
+		},
+		{
+			x = 1510156800000;
+			y = 2.254;
+			equityReturn = 0.6699;
+			unitMoney = "";
+		},
+		{
+			x = 1510243200000;
+			y = 2.306;
+			equityReturn = 2.307;
+			unitMoney = "";
+		},
+		{
+			x = 1510502400000;
+			y = 2.297;
+			equityReturn = -0.3903;
+			unitMoney = "";
+		},
+		{
+			x = 1510588800000;
+			y = 2.263;
+			equityReturn = -1.4802;
+			unitMoney = "";
+		},
+		{
+			x = 1510675200000;
+			y = 2.276;
+			equityReturn = 0.5745;
+			unitMoney = "";
+		},
+		{
+			x = 1510761600000;
+			y = 2.315;
+			equityReturn = 1.7135;
+			unitMoney = "";
+		},
+		{
+			x = 1510848000000;
+			y = 2.309;
+			equityReturn = -0.2592;
+			unitMoney = "";
+		},
+		{
+			x = 1511107200000;
+			y = 2.302;
+			equityReturn = -0.3032;
+			unitMoney = "";
+		},
+		{
+			x = 1511193600000;
+			y = 2.348;
+			equityReturn = 1.9983;
+			unitMoney = "";
+		},
+		{
+			x = 1511280000000;
+			y = 2.311;
+			equityReturn = -1.5758;
+			unitMoney = "";
+		},
+		{
+			x = 1511366400000;
+			y = 2.219;
+			equityReturn = -3.981;
+			unitMoney = "";
+		},
+		{
+			x = 1511452800000;
+			y = 2.221;
+			equityReturn = 0.0901;
+			unitMoney = "";
+		},
+		{
+			x = 1511712000000;
+			y = 2.191;
+			equityReturn = -1.3507;
+			unitMoney = "";
+		},
+		{
+			x = 1511798400000;
+			y = 2.209;
+			equityReturn = 0.8215;
+			unitMoney = "";
+		},
+		{
+			x = 1511884800000;
+			y = 2.162;
+			equityReturn = -2.1277;
+			unitMoney = "";
+		},
+		{
+			x = 1511971200000;
+			y = 2.138;
+			equityReturn = -1.1101;
+			unitMoney = "";
+		},
+		{
+			x = 1512057600000;
+			y = 2.137;
+			equityReturn = -0.0468;
+			unitMoney = "";
+		},
+		{
+			x = 1512316800000;
+			y = 2.18;
+			equityReturn = 2.0122;
+			unitMoney = "";
+		},
+		{
+			x = 1512403200000;
+			y = 2.194;
+			equityReturn = 0.6422;
+			unitMoney = "";
+		},
+		{
+			x = 1512489600000;
+			y = 2.172;
+			equityReturn = -1.0027;
+			unitMoney = "";
+		},
+		{
+			x = 1512576000000;
+			y = 2.13;
+			equityReturn = -1.9337;
+			unitMoney = "";
+		},
+		{
+			x = 1512662400000;
+			y = 2.168;
+			equityReturn = 1.784;
+			unitMoney = "";
+		},
+		{
+			x = 1512921600000;
+			y = 2.248;
+			equityReturn = 3.69;
+			unitMoney = "";
+		},
+		{
+			x = 1513008000000;
+			y = 2.232;
+			equityReturn = -0.7117;
+			unitMoney = "";
+		},
+		{
+			x = 1513094400000;
+			y = 2.285;
+			equityReturn = 2.3746;
+			unitMoney = "";
+		},
+		{
+			x = 1513180800000;
+			y = 2.281;
+			equityReturn = -0.1751;
+			unitMoney = "";
+		},
+		{
+			x = 1513267200000;
+			y = 2.259;
+			equityReturn = -0.9645;
+			unitMoney = "";
+		},
+		{
+			x = 1513526400000;
+			y = 2.294;
+			equityReturn = 1.5494;
+			unitMoney = "";
+		},
+		{
+			x = 1513612800000;
+			y = 2.314;
+			equityReturn = 0.8718;
+			unitMoney = "";
+		},
+		{
+			x = 1513699200000;
+			y = 2.344;
+			equityReturn = 1.2965;
+			unitMoney = "";
+		},
+		{
+			x = 1513785600000;
+			y = 2.356;
+			equityReturn = 0.5119;
+			unitMoney = "";
+		},
+		{
+			x = 1513872000000;
+			y = 2.341;
+			equityReturn = -0.6367;
+			unitMoney = "";
+		},
+		{
+			x = 1514131200000;
+			y = 2.349;
+			equityReturn = 0.3417;
+			unitMoney = "";
+		},
+		{
+			x = 1514217600000;
+			y = 2.326;
+			equityReturn = -0.9791;
+			unitMoney = "";
+		},
+		{
+			x = 1514304000000;
+			y = 2.28;
+			equityReturn = -1.9776;
+			unitMoney = "";
+		},
+		{
+			x = 1514390400000;
+			y = 2.334;
+			equityReturn = 2.3684;
+			unitMoney = "";
+		},
+		{
+			x = 1514476800000;
+			y = 2.331;
+			equityReturn = -0.1285;
+			unitMoney = "";
+		},
+		{
+			x = 1514649600000;
+			y = 2.331;
+			equityReturn = 0;
+			unitMoney = "";
+		},
+		{
+			x = 1514822400000;
+			y = 2.342;
+			equityReturn = 0.4719;
+			unitMoney = "";
+		},
+		{
+			x = 1514908800000;
+			y = 2.347;
+			equityReturn = 0.2135;
+			unitMoney = "";
+		},
+		{
+			x = 1514995200000;
+			y = 2.385;
+			equityReturn = 1.6191;
+			unitMoney = "";
+		},
+		{
+			x = 1515081600000;
+			y = 2.39;
+			equityReturn = 0.2096;
+			unitMoney = "";
+		},
+		{
+			x = 1515340800000;
+			y = 2.411;
+			equityReturn = 0.8787;
+			unitMoney = "";
+		},
+		{
+			x = 1515427200000;
+			y = 2.47;
+			equityReturn = 2.4471;
+			unitMoney = "";
+		},
+		{
+			x = 1515513600000;
+			y = 2.505;
+			equityReturn = 1.417;
+			unitMoney = "";
+		},
+		{
+			x = 1515600000000;
+			y = 2.485;
+			equityReturn = -0.7984;
+			unitMoney = "";
+		},
+		{
+			x = 1515686400000;
+			y = 2.527;
+			equityReturn = 1.6901;
+			unitMoney = "";
+		},
+		{
+			x = 1515945600000;
+			y = 2.536;
+			equityReturn = 0.3562;
+			unitMoney = "";
+		},
+		{
+			x = 1516032000000;
+			y = 2.54;
+			equityReturn = 0.1577;
+			unitMoney = "";
+		},
+		{
+			x = 1516118400000;
+			y = 2.484;
+			equityReturn = -2.2047;
+			unitMoney = "";
+		},
+		{
+			x = 1516204800000;
+			y = 2.487;
+			equityReturn = 0.1208;
+			unitMoney = "";
+		},
+		{
+			x = 1516291200000;
+			y = 2.457;
+			equityReturn = -1.2063;
+			unitMoney = "";
+		},
+		{
+			x = 1516550400000;
+			y = 2.554;
+			equityReturn = 3.9479;
+			unitMoney = "";
+		},
+		{
+			x = 1516636800000;
+			y = 2.563;
+			equityReturn = 0.3524;
+			unitMoney = "";
+		},
+		{
+			x = 1516723200000;
+			y = 2.531;
+			equityReturn = -1.2485;
+			unitMoney = "";
+		},
+		{
+			x = 1516809600000;
+			y = 2.526;
+			equityReturn = -0.1976;
+			unitMoney = "";
+		},
+		{
+			x = 1516896000000;
+			y = 2.545;
+			equityReturn = 0.7522;
+			unitMoney = "";
+		},
+		{
+			x = 1517155200000;
+			y = 2.461;
+			equityReturn = -3.3006;
+			unitMoney = "";
+		},
+		{
+			x = 1517241600000;
+			y = 2.445;
+			equityReturn = -0.6501;
+			unitMoney = "";
+		},
+		{
+			x = 1517328000000;
+			y = 2.485;
+			equityReturn = 1.636;
+			unitMoney = "";
+		},
+		{
+			x = 1517414400000;
+			y = 2.461;
+			equityReturn = -0.9658;
+			unitMoney = "";
+		},
+		{
+			x = 1517500800000;
+			y = 2.451;
+			equityReturn = -0.4063;
+			unitMoney = "";
+		},
+		{
+			x = 1517760000000;
+			y = 2.379;
+			equityReturn = -2.9376;
+			unitMoney = "";
+		},
+		{
+			x = 1517846400000;
+			y = 2.348;
+			equityReturn = -1.3031;
+			unitMoney = "";
+		},
+		{
+			x = 1517932800000;
+			y = 2.265;
+			equityReturn = -3.5349;
+			unitMoney = "";
+		},
+		{
+			x = 1518019200000;
+			y = 2.288;
+			equityReturn = 1.0155;
+			unitMoney = "";
+		},
+		{
+			x = 1518105600000;
+			y = 2.242;
+			equityReturn = -2.0105;
+			unitMoney = "";
+		},
+		{
+			x = 1518364800000;
+			y = 2.312;
+			equityReturn = 3.1222;
+			unitMoney = "";
+		},
+		{
+			x = 1518451200000;
+			y = 2.333;
+			equityReturn = 0.9083;
+			unitMoney = "";
+		},
+		{
+			x = 1518537600000;
+			y = 2.367;
+			equityReturn = 1.4574;
+			unitMoney = "";
+		},
+		{
+			x = 1519228800000;
+			y = 2.428;
+			equityReturn = 2.5771;
+			unitMoney = "";
+		},
+		{
+			x = 1519315200000;
+			y = 2.416;
+			equityReturn = -0.4942;
+			unitMoney = "";
+		},
+		{
+			x = 1519574400000;
+			y = 2.423;
+			equityReturn = 0.2897;
+			unitMoney = "";
+		},
+		{
+			x = 1519660800000;
+			y = 2.373;
+			equityReturn = -2.0636;
+			unitMoney = "";
+		},
+		{
+			x = 1519747200000;
+			y = 2.341;
+			equityReturn = -1.3485;
+			unitMoney = "";
+		},
+		{
+			x = 1519833600000;
+			y = 2.354;
+			equityReturn = 0.5553;
+			unitMoney = "";
+		},
+		{
+			x = 1519920000000;
+			y = 2.358;
+			equityReturn = 0.1699;
+			unitMoney = "";
+		},
+		{
+			x = 1520179200000;
+			y = 2.334;
+			equityReturn = -1.0178;
+			unitMoney = "";
+		},
+		{
+			x = 1520265600000;
+			y = 2.339;
+			equityReturn = 0.2142;
+			unitMoney = "";
+		},
+		{
+			x = 1520352000000;
+			y = 2.337;
+			equityReturn = -0.0855;
+			unitMoney = "";
+		},
+		{
+			x = 1520438400000;
+			y = 2.39;
+			equityReturn = 2.2679;
+			unitMoney = "";
+		},
+		{
+			x = 1520524800000;
+			y = 2.401;
+			equityReturn = 0.4603;
+			unitMoney = "";
+		},
+		{
+			x = 1520784000000;
+			y = 2.402;
+			equityReturn = 0.0416;
+			unitMoney = "";
+		},
+		{
+			x = 1520870400000;
+			y = 2.385;
+			equityReturn = -0.7077;
+			unitMoney = "";
+		},
+		{
+			x = 1520956800000;
+			y = 2.393;
+			equityReturn = 0.3354;
+			unitMoney = "";
+		},
+		{
+			x = 1521043200000;
+			y = 2.431;
+			equityReturn = 1.588;
+			unitMoney = "";
+		},
+		{
+			x = 1521129600000;
+			y = 2.401;
+			equityReturn = -1.2341;
+			unitMoney = "";
+		}
+	];
+	fund_Rate = 0.15;
+	mDataCount = 20;
+}

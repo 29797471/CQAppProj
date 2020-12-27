@@ -1,0 +1,42 @@
+[
+	{
+		name = "temp";
+		mDescContent = 
+		ValueCodeTemplate
+		{
+			mLanguage = "lua";
+			mStyleType = "string";
+			mValueChooses = 
+			[
+				"字符串",
+				"空串"
+			];
+			customValue = false;
+			mData = "\"\"";
+		};
+		mPercent = 
+		ValueCodeTemplate
+		{
+			mLanguage = "lua";
+			mStyleType = "number";
+			mValueChooses = 
+			[
+				"数值",
+				"0"
+			];
+			customValue = false;
+			mData = "0";
+		};
+		posList = 
+		[
+			{
+				mU = 22;
+				mV = 0;
+			},
+			{
+				mU = 1111;
+				mV = 0;
+			}
+		];
+	}
+]

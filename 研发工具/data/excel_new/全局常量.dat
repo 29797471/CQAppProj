@@ -1,0 +1,32 @@
+[
+	{
+		SheetName = "";
+		mOutFileName = "GlobalConst";
+		mExportCS = false;
+		mConstVal = true;
+		mItemList = 
+		[
+			{
+				name = "名称";
+				variable = "name";
+				type = "string";
+				isList = false;
+				mIsIndexItem = true;
+			},
+			{
+				name = "值";
+				variable = "value";
+				type = "string";
+				isList = false;
+				mIsIndexItem = false;
+			},
+			{
+				name = "说明";
+				variable = "";
+				type = "string";
+				isList = false;
+				mIsIndexItem = false;
+			}
+		];
+	}
+]

@@ -1,0 +1,9 @@
+[
+	{
+		mBtn = 
+		{
+			mShortcutPath = "CMD_DevelopTool.exe";
+			mName = "生成全部";
+		};
+	}
+]

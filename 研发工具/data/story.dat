@@ -1,0 +1,55 @@
+[
+	{
+		name = "temp";
+		storyId = 0;
+		timeline = 0;
+		mLineList = 
+		[
+			{
+				mLineData = 
+				[
+					TempDataType
+					{
+						startTicks = 2268000000000;
+						endTicks = 6264000000000;
+						mName = "角色";
+					},
+					TempDataType
+					{
+						startTicks = 8568000000000;
+						endTicks = 10188000000000;
+						mName = "声音";
+					}
+				];
+			},
+			{
+				mLineData = 
+				[
+					TempDataType
+					{
+						startTicks = 4320000000000;
+						endTicks = 9180000000000;
+						mName = "摄像机";
+					}
+				];
+			},
+			{
+				mLineData = 
+				[
+					TempDataType
+					{
+						startTicks = 324000000000;
+						endTicks = 360000000000;
+						mName = "可摧毁物";
+					},
+					TempDataType
+					{
+						startTicks = 4860000000000;
+						endTicks = 8892000000000;
+						mName = "特效";
+					}
+				];
+			}
+		];
+	}
+]

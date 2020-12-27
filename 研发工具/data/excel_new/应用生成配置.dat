@@ -1,0 +1,67 @@
+[
+	{
+		SheetName = "应用生成配置";
+		mOutFileName = "AppConfig";
+		mExportCS = true;
+		mConstVal = false;
+		mItemList = 
+		[
+			{
+				name = "生成配置样式";
+				variable = "configName";
+				type = "string";
+				isList = false;
+				mIsIndexItem = true;
+			},
+			{
+				name = "热更新地址";
+				variable = "updateUrl";
+				type = "string";
+				isList = false;
+				mIsIndexItem = false;
+			},
+			{
+				name = "应用Id";
+				variable = "appId";
+				type = "string";
+				isList = false;
+				mIsIndexItem = false;
+			},
+			{
+				name = "包含完整资源";
+				variable = "fullRes";
+				type = "bool";
+				isList = false;
+				mIsIndexItem = false;
+			},
+			{
+				name = "App名称";
+				variable = "appName";
+				type = "string";
+				isList = false;
+				mIsIndexItem = false;
+			},
+			{
+				name = "开发模式";
+				variable = "developModel";
+				type = "bool";
+				isList = false;
+				mIsIndexItem = false;
+			},
+			{
+				name = "应用图标";
+				variable = "appIcon";
+				type = "string";
+				isList = false;
+				mIsIndexItem = false;
+			},
+			{
+				name = "覆盖安装时清空App缓存目录";
+				variable = "clearPersistentData";
+				type = "bool";
+				isList = false;
+				mIsIndexItem = false;
+			}
+		];
+	}
+]

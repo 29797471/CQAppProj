@@ -1,0 +1,482 @@
+{
+	children = 
+	[
+		{
+			nodeObj = 
+			CqRoot
+			{
+				mName = "拷贝库到项目";
+			};
+			children = 
+			[
+				{
+					nodeObj = 
+					CqSequence
+					{
+						mName = "顺序";
+					};
+					children = 
+					[
+						{
+							nodeObj = 
+							CqSequence
+							{
+								mName = "BuildAssetBundle";
+							};
+							children = 
+							[
+								{
+									nodeObj = 
+									CopyFile
+									{
+										mSrcPath = "..\\..\\..\\CSharp\\解决方案\\bin\\CqCore.dll";
+										mDstPath = "..\\BuildAssetBundle\\Assets\\Plugins\\CqCore\\CqCore.dll";
+										mOverWrite = true;
+										mName = "CqCore.dll";
+									};
+									children = 
+									[
+									];
+								},
+								{
+									nodeObj = 
+									CopyFile
+									{
+										mSrcPath = "..\\..\\..\\CSharp\\解决方案\\bin\\CqCore.XML";
+										mDstPath = "..\\BuildAssetBundle\\Assets\\Plugins\\CqCore\\CqCore.XML";
+										mOverWrite = true;
+										mName = "CqCore.XML";
+									};
+									children = 
+									[
+									];
+								},
+								{
+									nodeObj = 
+									CopyFile
+									{
+										mSrcPath = "..\\..\\..\\CSharp\\解决方案\\bin\\UnityCore.dll";
+										mDstPath = "..\\BuildAssetBundle\\Assets\\Plugins\\CqCore\\UnityCore.dll";
+										mOverWrite = true;
+										mName = "UnityCore.dll";
+									};
+									children = 
+									[
+									];
+								},
+								{
+									nodeObj = 
+									CopyFile
+									{
+										mSrcPath = "..\\..\\..\\CSharp\\解决方案\\bin\\UnityCore.XML";
+										mDstPath = "..\\BuildAssetBundle\\Assets\\Plugins\\CqCore\\UnityCore.XML";
+										mOverWrite = true;
+										mName = "UnityCore.XML";
+									};
+									children = 
+									[
+									];
+								},
+								{
+									nodeObj = 
+									CopyFile
+									{
+										mSrcPath = "..\\..\\..\\CSharp\\解决方案\\bin\\UnityEditorCore.dll";
+										mDstPath = "..\\BuildAssetBundle\\Assets\\Plugins\\CqCore\\Editor\\UnityEditorCore.dll";
+										mOverWrite = true;
+										mName = "UnityEditorCore.dll";
+									};
+									children = 
+									[
+									];
+								},
+								{
+									nodeObj = 
+									CopyFile
+									{
+										mSrcPath = "..\\..\\..\\CSharp\\解决方案\\bin\\UnityEditorCore.XML";
+										mDstPath = "..\\BuildAssetBundle\\Assets\\Plugins\\CqCore\\Editor\\UnityEditorCore.XML";
+										mOverWrite = true;
+										mName = "UnityEditorCore.XML";
+									};
+									children = 
+									[
+									];
+								}
+							];
+						},
+						{
+							nodeObj = 
+							CqSequence
+							{
+								mName = "RJ1.0U3DProj";
+							};
+							children = 
+							[
+								{
+									nodeObj = 
+									CopyFile
+									{
+										mSrcPath = "..\\..\\..\\CSharp\\解决方案\\bin\\CqCore.dll";
+										mDstPath = "..\\RJ1.0U3DProj\\Assets\\Plugins\\CqCore\\CqCore.dll";
+										mOverWrite = true;
+										mName = "CqCore.dll";
+									};
+									children = 
+									[
+									];
+								},
+								{
+									nodeObj = 
+									CopyFile
+									{
+										mSrcPath = "..\\..\\..\\CSharp\\解决方案\\bin\\CqCore.XML";
+										mDstPath = "..\\RJ1.0U3DProj\\Assets\\Plugins\\CqCore\\CqCore.XML";
+										mOverWrite = true;
+										mName = "CqCore.XML";
+									};
+									children = 
+									[
+									];
+								},
+								{
+									nodeObj = 
+									CopyFile
+									{
+										mSrcPath = "..\\..\\..\\CSharp\\解决方案\\bin\\UnityCore.dll";
+										mDstPath = "..\\RJ1.0U3DProj\\Assets\\Plugins\\CqCore\\UnityCore.dll";
+										mOverWrite = true;
+										mName = "UnityCore.dll";
+									};
+									children = 
+									[
+									];
+								},
+								{
+									nodeObj = 
+									CopyFile
+									{
+										mSrcPath = "..\\..\\..\\CSharp\\解决方案\\bin\\UnityCore.XML";
+										mDstPath = "..\\RJ1.0U3DProj\\Assets\\Plugins\\CqCore\\UnityCore.XML";
+										mOverWrite = true;
+										mName = "UnityCore.XML";
+									};
+									children = 
+									[
+									];
+								},
+								{
+									nodeObj = 
+									CopyFile
+									{
+										mSrcPath = "..\\..\\..\\CSharp\\解决方案\\bin\\UnityEditorCore.dll";
+										mDstPath = "..\\RJ1.0U3DProj\\Assets\\Plugins\\CqCore\\Editor\\UnityEditorCore.dll";
+										mOverWrite = true;
+										mName = "UnityEditorCore.dll";
+									};
+									children = 
+									[
+									];
+								},
+								{
+									nodeObj = 
+									CopyFile
+									{
+										mSrcPath = "..\\..\\..\\CSharp\\解决方案\\bin\\UnityEditorCore.XML";
+										mDstPath = "..\\RJ1.0U3DProj\\Assets\\Plugins\\CqCore\\Editor\\UnityEditorCore.XML";
+										mOverWrite = true;
+										mName = "UnityEditorCore.XML";
+									};
+									children = 
+									[
+									];
+								}
+							];
+						}
+					];
+				}
+			];
+		},
+		{
+			nodeObj = 
+			SharesFollow
+			{
+				getTime = "2017-12-03 16:27:21";
+				buttonList = 
+				[
+					{
+						mSharesCode = "gb_baba";
+						mName = "阿里巴巴";
+						gszzl = 0.63;
+						dwjz = 178.19;
+						gsz = 0;
+					}
+				];
+				mName = "SharesFollow";
+			};
+			children = 
+			[
+			];
+		},
+		{
+			nodeObj = 
+			CqRoot
+			{
+				mName = "自动化打包";
+			};
+			children = 
+			[
+				{
+					nodeObj = 
+					CqSequence
+					{
+						mName = "顺序";
+					};
+					children = 
+					[
+						{
+							nodeObj = 
+							DelFolder
+							{
+								mSrcPath = "..\\RJ1.0U3DProj\\OutPut\\DJ";
+								mName = "DelFolder";
+							};
+							children = 
+							[
+							];
+						},
+						{
+							nodeObj = 
+							DelFolder
+							{
+								mSrcPath = "..\\RJ1.0U3DProj\\OutPut\\DJ";
+								mSuitGroupIndex = 1;
+								mName = "DelFolder";
+							};
+							children = 
+							[
+							];
+						},
+						{
+							nodeObj = 
+							DoCMD
+							{
+								mCommand = "start /min \"E:\\Program Files\\Unity 2017.1.0f3\\Editor\\Unity.exe\" -batchmode -projectPath E:\\work\\RJProj\\Client\\RJ1.0U3DProj -executeMethod MyClass.MyFunc1
+Pause
+taskkill /f /im unity.exe";
+								mName = "DoCMD";
+							};
+							children = 
+							[
+							];
+						}
+					];
+				}
+			];
+		},
+		{
+			nodeObj = 
+			CqRoot
+			{
+				mName = "全部生成";
+			};
+			children = 
+			[
+				{
+					nodeObj = 
+					RunExe
+					{
+						mExeFilePath = "..\\全部生成.cmd";
+						mArgs = "";
+						mName = "RunExe";
+					};
+					children = 
+					[
+					];
+				}
+			];
+		},
+		{
+			nodeObj = 
+			CqRoot
+			{
+				mName = "向客户端发送指令";
+			};
+			children = 
+			[
+				{
+					nodeObj = 
+					ConsoleClient
+					{
+						mPort = 8888;
+						mIP = "19546s06f1.iask.in";
+						buttonList = 
+						[
+							{
+								path = "测试提示窗口";
+								mAction = 
+								ValueCodeTemplate
+								{
+									mLanguage = "csharp";
+									mStyleType = "void";
+									mValueChooses = 
+									[
+										"执行",
+										"无"
+									];
+									customValue = true;
+									mData = "MessageModel.instance.Show(\"abc\",4)";
+								};
+							},
+							{
+								path = "测试检查本地资源版本号";
+								mAction = 
+								ValueCodeTemplate
+								{
+									mLanguage = "csharp";
+									mStyleType = "void";
+									mValueChooses = 
+									[
+										"执行",
+										"无"
+									];
+									customValue = true;
+									mData = "FileVersionMgr.instance.CheckLocalVersion(\"窗口/onekeywin.assetbundle\")";
+								};
+							},
+							{
+								path = "测试检查本地资源md5";
+								mAction = 
+								ValueCodeTemplate
+								{
+									mLanguage = "csharp";
+									mStyleType = "void";
+									mValueChooses = 
+									[
+										"执行",
+										"无"
+									];
+									customValue = true;
+									mData = "FileVersionMgr.instance.CheckLocalMd5(\"窗口/onekeywin.assetbundle\")";
+								};
+							},
+							{
+								path = "测试pos";
+								mAction = 
+								ValueCodeTemplate
+								{
+									mLanguage = "csharp";
+									mStyleType = "void";
+									mValueChooses = 
+									[
+										"执行",
+										"无"
+									];
+									customValue = true;
+									mData = "FileVersionMgr.instance.CheckLocalVersion(\"pos.dat\")";
+								};
+							},
+							{
+								path = "获取设备名";
+								mAction = 
+								ValueCodeTemplate
+								{
+									mLanguage = "csharp";
+									mStyleType = "void";
+									mValueChooses = 
+									[
+										"执行",
+										"无"
+									];
+									customValue = true;
+									mData = "UnityEngine.SystemInfo.deviceName";
+								};
+							},
+							{
+								path = "修改帐号";
+								mAction = 
+								ValueCodeTemplate
+								{
+									mLanguage = "csharp";
+									mStyleType = "void";
+									mValueChooses = 
+									[
+										"执行",
+										"无"
+									];
+									customValue = true;
+									mData = "UnityEngine.Camera.main.transform.localPosition=UnityEngine.Vector3.Vector3(0,0,5)";
+								};
+							},
+							{
+								path = "切换到测试版";
+								mAction = 
+								ValueCodeTemplate
+								{
+									mLanguage = "csharp";
+									mStyleType = "void";
+									mValueChooses = 
+									[
+										"执行",
+										"无"
+									];
+									customValue = true;
+									mData = "CustomModel.SettingModel.instance.SetKey(\"clientType\",\"1\")";
+								};
+							},
+							{
+								path = "切换到正式版";
+								mAction = 
+								ValueCodeTemplate
+								{
+									mLanguage = "csharp";
+									mStyleType = "void";
+									mValueChooses = 
+									[
+										"执行",
+										"无"
+									];
+									customValue = true;
+									mData = "CustomModel.SettingModel.instance.SetKey(\"clientType\",\"2\")";
+								};
+							},
+							{
+								path = "还原安装版本";
+								mAction = 
+								ValueCodeTemplate
+								{
+									mLanguage = "csharp";
+									mStyleType = "void";
+									mValueChooses = 
+									[
+										"执行",
+										"无"
+									];
+									customValue = true;
+									mData = "CustomModel.SettingModel.instance.DeleteKey(\"clientType\")";
+								};
+							}
+						];
+						mName = "处理";
+					};
+					children = 
+					[
+					];
+				}
+			];
+		},
+		{
+			nodeObj = 
+			FundForecast
+			{
+				year = 1;
+				m_Code = "110022";
+				mBuyCost = 0;
+				mName = "FundForecast";
+			};
+			children = 
+			[
+			];
+		}
+	];
+}

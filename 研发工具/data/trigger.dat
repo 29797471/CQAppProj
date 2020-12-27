@@ -1,0 +1,538 @@
+{
+	children = 
+	[
+		{
+			nodeObj = 
+			TriggerGroup
+			{
+				mName = "测试";
+			};
+			children = 
+			[
+				{
+					nodeObj = 
+					TriggerNode
+					{
+						mExportCode = false;
+						mAction = 
+						CustomCodeTemplate
+						{
+							mLanguage = "lua";
+							mStyleType = "void";
+							mData = "print(\"键盘a按下测试1\")";
+						};
+						mCondition = 
+						ValueCodeTemplate
+						{
+							mLanguage = "lua";
+							mStyleType = "bool";
+							mValueChooses = 
+							[
+								"条件",
+								"真"
+							];
+							customValue = false;
+						};
+						mEvent = 
+						{
+							mChooses = 
+							[
+								"设备交互",
+								"键盘按下"
+							];
+						};
+						mName = "按键打印";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					TriggerNode
+					{
+						mExportCode = true;
+						mAction = 
+						CustomCodeTemplate
+						{
+							mLanguage = "lua";
+							mStyleType = "void";
+							mData = "GlobalMgr.instance:ReStart(false)";
+						};
+						mCondition = 
+						CustomCodeTemplate
+						{
+							mLanguage = "lua";
+							mStyleType = "bool";
+							mData = "data.key==UnityEngine.KeyCode.F5";
+						};
+						mEvent = 
+						{
+							mChooses = 
+							[
+								"设备交互",
+								"键盘按下"
+							];
+						};
+						mName = "f5重启游戏";
+					};
+					children = 
+					[
+					];
+				}
+			];
+		},
+		{
+			nodeObj = 
+			TriggerNode
+			{
+				mExportCode = true;
+				mAction = 
+				CustomCodeTemplate
+				{
+					mLanguage = "lua";
+					mStyleType = "void";
+					mData = "Resources.UnloadUnusedAssets();
+GC.Collect();";
+				};
+				mCondition = 
+				ValueCodeTemplate
+				{
+					mLanguage = "lua";
+					mStyleType = "bool";
+					mValueChooses = 
+					[
+						"条件",
+						"真"
+					];
+					customValue = false;
+					mData = "true";
+				};
+				mEvent = 
+				{
+					mChooses = 
+					[
+						"本地",
+						"游戏状态",
+						"游戏启动"
+					];
+				};
+				mName = "清缓存";
+			};
+			children = 
+			[
+			];
+		},
+		{
+			nodeObj = 
+			TriggerNode
+			{
+				mExportCode = true;
+				mAction = 
+				CustomCodeTemplate
+				{
+					mLanguage = "lua";
+					mStyleType = "void";
+					mData = "if SettingModel.instance.CheckUpdate then
+        DlgMgr.Inst:Open(\"ProgressWin\")
+else
+        DlgMgr.Inst:Open(\"LoginWin\")
+        --DlgMgr.instance:Open(\"LoadingWin\")
+end
+";
+				};
+				mCondition = 
+				ValueCodeTemplate
+				{
+					mLanguage = "lua";
+					mStyleType = "bool";
+					mValueChooses = 
+					[
+						"条件",
+						"真"
+					];
+					customValue = false;
+					mData = "true";
+				};
+				mEvent = 
+				{
+					mChooses = 
+					[
+						"本地",
+						"游戏状态",
+						"UI画布初始化完成"
+					];
+				};
+				mName = "启动时载入进度";
+			};
+			children = 
+			[
+			];
+		},
+		{
+			nodeObj = 
+			TriggerNode
+			{
+				mExportCode = true;
+				mAction = 
+				ExprCodeTemplate
+				{
+					mLanguage = "lua";
+					mStyleType = "void";
+					childs = 
+					[
+						ExprCodeTemplate
+						{
+							mLanguage = "lua";
+							mStyleType = "void";
+							childs = 
+							[
+								ValueCodeTemplate
+								{
+									mLanguage = "lua";
+									mStyleType = "string";
+									mValueChooses = 
+									[
+										"字符串",
+										"窗口",
+										"登陆窗口"
+									];
+									customValue = false;
+									mData = "\"LoginWin\"";
+								}
+							];
+							mExpChooses = 
+							[
+								"UI",
+								"窗口",
+								"打开窗口"
+							];
+						},
+						ValueCodeTemplate
+						{
+							mLanguage = "lua";
+							mStyleType = "void";
+							mValueChooses = 
+							[
+								"执行",
+								"无"
+							];
+							customValue = false;
+							mData = " ";
+						}
+					];
+					mExpChooses = 
+					[
+						"逻辑",
+						"执行两件事"
+					];
+				};
+				mCondition = 
+				ValueCodeTemplate
+				{
+					mLanguage = "lua";
+					mStyleType = "bool";
+					mValueChooses = 
+					[
+						"条件",
+						"真"
+					];
+					customValue = false;
+					mData = "true";
+				};
+				mEvent = 
+				{
+					mChooses = 
+					[
+						"本地",
+						"游戏状态",
+						"资源热更新完成"
+					];
+				};
+				mName = "热更新完成进入登陆界面";
+			};
+			children = 
+			[
+			];
+		},
+		{
+			nodeObj = 
+			TriggerGroup
+			{
+				mName = "用户操作";
+			};
+			children = 
+			[
+				{
+					nodeObj = 
+					TriggerNode
+					{
+						mExportCode = true;
+						mAction = 
+						ExprCodeTemplate
+						{
+							mLanguage = "lua";
+							mStyleType = "void";
+							childs = 
+							[
+								EventArgCodeTemplate
+								{
+									mStyleType = "bool";
+									mItemName = "打开/关闭";
+									mItemValue = "data.isOpen";
+								},
+								ExprCodeTemplate
+								{
+									mLanguage = "lua";
+									mStyleType = "void";
+									childs = 
+									[
+										ValueCodeTemplate
+										{
+											mLanguage = "lua";
+											mStyleType = "string";
+											mValueChooses = 
+											[
+												"字符串",
+												"窗口",
+												"阻止用户操作并加载"
+											];
+											customValue = false;
+											mData = "\"LoadingWin\"";
+										}
+									];
+									mExpChooses = 
+									[
+										"UI",
+										"窗口",
+										"打开窗口"
+									];
+								},
+								ExprCodeTemplate
+								{
+									mLanguage = "lua";
+									mStyleType = "void";
+									childs = 
+									[
+										ValueCodeTemplate
+										{
+											mLanguage = "lua";
+											mStyleType = "string";
+											mValueChooses = 
+											[
+												"字符串",
+												"窗口",
+												"阻止用户操作并加载"
+											];
+											customValue = false;
+											mData = "\"LoadingWin\"";
+										}
+									];
+									mExpChooses = 
+									[
+										"UI",
+										"窗口",
+										"关闭窗口"
+									];
+								}
+							];
+							mExpChooses = 
+							[
+								"逻辑",
+								"满足条件的执行否则执行2"
+							];
+						};
+						mCondition = 
+						ValueCodeTemplate
+						{
+							mLanguage = "lua";
+							mStyleType = "bool";
+							mValueChooses = 
+							[
+								"条件",
+								"真"
+							];
+							customValue = false;
+							mData = "true";
+						};
+						mEvent = 
+						{
+							mChooses = 
+							[
+								"本地",
+								"窗口",
+								"通知",
+								"执行打开或者关闭加载窗口"
+							];
+						};
+						mName = "打开关闭加载UI";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					TriggerNode
+					{
+						mExportCode = true;
+						mAction = 
+						ExprCodeTemplate
+						{
+							mLanguage = "lua";
+							mStyleType = "void";
+							childs = 
+							[
+								ValueCodeTemplate
+								{
+									mLanguage = "lua";
+									mStyleType = "number";
+									mValueChooses = 
+									[
+										"数值",
+										"0"
+									];
+									customValue = true;
+									mData = "1009";
+								}
+							];
+							mExpChooses = 
+							[
+								"UI",
+								"通用提示"
+							];
+						};
+						mCondition = 
+						ValueCodeTemplate
+						{
+							mLanguage = "lua";
+							mStyleType = "bool";
+							mValueChooses = 
+							[
+								"条件",
+								"真"
+							];
+							customValue = false;
+							mData = "true";
+						};
+						mEvent = 
+						{
+							mChooses = 
+							[
+								"本地",
+								"窗口",
+								"通知",
+								"执行弹出用户操作失败窗口"
+							];
+						};
+						mName = "操作失败时弹出的错误提示";
+					};
+					children = 
+					[
+					];
+				}
+			];
+		},
+		{
+			nodeObj = 
+			TriggerGroup
+			{
+				mName = "安卓返回";
+			};
+			children = 
+			[
+				{
+					nodeObj = 
+					TriggerNode
+					{
+						mExportCode = false;
+						mAction = 
+						CustomCodeTemplate
+						{
+							mLanguage = "lua";
+							mStyleType = "void";
+							mData = "--DlgGroupMgr.instance:Return()";
+						};
+						mCondition = 
+						CustomCodeTemplate
+						{
+							mLanguage = "lua";
+							mStyleType = "bool";
+							mData = "data.key==UnityEngine.KeyCode.Escape";
+						};
+						mEvent = 
+						{
+							mChooses = 
+							[
+								"设备交互",
+								"键盘按下"
+							];
+						};
+						mName = "目前不支持一直点Escape返回";
+					};
+					children = 
+					[
+					];
+				}
+			];
+		},
+		{
+			nodeObj = 
+			TriggerNode
+			{
+				mExportCode = true;
+				mAction = 
+				CustomCodeTemplate
+				{
+					mLanguage = "lua";
+					mStyleType = "void";
+					mData = "FileVersionMgr.instance:CheckUpdateOnce(function (_netResInfo)
+    CommonWinMgr.Open(1003,function (btnIndex)
+        if btnIndex==0 then
+            Application.OpenURL(CustomSetting.Inst.updateUrl..\"/\".._netResInfo.appFileName)	
+        end
+    end,nil,_netResInfo.appVersion)
+end,function (_netResInfo)
+    CommonWinMgr.Open(1011,function (btnIndex)
+        if btnIndex==0 then
+            GlobalMgr.instance:ReStart(true)
+        end
+    end)
+end)";
+				};
+				mCondition = 
+				ExprCodeTemplate
+				{
+					mLanguage = "lua";
+					mStyleType = "bool";
+					childs = 
+					[
+						EventArgCodeTemplate
+						{
+							mStyleType = "bool";
+							mItemName = "暂停";
+							mItemValue = "data.pause";
+						}
+					];
+					mExpChooses = 
+					[
+						"逻辑运算",
+						"取反"
+					];
+				};
+				mEvent = 
+				{
+					mChooses = 
+					[
+						"设备交互",
+						"应用暂停"
+					];
+				};
+				mName = "切换到前台时检查更新";
+			};
+			children = 
+			[
+			];
+		}
+	];
+}

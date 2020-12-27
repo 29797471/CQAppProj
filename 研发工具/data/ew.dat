@@ -1,0 +1,444 @@
+{
+	children = 
+	[
+		{
+			children = 
+			[
+				{
+					children = 
+					[
+						{
+							children = 
+							[
+							];
+							nodeObj = 
+							LabelFieldNode
+							{
+								mAction = null;
+								mDataContent = null;
+								mName = null;
+								name = "xxx";
+							};
+						},
+						{
+							children = 
+							[
+							];
+							nodeObj = 
+							ButtonNode
+							{
+								mExecCode = "Debug.Log(\"abc\");";
+								mAction = null;
+								mDataContent = null;
+								mName = null;
+								name = "abc";
+							};
+						},
+						{
+							children = 
+							[
+							];
+							nodeObj = 
+							ButtonNode
+							{
+								mExecCode = "Debug.Log(\"bbb\");";
+								mAction = null;
+								mDataContent = null;
+								mName = null;
+								name = "bbb";
+							};
+						}
+					];
+					nodeObj = 
+					HorizontalNode
+					{
+						mAction = 
+						ExprCodeTemplate
+						{
+							mLanguage = "csharp";
+							mStyleType = "void";
+							mStyleName = "水平布局";
+							childs = 
+							[
+								ValueCodeTemplate
+								{
+									mLanguage = "csharp";
+									mStyleType = "void";
+									mData = " ";
+								}
+							];
+						};
+						mDataContent = null;
+						mName = null;
+						name = "水平布局";
+					};
+				},
+				{
+					children = 
+					[
+						{
+							children = 
+							[
+							];
+							nodeObj = 
+							ButtonNode
+							{
+								mExecCode = "Debug.Log(\"ddd\");";
+								mAction = null;
+								mDataContent = null;
+								mName = null;
+								name = "ddd";
+							};
+						},
+						{
+							children = 
+							[
+							];
+							nodeObj = 
+							ButtonNode
+							{
+								mExecCode = "Debug.Log(\"fff\");";
+								mAction = null;
+								mDataContent = null;
+								mName = null;
+								name = "fff";
+							};
+						},
+						{
+							children = 
+							[
+							];
+							nodeObj = 
+							ButtonNode
+							{
+								mExecCode = "Debug.Log(\"ccc\");";
+								mAction = null;
+								mDataContent = null;
+								mName = null;
+								name = "ccc";
+							};
+						}
+					];
+					nodeObj = 
+					HorizontalNode
+					{
+						mAction = 
+						ValueCodeTemplate
+						{
+							mLanguage = "csharp";
+							mStyleType = "void";
+							mData = " ";
+						};
+						mDataContent = null;
+						mName = null;
+						name = "水平布局";
+					};
+				}
+			];
+			nodeObj = 
+			EditorWindowNode
+			{
+				mMenuItem = "Window/TestA %#&P";
+				mShortcutKey = "Ctrl+Shift+P";
+				mOnGui = 
+				ExprCodeTemplate
+				{
+					mLanguage = "csharp";
+					mStyleType = "void";
+					mStyleName = "水平布局";
+					childs = 
+					[
+						ValueCodeTemplate
+						{
+							mLanguage = "csharp";
+							mStyleType = "void";
+							mData = " ";
+						}
+					];
+				};
+				mName = "AWindow";
+				name = "AWindow";
+			};
+		},
+		{
+			children = 
+			[
+				{
+					children = 
+					[
+						{
+							children = 
+							[
+								{
+									children = 
+									[
+									];
+									nodeObj = 
+									LabelFieldNode
+									{
+										mAction = null;
+										mDataContent = null;
+										mName = null;
+										name = "设置播放速度";
+									};
+								}
+							];
+							nodeObj = 
+							HorizontalNode
+							{
+								mAction = 
+								ValueCodeTemplate
+								{
+									mLanguage = "csharp";
+									mStyleType = "void";
+									mData = " ";
+								};
+								mDataContent = null;
+								mName = null;
+								name = "水平布局";
+							};
+						},
+						{
+							children = 
+							[
+								{
+									children = 
+									[
+									];
+									nodeObj = 
+									LabelFieldNode
+									{
+										mAction = null;
+										mDataContent = null;
+										mName = null;
+										name = "播放速度";
+									};
+								},
+								{
+									children = 
+									[
+									];
+									nodeObj = 
+									ButtonNode
+									{
+										mExecCode = null;
+										mAction = null;
+										mDataContent = null;
+										mName = null;
+										name = "5x";
+									};
+								},
+								{
+									children = 
+									[
+									];
+									nodeObj = 
+									ButtonNode
+									{
+										mExecCode = null;
+										mAction = null;
+										mDataContent = null;
+										mName = null;
+										name = "4x";
+									};
+								},
+								{
+									children = 
+									[
+									];
+									nodeObj = 
+									ButtonNode
+									{
+										mExecCode = null;
+										mAction = null;
+										mDataContent = null;
+										mName = null;
+										name = "3x";
+									};
+								},
+								{
+									children = 
+									[
+									];
+									nodeObj = 
+									ButtonNode
+									{
+										mExecCode = null;
+										mAction = null;
+										mDataContent = null;
+										mName = null;
+										name = "2x";
+									};
+								},
+								{
+									children = 
+									[
+									];
+									nodeObj = 
+									ButtonNode
+									{
+										mExecCode = null;
+										mAction = null;
+										mDataContent = null;
+										mName = null;
+										name = "1x";
+									};
+								}
+							];
+							nodeObj = 
+							HorizontalNode
+							{
+								mAction = null;
+								mDataContent = null;
+								mName = null;
+								name = "水平布局";
+							};
+						},
+						{
+							children = 
+							[
+								{
+									children = 
+									[
+									];
+									nodeObj = 
+									ButtonNode
+									{
+										mExecCode = null;
+										mAction = null;
+										mDataContent = null;
+										mName = null;
+										name = "Win Now";
+									};
+								},
+								{
+									children = 
+									[
+									];
+									nodeObj = 
+									ButtonNode
+									{
+										mExecCode = null;
+										mAction = null;
+										mDataContent = null;
+										mName = null;
+										name = "Lose Now";
+									};
+								},
+								{
+									children = 
+									[
+									];
+									nodeObj = 
+									ButtonNode
+									{
+										mExecCode = null;
+										mAction = null;
+										mDataContent = null;
+										mName = null;
+										name = "Clear NPC";
+									};
+								},
+								{
+									children = 
+									[
+									];
+									nodeObj = 
+									SliderNode
+									{
+										mMinValue = "0";
+										mMaxValue = "1000";
+										mCurrentValue = "{Binding Da}";
+										mAction = null;
+										mDataContent = null;
+										mName = null;
+										name = "Player Damager Ratio";
+									};
+								}
+							];
+							nodeObj = 
+							HorizontalNode
+							{
+								mAction = null;
+								mDataContent = null;
+								mName = null;
+								name = "水平布局";
+							};
+						},
+						{
+							children = 
+							[
+								{
+									children = 
+									[
+									];
+									nodeObj = 
+									CurveNode
+									{
+										mValue = "{Binding Curve}";
+										mAction = null;
+										mDataContent = null;
+										mName = null;
+										name = "CurveNode";
+									};
+								},
+								{
+									children = 
+									[
+									];
+									nodeObj = 
+									TextFieldNode
+									{
+										mValue = "{Binding Name}";
+										mAction = null;
+										mDataContent = null;
+										mName = null;
+										name = "Name=";
+									};
+								}
+							];
+							nodeObj = 
+							HorizontalNode
+							{
+								mAction = null;
+								mDataContent = null;
+								mName = null;
+								name = "水平布局";
+							};
+						}
+					];
+					nodeObj = 
+					VerticalNode
+					{
+						mAction = 
+						ValueCodeTemplate
+						{
+							mLanguage = "csharp";
+							mStyleType = "void";
+							mData = " ";
+						};
+						mDataContent = null;
+						mName = null;
+						name = "垂直布局";
+					};
+				}
+			];
+			nodeObj = 
+			EditorWindowNode
+			{
+				mMenuItem = "Window/TestB %K";
+				mShortcutKey = "Ctrl+K";
+				mOnGui = 
+				ValueCodeTemplate
+				{
+					mLanguage = "csharp";
+					mStyleType = "void";
+					mData = " ";
+				};
+				mName = "BWindow";
+				name = "BWindow";
+			};
+		}
+	];
+	nodeObj = null;
+}

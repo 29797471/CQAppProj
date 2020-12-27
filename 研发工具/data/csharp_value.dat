@@ -1,0 +1,459 @@
+{
+	children = 
+	[
+		{
+			nodeObj = 
+			CodeStyleGroup
+			{
+				mName = "执行";
+			};
+			children = 
+			[
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "void";
+						mContent = "无";
+						mExecContent = " ";
+						mName = "无";
+					};
+					children = 
+					[
+					];
+				}
+			];
+		},
+		{
+			nodeObj = 
+			CodeStyleGroup
+			{
+				mName = "曲线";
+			};
+			children = 
+			[
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "curve";
+						mContent = "直线";
+						mExecContent = "AnimationCurve.Linear(0, 0, 1, 1)";
+						mName = "直线";
+					};
+					children = 
+					[
+					];
+				}
+			];
+		},
+		{
+			nodeObj = 
+			CodeStyleGroup
+			{
+				mName = "条件";
+			};
+			children = 
+			[
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "bool";
+						mContent = "真";
+						mExecContent = "true";
+						mName = "真";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "bool";
+						mContent = "假";
+						mExecContent = "false";
+						mName = "假";
+					};
+					children = 
+					[
+					];
+				}
+			];
+		},
+		{
+			nodeObj = 
+			CodeStyleGroup
+			{
+				mName = "数值";
+			};
+			children = 
+			[
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "int";
+						mContent = "0";
+						mExecContent = "0";
+						mName = "0";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleGroup
+					{
+						mName = "安卓键值";
+					};
+					children = 
+					[
+						{
+							nodeObj = 
+							CodeStyleNode
+							{
+								mTypeName = "int";
+								mContent = "Escape";
+								mExecContent = "0";
+								mName = "Escape";
+							};
+							children = 
+							[
+							];
+						},
+						{
+							nodeObj = 
+							CodeStyleNode
+							{
+								mTypeName = "int";
+								mContent = "Home";
+								mExecContent = "1";
+								mName = "Home";
+							};
+							children = 
+							[
+							];
+						}
+					];
+				}
+			];
+		},
+		{
+			nodeObj = 
+			CodeStyleGroup
+			{
+				mName = "关系运算符";
+			};
+			children = 
+			[
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "operator";
+						mContent = "等于";
+						mExecContent = "==";
+						mName = "等于";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "operator";
+						mContent = "不等于";
+						mExecContent = "~=";
+						mName = "不等于";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "operator";
+						mContent = "大于等于";
+						mExecContent = ">=";
+						mName = "大于等于";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "operator";
+						mContent = "小于等于";
+						mExecContent = "<=";
+						mName = "小于等于";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "operator";
+						mContent = "大于";
+						mExecContent = ">";
+						mName = "大于";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "operator";
+						mContent = "小于";
+						mExecContent = "<";
+						mName = "小于";
+					};
+					children = 
+					[
+					];
+				}
+			];
+		},
+		{
+			nodeObj = 
+			CodeStyleGroup
+			{
+				mName = "对象关系运算符";
+			};
+			children = 
+			[
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "operator_object";
+						mContent = "等于";
+						mExecContent = "==";
+						mName = "等于";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "operator_object";
+						mContent = "不等于";
+						mExecContent = "~=";
+						mName = "不等于";
+					};
+					children = 
+					[
+					];
+				}
+			];
+		},
+		{
+			nodeObj = 
+			CodeStyleGroup
+			{
+				mName = "字符串";
+			};
+			children = 
+			[
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "string";
+						mContent = "空串";
+						mExecContent = "\"\"";
+						mName = "空串";
+					};
+					children = 
+					[
+					];
+				}
+			];
+		},
+		{
+			nodeObj = 
+			CodeStyleGroup
+			{
+				mName = "事件";
+			};
+			children = 
+			[
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "event";
+						mContent = "移除套装模型";
+						mExecContent = "RemoveGroupModel";
+						mName = "移除套装模型";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "event";
+						mContent = "创建套装模型";
+						mExecContent = "CreateGroupModel";
+						mName = "创建套装模型";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "event";
+						mContent = "启用相机控制";
+						mExecContent = "EnableCameraControl";
+						mName = "启用相机控制";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "event";
+						mContent = "禁用相机控制";
+						mExecContent = "DisableCameraControl";
+						mName = "禁用相机控制";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "event";
+						mContent = "重置摄像机位置";
+						mExecContent = "ResetCameraPos";
+						mName = "重置摄像机位置";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "event";
+						mContent = "生成订单";
+						mExecContent = "CreateOrder";
+						mName = "生成订单";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "event";
+						mContent = "开始加载资源";
+						mExecContent = "ResLoadStart";
+						mName = "开始加载资源";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "event";
+						mContent = "资源加载完成";
+						mExecContent = "ResLoadEnd";
+						mName = "资源加载完成";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "event";
+						mContent = "套装编辑";
+						mExecContent = "SuitEdit";
+						mName = "套装编辑";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "event";
+						mContent = "单件编辑";
+						mExecContent = "SingletonEdit";
+						mName = "单件编辑";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "event";
+						mContent = "开始购物";
+						mExecContent = "StartShopping";
+						mName = "开始购物";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "event";
+						mContent = "模拟开关点击";
+						mExecContent = "SimulatorToggleClick";
+						mName = "模拟开关点击";
+					};
+					children = 
+					[
+					];
+				}
+			];
+		}
+	];
+}

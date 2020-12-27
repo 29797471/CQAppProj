@@ -1,0 +1,451 @@
+{
+	children = 
+	[
+		{
+			nodeObj = 
+			CqRoot
+			{
+				mDoCMD = false;
+				mName = "拷贝库到项目";
+			};
+			children = 
+			[
+				{
+					nodeObj = 
+					CqSequence
+					{
+						mName = "生成CqPlugin";
+					};
+					children = 
+					[
+						{
+							nodeObj = 
+							CopyFile
+							{
+								mSrcPath = "..\\..\\..\\CSharp\\解决方案\\bin\\CqCore3.5.dll";
+								mDstPath = "CqPlugin\\CqCore3.5.dll";
+								mOverWrite = true;
+								mName = "CqCore3.5.dll";
+							};
+							children = 
+							[
+							];
+						},
+						{
+							nodeObj = 
+							CopyFile
+							{
+								mSrcPath = "..\\..\\..\\CSharp\\解决方案\\bin\\CqCore3.5.pdb";
+								mDstPath = "CqPlugin\\CqCore3.5.pdb";
+								mOverWrite = true;
+								mName = "CqCore3.5.pdb";
+							};
+							children = 
+							[
+							];
+						},
+						{
+							nodeObj = 
+							CopyFile
+							{
+								mSrcPath = "..\\..\\..\\CSharp\\解决方案\\bin\\CqCore3.5.XML";
+								mDstPath = "CqPlugin\\CqCore3.5.XML";
+								mOverWrite = true;
+								mName = "CqCore3.5.XML";
+							};
+							children = 
+							[
+							];
+						},
+						{
+							nodeObj = 
+							CopyFile
+							{
+								mSrcPath = "..\\..\\..\\CSharp\\解决方案\\bin\\UnityCore.dll";
+								mDstPath = "CqPlugin\\UnityCore.dll";
+								mOverWrite = true;
+								mName = "UnityCore.dll";
+							};
+							children = 
+							[
+							];
+						},
+						{
+							nodeObj = 
+							CopyFile
+							{
+								mSrcPath = "..\\..\\..\\CSharp\\解决方案\\bin\\UnityCore.pdb";
+								mDstPath = "CqPlugin\\UnityCore.pdb";
+								mOverWrite = true;
+								mName = "UnityCore.pdb";
+							};
+							children = 
+							[
+							];
+						},
+						{
+							nodeObj = 
+							CopyFile
+							{
+								mSrcPath = "..\\..\\..\\CSharp\\解决方案\\bin\\UnityCore.XML";
+								mDstPath = "CqPlugin\\UnityCore.XML";
+								mOverWrite = true;
+								mName = "UnityCore.XML";
+							};
+							children = 
+							[
+							];
+						},
+						{
+							nodeObj = 
+							CopyFile
+							{
+								mSrcPath = "..\\..\\..\\CSharp\\解决方案\\bin\\UnityEditorCore.dll";
+								mDstPath = "CqPlugin\\Editor\\UnityEditorCore.dll";
+								mOverWrite = true;
+								mName = "UnityEditorCore.dll";
+							};
+							children = 
+							[
+							];
+						},
+						{
+							nodeObj = 
+							CopyFile
+							{
+								mSrcPath = "..\\..\\..\\CSharp\\解决方案\\bin\\UnityEditorCore.pdb";
+								mDstPath = "CqPlugin\\Editor\\UnityEditorCore.pdb";
+								mOverWrite = true;
+								mName = "UnityEditorCore.pdb";
+							};
+							children = 
+							[
+							];
+						},
+						{
+							nodeObj = 
+							CopyFile
+							{
+								mSrcPath = "..\\..\\..\\CSharp\\解决方案\\bin\\UnityEditorCore.XML";
+								mDstPath = "CqPlugin\\Editor\\UnityEditorCore.XML";
+								mOverWrite = true;
+								mName = "UnityEditorCore.XML";
+							};
+							children = 
+							[
+							];
+						}
+					];
+				},
+				{
+					nodeObj = 
+					CopyFolder
+					{
+						mSrcPath = "CqPlugin";
+						mDstPath = "..\\Duala3.0\\Assets\\Plugins";
+						mOverWrite = true;
+						mName = "拷贝到duola项目";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CopyFolder
+					{
+						mSrcPath = "CqPlugin";
+						mDstPath = "..\\..\\..\\Command\\Assets\\Plugins";
+						mOverWrite = true;
+						mName = "拷贝到command项目";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CopyFolder
+					{
+						mSrcPath = "CqPlugin";
+						mDstPath = "..\\..\\..\\TA_Branch\\client_u3d\\game\\Rich5\\Assets\\Plugins";
+						mOverWrite = true;
+						mName = "拷贝到TA分支";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					DelFolder
+					{
+						mSrcPath = "CqPlugin";
+						mName = "删除CqPlugin";
+					};
+					children = 
+					[
+					];
+				}
+			];
+		},
+		{
+			nodeObj = 
+			CqRoot
+			{
+				mDoCMD = false;
+				mName = "拷贝曲线";
+			};
+			children = 
+			[
+				{
+					nodeObj = 
+					CopyFolder
+					{
+						mSrcPath = "..\\Duala3.0\\Assets\\Scripts\\Curve";
+						mDstPath = "..\\..\\..\\dfh5\\client_u3d\\game\\Code_Trunk\\Scripts";
+						mOverWrite = true;
+						mName = "拷贝";
+					};
+					children = 
+					[
+					];
+				}
+			];
+		},
+		{
+			nodeObj = 
+			CqRoot
+			{
+				mDoCMD = false;
+				mName = "拷回曲线";
+			};
+			children = 
+			[
+				{
+					nodeObj = 
+					CopyFolder
+					{
+						mSrcPath = "..\\..\\..\\dfh5\\client_u3d\\game\\Code_Trunk\\Scripts\\Curve";
+						mDstPath = "..\\Duala3.0\\Assets\\Scripts";
+						mOverWrite = true;
+						mName = "拷贝";
+					};
+					children = 
+					[
+					];
+				}
+			];
+		},
+		{
+			nodeObj = 
+			CqRoot
+			{
+				mDoCMD = true;
+				mName = "删除lua生成";
+			};
+			children = 
+			[
+				{
+					nodeObj = 
+					DelFolder
+					{
+						mSrcPath = "..\\Duala3.0\\Assets\\Slua\\LuaObject";
+						mName = "DelFolder";
+					};
+					children = 
+					[
+					];
+				}
+			];
+		},
+		{
+			nodeObj = 
+			CalcMd5
+			{
+				mCommand = "cq";
+				mResultStr = "Wxja8Sl6";
+				mName = "CalcMd5";
+			};
+			children = 
+			[
+			];
+		},
+		{
+			nodeObj = 
+			CqRoot
+			{
+				mDoCMD = false;
+				mName = "解锁文件";
+			};
+			children = 
+			[
+				{
+					nodeObj = 
+					KillLockFile
+					{
+						mExeName = "H:\\work\\ServerAssets\\a.cqqqq.real_time_test";
+						mExeName2 = "..\\..\\..\\CSharp\\dll\\Handle\\handle64.exe";
+						mName = "KillLockFile";
+					};
+					children = 
+					[
+					];
+				}
+			];
+		},
+		{
+			nodeObj = 
+			DrawCoordinateSystem
+			{
+				mEquations = 
+				[
+					{
+						mExpr = "x";
+						mXmin = -4;
+						mXmax = 4;
+						mSampling = 1000;
+						mDraw = true;
+					}
+				];
+				mXYAxisSacle = 1;
+				mSmallMarkCount = 10;
+				mBigMarkCount = 5;
+				mName = "DrawCoordinateSystem";
+			};
+			children = 
+			[
+			];
+		},
+		{
+			nodeObj = 
+			CqRoot
+			{
+				mDoCMD = false;
+				mName = "根节点";
+			};
+			children = 
+			[
+				{
+					nodeObj = 
+					WhileDecorator
+					{
+						mSuccessExit = true;
+						mName = "循环";
+					};
+					children = 
+					[
+						{
+							nodeObj = 
+							WaitAction
+							{
+								mDuration = 10;
+								mName = "等待一段时间";
+							};
+							children = 
+							[
+							];
+						},
+						{
+							nodeObj = 
+							RunExe
+							{
+								mExeFilePath = "C:\\Users\\dell\\Desktop\\新建文本文档.txt";
+								mArgs = "";
+								mName = "执行程序";
+							};
+							children = 
+							[
+							];
+						},
+						{
+							nodeObj = 
+							WaitAction
+							{
+								mDuration = 2;
+								mName = "等待一段时间";
+							};
+							children = 
+							[
+							];
+						},
+						{
+							nodeObj = 
+							KillExe
+							{
+								mExeName = "notepad++";
+								mName = "关闭正在执行的程序";
+							};
+							children = 
+							[
+							];
+						},
+						{
+							nodeObj = 
+							WaitAction
+							{
+								mDuration = 2;
+								mName = "等待一段时间";
+							};
+							children = 
+							[
+							];
+						}
+					];
+				}
+			];
+		},
+		{
+			nodeObj = 
+			CalcTaxes
+			{
+				mCommand = 0;
+				mInsurance = 0;
+				mOtherCost = 0;
+				mName = "个税计算器";
+			};
+			children = 
+			[
+			];
+		},
+		{
+			nodeObj = 
+			CqRoot
+			{
+				mDoCMD = false;
+				mName = "工具项目路径切换";
+			};
+			children = 
+			[
+				{
+					nodeObj = 
+					ModifyFile
+					{
+						mSrcPath = "..\\..\\..\\CSharp\\DevelopTool\\DevelopTool.csproj";
+						mStartStr = "<OutputPath>";
+						mEndStr = "</OutputPath>";
+						mContent = "bin\\";
+						mName = "修改文件内容";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					ModifyFile
+					{
+						mSrcPath = "..\\..\\..\\CSharp\\DevelopTool\\CMD_DevelopTool.csproj";
+						mStartStr = "<OutputPath>";
+						mEndStr = "</OutputPath>";
+						mContent = "bin\\";
+						mName = "修改文件内容";
+					};
+					children = 
+					[
+					];
+				}
+			];
+		}
+	];
+}

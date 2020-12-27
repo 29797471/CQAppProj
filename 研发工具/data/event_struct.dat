@@ -1,0 +1,71 @@
+[
+	{
+		name = "Vector2";
+		mClassDefine = "struct";
+		customerList = 
+		[
+			{
+				variable = "x";
+				mDefaultValue = "";
+				type = "float";
+				isList = false;
+			},
+			{
+				variable = "y";
+				type = "float";
+				isList = false;
+			}
+		];
+	},
+	{
+		name = "Vector3";
+		mClassDefine = "struct";
+		customerList = 
+		[
+			{
+				variable = "x";
+				mDefaultValue = "";
+				type = "float";
+				isList = false;
+			},
+			{
+				variable = "y";
+				type = "float";
+				isList = false;
+			},
+			{
+				variable = "z";
+				type = "float";
+				isList = false;
+			}
+		];
+	},
+	{
+		name = "Color";
+		mClassDefine = "struct";
+		customerList = 
+		[
+			{
+				variable = "r";
+				mDefaultValue = "";
+				type = "float";
+				isList = false;
+			},
+			{
+				variable = "g";
+				type = "float";
+				isList = false;
+			},
+			{
+				variable = "b";
+				type = "float";
+				isList = false;
+			},
+			{
+				variable = "a";
+				type = "float";
+				isList = false;
+			}
+		];
+	}
+]

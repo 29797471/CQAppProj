@@ -1,0 +1,77 @@
+[
+	{
+		name = "Vector2";
+		mMake = false;
+		customerList = 
+		[
+			{
+				variable = "x";
+				type = "float";
+				isList = false;
+				mIsIndexItem = false;
+			},
+			{
+				variable = "y";
+				type = "float";
+				isList = false;
+				mIsIndexItem = false;
+			}
+		];
+	},
+	{
+		name = "Vector3";
+		mMake = false;
+		customerList = 
+		[
+			{
+				variable = "x";
+				type = "float";
+				isList = false;
+				mIsIndexItem = false;
+			},
+			{
+				variable = "y";
+				type = "float";
+				isList = false;
+				mIsIndexItem = false;
+			},
+			{
+				variable = "z";
+				type = "float";
+				isList = false;
+				mIsIndexItem = false;
+			}
+		];
+	},
+	{
+		name = "Color32";
+		mMake = false;
+		customerList = 
+		[
+			{
+				variable = "r";
+				type = "int";
+				isList = false;
+				mIsIndexItem = false;
+			},
+			{
+				variable = "g";
+				type = "int";
+				isList = false;
+				mIsIndexItem = false;
+			},
+			{
+				variable = "b";
+				type = "int";
+				isList = false;
+				mIsIndexItem = false;
+			},
+			{
+				variable = "a";
+				type = "int";
+				isList = false;
+				mIsIndexItem = false;
+			}
+		];
+	}
+]

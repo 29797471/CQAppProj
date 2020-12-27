@@ -1,0 +1,178 @@
+[
+	{
+		SheetName = "窗口表";
+		mOutFileName = "Win";
+		mExportCS = true;
+		mConstVal = false;
+		mItemList = 
+		[
+			{
+				name = "窗口";
+				variable = "winName";
+				type = "string";
+				isList = false;
+				mIsIndexItem = true;
+			},
+			{
+				name = "备注";
+				variable = "desc";
+				type = "string";
+				isList = false;
+				mIsIndexItem = false;
+			},
+			{
+				name = "窗口名语言id";
+				variable = "nameId";
+				type = "int";
+				isList = false;
+				mIsIndexItem = false;
+			},
+			{
+				name = "独立窗口";
+				variable = "isAlone";
+				type = "bool";
+				isList = false;
+				mIsIndexItem = false;
+			},
+			{
+				name = "显示层级";
+				variable = "layer";
+				type = "string";
+				isList = false;
+				mIsIndexItem = false;
+			},
+			{
+				name = "打开方式";
+				variable = "tweenStyle";
+				type = "int";
+				isList = false;
+				mIsIndexItem = false;
+			},
+			{
+				name = "关闭时销毁";
+				variable = "destroyByClose";
+				type = "bool";
+				isList = false;
+				mIsIndexItem = false;
+			},
+			{
+				name = "预设";
+				variable = "prefab";
+				type = "string";
+				isList = false;
+				mIsIndexItem = false;
+			},
+			{
+				name = "代码文件";
+				variable = "code";
+				type = "string";
+				isList = false;
+				mIsIndexItem = false;
+			}
+		];
+	},
+	{
+		SheetName = "显示层级表";
+		mOutFileName = "WinLayer";
+		mExportCS = true;
+		mConstVal = false;
+		mItemList = 
+		[
+			{
+				name = "层级";
+				variable = "layer";
+				type = "string";
+				isList = false;
+				mIsIndexItem = true;
+			},
+			{
+				name = "备注";
+				variable = "";
+				type = "string";
+				isList = false;
+				mIsIndexItem = false;
+			},
+			{
+				name = "优先级";
+				variable = "priority";
+				type = "int";
+				isList = false;
+				mIsIndexItem = false;
+			}
+		];
+	},
+	{
+		SheetName = "通用弹窗";
+		mOutFileName = "CommonWin";
+		mExportCS = false;
+		mConstVal = false;
+		mItemList = 
+		[
+			{
+				name = "通用弹窗";
+				variable = "id";
+				type = "int";
+				isList = false;
+				mIsIndexItem = true;
+			},
+			{
+				name = "备注";
+				variable = "";
+				type = "string";
+				isList = false;
+				mIsIndexItem = false;
+			},
+			{
+				name = "通用窗口样式";
+				variable = "style";
+				type = "string";
+				isList = false;
+				mIsIndexItem = false;
+			},
+			{
+				name = "内容(多语言id)";
+				variable = "contentId";
+				type = "int";
+				isList = false;
+				mIsIndexItem = false;
+			},
+			{
+				name = "按钮组";
+				variable = "btnGroup";
+				type = "int";
+				isList = true;
+				mIsIndexItem = false;
+			}
+		];
+	},
+	{
+		SheetName = "通用窗口样式";
+		mOutFileName = "CommonWinStyle";
+		mExportCS = false;
+		mConstVal = false;
+		mItemList = 
+		[
+			{
+				name = "通用窗口样式";
+				variable = "style";
+				type = "string";
+				isList = false;
+				mIsIndexItem = true;
+			},
+			{
+				name = "说明";
+				variable = "";
+				type = "string";
+				isList = false;
+				mIsIndexItem = false;
+			},
+			{
+				name = "窗口";
+				variable = "win";
+				type = "string";
+				isList = false;
+				mIsIndexItem = false;
+			}
+		];
+	}
+]

@@ -1,0 +1,590 @@
+{
+	children = 
+	[
+		{
+			nodeObj = 
+			CodeStyleGroup
+			{
+				mName = "字符串";
+			};
+			children = 
+			[
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "string";
+						mContent = "空串";
+						mExecContent = "\"\"";
+						mName = "空串";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleGroup
+					{
+						mName = "窗口";
+					};
+					children = 
+					[
+						{
+							nodeObj = 
+							CodeStyleNode
+							{
+								mTypeName = "string";
+								mContent = "背景窗口";
+								mExecContent = "\"BackWin\"";
+								mName = "背景窗口";
+							};
+							children = 
+							[
+							];
+						},
+						{
+							nodeObj = 
+							CodeStyleNode
+							{
+								mTypeName = "string";
+								mContent = "登陆窗口";
+								mExecContent = "\"LoginWin\"";
+								mName = "登陆窗口";
+							};
+							children = 
+							[
+							];
+						},
+						{
+							nodeObj = 
+							CodeStyleNode
+							{
+								mTypeName = "string";
+								mContent = "主窗口";
+								mExecContent = "\"MainWin\"";
+								mName = "主窗口";
+							};
+							children = 
+							[
+							];
+						},
+						{
+							nodeObj = 
+							CodeStyleNode
+							{
+								mTypeName = "string";
+								mContent = "启动页面";
+								mExecContent = "\"Logo\"";
+								mName = "启动页面";
+							};
+							children = 
+							[
+							];
+						},
+						{
+							nodeObj = 
+							CodeStyleNode
+							{
+								mTypeName = "string";
+								mContent = "股票页面";
+								mExecContent = "\"YuCeWin\"";
+								mName = "股票页面";
+							};
+							children = 
+							[
+							];
+						},
+						{
+							nodeObj = 
+							CodeStyleNode
+							{
+								mTypeName = "string";
+								mContent = "载入进度界面";
+								mExecContent = "\"ProgressWin\"";
+								mName = "载入进度界面";
+							};
+							children = 
+							[
+							];
+						},
+						{
+							nodeObj = 
+							CodeStyleNode
+							{
+								mTypeName = "string";
+								mContent = "阻止用户操作并加载";
+								mExecContent = "\"LoadingWin\"";
+								mName = "阻止用户操作并加载";
+							};
+							children = 
+							[
+							];
+						}
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleGroup
+					{
+						mName = "其他";
+					};
+					children = 
+					[
+						{
+							nodeObj = 
+							CodeStyleNode
+							{
+								mTypeName = "string";
+								mContent = "a";
+								mExecContent = "\"LoginWin\"";
+								mName = "a";
+							};
+							children = 
+							[
+							];
+						},
+						{
+							nodeObj = 
+							CodeStyleNode
+							{
+								mTypeName = "string";
+								mContent = "b";
+								mExecContent = "\"MainWin\"";
+								mName = "b";
+							};
+							children = 
+							[
+							];
+						}
+					];
+				}
+			];
+		},
+		{
+			nodeObj = 
+			CodeStyleGroup
+			{
+				mName = "条件";
+			};
+			children = 
+			[
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "bool";
+						mContent = "真";
+						mExecContent = "true";
+						mName = "真";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "bool";
+						mContent = "假";
+						mExecContent = "false";
+						mName = "假";
+					};
+					children = 
+					[
+					];
+				}
+			];
+		},
+		{
+			nodeObj = 
+			CodeStyleGroup
+			{
+				mName = "关系运算符";
+			};
+			children = 
+			[
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "operator";
+						mContent = "等于";
+						mExecContent = "==";
+						mName = "等于";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "operator";
+						mContent = "不等于";
+						mExecContent = "~=";
+						mName = "不等于";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "operator";
+						mContent = "大于等于";
+						mExecContent = ">=";
+						mName = "大于等于";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "operator";
+						mContent = "小于等于";
+						mExecContent = "<=";
+						mName = "小于等于";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "operator";
+						mContent = "大于";
+						mExecContent = ">";
+						mName = "大于";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "operator";
+						mContent = "小于";
+						mExecContent = "<";
+						mName = "小于";
+					};
+					children = 
+					[
+					];
+				}
+			];
+		},
+		{
+			nodeObj = 
+			CodeStyleGroup
+			{
+				mName = "对象关系运算符";
+			};
+			children = 
+			[
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "operator_object";
+						mContent = "等于";
+						mExecContent = "==";
+						mName = "等于";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "operator_object";
+						mContent = "不等于";
+						mExecContent = "~=";
+						mName = "不等于";
+					};
+					children = 
+					[
+					];
+				}
+			];
+		},
+		{
+			nodeObj = 
+			CodeStyleGroup
+			{
+				mName = "对象";
+			};
+			children = 
+			[
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "object";
+						mContent = "空对象";
+						mExecContent = "nil";
+						mName = "空对象";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "object";
+						mContent = "自己";
+						mExecContent = "self";
+						mName = "自己";
+					};
+					children = 
+					[
+					];
+				}
+			];
+		},
+		{
+			nodeObj = 
+			CodeStyleGroup
+			{
+				mName = "委托";
+			};
+			children = 
+			[
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "delegate";
+						mContent = "空委托";
+						mExecContent = "function () end";
+						mName = "空委托";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "delegate";
+						mContent = "绑定激活";
+						mExecContent = "BindingActive";
+						mName = "绑定控件激活";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "delegate";
+						mContent = "绑定纹理";
+						mExecContent = "BindingUITexture";
+						mName = "绑定纹理";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "delegate";
+						mContent = "绑定文本";
+						mExecContent = "BindingUILabel";
+						mName = "绑定文本";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "delegate";
+						mContent = "绑定图片";
+						mExecContent = "BindingUISprite";
+						mName = "绑定图片";
+					};
+					children = 
+					[
+					];
+				}
+			];
+		},
+		{
+			nodeObj = 
+			CodeStyleGroup
+			{
+				mName = "执行";
+			};
+			children = 
+			[
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "void";
+						mContent = "无";
+						mExecContent = " ";
+						mName = "无";
+					};
+					children = 
+					[
+					];
+				}
+			];
+		},
+		{
+			nodeObj = 
+			CodeStyleGroup
+			{
+				mName = "数值";
+			};
+			children = 
+			[
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "number";
+						mContent = "0";
+						mExecContent = "0";
+						mName = "0";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "number";
+						mContent = "净值收益率";
+						mExecContent = "Ta";
+						mName = "净值收益率";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleNode
+					{
+						mTypeName = "number";
+						mContent = "持有时间";
+						mExecContent = "Time";
+						mName = "持有时间";
+					};
+					children = 
+					[
+					];
+				}
+			];
+		},
+		{
+			nodeObj = 
+			CodeStyleGroup
+			{
+				mName = "事件";
+			};
+			children = 
+			[
+				{
+					nodeObj = 
+					CodeStyleGroup
+					{
+						mName = "UI";
+					};
+					children = 
+					[
+						{
+							nodeObj = 
+							CodeStyleNode
+							{
+								mTypeName = "event";
+								mContent = "按钮点击";
+								mExecContent = "ButtonClick";
+								mName = "按钮点击";
+							};
+							children = 
+							[
+							];
+						},
+						{
+							nodeObj = 
+							CodeStyleNode
+							{
+								mTypeName = "event";
+								mContent = "窗口打开";
+								mExecContent = "OpenWindow";
+								mName = "窗口打开";
+							};
+							children = 
+							[
+							];
+						},
+						{
+							nodeObj = 
+							CodeStyleNode
+							{
+								mTypeName = "event";
+								mContent = "窗口关闭";
+								mExecContent = "CloseWindow";
+								mName = "窗口关闭";
+							};
+							children = 
+							[
+							];
+						}
+					];
+				},
+				{
+					nodeObj = 
+					CodeStyleGroup
+					{
+						mName = "网络";
+					};
+					children = 
+					[
+						{
+							nodeObj = 
+							CodeStyleNode
+							{
+								mTypeName = "event";
+								mContent = "网络状态变化";
+								mExecContent = "NetStateChange";
+								mName = "网络状态变化";
+							};
+							children = 
+							[
+							];
+						}
+					];
+				}
+			];
+		}
+	];
+}

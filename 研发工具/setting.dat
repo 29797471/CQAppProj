@@ -1,0 +1,822 @@
+{
+	saveData = 
+	[
+		DevelopTool.EventSetting
+		{
+			itemExecContent = "data.%Variable%";
+			mTemplateFileList = 
+			[
+				{
+					mFileName = "EventMgr.Make.cs";
+					mTemplateContent = "using CqCore;
+using System;
+using System.Collections.Generic;
+using UnityEngine;
+using SLua;
+
+/// <summary>
+/// 事件管理器<para/>
+/// 主要处理那些可能会存在多个事件监听者的事件<para/>
+/// 当是一对一的时候,或者 要处理返回值,没有必要使用事件管理器,参数传递委托就好<para/>
+/// example: <para/>
+///     EventMgr.ButtonClick.EventHandler +=OnButtonClick;<para/>
+///     EventMgr.ButtonClick.Notify(\"btn1\", \"win2\", this);
+/// </summary>
+public static class EventMgr
+{
+    /// <summary>
+    /// 将一个序列化的事件结构,反序列化生成事件消息,并发送
+    /// </summary>
+    public static void UrlNotify(string url, object sender = null)
+    {
+        if (!url.IsNullOrEmpty())
+        {
+            var o = (CustomEventArgs)Torsion.Deserialize(url);
+            if (o != null) o.Notify(sender);
+        }
+    }
+    public static void Dispose()
+    {
+        if(OnDispose!=null)
+        {
+            OnDispose();
+            //OnDispose = null;有可能会多次清除
+        }
+    }
+    static event Action OnDispose;
+
+    %Start_Export%%IsLua[%%M%
+    #region %Path%
+    /// <summary>%Name%</summary>
+    public static class %EventId%
+    {
+        static %EventId%()
+        {
+            OnDispose+=()=> mEventHandler = null;
+        }
+        [System.Serializable]
+        public class _EventArgs:CustomEventArgs 
+        {
+            %Start% 
+            /// <summary>
+            /// %ItemName%%Start_Comment%<para>%CommentPart%</para>%End_Comment%
+            /// </summary>%ListStart%
+            public readonly List<%Type%> %Variable%;%|%
+            public readonly %Type% %Variable%;%ListEnd%
+            %End%
+            /// <summary>%Name%</summary>
+            public _EventArgs(%Start%%ListStart% List<%Type%> %Variable%,%|%%Type% %Variable%,%ListEnd%%End%object sender=null)
+            {%Start%
+                this.%Variable%=%Variable%;%End%
+            }
+            public override bool Notify(object sender=null)
+            {
+                return %EventId%.Notify(this, sender);
+            }
+        }
+        static event EventHandler<_EventArgs> mEventHandler;
+        
+        public static event EventHandler<_EventArgs> EventHandler { add { mEventHandler += value; } remove { mEventHandler -= value; } }
+        /// <summary>
+        /// %Name%
+        /// </summary>%Start%
+        /// <param name=\"%Variable%\">%ItemName%%Start_Comment%<para>%CommentPart%</para>%End_Comment%</param>%End%
+        public static void Notify(%Start% %ListStart%List<%Type%>%|%%Type%%ListEnd% %Variable%,%End% object sender = null)
+        {
+            var eventData = new _EventArgs(%Start%%Variable%,%End%sender);
+            mEventHandler?.Invoke(sender, eventData);
+        }
+        /// <summary>
+        /// 分发事件通知
+        /// </summary>
+        static bool Notify(_EventArgs eventData, object sender)
+        {
+
+            if (mEventHandler != null)
+            {
+                 try
+                 {
+                     mEventHandler(sender, eventData);
+                 }
+                 catch (Exception e)
+                 {
+                     Debug.LogError(e);
+                     return false;
+                 }
+            }
+            return true;
+        }
+        public static void CallBack(EventHandler<_EventArgs> action,ICancelHandle handle=null)
+        {
+            mEventHandler += action;
+            if (handle != null) handle.CancelAct+=() => { mEventHandler -= action; };
+        }
+        public static void CallBackOnce(EventHandler<_EventArgs> action, ICancelHandle handle=null)
+        {
+            EventHandler<_EventArgs> temp = null;
+            temp = (obj, e) =>
+            {
+                mEventHandler -= temp;
+                if (action != null) action(obj, e);
+            };
+            mEventHandler += temp;
+            if (handle != null) handle.CancelAct+=() => mEventHandler -= temp;
+        }
+    }
+    #endregion%]IsLua%%End_Export%
+}
+";
+					mFolderPath = "..\\Duala3.0\\Assets\\Scripts\\Event";
+					mName = "EventMgr.Make.cs";
+				},
+				{
+					mFileName = "ExportEventToLua.cs";
+					mTemplateContent = "using SLua;
+
+public static class ExportEventToLua
+{
+	public static void OnAddCustomClass(LuaCodeGen.ExportGenericDelegate add)
+	{%Start_Export%%IsLua[%%M%
+		add(typeof(EventMgr.%EventId%), null);%]IsLua%%End_Export%
+		//add(typeof(EventMgr.%EventId%._EventArgs), null);
+	}
+}";
+					mFolderPath = "..\\Duala3.0\\Assets\\Slua\\Editor";
+					mName = "ExportEventToLua.cs";
+				},
+				{
+					mFileName = "EventMgr_CSharp.lua";
+					mTemplateContent = "%Start_Export%
+%IsLua[%
+%M%
+-----------%Path%------------
+---@class EventMgr_%EventId% %Name%
+EventMgr_%EventId%={}
+%Start%
+---@param %Variable% %Type%%End%
+function EventMgr_%EventId%.Notify(%Start%%Variable%,%End%sender )
+	EventMgr.%EventId%.Notify(%Start%%Variable%,%End%sender)
+end
+---@param _action fun(%Start%%Variable%:%Type%,%End%)
+function EventMgr_%EventId%.CallBack(_action,handle)
+	EventMgr.%EventId%.CallBack(function (sender,e) _action(e) end,handle)
+end
+---@param _action fun(%Start%%Variable%:%Type%,%End%)
+function EventMgr_%EventId%.CallBackOnce(_action,handle)
+	EventMgr.%EventId%.CallBackOnce(function (sender,e) _action(e) end,handle)
+end
+%]IsLua%%End_Export%
+";
+					mFolderPath = "..\\LuaProject\\LuaScripts\\Event";
+					mName = "EventMgr_CSharp.lua";
+				},
+				{
+					mFileName = "EventMgr_Lua.lua";
+					mTemplateContent = "
+EventEnum = CreatEnumTable(
+{%Start_Export%%IsLua[%
+    \"%EventId%\",--%Path%%M%%]IsLua%%End_Export%
+},1001)
+
+%Start_Export%%IsLua[%
+-----------%Path%------------
+---@class EventMgr_%EventId% %Name%
+EventMgr_%EventId%={}
+%Start%
+---@param %Variable% %Type% %End%
+function EventMgr_%EventId%.Notify(%Start%%Variable%,%End%sender )
+	local _tbl={}%Start%
+	_tbl.%Variable%=%Variable%%End%
+	EventDispatcher.Notify(EventEnum.%EventId%,_tbl)
+end
+---@param _action fun(%Start%%Variable%:%Type%,%End%)
+function EventMgr_%EventId%.CallBack(_action,handle)
+	EventDispatcher.CallBack(EventEnum.%EventId%,_action,handle)
+end
+---@param _action fun(%Start%%Variable%:%Type%,%End%)
+function EventMgr_%EventId%.CallBackOnce(_action,handle)
+	EventDispatcher.CallBack(EventEnum.%EventId%,_action,handle,true)
+end
+%M%%]IsLua%%End_Export%
+";
+					mFolderPath = "..\\LuaProject\\LuaScripts\\Event";
+					mName = "EventMgr_Lua.lua";
+				},
+				{
+					mFileName = "EventMgr_Print.lua";
+					mTemplateContent = "--事件打印类
+
+function EventMgr_Print()
+	--默认托管给退出游戏的全局句柄
+	local handle=GlobalMgr.instance.ExitHandle
+	local _printCSharp=function (name,eventData)
+		printColor(Config_PrintColor.Azure,name..Torsion.Serialize(eventData,true,false,false,100))  
+	end
+	local _printLua=function (name,eventData)
+		printColor(Config_PrintColor.Azure,name..table.SerializeValue(eventData))  
+	end
+%Start_Export%%Print[%%IsLua[%
+	EventMgr_%EventId%.CallBack(function (eventData)
+		_printLua(\"%Name%(%EventId%)\",eventData)
+	end,handle)
+%M%
+	EventMgr_%EventId%.CallBack(function (eventData)
+		_printCSharp(\"%Name%(%EventId%)\\n\",eventData)
+	end,handle)%]IsLua%%]Print%%End_Export%
+end
+
+EventMgr_Print()
+";
+					mFolderPath = "..\\LuaProject\\LuaScripts\\Event";
+					mName = "EventMgr_Print.lua";
+				}
+			];
+			mAllowCommand = true;
+			setPath = "data\\event.dat";
+		},
+		DevelopTool.GameStructSetting
+		{
+			baseTypeList = 
+			[
+				"int",
+				"float",
+				"long",
+				"bool",
+				"string",
+				"uint",
+				"object",
+				"UnityEngine.SystemLanguage",
+				"UnityEngine.KeyCode",
+				"RoadDrawStyle"
+			];
+			mClassDefineList = 
+			[
+				"class",
+				"struct"
+			];
+			mTemplateFileList = 
+			[
+			];
+			mAllowCommand = false;
+			setPath = "data\\event_struct.dat";
+		},
+		DevelopTool.GuideSetting
+		{
+			makePath = "..\\..\\resource\\LuaScript\\Window\\Guide\\Make";
+			mTemplateGuideLink = 
+			{
+				mFileName = "temp";
+				mTemplateContent = "";
+				mFolderPath = "temp";
+				mName = "temp";
+			};
+			mTemplateRequire = 
+			{
+				mName = "temp";
+			};
+			mNodeTypesList = 
+			[
+				{
+					mKey = "点击";
+					mValue = "GuideWnd_Click";
+				}
+			];
+			mLinkTypesList = 
+			[
+				{
+					mKey = "重复执行";
+					mValue = "Repeat";
+				},
+				{
+					mKey = "执行一次";
+					mValue = "DoOnce";
+				},
+				{
+					mKey = "完成一次";
+					mValue = "CompleteOnce";
+				}
+			];
+			mRolePossList = 
+			[
+				{
+					mKey = "左";
+					mValue = "left";
+				}
+			];
+			mGuideIcon = 
+			[
+			];
+			mGuideDir = 
+			[
+			];
+			mGuideArrowDir = 
+			[
+			];
+			mStoryAction = 
+			[
+			];
+			mAllowCommand = false;
+			setPath = "data\\guide.dat";
+		},
+		DevelopTool.CodeStyleNewSetting
+		{
+			mCodeSettingList = 
+			[
+				{
+					mName = "lua";
+					mExpPath = "data/lua_exp.dat";
+					mValuePath = "data/lua_value.dat";
+					mLinkTypeList = 
+					[
+						{
+							mKey = "string";
+							mValue = "字符串";
+						},
+						{
+							mKey = "number";
+							mValue = "数值";
+						},
+						{
+							mKey = "bool";
+							mValue = "条件";
+						},
+						{
+							mKey = "void";
+							mValue = "执行";
+						},
+						{
+							mKey = "delegate";
+							mValue = "委托";
+						},
+						{
+							mKey = "object";
+							mValue = "对象";
+						},
+						{
+							mKey = "operator_object";
+							mValue = "对象关系运算符";
+						},
+						{
+							mKey = "operator";
+							mValue = "关系运算符";
+						},
+						{
+							mKey = "event";
+							mValue = "事件";
+						}
+					];
+					mTemplateFileList = 
+					[
+					];
+				},
+				{
+					mName = "csharp";
+					mExpPath = "data/csharp_exp.dat";
+					mValuePath = "data/csharp_value.dat";
+					mLinkTypeList = 
+					[
+						{
+							mKey = "string";
+							mValue = "字符串";
+						},
+						{
+							mKey = "int";
+							mValue = "整数";
+						},
+						{
+							mKey = "float";
+							mValue = "浮点数";
+						},
+						{
+							mKey = "bool";
+							mValue = "条件";
+						},
+						{
+							mKey = "void";
+							mValue = "执行";
+						},
+						{
+							mKey = "curve";
+							mValue = "曲线";
+						},
+						{
+							mKey = "object";
+							mValue = "对象";
+						},
+						{
+							mKey = "event";
+							mValue = "事件";
+						},
+						{
+							mKey = "operator";
+							mValue = "关系运算符";
+						},
+						{
+							mKey = "operator_object";
+							mValue = "对象关系运算符";
+						}
+					];
+					mTemplateFileList = 
+					[
+					];
+				}
+			];
+			mAllowCommand = false;
+		},
+		DevelopTool.TriggerSetting
+		{
+			mTempleteFile = 
+			{
+				mFileName = "TriggerMgr.lua";
+				mTemplateContent = "super_class.TriggerMgr()
+
+function TriggerMgr:Init()
+	TriggerMgr:SetVar()
+	TriggerMgr:RunTrigger()
+end
+
+function TriggerMgr:SetVar()
+	%Var%
+	%VarName%=%DefaultValue%--%Variable%
+	%_Var%
+end
+
+function TriggerMgr:RunTrigger()
+	--默认托管给退出游戏的全局句柄
+	local handle=GlobalMgr.instance.ExitHandle
+	%Start%
+	--%NodeNameList%
+	EventMgr_%NewEvent%.CallBack(function (data)
+		if %OpenCondition%	then
+			%OpenAction%
+		end
+	end,handle)
+	%End%
+end
+
+TriggerMgr:Init()";
+				mFolderPath = "..\\LuaProject\\LuaScripts\\Mgr";
+				mName = "TriggerMgr.lua";
+			};
+			mLanguage = "lua";
+			mAction = "void";
+			mCondition = "bool";
+			mNewEvent = "event";
+			customerList = 
+			[
+				{
+					variable = "数字1";
+					mDefaultValue = "0";
+					mVarType = "number";
+				},
+				{
+					variable = "字符串1";
+					mDefaultValue = "\"a\"";
+					mVarType = "string";
+				}
+			];
+			mPrefixVar = "self.temp_";
+			mAllowCommand = true;
+			setPath = "data\\trigger.dat";
+		},
+		DevelopTool.ExcelNewSetting
+		{
+			excelFolderPath = "..\\表格数据";
+			mExcelDatPath = "data\\excel_new";
+			mStartDataRow = 2;
+			mTemplateFileList = 
+			[
+				{
+					mFileName = "Config_%NAME%.lua";
+					mTemplateContent = "--%Excel% - %Sheet%
+ConfigData_%NAME%=
+{%DateItem~%
+	{%VarValueData~%
+		%Var% = %Value%,%~VarValueData%
+	},%~DataItem%
+}
+function ConfigData_%NAME%_GetTorsion()
+	return table.SerializeValue(ConfigData_%NAME%)
+end
+%OneKey[%
+Config_%NAME%={}
+for i,v in pairs(ConfigData_%NAME%) do
+	Config_%NAME%[v.%Key1%]=v
+end
+%]OneKey%%DoubleKey[%
+Config_%NAME%={}
+for i,v in pairs(ConfigData_%NAME%) do
+	if Config_%NAME%[v.%Key1%]==nil then
+		Config_%NAME%[v.%Key1%]={}
+	end
+	Config_%NAME%[v.%Key1%][v.%Key2%]=v
+end
+%]DoubleKey%
+
+%ConstVal~%
+local __data=Config_%NAME%
+Config_%NAME%=setmetatable({},{__index = function (tbl,key) return __data[key].value end})
+%~ConstVal%";
+					mFolderPath = "..\\LuaProject\\LuaScripts\\Excel\\More";
+					mName = "生成lua";
+				},
+				{
+					mFileName = "ConfigLua_%NAME%.cs";
+					mTemplateContent = "using UnityEngine;
+using System.Collections.Generic;
+using SLua;
+
+/// <summary>
+/// %Excel% - %Sheet%
+/// </summary>
+public static class Config_%NAME%
+{
+    static List<DataItem> mList;
+    public static List<DataItem> List
+    {
+        get
+        {
+            if (mList == null)
+            {
+                if(!Application.isPlaying)LuaMgr.instance.require(\"Excel/More/Config_%NAME%\");
+                var x = (string)LuaMgr.instance.MainState.getFunction(\"ConfigData_%NAME%_GetTorsion\").call();
+                mList = Torsion.Deserialize<List<DataItem>>(x);
+                LuaSvr.OnDispose += () => mList = null;
+            }
+            return mList;
+        }
+    }%OneKey[%
+    static Dictionary<%Type1%, DataItem> mDic;
+    public static Dictionary<%Type1%,DataItem> Dic
+    {
+        get
+        {
+            if(mDic==null)
+            {
+                var luaList = List;
+                mDic = new Dictionary<%Type1%, DataItem>();
+                
+                foreach (var it in luaList)
+                {
+                    mDic[it.%Key1%] = it;
+                }
+                LuaSvr.OnDispose += () => mDic = null;
+            }
+            return mDic;
+        }
+    }%]OneKey%%DoubleKey[%
+    static Dictionary<%Type1%, Dictionary<%Type2%, DataItem>> mDic;
+    public static Dictionary<%Type1%, Dictionary<%Type2%, DataItem>> Dic
+    {
+        get
+        {
+            if (mDic == null)
+            {
+                var luaList = List;
+                mDic = new Dictionary<%Type1%, Dictionary<%Type2%, DataItem>>();
+
+                foreach (var it in luaList)
+                {
+                    if(!mDic.ContainsKey(it.%Key1%))
+                    {
+                        mDic[it.%Key1%] = new Dictionary<%Type2%, DataItem>();
+                    }
+                    mDic[it.%Key1%][it.%Key2%] = it;
+                }
+            }
+            return mDic;
+        }
+    }%]DoubleKey%
+    /// <summary>
+    /// %Excel% - %Sheet%
+    /// </summary>
+    public class DataItem
+    {%Item~%
+        /// <summary>
+        /// %Name%
+        /// </summary>
+        public %Type%%ListStart%[]%|%%ListEnd% %Variable%;%~Item%
+    }
+}
+";
+					mFolderPath = "..\\Duala3.0\\Assets\\Scripts\\Excel\\Make\\Configs";
+					mName = "生成c#调用lua接口类";
+				}
+			];
+			mTempleteFile = 
+			{
+				mFileName = "Init.lua";
+				mTemplateContent = "%Start_StructList%%Start_Sheet%
+require \"Excel/More/Config_%NAME%\"%End_Sheet%%End_StructList%";
+				mFolderPath = "..\\LuaProject\\LuaScripts\\Excel";
+				mName = "table.lua";
+			};
+			mMarkFile = 
+			{
+				mFileName = "mark_config_changed._temp";
+				mTemplateContent = "";
+				mFolderPath = "..\\Duala3.0\\Assets\\Scripts\\Excel\\Make";
+				mName = "标记导出数据改变";
+			};
+			mAllowCommand = true;
+		},
+		DevelopTool.CustomStructSetting
+		{
+			mTempleteFile = 
+			{
+				mName = "temp";
+			};
+			baseTypeList = 
+			[
+				"string",
+				"float",
+				"int",
+				"uint",
+				"bool"
+			];
+			mSeparates = "-|,";
+			mAllowCommand = false;
+			setPath = "data\\struct.dat";
+		},
+		DevelopTool.FolderSetting
+		{
+			mAllowCommand = true;
+			setPath = "..\\..\\Resources\\单件.dat,..\\..\\Resources\\套装.dat";
+		},
+		DevelopTool.LevelMapSetting
+		{
+			mCellSize = 
+			{
+				mU = 0;
+				mV = 0;
+			};
+			mTempleteFile = 
+			{
+				mFileName = "";
+				mTemplateContent = "";
+				mFolderPath = "";
+				mName = "temp";
+			};
+			mAllowCommand = false;
+			setPath = "data\\map.dat";
+		},
+		DevelopTool.TranslatorNewSetting
+		{
+			mExcelPath = "..\\多语言\\多语言文字.xlsx";
+			mLanguage = "lua";
+			mDesc = "";
+			mTemplateFileList = 
+			[
+				{
+					mFileName = "%Language%.lua";
+					mTemplateContent = "Language = {}
+
+function Language:GetTextData()
+    local data={}
+    local Miss=\"Miss\" 
+    local Convert=TextMgr.Convert
+    %Start_Translator%
+    data[%Id%]=function (args) return %Content% end
+    %End_Translator%
+    return data
+end
+
+return Language:GetTextData()";
+					mFolderPath = "..\\LuaProject\\LuaScripts\\Excel\\Language";
+					mName = "language.lua";
+				}
+			];
+			mTempleteFile = 
+			{
+				mFileName = "";
+				mTemplateContent = "";
+				mFolderPath = "";
+				mName = "";
+			};
+			mLinkTypesList = 
+			[
+				{
+					mKey = "1";
+					mValue = "Chinese";
+				},
+				{
+					mKey = "2";
+					mValue = "English";
+				}
+			];
+			mAllowCommand = true;
+		},
+		DevelopTool.ProtoSetting
+		{
+			protoFolder = "..\\proto";
+			baseTypeList = 
+			[
+				"int32",
+				"int64",
+				"uint32",
+				"uint64",
+				"string",
+				"bool",
+				"bytes",
+				"double",
+				"float"
+			];
+			mAllowCommand = false;
+			setPath = "";
+		},
+		DevelopTool.AISetting
+		{
+			mAllowCommand = true;
+			setPath = "data\\ai.dat";
+		},
+		DevelopTool.StorySetting
+		{
+			mAllowCommand = false;
+			setPath = "data\\story.dat";
+		},
+		DevelopTool.CommonStructSetting
+		{
+			baseTypeList = 
+			[
+				"string",
+				"int",
+				"uint",
+				"Dictionary<string, uint>"
+			];
+			mTemplateFileList = 
+			[
+				{
+					mFileName = "ConnectHttpServer.Make.cs";
+					mTemplateContent = "using CqCore;
+using CustomModel;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using Http.Send;
+using Http.Receive;
+
+public class HttpReturn
+{
+        public string data;
+        public uint status;
+        public uint info;
+}
+%StartNode%
+namespace %NameSpace%
+{
+	public %ClassDefine% %StructName%
+	{%StartItem%
+		public %ListStart%List<%Type%>%|%%Type%%ListEnd% %Variable%%DefaultValueStart%=%DefaultValue%%DefaultValueEnd%;%EndItem%
+	}
+}
+%EndNode%
+public partial class ConnectHttpServer : Singleton<ConnectHttpServer>
+{%StartNode%%FunStart%
+    /// <summary>
+    ///  %NodeName%
+    /// </summary>
+    public void %StructName%(%StartItem%%NoDefaultValueStart%%ListStart%List<%Type%>%|%%Type%%ListEnd% %Variable%,%NoDefaultValueEnd%%EndItem%Action<HttpReturn,%Additional%> OnReceive=null)
+    {
+	var _dic = new Dictionary<string, object>();%StartItem%%NoDefaultValueStart%
+	_dic[\"%Variable%\"] = %Variable%;%NoDefaultValueEnd%%DefaultValueStart%
+	_dic[\"%Variable%\"] = %DefaultValue%;%DefaultValueEnd%%EndItem%
+#if %Print%
+	Debug.Log(string.Format(\"{0}({1})\\n{2}\", \"%NodeName%\", \"%StructName%\", Json.Serialize(_dic)));
+#endif
+        Request(_dic, OnReceive);
+    }%FunEnd%%EndNode%
+}
+";
+					mFolderPath = "..\\Duala3.0\\Assets\\Scripts\\Net";
+					mName = "ConnectHttpServer.Make.cs";
+				}
+			];
+			mAllowCommand = false;
+			setPath = "data\\common_struct.dat";
+		},
+		DevelopTool.ShortcutSetting
+		{
+			mAllowCommand = false;
+			setPath = "data\\shortcut.dat";
+		},
+		DevelopTool.OtherSetting
+		{
+			mComparePath = "..\\..\\..\\..\\Program Files\\beyond compare\\BCompare.exe";
+			mForeground = "#FF168AE9";
+			mBackground = "#6E969696";
+			mFontSize = 20;
+			mTipIconsList = 
+			[
+			];
+			mHorizontalDot = 
+			[
+			];
+			mVerticalDot = 
+			[
+			];
+			dataPath = "shares";
+			mAllowCommand = false;
+		}
+	];
+}

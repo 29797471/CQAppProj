@@ -1,0 +1,505 @@
+{
+	nodeObj = null;
+	children = 
+	[
+		{
+			nodeObj = 
+			CommonStruct.CommonStructGroup
+			{
+				mNameSpace = "Http";
+				mName = "Http";
+			};
+			children = 
+			[
+				{
+					nodeObj = 
+					CommonStruct.CommonStructGroup
+					{
+						mNameSpace = "Send";
+						mName = "Send";
+					};
+					children = 
+					[
+						{
+							nodeObj = 
+							CommonStruct.CommonStructNode
+							{
+								mStructName = "UploadSuitData";
+								mClassDefine = "class";
+								mAdditional = "UploadSuitDataReturn";
+								mCanExportFun = true;
+								mPrint = false;
+								customerList = 
+								[
+									{
+										variable = "msgId";
+										mDefaultValue = "101";
+										mDesc = "消息id";
+										type = "int";
+										isList = false;
+										mIsConst = false;
+									},
+									{
+										variable = "token";
+										mDefaultValue = null;
+										mDesc = "用户token";
+										type = "string";
+										isList = false;
+										mIsConst = false;
+									},
+									{
+										variable = "name";
+										mDefaultValue = "";
+										mDesc = "套装名字";
+										type = "string";
+										isList = false;
+										mIsConst = false;
+									},
+									{
+										variable = "id";
+										mDefaultValue = null;
+										mDesc = "套装id";
+										type = "int";
+										isList = false;
+										mIsConst = false;
+									},
+									{
+										variable = "data";
+										mDefaultValue = "";
+										mDesc = "数据";
+										type = "string";
+										isList = false;
+										mIsConst = false;
+									}
+								];
+								mName = "上传套装数据";
+							};
+							children = 
+							[
+							];
+						},
+						{
+							nodeObj = 
+							CommonStruct.CommonStructNode
+							{
+								mStructName = "GetSuitData";
+								mClassDefine = "class";
+								mAdditional = "SuitDataReturn";
+								mCanExportFun = true;
+								mPrint = false;
+								customerList = 
+								[
+									{
+										variable = "msgId";
+										mDefaultValue = "102";
+										mDesc = "消息id";
+										type = "int";
+										isList = false;
+										mIsConst = false;
+									},
+									{
+										variable = "token";
+										mDefaultValue = null;
+										mDesc = "用户token";
+										type = "string";
+										isList = false;
+										mIsConst = false;
+									},
+									{
+										variable = "id";
+										mDefaultValue = null;
+										mDesc = "套装id";
+										type = "int";
+										isList = false;
+										mIsConst = false;
+									}
+								];
+								mName = "获取套装数据";
+							};
+							children = 
+							[
+							];
+						},
+						{
+							nodeObj = 
+							CommonStruct.CommonStructNode
+							{
+								mStructName = "LoginHttpServer";
+								mClassDefine = "class";
+								mAdditional = "LoginHttpServerReturn";
+								mCanExportFun = true;
+								mPrint = true;
+								customerList = 
+								[
+									{
+										variable = "msgId";
+										mDefaultValue = "103";
+										mDesc = "消息id";
+										type = "int";
+										isList = false;
+										mIsConst = false;
+									},
+									{
+										variable = "username";
+										mDefaultValue = null;
+										mDesc = "帐号";
+										type = "string";
+										isList = false;
+										mIsConst = false;
+									},
+									{
+										variable = "password";
+										mDefaultValue = null;
+										mDesc = "密码";
+										type = "string";
+										isList = false;
+										mIsConst = false;
+									}
+								];
+								mName = "登录";
+							};
+							children = 
+							[
+							];
+						},
+						{
+							nodeObj = 
+							CommonStruct.CommonStructNode
+							{
+								mStructName = "SendOrderInfo";
+								mClassDefine = "class";
+								mAdditional = "OrderInfoReturn";
+								mCanExportFun = true;
+								mPrint = true;
+								customerList = 
+								[
+									{
+										variable = "msgId";
+										mDefaultValue = "104";
+										mDesc = "消息id";
+										type = "int";
+										isList = false;
+										mIsConst = false;
+									},
+									{
+										variable = "token";
+										mDefaultValue = null;
+										mDesc = "token";
+										type = "string";
+										isList = false;
+										mIsConst = false;
+									},
+									{
+										variable = "order_info";
+										mDefaultValue = null;
+										mDesc = "订单信息";
+										type = "KSTechInfo";
+										isList = true;
+										mIsConst = false;
+									},
+									{
+										variable = "name";
+										mDefaultValue = null;
+										mDesc = "姓名";
+										type = "string";
+										isList = false;
+										mIsConst = false;
+									},
+									{
+										variable = "phone";
+										mDefaultValue = null;
+										mDesc = "电话";
+										type = "string";
+										isList = false;
+										mIsConst = false;
+									}
+								];
+								mName = "发送工艺信息";
+							};
+							children = 
+							[
+							];
+						},
+						{
+							nodeObj = 
+							CommonStruct.CommonStructNode
+							{
+								mStructName = "LoginOut";
+								mClassDefine = "class";
+								mAdditional = "LoginOutReturn";
+								mCanExportFun = true;
+								mPrint = false;
+								customerList = 
+								[
+									{
+										variable = "msgId";
+										mDefaultValue = "105";
+										mDesc = "消息id";
+										type = "int";
+										isList = false;
+										mIsConst = false;
+									},
+									{
+										variable = "token";
+										mDefaultValue = null;
+										mDesc = "token";
+										type = "string";
+										isList = false;
+										mIsConst = false;
+									}
+								];
+								mName = "退出登录";
+							};
+							children = 
+							[
+							];
+						},
+						{
+							nodeObj = 
+							CommonStruct.CommonStructNode
+							{
+								mStructName = "KSTechInfo";
+								mClassDefine = "class";
+								mAdditional = null;
+								mCanExportFun = false;
+								mPrint = false;
+								customerList = 
+								[
+									{
+										variable = "style";
+										mDefaultValue = null;
+										mDesc = "款式";
+										type = "uint";
+										isList = false;
+										mIsConst = false;
+									},
+									{
+										variable = "sprite";
+										mDefaultValue = null;
+										mDesc = "图片地址";
+										type = "string";
+										isList = false;
+										mIsConst = false;
+									},
+									{
+										variable = "dic";
+										mDefaultValue = null;
+										mDesc = "工艺分类映射工艺/面料id";
+										type = "Dictionary<string, uint>";
+										isList = false;
+										mIsConst = false;
+									}
+								];
+								mName = "款式工艺信息";
+							};
+							children = 
+							[
+							];
+						},
+						{
+							nodeObj = 
+							CommonStruct.CommonStructNode
+							{
+								mStructName = "GetServerInfo";
+								mClassDefine = "class";
+								mAdditional = "ServerInfoReturn";
+								mCanExportFun = true;
+								mPrint = false;
+								customerList = 
+								[
+									{
+										variable = "msgId";
+										mDefaultValue = "1234";
+										mDesc = "消息id";
+										type = "int";
+										isList = false;
+										mIsConst = false;
+									}
+								];
+								mName = "获取服务器信息";
+							};
+							children = 
+							[
+							];
+						}
+					];
+				},
+				{
+					nodeObj = 
+					CommonStruct.CommonStructGroup
+					{
+						mNameSpace = "Receive";
+						mName = "Receive";
+					};
+					children = 
+					[
+						{
+							nodeObj = 
+							CommonStruct.CommonStructNode
+							{
+								mStructName = "UploadSuitDataReturn";
+								mClassDefine = "class";
+								mAdditional = "";
+								mCanExportFun = false;
+								mPrint = false;
+								customerList = 
+								[
+								];
+								mName = "上传套装数据返回";
+							};
+							children = 
+							[
+							];
+						},
+						{
+							nodeObj = 
+							CommonStruct.CommonStructNode
+							{
+								mStructName = "SuitDataReturn";
+								mClassDefine = "class";
+								mAdditional = null;
+								mCanExportFun = false;
+								mPrint = false;
+								customerList = 
+								[
+									{
+										variable = "suit";
+										mDefaultValue = "";
+										mDesc = "套装数据";
+										type = "string";
+										isList = false;
+										mIsConst = false;
+									}
+								];
+								mName = "获取套装数据返回";
+							};
+							children = 
+							[
+							];
+						},
+						{
+							nodeObj = 
+							CommonStruct.CommonStructNode
+							{
+								mStructName = "LoginHttpServerReturn";
+								mClassDefine = "class";
+								mAdditional = null;
+								mCanExportFun = false;
+								mPrint = false;
+								customerList = 
+								[
+									{
+										variable = "token";
+										mDefaultValue = null;
+										mDesc = "token";
+										type = "string";
+										isList = false;
+										mIsConst = false;
+									}
+								];
+								mName = "登录返回";
+							};
+							children = 
+							[
+							];
+						},
+						{
+							nodeObj = 
+							CommonStruct.CommonStructNode
+							{
+								mStructName = "OrderInfoReturn";
+								mClassDefine = "class";
+								mAdditional = null;
+								mCanExportFun = false;
+								mPrint = false;
+								customerList = 
+								[
+									{
+										variable = "style_id";
+										mDefaultValue = null;
+										mDesc = null;
+										type = "uint";
+										isList = false;
+										mIsConst = false;
+									},
+									{
+										variable = "cate_id";
+										mDefaultValue = null;
+										mDesc = null;
+										type = "uint";
+										isList = false;
+										mIsConst = false;
+									},
+									{
+										variable = "cell";
+										mDefaultValue = null;
+										mDesc = null;
+										type = "string";
+										isList = true;
+										mIsConst = false;
+									}
+								];
+								mName = "工艺信息返回";
+							};
+							children = 
+							[
+							];
+						},
+						{
+							nodeObj = 
+							CommonStruct.CommonStructNode
+							{
+								mStructName = "LoginOutReturn";
+								mClassDefine = "class";
+								mAdditional = null;
+								mCanExportFun = false;
+								mPrint = false;
+								customerList = 
+								[
+								];
+								mName = "退出登录返回";
+							};
+							children = 
+							[
+							];
+						},
+						{
+							nodeObj = 
+							CommonStruct.CommonStructNode
+							{
+								mStructName = "ServerInfoReturn";
+								mClassDefine = "class";
+								mAdditional = null;
+								mCanExportFun = false;
+								mPrint = false;
+								customerList = 
+								[
+									{
+										variable = "httpServerUrl";
+										mDefaultValue = null;
+										mDesc = "http服务器地址";
+										type = "string";
+										isList = true;
+										mIsConst = false;
+									},
+									{
+										variable = "resServerUrl";
+										mDefaultValue = null;
+										mDesc = "资源服务器地址";
+										type = "string";
+										isList = true;
+										mIsConst = false;
+									}
+								];
+								mName = "获取服务器信息返回";
+							};
+							children = 
+							[
+							];
+						}
+					];
+				}
+			];
+		}
+	];
+}

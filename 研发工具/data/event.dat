@@ -1,0 +1,882 @@
+{
+	children = 
+	[
+		{
+			nodeObj = 
+			EventGroup
+			{
+				mName = "网络";
+			};
+			children = 
+			[
+				{
+					nodeObj = 
+					EventNode
+					{
+						m_EventId = "NetStateChange";
+						customerList = 
+						[
+						];
+						mIsLua = true;
+						mName = "网络状态变化";
+					};
+					children = 
+					[
+					];
+				}
+			];
+		},
+		{
+			nodeObj = 
+			EventGroup
+			{
+				mName = "本地";
+			};
+			children = 
+			[
+				{
+					nodeObj = 
+					EventNode
+					{
+						m_EventId = "ServerTimeUpdate";
+						customerList = 
+						[
+							{
+								name = "时间戳(秒)";
+								variable = "timestamp";
+								type = "int";
+								isList = false;
+							}
+						];
+						mIsLua = false;
+						mName = "服务器时间戳更新";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					EventNode
+					{
+						m_EventId = "NetPingUpdate";
+						customerList = 
+						[
+							{
+								name = "毫秒";
+								variable = "time";
+								type = "int";
+								isList = false;
+							}
+						];
+						mIsLua = false;
+						mName = "网络Ping延时变更";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					EventGroup
+					{
+						mName = "多语言";
+					};
+					children = 
+					[
+						{
+							nodeObj = 
+							EventNode
+							{
+								m_EventId = "LanguageChange";
+								customerList = 
+								[
+									{
+										name = "语言";
+										variable = "sysLanguage";
+										type = "UnityEngine.SystemLanguage";
+										isList = false;
+									}
+								];
+								mIsLua = false;
+								mName = "语言切换";
+							};
+							children = 
+							[
+							];
+						}
+					];
+				},
+				{
+					nodeObj = 
+					EventGroup
+					{
+						mName = "消息";
+					};
+					children = 
+					[
+						{
+							nodeObj = 
+							EventNode
+							{
+								m_EventId = "CmdCommand";
+								customerList = 
+								[
+									{
+										name = "命令";
+										variable = "command";
+										type = "string";
+										isList = false;
+									}
+								];
+								mIsLua = false;
+								mName = "批处理";
+							};
+							children = 
+							[
+							];
+						}
+					];
+				},
+				{
+					nodeObj = 
+					EventGroup
+					{
+						mName = "窗口";
+					};
+					children = 
+					[
+						{
+							nodeObj = 
+							EventNode
+							{
+								m_EventId = "WindowShow";
+								customerList = 
+								[
+									{
+										name = "窗口";
+										variable = "win";
+										type = "string";
+										isList = false;
+									},
+									{
+										name = "窗口名称";
+										variable = "desc";
+										type = "string";
+										isList = false;
+									}
+								];
+								mIsLua = false;
+								mName = "窗口显示";
+							};
+							children = 
+							[
+							];
+						},
+						{
+							nodeObj = 
+							EventNode
+							{
+								m_EventId = "WindowHide";
+								customerList = 
+								[
+									{
+										name = "窗口";
+										variable = "win";
+										type = "string";
+										isList = false;
+									},
+									{
+										name = "窗口名称";
+										variable = "desc";
+										type = "string";
+										isList = false;
+									}
+								];
+								mIsLua = false;
+								mName = "窗口隐藏";
+							};
+							children = 
+							[
+							];
+						},
+						{
+							nodeObj = 
+							EventGroup
+							{
+								mName = "缓动";
+							};
+							children = 
+							[
+								{
+									nodeObj = 
+									EventNode
+									{
+										m_EventId = "WindowFadeInStart";
+										customerList = 
+										[
+											{
+												name = "窗口名称";
+												variable = "winName";
+												type = "string";
+												isList = false;
+											}
+										];
+										mIsLua = false;
+										mName = "窗口缓入开始";
+									};
+									children = 
+									[
+									];
+								},
+								{
+									nodeObj = 
+									EventNode
+									{
+										m_EventId = "WindowFadeInEnd";
+										customerList = 
+										[
+											{
+												name = "窗口名称";
+												variable = "winName";
+												type = "string";
+												isList = false;
+											}
+										];
+										mIsLua = false;
+										mName = "窗口缓入结束";
+									};
+									children = 
+									[
+									];
+								},
+								{
+									nodeObj = 
+									EventNode
+									{
+										m_EventId = "WindowFadeOutStart";
+										customerList = 
+										[
+											{
+												name = "窗口名称";
+												variable = "winName";
+												type = "string";
+												isList = false;
+											}
+										];
+										mIsLua = false;
+										mName = "窗口缓出开始";
+									};
+									children = 
+									[
+									];
+								},
+								{
+									nodeObj = 
+									EventNode
+									{
+										m_EventId = "WindowFadeOutEnd";
+										customerList = 
+										[
+											{
+												name = "窗口名称";
+												variable = "winName";
+												type = "string";
+												isList = false;
+											}
+										];
+										mIsLua = false;
+										mName = "窗口缓出结束";
+									};
+									children = 
+									[
+									];
+								}
+							];
+						},
+						{
+							nodeObj = 
+							EventNode
+							{
+								m_EventId = "ButtonClick";
+								customerList = 
+								[
+									{
+										name = "窗口名称";
+										variable = "winName";
+										type = "string";
+										isList = false;
+									},
+									{
+										name = "按钮名称";
+										variable = "btnPath";
+										type = "string";
+										isList = false;
+									}
+								];
+								mIsLua = false;
+								mName = "按钮点击";
+							};
+							children = 
+							[
+							];
+						},
+						{
+							nodeObj = 
+							EventNode
+							{
+								m_EventId = "ToggleClick";
+								customerList = 
+								[
+									{
+										name = "窗口名称";
+										variable = "winName";
+										type = "string";
+										isList = false;
+									},
+									{
+										name = "开关名称";
+										variable = "btnPath";
+										type = "string";
+										isList = false;
+									},
+									{
+										name = "是否打开";
+										variable = "select";
+										type = "bool";
+										isList = false;
+									}
+								];
+								mIsLua = false;
+								mName = "开关点击";
+							};
+							children = 
+							[
+							];
+						},
+						{
+							nodeObj = 
+							EventNode
+							{
+								m_EventId = "SimulatorToggleClick";
+								customerList = 
+								[
+									{
+										name = "窗口名称";
+										variable = "winName";
+										type = "string";
+										isList = false;
+									},
+									{
+										name = "开关名称";
+										variable = "togglePath";
+										type = "string";
+										isList = false;
+									}
+								];
+								mIsLua = false;
+								mName = "模拟开关点击";
+							};
+							children = 
+							[
+							];
+						},
+						{
+							nodeObj = 
+							EventGroup
+							{
+								mName = "通知";
+							};
+							children = 
+							[
+								{
+									nodeObj = 
+									EventNode
+									{
+										m_EventId = "DoOpenOrCloseLoadingDlg";
+										customerList = 
+										[
+											{
+												name = "打开/关闭";
+												variable = "isOpen";
+												type = "bool";
+												isList = false;
+											}
+										];
+										mIsLua = false;
+										mName = "执行打开或者关闭加载窗口";
+									};
+									children = 
+									[
+									];
+								},
+								{
+									nodeObj = 
+									EventNode
+									{
+										m_EventId = "DoOpenUserOprFail";
+										customerList = 
+										[
+										];
+										mIsLua = false;
+										mName = "执行弹出用户操作失败窗口";
+									};
+									children = 
+									[
+									];
+								}
+							];
+						}
+					];
+				},
+				{
+					nodeObj = 
+					EventGroup
+					{
+						mName = "游戏状态";
+					};
+					children = 
+					[
+						{
+							nodeObj = 
+							EventNode
+							{
+								m_EventId = "GameStartup";
+								customerList = 
+								[
+								];
+								mIsLua = false;
+								mName = "游戏启动";
+							};
+							children = 
+							[
+							];
+						},
+						{
+							nodeObj = 
+							EventNode
+							{
+								m_EventId = "CanvasInitComplete";
+								customerList = 
+								[
+								];
+								mIsLua = false;
+								mName = "UI画布初始化完成";
+							};
+							children = 
+							[
+							];
+						},
+						{
+							nodeObj = 
+							EventNode
+							{
+								m_EventId = "ResUpdateComplete";
+								customerList = 
+								[
+								];
+								mIsLua = false;
+								mName = "资源热更新完成";
+							};
+							children = 
+							[
+							];
+						},
+						{
+							nodeObj = 
+							EventNode
+							{
+								m_EventId = "InitServerAddressComplete";
+								customerList = 
+								[
+								];
+								mIsLua = false;
+								mName = "初始化服务器信息完成";
+							};
+							children = 
+							[
+							];
+						},
+						{
+							nodeObj = 
+							EventNode
+							{
+								m_EventId = "LoginComplete";
+								customerList = 
+								[
+								];
+								mIsLua = false;
+								mName = "登录成功";
+							};
+							children = 
+							[
+							];
+						},
+						{
+							nodeObj = 
+							EventNode
+							{
+								m_EventId = "InitModel";
+								customerList = 
+								[
+								];
+								mIsLua = false;
+								mName = "初始化模块";
+							};
+							children = 
+							[
+							];
+						}
+					];
+				},
+				{
+					nodeObj = 
+					EventGroup
+					{
+						mName = "加载";
+					};
+					children = 
+					[
+						{
+							nodeObj = 
+							EventNode
+							{
+								m_EventId = "ResLoadStart";
+								customerList = 
+								[
+								];
+								mIsLua = false;
+								mName = "开始加载资源";
+							};
+							children = 
+							[
+							];
+						},
+						{
+							nodeObj = 
+							EventNode
+							{
+								m_EventId = "ResLoadEnd";
+								customerList = 
+								[
+								];
+								mIsLua = false;
+								mName = "资源加载完成";
+							};
+							children = 
+							[
+							];
+						}
+					];
+				},
+				{
+					nodeObj = 
+					EventNode
+					{
+						m_EventId = "DrawStyleChanged";
+						customerList = 
+						[
+							{
+								variable = "style";
+								type = "RoadDrawStyle";
+								isList = false;
+							}
+						];
+						mIsLua = false;
+						mName = "绘制样式改变";
+					};
+					children = 
+					[
+					];
+				}
+			];
+		},
+		{
+			nodeObj = 
+			EventGroup
+			{
+				mName = "设备交互";
+			};
+			children = 
+			[
+				{
+					nodeObj = 
+					EventNode
+					{
+						m_EventId = "ApplicationQuit";
+						customerList = 
+						[
+						];
+						mIsLua = false;
+						mName = "退出应用";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					EventNode
+					{
+						m_EventId = "ApplicationPause";
+						customerList = 
+						[
+							{
+								name = "暂停";
+								variable = "pause";
+								type = "bool";
+								isList = false;
+							}
+						];
+						mIsLua = false;
+						mContent = "一般切换到后台时发生,切换回来时恢复";
+						mName = "应用暂停";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					EventNode
+					{
+						m_EventId = "AndroidClick";
+						customerList = 
+						[
+							{
+								name = "按键";
+								variable = "style";
+								type = "int";
+								isList = false;
+								comment = "0.Escape
+1.Home";
+							}
+						];
+						mIsLua = false;
+						mName = "Android交互";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					EventNode
+					{
+						m_EventId = "KeyBoardDown";
+						customerList = 
+						[
+							{
+								name = "按键";
+								variable = "key";
+								type = "UnityEngine.KeyCode";
+								isList = false;
+								comment = "";
+							}
+						];
+						mIsLua = false;
+						mName = "键盘按下";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					EventNode
+					{
+						m_EventId = "MoreInputMove";
+						customerList = 
+						[
+							{
+								name = "移动增量";
+								variable = "delta";
+								type = "float";
+								isList = false;
+								comment = "放开为正,夹住为负";
+							}
+						];
+						mIsLua = false;
+						mName = "多触点移动";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					EventNode
+					{
+						m_EventId = "OneInputMove";
+						customerList = 
+						[
+							{
+								name = "移动增量";
+								variable = "delta";
+								type = "Vector2";
+								isList = false;
+								comment = "";
+							}
+						];
+						mIsLua = false;
+						mName = "单触点移动";
+					};
+					children = 
+					[
+					];
+				}
+			];
+		},
+		{
+			nodeObj = 
+			EventGroup
+			{
+				mName = "系统";
+			};
+			children = 
+			[
+				{
+					nodeObj = 
+					EventNode
+					{
+						m_EventId = "DeviceDataUpdate";
+						customerList = 
+						[
+							{
+								name = "左边";
+								variable = "isLeft";
+								type = "bool";
+								isList = false;
+							},
+							{
+								name = "力量";
+								variable = "power";
+								type = "float";
+								isList = false;
+							}
+						];
+						mIsLua = false;
+						mName = "设备数据更新";
+					};
+					children = 
+					[
+					];
+				}
+			];
+		},
+		{
+			nodeObj = 
+			EventGroup
+			{
+				mName = "研发工具事件";
+			};
+			children = 
+			[
+				{
+					nodeObj = 
+					EventNode
+					{
+						m_EventId = "MsgBox";
+						customerList = 
+						[
+							{
+								name = "内容";
+								variable = "content";
+								type = "string";
+								isList = false;
+							},
+							{
+								name = "标题";
+								variable = "title";
+								type = "string";
+								isList = false;
+							},
+							{
+								name = "弹框样式";
+								variable = "style";
+								type = "int";
+								isList = false;
+							}
+						];
+						mIsLua = false;
+						mName = "弹框消息";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					EventNode
+					{
+						m_EventId = "MsgBalloon";
+						customerList = 
+						[
+							{
+								name = "内容";
+								variable = "content";
+								type = "string";
+								isList = false;
+							},
+							{
+								name = "标题";
+								variable = "title";
+								type = "string";
+								isList = false;
+							},
+							{
+								name = "图标";
+								variable = "icon";
+								type = "int";
+								isList = false;
+								comment = "0.无
+1.信息
+2.警告
+3.错误";
+							},
+							{
+								name = "持续时间";
+								variable = "duration";
+								type = "float";
+								isList = false;
+							}
+						];
+						mIsLua = false;
+						mName = "气泡消息";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					EventNode
+					{
+						m_EventId = "MsgPrint";
+						customerList = 
+						[
+							{
+								name = "内容";
+								variable = "content";
+								type = "string";
+								isList = false;
+							},
+							{
+								name = "持续时间";
+								variable = "duration";
+								type = "float";
+								isList = false;
+								comment = "";
+							}
+						];
+						mIsLua = false;
+						mName = "打印消息";
+					};
+					children = 
+					[
+					];
+				}
+			];
+		}
+	];
+}

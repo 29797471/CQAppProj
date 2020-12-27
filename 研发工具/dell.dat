@@ -1,0 +1,22 @@
+{
+	mLastSelectItem = 11;
+	mLastSelectSet = 15;
+	mPrintDic = 
+	{
+		"Event_窗口显示":true,
+		"Event_窗口隐藏":true,
+		"Event_执行打开或者关闭加载窗口":true,
+		"Event_Android交互":true,
+		"Event_退出应用":true,
+		"Event_应用暂停":true,
+		"Event_服务器时间更新":true,
+		"Event_语言切换":true,
+		"Event_加载语言包完成":true
+	};
+	openUnityBox = 
+	{
+		mUnityFolder = "F:\\Program Files\\Unity 2018.4.9f1";
+		mProjDir = "H:\\work\\duola\\Proj\\Duala3.0";
+		mTargetPlatform = "Android";
+	};
+}

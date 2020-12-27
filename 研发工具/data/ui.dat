@@ -1,0 +1,305 @@
+{
+	children = 
+	[
+		{
+			nodeObj = 
+			CqDlg.GameDlgGroup
+			{
+				mContent = "这个层由外部打开分组的方式打开所有窗口,
+对应由关闭分组的方式全部关闭";
+				mName = "用户交互层";
+			};
+			children = 
+			[
+				{
+					nodeObj = 
+					CqDlg.GameDlgNode
+					{
+						mName = "主界面头像";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CqDlg.GameDlgNode
+					{
+						mName = "主界面聊天";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CqDlg.GameDlgNode
+					{
+						mName = "主界面右下折叠菜单";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CqDlg.GameDlgNode
+					{
+						mName = "主界面右上折叠菜单";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CqDlg.GameDlgNode
+					{
+						mName = "主界面货币栏";
+					};
+					children = 
+					[
+					];
+				}
+			];
+		},
+		{
+			nodeObj = 
+			CqDlg.GameDlgGroup
+			{
+				mContent = "带返回(关闭当前窗口)和关闭按钮
+(关闭所有,打开用户交互层所有窗口)
+被全屏窗口挡住的打开窗口,要停止渲染,
+而不是把它们关闭";
+				mName = "全屏层";
+			};
+			children = 
+			[
+				{
+					nodeObj = 
+					CqDlg.GameDlgNode
+					{
+						mCallName = "";
+						mClassPath = "";
+						mName = "加载界面";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CqDlg.GameDlgNode
+					{
+						mName = "聊天窗口";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CqDlg.GameDlgNode
+					{
+						mName = "任务";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CqDlg.GameDlgNode
+					{
+						mName = "设置";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CqDlg.GameDlgNode
+					{
+						mCallName = "Logo";
+						mResPath = "Window/Login/LogoWin";
+						mClassPath = "Window/Windows/LogoWin";
+						mName = "启动logo";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CqDlg.GameDlgNode
+					{
+						mCallName = "LoginWin";
+						mResPath = "Window/Login/LoginWin";
+						mClassPath = "Window/Windows/LoginWin";
+						mName = "登录";
+					};
+					children = 
+					[
+					];
+				}
+			];
+		},
+		{
+			nodeObj = 
+			CqDlg.GameDlgGroup
+			{
+				mName = "系统层x";
+			};
+			children = 
+			[
+				{
+					nodeObj = 
+					CqDlg.GameDlgNode
+					{
+						mCallName = "YuCeWin";
+						mResPath = "Window/YuCe/YuCeWin";
+						mClassPath = "Window/Windows/YuCeWin";
+						mName = "股票数据";
+					};
+					children = 
+					[
+					];
+				}
+			];
+		},
+		{
+			nodeObj = 
+			CqDlg.GameDlgGroup
+			{
+				mName = "系统UI-1";
+			};
+			children = 
+			[
+				{
+					nodeObj = 
+					CqDlg.GameDlgNode
+					{
+						mCallName = "OrderCenterWin";
+						mResPath = "Window/Order/OrderCenterWin";
+						mClassPath = "Window/Windows/OrderCenterWin";
+						mName = "订单中心";
+					};
+					children = 
+					[
+					];
+				}
+			];
+		},
+		{
+			nodeObj = 
+			CqDlg.GameDlgGroup
+			{
+				mName = "系统UI-2";
+			};
+			children = 
+			[
+			];
+		},
+		{
+			nodeObj = 
+			CqDlg.GameDlgGroup
+			{
+				mName = "场景弹窗";
+			};
+			children = 
+			[
+				{
+					nodeObj = 
+					CqDlg.GameDlgNode
+					{
+						mName = "选中建筑弹窗";
+					};
+					children = 
+					[
+					];
+				}
+			];
+		},
+		{
+			nodeObj = 
+			CqDlg.GameDlgGroup
+			{
+				mName = "指引层";
+			};
+			children = 
+			[
+				{
+					nodeObj = 
+					CqDlg.GameDlgNode
+					{
+						mName = "指引窗口";
+					};
+					children = 
+					[
+					];
+				}
+			];
+		},
+		{
+			nodeObj = 
+			CqDlg.GameDlgGroup
+			{
+				mName = "悬浮层";
+			};
+			children = 
+			[
+				{
+					nodeObj = 
+					CqDlg.GameDlgNode
+					{
+						mName = "断线重连";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CqDlg.GameDlgNode
+					{
+						mName = "错误提示";
+					};
+					children = 
+					[
+					];
+				}
+			];
+		},
+		{
+			nodeObj = 
+			CqDlg.GameDlgGroup
+			{
+				mName = "提示层";
+			};
+			children = 
+			[
+				{
+					nodeObj = 
+					CqDlg.GameDlgNode
+					{
+						mName = "头衔详情";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					CqDlg.GameDlgNode
+					{
+						mName = "货币说明";
+					};
+					children = 
+					[
+					];
+				}
+			];
+		}
+	];
+}

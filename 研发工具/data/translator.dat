@@ -1,0 +1,31 @@
+{
+	mNodeList = 
+	[
+		{
+			mName = "temp";
+			mGlobalVar = 
+			ExprCodeTemplate
+			{
+				mLanguage = "lua";
+				mStyleType = "string";
+				mStyleName = "翻译文本";
+				childs = 
+				[
+					ValueCodeTemplate
+					{
+						mLanguage = "lua";
+						mStyleType = "number";
+						mData = "0";
+					}
+				];
+			};
+			mDesc = null;
+		}
+	];
+	mTempNodeList = 
+	[
+	];
+	mTranslatorSectionList = 
+	[
+	];
+}
