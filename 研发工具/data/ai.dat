@@ -142,7 +142,7 @@
 					CopyFolder
 					{
 						mSrcPath = "CqPlugin";
-						mDstPath = "..\\Duala3.0\\Assets\\Plugins";
+						mDstPath = "..\\UnityProj\\Assets\\Plugins";
 						mOverWrite = true;
 						mName = "拷贝到项目";
 					};
