@@ -1,0 +1,8 @@
+{
+	resVersion = "";
+	appVersion = "2020.1018.201821";
+	appFileName = "实时行情-测试.apk";
+	startCheckSize = 270158;
+	dynamicCheckSize = 0;
+}
+//启动更新资源总大小:263.83 KB 动态加载资源总大小:0.00 B

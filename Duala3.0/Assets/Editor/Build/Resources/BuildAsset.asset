@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5a1e2179d476b749bcd78398cb1bb7d, type: 3}
+  m_Name: BuildAsset
+  m_EditorClassIdentifier: 
+  makeAppConfig: 1
+  serverAssets: ../../../../ServerAssets
+  assetBundleDir: ../Library/AssetBundles
+  fullRes: 0
+  developModel: 1
+  packageResources:
+  - {fileID: 1166812024398636, guid: 5c4e42193a0416942b7abcd7cc3eccd3, type: 3}
+  - {fileID: 1656997651397602, guid: 15e3a8881388b904499212710457c2a8, type: 3}
+  - {fileID: 6752029853331220074, guid: 9fa25fedb16d7c043bb027a243c00748, type: 3}
+  - {fileID: 1656997651397602, guid: a92cb7ffb005b51469c105cf9af61d64, type: 3}
+  - {fileID: 1656997651397602, guid: 9007c3017d912a54b9ec8079ce402612, type: 3}
+  - {fileID: 862787032743785884, guid: 0791942dd0ec51e44b755f2abed9bd17, type: 3}
+  appIcon: {fileID: 2800000, guid: 57ed362dc0193e04f8708d0fee376790, type: 3}
+  buildAndroidSkin: {fileID: 11400000, guid: 25baa07ff1dbe3d498c405a1447c3b50, type: 2}

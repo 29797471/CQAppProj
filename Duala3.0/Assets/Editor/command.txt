@@ -1,0 +1,31 @@
+{
+	"打开加载窗口":"DlgMgr.Inst:Open(\"LoadingWin\")",
+	"关闭加载窗口":"DlgMgr.Inst:Close(\"LoadingWin\")",
+	"打印设备信息":"print(\"设备名称:\"..UnityEngine.SystemInfo.deviceName..[[ 
+设备模型:]]..UnityEngine.SystemInfo.deviceModel..[[ 
+设备类型:]]..tostring(UnityEngine.SystemInfo.deviceType)..[[ 
+\"操作系统:]]..tostring(UnityEngine.SystemInfo.operatingSystem)..[[ 
+设备唯一标识符:]]..tostring(UnityEngine.SystemInfo.deviceUniqueIdentifier)..[[ 
+运行平台:]]..tostring(UnityEngine.Application.platform)..[[ 
+屏幕宽高:]]..UnityEngine.Screen.width..\"x\"..UnityEngine.Screen.height..[[ 
+设备分辨率:]]..tostring(UnityEngine.Screen.currentResolution))
+",
+	"切换到外网版":"SettingModel.instance.Version=\"外网版\"",
+	"切换到内网版":"SettingModel.instance.Version=\"内网版\"",
+	"vrc":"vrc.x=2
+vrc:SetLeftRight()",
+	"打印屏幕方向":"print(UnityEngine.Screen.orientation)",
+	"打印屏幕旋转参数":"print(UnityEngine.Screen.orientation)
+print(UnityEngine.Screen.autorotateToLandscapeLeft)
+print(UnityEngine.Screen.autorotateToLandscapeRight)
+print(UnityEngine.Screen.autorotateToPortrait)
+print(UnityEngine.Screen.autorotateToPortraitUpsideDown)",
+	"鼠标是否启用":"print(UnityEngine.Input.mousePresent)",
+	"rich5_功能激活":"SystemOpenMgr.SetState(107,SystemState.Achieve)
+SystemOpenMgr.SetState(105,SystemState.Achieve)
+SystemOpenMgr.SetState(113,SystemState.Achieve)",
+	"rich5_功能关闭":"SystemOpenMgr.SetState(107,SystemState.Close)
+SystemOpenMgr.SetState(105,SystemState.Close)
+SystemOpenMgr.SetState(113,SystemState.Close)",
+	"重启游戏":"GlobalMgr.instance:ReStart()"
+}

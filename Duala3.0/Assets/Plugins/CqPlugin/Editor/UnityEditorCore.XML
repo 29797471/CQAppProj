@@ -1,0 +1,385 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UnityEditorCore</name>
+    </assembly>
+    <members>
+        <member name="T:AutoAction">
+            <summary>
+            定义被调用的静态方法的显示名称
+            该方法所在的类需包含在名称空间Automation下
+            </summary>
+        </member>
+        <member name="T:AutoActionMenu">
+            <summary>
+            自动化窗口菜单,修饰静态方法
+            该方法所在的类需包含在名称空间Automation下
+            </summary>
+        </member>
+        <member name="M:AutoActionWindow.OnFocus">
+            <summary>
+            当窗口获得焦点时调用一次
+            </summary>
+        </member>
+        <member name="M:AutoActionWindow.OnLostFocus">
+            <summary>
+            当窗口丢失焦点时调用一次
+            </summary>
+        </member>
+        <member name="M:AutoActionWindow.OnHierarchyChange">
+            <summary>
+            当Hierarchy视图中的任何对象发生改变时调用一次
+            </summary>
+        </member>
+        <member name="M:AutoActionWindow.OnProjectChange">
+            <summary>
+            当Project视图中的资源发生改变时调用一次
+            </summary>
+        </member>
+        <member name="M:AutoActionWindow.OnInspectorUpdate">
+            <summary>
+            窗口面板的更新
+            这里开启窗口的重绘，不然窗口信息不会刷新
+            </summary>
+        </member>
+        <member name="M:AutoActionWindow.OnSelectionChange">
+            <summary>
+            当窗口出去开启状态，并且在Hierarchy视图中选择某游戏对象时调用
+            有可能是多选，
+            </summary>
+        </member>
+        <member name="M:AutoActionWindow.OnDestroy">
+            <summary>
+            当窗口关闭时调用
+            </summary>
+        </member>
+        <member name="T:CqLabelAttributeDrawer">
+            <summary>
+            继承PropertyDrawer, 必须放入Editor文件夹下
+            </summary>
+        </member>
+        <member name="T:CqQuaternionAttributeDrawer">
+            <summary>
+            继承PropertyDrawer, 必须放入Editor文件夹下
+            </summary>
+        </member>
+        <member name="T:CqPropertyDrawer`1">
+            <summary>
+            当在编辑面板上右键弹出菜单时,OnGUI不会执行，关闭菜单后才会触发
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:CqPropertyDrawer`1.DrawPerfix(UnityEditor.SerializedProperty)">
+            <summary>
+            绘制前缀
+            </summary>
+        </member>
+        <member name="M:CqPropertyDrawer`1.GetDrawRect">
+            <summary>
+            返回实际绘制大小
+            </summary>
+        </member>
+        <member name="T:UnityEditorCore.ListBoxAttributeDrawer">
+            <summary>
+            绘制列表框
+            </summary>
+        </member>
+        <member name="T:UnityEditorCore.RectAttributeDrawer">
+            <summary>
+            绘制区域
+            </summary>
+        </member>
+        <member name="T:UnityEditorCore.ButtonAttributeDrawer">
+            <summary>
+            绘制列表框
+            </summary>
+        </member>
+        <member name="M:UnityEditorCore.ButtonAttributeDrawer.OnCqGUI(UnityEditor.SerializedProperty)">
+            <summary>
+            当面板绘制时
+            </summary>
+        </member>
+        <member name="T:UnityEditorCore.ButtonsAttributeDrawer">
+            <summary>
+            绘制多按钮(修饰枚举变量,位的方式)
+            </summary>
+        </member>
+        <member name="M:UnityEditorCore.ButtonsAttributeDrawer.OnCqGUI(UnityEditor.SerializedProperty)">
+            <summary>
+            当面板绘制时
+            </summary>
+        </member>
+        <member name="T:UnityEditorCore.CheckBoxAttributeDrawer">
+            <summary>
+            绘制勾选框
+            </summary>
+        </member>
+        <member name="M:UnityEditorCore.CheckBoxAttributeDrawer.OnCqGUI(UnityEditor.SerializedProperty)">
+            <summary>
+            当面板绘制时
+            </summary>
+        </member>
+        <member name="T:UnityEditorCore.ComBoxAttributeDrawer">
+            <summary>
+            绘制组合框
+            </summary>
+        </member>
+        <member name="T:ColorAttributeDrawer">
+            <summary>
+            继承PropertyDrawer, 必须放入Editor文件夹下
+            </summary>
+        </member>
+        <member name="T:ObjectLabelAttributeDrawer">
+            <summary>
+            继承PropertyDrawer, 必须放入Editor文件夹下
+            </summary>
+        </member>
+        <member name="T:CurveAttributeDrawer">
+            <summary>
+            继承PropertyDrawer, 必须放入Editor文件夹下
+            </summary>
+        </member>
+        <member name="T:SliderAttributeDrawer">
+            <summary>
+            继承PropertyDrawer, 必须放入Editor文件夹下
+            </summary>
+        </member>
+        <member name="T:TextBoxAttributeDrawer">
+            <summary>
+            继承PropertyDrawer, 必须放入Editor文件夹下
+            </summary>
+        </member>
+        <member name="T:TorsionValueAttributeDrawer">
+            <summary>
+            继承PropertyDrawer, 必须放入Editor文件夹下
+            </summary>
+        </member>
+        <member name="T:VectorAttributeDrawer">
+            <summary>
+            继承PropertyDrawer, 必须放入Editor文件夹下
+            </summary>
+        </member>
+        <member name="M:CqEditorGUI.BeginProperty(UnityEngine.Rect,UnityEditor.SerializedProperty,UnityEngine.GUIContent)">
+            <summary>
+            刚开始绘制时position的x=0,y=绘制起点的列坐标 width宽度为列宽
+            </summary>
+        </member>
+        <member name="M:CqEditorGUI.DrawControlFromStart(System.Single,System.Single,System.Single)">
+            <summary>
+            获取一个将要绘制的控件的区域(从编辑面板的最后向前定位)
+            </summary>
+        </member>
+        <member name="M:CqEditorGUI.DrawControlToEnd(System.Single,System.Single,System.Single)">
+            <summary>
+            获取一个将要绘制的控件的区域(从编辑面板的最后向前定位)
+            </summary>
+        </member>
+        <member name="M:CqEditorGUI.BaseDrawControl(System.Single,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            获取一个将要绘制的控件的区域,基于起始描点的偏移和终止描点的偏移来定位区域
+            </summary>
+        </member>
+        <member name="M:CqEditorGUI.FolderOut(System.Boolean,System.String)">
+            <summary>
+            折叠标签
+            </summary>
+        </member>
+        <member name="T:ComponentPropertyAttributeDrawer">
+            <summary>
+            继承PropertyDrawer, 必须放入Editor文件夹下
+            </summary>
+        </member>
+        <member name="T:SetPropertyDrawer">
+            <summary>
+            提供Inspector编辑属性时,回调方法
+            </summary>
+        </member>
+        <member name="T:UnityEditor.FixBug">
+            <summary>
+            解决unity bug
+            </summary>
+        </member>
+        <member name="M:UnityEditor.FixBug.CallMenuItemOnce(System.Action)">
+            <summary>
+            当MenuItem修饰的静态函数,通过右键在Hierarchy回调时,如果是多选GameObject,会产生BUG,被回调多次.
+            </summary>
+        </member>
+        <member name="M:UnityEditor.SceneViewUtil.GetClickRay">
+            <summary>
+            获取Scene视图鼠标点击发出的射线
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UnityEditor.HandlesUtil.DrawBezier(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Color,System.Single)">
+            <summary>
+            绘制过三点的贝塞尔曲线
+            </summary>
+        </member>
+        <member name="M:UnityEditor.SelectionUtil.SelectByPath(System.String)">
+            <summary>
+            由路径选中一个文件
+            </summary>
+        </member>
+        <member name="M:UnityEditor.SelectionUtil.ChangedOnce(System.Action)">
+            <summary>
+            当Hierarchy面板选中改变时回调一次
+            </summary>
+        </member>
+        <member name="M:GizmoMgr.OnNonSelected(UnityEngine.MonoBehaviour,UnityEditor.GizmoType)">
+            <summary>
+            如果gameObject没有被激活一定不会被绘制
+            GizmoType： 指定如何绘制线条，何时绘制线条
+            NoSelected  当该gameObject未被选中，也没有被父级选中
+            Selected 当该gameObject被选中时
+            Pickable 若gizmo在编辑器中可被选中
+            </summary>
+        </member>
+        <member name="F:UnityCore.PolygonInScene.plane">
+            <summary>
+            顶点所在平面
+            </summary>
+        </member>
+        <member name="F:UnityCore.PolygonInScene.lastMat">
+            <summary>
+            上一次多边形所在的矩阵
+            </summary>
+        </member>
+        <member name="F:UnityCore.PolygonInScene.oprState">
+            <summary>
+            0.正常 1.移动顶点 2.添加
+            </summary>
+        </member>
+        <member name="M:UnityCore.PolygonInScene.Check(System.Collections.Generic.IList{UnityEngine.Vector2},System.Single)">
+            <summary>
+            当顶点不够构成一个平面时,初始化3个顶点
+            </summary>
+        </member>
+        <member name="M:UnityCore.PolygonInScene.DrawLines(System.Collections.Generic.IList{UnityEngine.Vector3})">
+            <summary>
+            绘制3d闭合多边形
+            </summary>
+        </member>
+        <member name="T:EditorGlobalCoroutine">
+            <summary>
+            编辑器模式下的协程支持
+            </summary>
+        </member>
+        <member name="M:EditorGlobalCoroutine.#cctor">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="T:SVNUtil">
+            <summary>
+            Svn窗口操作扩展
+            </summary>
+        </member>
+        <member name="M:SVNUtil.UpLoadSvn(System.Converter{System.String,System.String},System.String[])">
+            <summary>
+            打开SVN提交窗口,提交与Project面板选中文件列表以及所有依赖文件.
+            </summary>
+            <param name="ConverterPath">相对路径转换函数</param>
+            <param name="ignoreList">忽略文件类型</param>
+        </member>
+        <member name="F:CommandClientWindow.dstClient">
+            <summary>
+            跟踪日志的目标游戏端
+            </summary>
+        </member>
+        <member name="M:CommandClientWindow.OnFocus">
+            <summary>
+            当窗口获得焦点时调用一次
+            </summary>
+        </member>
+        <member name="M:CommandClientWindow.OnLostFocus">
+            <summary>
+            当窗口丢失焦点时调用一次
+            </summary>
+        </member>
+        <member name="M:CommandClientWindow.OnHierarchyChange">
+            <summary>
+            当Hierarchy视图中的任何对象发生改变时调用一次
+            </summary>
+        </member>
+        <member name="M:CommandClientWindow.OnProjectChange">
+            <summary>
+            当Project视图中的资源发生改变时调用一次
+            </summary>
+        </member>
+        <member name="M:CommandClientWindow.OnInspectorUpdate">
+            <summary>
+            窗口面板的更新
+            这里开启窗口的重绘，不然窗口信息不会刷新
+            </summary>
+        </member>
+        <member name="M:CommandClientWindow.OnSelectionChange">
+            <summary>
+            当窗口出去开启状态，并且在Hierarchy视图中选择某游戏对象时调用
+            有可能是多选，
+            </summary>
+        </member>
+        <member name="M:CommandClientWindow.OnDestroy">
+            <summary>
+            当窗口关闭时调用
+            </summary>
+        </member>
+        <member name="T:ComponentPropertyWindow">
+            <summary>
+            通过面板编辑器选择一个组件的属性或者字段或者方法
+            </summary>
+        </member>
+        <member name="M:ComponentPropertyWindow.EditObject(UnityEngine.GameObject,System.Action{UnityEngine.Component,System.String,System.Reflection.MemberTypes},System.Type[],System.Reflection.MemberTypes)">
+            <summary>
+            弹出一个面板,列出obj 的组件列表,
+            选中组件后列出所有是allowTypes之中的类型的成员.
+            回调选中的成员
+            </summary>
+        </member>
+        <member name="F:ComponentPropertyWindow.OnSelectTarget">
+            <summary>
+            Component 组件,string 属性名/字段名/方法名
+            </summary>
+        </member>
+        <member name="M:ComponentPropertyWindow.isValidType(System.Type)">
+            <summary>
+            是否是一个满足需求的类型
+            </summary>
+        </member>
+        <member name="T:CqEaseWindow">
+            <summary>
+            常用曲线编辑窗口
+            </summary>
+        </member>
+        <member name="M:CqEaseWindow.GetCurve(System.Action{UnityEngine.AnimationCurve})">
+            <summary>
+            获取常用曲线
+            </summary>
+            <param name="SetCurve"></param>
+        </member>
+        <member name="T:FormMapWindow">
+            <summary>
+            二维bool数组编辑器
+            </summary>
+        </member>
+        <member name="T:StringEditorWindow">
+            <summary>
+            文本输入弹窗
+            </summary>
+        </member>
+        <member name="M:StringEditorWindow.OnDestroy">
+            <summary>
+            当窗口关闭时调用
+            </summary>
+        </member>
+        <member name="T:TitileContentEditorWindow">
+            <summary>
+            文本输入弹窗
+            </summary>
+        </member>
+        <member name="M:TitileContentEditorWindow.OnDestroy">
+            <summary>
+            当窗口关闭时调用
+            </summary>
+        </member>
+    </members>
+</doc>

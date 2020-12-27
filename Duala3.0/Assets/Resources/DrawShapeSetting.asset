@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ed5ae19cc865334da2882a027bcaa06, type: 3}
+  m_Name: DrawShapeSetting
+  m_EditorClassIdentifier: 
+  matDottedLine: {fileID: 2100000, guid: 3e6c474eeb977fb4c8e522044f31a07f, type: 2}
+  matLine: {fileID: 2100000, guid: 2e1c7411d8e728a4b8e91f0deb019768, type: 2}
+  matCircle: {fileID: 2100000, guid: 102af1044adf85b47a8387e70074594c, type: 2}
+  matRing: {fileID: 2100000, guid: e8829bb1bb38af04889e4c871f3942e1, type: 2}
+  matpolygon: {fileID: 2100000, guid: ced31c20f57f40f4fbd64a7f4f9e7dd5, type: 2}
