@@ -22,7 +22,7 @@
 							nodeObj = 
 							CopyFile
 							{
-								mSrcPath = "..\\..\\..\\CSharp\\解决方案\\bin\\CqCore3.5.dll";
+								mSrcPath = "..\\..\\CSharp\\解决方案\\bin\\CqCore3.5.dll";
 								mDstPath = "CqPlugin\\CqCore3.5.dll";
 								mOverWrite = true;
 								mName = "CqCore3.5.dll";
@@ -35,7 +35,7 @@
 							nodeObj = 
 							CopyFile
 							{
-								mSrcPath = "..\\..\\..\\CSharp\\解决方案\\bin\\CqCore3.5.pdb";
+								mSrcPath = "..\\..\\CSharp\\解决方案\\bin\\CqCore3.5.pdb";
 								mDstPath = "CqPlugin\\CqCore3.5.pdb";
 								mOverWrite = true;
 								mName = "CqCore3.5.pdb";
@@ -48,7 +48,7 @@
 							nodeObj = 
 							CopyFile
 							{
-								mSrcPath = "..\\..\\..\\CSharp\\解决方案\\bin\\CqCore3.5.XML";
+								mSrcPath = "..\\..\\CSharp\\解决方案\\bin\\CqCore3.5.XML";
 								mDstPath = "CqPlugin\\CqCore3.5.XML";
 								mOverWrite = true;
 								mName = "CqCore3.5.XML";
@@ -61,7 +61,7 @@
 							nodeObj = 
 							CopyFile
 							{
-								mSrcPath = "..\\..\\..\\CSharp\\解决方案\\bin\\UnityCore.dll";
+								mSrcPath = "..\\..\\CSharp\\解决方案\\bin\\UnityCore.dll";
 								mDstPath = "CqPlugin\\UnityCore.dll";
 								mOverWrite = true;
 								mName = "UnityCore.dll";
@@ -74,7 +74,7 @@
 							nodeObj = 
 							CopyFile
 							{
-								mSrcPath = "..\\..\\..\\CSharp\\解决方案\\bin\\UnityCore.pdb";
+								mSrcPath = "..\\..\\CSharp\\解决方案\\bin\\UnityCore.pdb";
 								mDstPath = "CqPlugin\\UnityCore.pdb";
 								mOverWrite = true;
 								mName = "UnityCore.pdb";
@@ -87,7 +87,7 @@
 							nodeObj = 
 							CopyFile
 							{
-								mSrcPath = "..\\..\\..\\CSharp\\解决方案\\bin\\UnityCore.XML";
+								mSrcPath = "..\\..\\CSharp\\解决方案\\bin\\UnityCore.XML";
 								mDstPath = "CqPlugin\\UnityCore.XML";
 								mOverWrite = true;
 								mName = "UnityCore.XML";
@@ -100,7 +100,7 @@
 							nodeObj = 
 							CopyFile
 							{
-								mSrcPath = "..\\..\\..\\CSharp\\解决方案\\bin\\UnityEditorCore.dll";
+								mSrcPath = "..\\..\\CSharp\\解决方案\\bin\\UnityEditorCore.dll";
 								mDstPath = "CqPlugin\\Editor\\UnityEditorCore.dll";
 								mOverWrite = true;
 								mName = "UnityEditorCore.dll";
@@ -113,7 +113,7 @@
 							nodeObj = 
 							CopyFile
 							{
-								mSrcPath = "..\\..\\..\\CSharp\\解决方案\\bin\\UnityEditorCore.pdb";
+								mSrcPath = "..\\..\\CSharp\\解决方案\\bin\\UnityEditorCore.pdb";
 								mDstPath = "CqPlugin\\Editor\\UnityEditorCore.pdb";
 								mOverWrite = true;
 								mName = "UnityEditorCore.pdb";
@@ -126,7 +126,7 @@
 							nodeObj = 
 							CopyFile
 							{
-								mSrcPath = "..\\..\\..\\CSharp\\解决方案\\bin\\UnityEditorCore.XML";
+								mSrcPath = "..\\..\\CSharp\\解决方案\\bin\\UnityEditorCore.XML";
 								mDstPath = "CqPlugin\\Editor\\UnityEditorCore.XML";
 								mOverWrite = true;
 								mName = "UnityEditorCore.XML";
@@ -144,33 +144,7 @@
 						mSrcPath = "CqPlugin";
 						mDstPath = "..\\Duala3.0\\Assets\\Plugins";
 						mOverWrite = true;
-						mName = "拷贝到duola项目";
-					};
-					children = 
-					[
-					];
-				},
-				{
-					nodeObj = 
-					CopyFolder
-					{
-						mSrcPath = "CqPlugin";
-						mDstPath = "..\\..\\..\\Command\\Assets\\Plugins";
-						mOverWrite = true;
-						mName = "拷贝到command项目";
-					};
-					children = 
-					[
-					];
-				},
-				{
-					nodeObj = 
-					CopyFolder
-					{
-						mSrcPath = "CqPlugin";
-						mDstPath = "..\\..\\..\\TA_Branch\\client_u3d\\game\\Rich5\\Assets\\Plugins";
-						mOverWrite = true;
-						mName = "拷贝到TA分支";
+						mName = "拷贝到项目";
 					};
 					children = 
 					[
