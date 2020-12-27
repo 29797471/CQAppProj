@@ -252,6 +252,9 @@ namespace SLua
                 "Unity.Jobs",
                 "Unity.Collections",
                 "Unity.IO.LowLevel.Unsafe.ReadCommand",
+                "UnityEngine.Rendering.CommandBuffer",
+                "Unity.Profiling.LowLevel.Unsafe.ProfilerMarkerData",
+                "Unity.Profiling.LowLevel.Unsafe.ProfilerUnsafeUtility",
             };
         }
     }
