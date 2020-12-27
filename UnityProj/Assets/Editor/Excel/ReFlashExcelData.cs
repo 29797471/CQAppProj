@@ -1,4 +1,5 @@
-﻿using UnityEditor;
+﻿using CqCore;
+using UnityEditor;
 /// <summary>
 /// 处理编辑器下当配置文件更改时,刷新数据
 /// </summary>
@@ -10,8 +11,8 @@ public class ReFlashExcelData : AssetPostprocessor
         {
             if (it.EndsWith("mark_config_changed._temp"))
             {
-                FileOpr.DeleteFile(it);
-                FileOpr.DeleteFile(it+".meta");
+                DirOpr.Delete(it);
+                DirOpr.Delete(it+".meta");
                 //Debug.Log(FileOpr.GetNameByShort(it));
                 //LuaMgr.instance.require("Excel/More/Config_AppConfig");
                 LuaMgr.instance.Dispose();

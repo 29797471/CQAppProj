@@ -176,7 +176,7 @@ public class LuaMgr : Singleton<LuaMgr>,IDisposable
                     File.WriteAllBytes(luaZipPath, AsyncReturn.data);
 
                     ZipHelper.UnZip(luaZipPath, luaUserDir);
-                    FileOpr.DeleteFile(luaZipPath);
+                    DirOpr.Delete(luaZipPath);
                     Debug.Log("解压lua压缩包");
                 }
                 else
