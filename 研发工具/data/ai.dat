@@ -395,7 +395,7 @@
 					nodeObj = 
 					ModifyFile
 					{
-						mSrcPath = "..\\..\\..\\CSharp\\DevelopTool\\DevelopTool.csproj";
+						mSrcPath = "..\\..\\CSharp\\DevelopTool\\DevelopTool.csproj";
 						mStartStr = "<OutputPath>";
 						mEndStr = "</OutputPath>";
 						mContent = "bin\\";
@@ -409,7 +409,7 @@
 					nodeObj = 
 					ModifyFile
 					{
-						mSrcPath = "..\\..\\..\\CSharp\\DevelopTool\\CMD_DevelopTool.csproj";
+						mSrcPath = "..\\..\\CSharp\\DevelopTool\\CMD_DevelopTool.csproj";
 						mStartStr = "<OutputPath>";
 						mEndStr = "</OutputPath>";
 						mContent = "bin\\";
