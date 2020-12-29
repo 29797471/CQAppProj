@@ -9,3 +9,4 @@
 /UnityProj/obj/*
 /UnityProj/*.sln
 /UnityProj/*.csproj
+/UnityProj/Assets/StreamingAssets
