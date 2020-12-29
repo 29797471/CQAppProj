@@ -3,3 +3,9 @@
 /研发工具/*.xml
 /UnityProj/Assets/Slua/LuaObject
 /UnityProj/Assets/Slua/LuaObject.meta
+/UnityProj/.vs/*
+/UnityProj/Library/*
+/UnityProj/Logs/*
+/UnityProj/obj/*
+/UnityProj/*.sln
+/UnityProj/*.csproj
